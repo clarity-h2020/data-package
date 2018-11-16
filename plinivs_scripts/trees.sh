@@ -31,15 +31,16 @@ rm -r $NAME2
 psql -d clarity -U postgres -f $NAME2".sql"
 rm $NAME2".sql"
 
+#adding rest of parameters
 psql -U "postgres" -d "clarity" -c "ALTER TABLE "$NAME" ADD albedo real DEFAULT "$ALBEDO";"
 psql -U "postgres" -d "clarity" -c "ALTER TABLE "$NAME" ADD emissivity real DEFAULT "$EMISSIVITY";"
 psql -U "postgres" -d "clarity" -c "ALTER TABLE "$NAME" ADD transmissivity real DEFAULT "$TRANSMISSIVITY";"
 psql -U "postgres" -d "clarity" -c "ALTER TABLE "$NAME" ADD vegetation_shadow real DEFAULT "$VEGETATION_SHADOW";"
 psql -U "postgres" -d "clarity" -c "ALTER TABLE "$NAME" ADD run_off_coefficient real DEFAULT "$RUNOFF_COEFFICIENT";"
-#building shadow 1 por defecto(no interseccion) y actualizar a valor 0 cuando haya interseccion
+#building shadow 1 by default(not intersecting) then update with value 0 when intersecting
 psql -U "postgres" -d "clarity" -c "ALTER TABLE "$NAME" ADD building_shadow smallint DEFAULT 1;"
 psql -U "postgres" -d "clarity" -c "UPDATE "$NAME" SET building_shadow=0 FROM (SELECT r.gid FROM "$NAME" r, "$SHP_UA"_layers9_12 b WHERE ST_Intersects( r.geom , b.geom ) IS TRUE GROUP BY r.gid) AS subquery WHERE "$NAME".gid=subquery.gid;"
-###FALTA HILLSHADE GREEN FRACTION, no se de que campo sacar el tipo de arbol... asi que pongo el valor por defecto 0.37
+###MISSING HILLSHADE GREEN FRACTION, we do not know where to gettree type... so we set default value 0.37
 psql -U "postgres" -d "clarity" -c "ALTER TABLE "$NAME" ADD hillshade_green_fraction real DEFAULT 0.37;"
 
 #FALTA VOLCAR SOBRE TABLA ROADS GLOBAL Y BORRAR LA TABLA trees DEL SHAPEFILE ACTUAL(ITALIA-NAPOLES)

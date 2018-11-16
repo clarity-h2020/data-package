@@ -91,15 +91,20 @@ v.out.ogr type="auto" input="output08aad7e15cf0402da3436e32ac40c6c9" output="$SH
 #result to databse
 shp2pgsql -k -s 3035 -S -I -d $SHP $NAME > $NAME.sql
 psql -d clarity -U postgres -f $NAME.sql
-rm $NAME"_calculated.*"
+rm $NAME"_calculated.TIF"
+rm $NAME"_calculated.prj"
+rm $NAME"_calculated.shx"
+rm $NAME"_calculated.shp"
+rm $NAME"_calculated.prj"
+rm $NAME"_calculated.dbf"
 
 #REMOVE INTERSECTIONS WITH LAYERS 6,5,4,3,2,1 check in postgis...
-psql -U "postgres" -d "clarity" -c "DELETE FROM public.\""$NAME"\" WHERE gid IN (SELECT b.gid FROM public.\""$NAME"\" b, "$DATA"_water x WHERE ST_Intersects( b.geom , x.geom ) IS TRUE);"
-psql -U "postgres" -d "clarity" -c "DELETE FROM public.\""$NAME"\" WHERE gid IN (SELECT b.gid FROM public.\""$NAME"\" b, "$DATA"_roads x WHERE ST_Intersects( b.geom , x.geom ) IS TRUE);"
-psql -U "postgres" -d "clarity" -c "DELETE FROM public.\""$NAME"\" WHERE gid IN (SELECT b.gid FROM public.\""$NAME"\" b, "$DATA"_railways x WHERE ST_Intersects( b.geom , x.geom ) IS TRUE);"
-psql -U "postgres" -d "clarity" -c "DELETE FROM public.\""$NAME"\" WHERE gid IN (SELECT b.gid FROM public.\""$NAME"\" b, "$DATA"_trees x WHERE ST_Intersects( b.geom , x.geom ) IS TRUE);"
-psql -U "postgres" -d "clarity" -c "DELETE FROM public.\""$NAME"\" WHERE gid IN (SELECT b.gid FROM public.\""$NAME"\" b, "$DATA"_vegetation x WHERE ST_Intersects( b.geom , x.geom ) IS TRUE);"
-psql -U "postgres" -d "clarity" -c "DELETE FROM public.\""$NAME"\" WHERE gid IN (SELECT b.gid FROM public.\""$NAME"\" b, "$DATA"_agricultural_areas x WHERE ST_Intersects( b.geom , x.geom ) IS TRUE);"
+#psql -U "postgres" -d "clarity" -c "DELETE FROM public.\""$NAME"\" WHERE gid IN (SELECT b.gid FROM public.\""$NAME"\" b, "$DATA"_water x WHERE ST_Intersects( b.geom , x.geom ) IS TRUE);"
+#psql -U "postgres" -d "clarity" -c "DELETE FROM public.\""$NAME"\" WHERE gid IN (SELECT b.gid FROM public.\""$NAME"\" b, "$DATA"_roads x WHERE ST_Intersects( b.geom , x.geom ) IS TRUE);"
+#psql -U "postgres" -d "clarity" -c "DELETE FROM public.\""$NAME"\" WHERE gid IN (SELECT b.gid FROM public.\""$NAME"\" b, "$DATA"_railways x WHERE ST_Intersects( b.geom , x.geom ) IS TRUE);"
+#psql -U "postgres" -d "clarity" -c "DELETE FROM public.\""$NAME"\" WHERE gid IN (SELECT b.gid FROM public.\""$NAME"\" b, "$DATA"_trees x WHERE ST_Intersects( b.geom , x.geom ) IS TRUE);"
+#psql -U "postgres" -d "clarity" -c "DELETE FROM public.\""$NAME"\" WHERE gid IN (SELECT b.gid FROM public.\""$NAME"\" b, "$DATA"_vegetation x WHERE ST_Intersects( b.geom , x.geom ) IS TRUE);"
+#psql -U "postgres" -d "clarity" -c "DELETE FROM public.\""$NAME"\" WHERE gid IN (SELECT b.gid FROM public.\""$NAME"\" b, "$DATA"_agricultural_areas x WHERE ST_Intersects( b.geom , x.geom ) IS TRUE);"
 
 #drop not needed columns
 psql -U "postgres" -d "clarity" -c "ALTER TABLE public.\""$NAME"\" DROP COLUMN cat;"
@@ -112,7 +117,7 @@ psql -U "postgres" -d "clarity" -c "ALTER TABLE public.\""$NAME"\" ADD emissivit
 psql -U "postgres" -d "clarity" -c "ALTER TABLE public.\""$NAME"\" ADD transmissivity real DEFAULT "$TRANSMISSIVITY";"
 psql -U "postgres" -d "clarity" -c "ALTER TABLE public.\""$NAME"\" ADD vegetation_shadow real DEFAULT "$VEGETATION_SHADOW";"
 psql -U "postgres" -d "clarity" -c "ALTER TABLE public.\""$NAME"\" ADD run_off_coefficient real DEFAULT "$RUNOFF_COEFFICIENT";"
-#building shadow 1 por defecto(no interseccion) y actualizar a valor 0 cuando haya interseccion
+#building shadow 1 by default(not intersecting) then update with value 0 when intersecting
 psql -U "postgres" -d "clarity" -c "ALTER TABLE public.\""$NAME"\" ADD building_shadow smallint DEFAULT 1;"
 psql -U "postgres" -d "clarity" -c "UPDATE public.\""$NAME"\" SET building_shadow=0 FROM (SELECT w.gid FROM public.\""$NAME"\" w, "$DATA"_layers9_12 b WHERE ST_Intersects( w.geom , b.geom ) IS TRUE GROUP BY w.gid) AS subquery WHERE public.\""$NAME"\".gid=subquery.gid;"
 

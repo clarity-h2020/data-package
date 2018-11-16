@@ -19,25 +19,26 @@ shp2pgsql -k -s 3035 -S -I -d $NAME/$SHP.shp $NAME > $NAME".sql"
 rm -r $NAME
 psql -d clarity -U postgres -f $NAME".sql"
 rm $NAME".sql"
+#adding rest of parameters
 psql -U "postgres" -d "clarity" -c "ALTER TABLE "$NAME" ADD albedo real DEFAULT "$ALBEDO";"
 psql -U "postgres" -d "clarity" -c "ALTER TABLE "$NAME" ADD emissivity real DEFAULT "$EMISSIVITY";"
 psql -U "postgres" -d "clarity" -c "ALTER TABLE "$NAME" ADD transmissivity real DEFAULT "$TRANSMISSIVITY";"
 psql -U "postgres" -d "clarity" -c "ALTER TABLE "$NAME" ADD vegetation_shadow real DEFAULT "$VEGETATION_SHADOW";"
 psql -U "postgres" -d "clarity" -c "ALTER TABLE "$NAME" ADD run_off_coefficient real DEFAULT "$RUNOFF_COEFFICIENT";"
 
-#building shadow 1 por defecto(no interseccion) y actualizar a valor 0 cuando haya interseccion
+#building shadow 1 by default(not intersecting) then update with value 0 when intersection occurs
 psql -U "postgres" -d "clarity" -c "ALTER TABLE "$NAME" ADD building_shadow smallint DEFAULT 1;"
 psql -U "postgres" -d "clarity" -c "UPDATE "$NAME" SET building_shadow=0 FROM (SELECT r.gid FROM "$NAME" r, "$SHP"_layers9_12 b WHERE ST_Intersects( r.geom , b.geom ) IS TRUE GROUP BY r.gid) AS subquery WHERE "$NAME".gid=subquery.gid;"
 
-#hillshade_building 0 por defecto y luego se actualiza en base a las intersecciones que tenga
+#hillshade_building 0 by default then update depending on intersections
 psql -U "postgres" -d "clarity" -c "ALTER TABLE "$NAME" ADD hillshade_building real DEFAULT 0;"
-#hillshade_building de intersecciones con layer12(CODE2012=12100) a 0.5
+#hillshade_building intersection with layer12(CODE2012=12100) assign 0.5
 psql -U "postgres" -d "clarity" -c "UPDATE "$NAME" SET hillshade_building=0.5 FROM (SELECT r.gid FROM "$NAME" r, "$SHP"_layers9_12 b WHERE b.CODE2012='12100' AND ST_Intersects( r.geom , b.geom ) IS TRUE GROUP BY r.gid) AS subquery WHERE "$NAME".gid=subquery.gid;"
-#hillshade_building de intersecciones con layer11(CODE2012=11230,11240,11300) a 0.5
+#hillshade_building intersection with layer11(CODE2012=11230,11240,11300) assign 0.5
 psql -U "postgres" -d "clarity" -c "UPDATE "$NAME" SET hillshade_building=0.5 FROM (SELECT r.gid FROM "$NAME" r, "$SHP"_layers9_12 b WHERE (b.CODE2012='11230' OR b.CODE2012='11240' OR b.CODE2012='11300') AND ST_Intersects( r.geom , b.geom ) IS TRUE GROUP BY r.gid) AS subquery WHERE "$NAME".gid=subquery.gid;"
-#hillshade_building de intersecciones con layer10(CODE2012=11220) a 0.8
+#hillshade_building intersection with layer10(CODE2012=11220) assign 0.8
 psql -U "postgres" -d "clarity" -c "UPDATE "$NAME" SET hillshade_building=0.8 FROM (SELECT r.gid FROM "$NAME" r, "$SHP"_layers9_12 b WHERE (b.CODE2012='11220') AND ST_Intersects( r.geom , b.geom ) IS TRUE GROUP BY r.gid) AS subquery WHERE "$NAME".gid=subquery.gid;"
-#hillshade_building de intersecciones con layer9(CODE2012=11210,11100) a 1
+#hillshade_building intersection with layer9(CODE2012=11210,11100) assign 1
 psql -U "postgres" -d "clarity" -c "UPDATE "$NAME" SET hillshade_building=1 FROM (SELECT r.gid FROM "$NAME" r, "$SHP"_layers9_12 b WHERE (b.CODE2012='11210' OR b.CODE2012='11100') AND ST_Intersects( r.geom , b.geom ) IS TRUE GROUP BY r.gid) AS subquery WHERE "$NAME".gid=subquery.gid;"
 
 #FALTA VOLCAR SOBRE TABLA ROADS GLOBAL Y BORRAR LA TABLA ROADS DEL SHAPEFILE ACTUAL(ITALIA-NAPOLES)

@@ -102,13 +102,13 @@ rm $NAME2.*
 psql -U "postgres" -d "clarity" -c "insert into "$NAME" (select nextval('"$NAME"_gid_seq'), ST_Perimeter(geom), ST_Area(geom) from public.\""$NAME2"\");"
 psql -U "postgres" -d "clarity" -c "DROP TABLE public.\""$NAME2"\";"
 
-#add rest of the parameters to the layer
+#add ingrest of the parameters
 psql -U "postgres" -d "clarity" -c "ALTER TABLE "$NAME" ADD albedo real DEFAULT "$ALBEDO";"
 psql -U "postgres" -d "clarity" -c "ALTER TABLE "$NAME" ADD emissivity real DEFAULT "$EMISSIVITY";"
 psql -U "postgres" -d "clarity" -c "ALTER TABLE "$NAME" ADD transmissivity real DEFAULT "$TRANSMISSIVITY";"
 psql -U "postgres" -d "clarity" -c "ALTER TABLE "$NAME" ADD vegetation_shadow real DEFAULT "$VEGETATION_SHADOW";"
 psql -U "postgres" -d "clarity" -c "ALTER TABLE "$NAME" ADD run_off_coefficient real DEFAULT "$RUNOFF_COEFFICIENT";"
-#building shadow 1 por defecto(no interseccion) y actualizar a valor 0 cuando haya interseccion
+#building shadow 1 by default(not interseccting) then update with value 0 when intersecting
 psql -U "postgres" -d "clarity" -c "ALTER TABLE "$NAME" ADD building_shadow smallint DEFAULT 1;"
 psql -U "postgres" -d "clarity" -c "UPDATE "$NAME" SET building_shadow=0 FROM (SELECT w.gid FROM "$NAME" w, "$SHP"_layers9_12 b WHERE ST_Intersects( w.geom , b.geom ) IS TRUE GROUP BY w.gid) AS subquery WHERE "$NAME".gid=subquery.gid;"
 
