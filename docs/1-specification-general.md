@@ -189,7 +189,9 @@ Note2: CLARITY Data Packages ONLY support resources that describe their location
 </tbody>
 </table>
 
-<b>Source object:</b>
+<br/>
+<br/>
+<u><b>Source object:</b></u>
 <table>
 <thead>
 <tr>
@@ -233,8 +235,9 @@ Note2: CLARITY Data Packages ONLY support resources that describe their location
 </tbody>
 </table>
 
-
-<b>Contributor object:</b>
+<br/>
+<br/>
+<u><b>Contributor object:</b></u>
 <table>
 <thead>
 <tr>
@@ -296,8 +299,9 @@ Note on semantics: use of the "author" property does not imply that that person 
 </tbody>
 </table>
 
-
-<b>License object:</b>
+<br/>
+<br/>
+<u><b>License object:</b></u>
 <table>
 <thead>
 <tr>
