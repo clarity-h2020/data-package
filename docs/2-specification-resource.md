@@ -183,7 +183,7 @@ Data in Multiple Files: Usually, a resource will have only a single file associa
 To support this use case the path property MAY be an array of strings rather than a single string: "path": [ "myfile1.csv", "myfile2.csv" ]
 It is NOT permitted to mix fully qualified URLs and relative paths in a path array: strings MUST either all be relative paths or all URLs.
  
-Best Practice (proposal): dataset resources MUST be located in a ""data"" folder in the root of the in a Data Package (where the json descriptor is also located) in order to have a better organization of the contents. Within the data folder, datasets MAY be further organized creating additional subfolders if necessary.</td>
+Best Practice (proposal): dataset resources MUST be located in a "data" folder in the root of the in a Data Package (where the json descriptor is also located) in order to have a better organization of the contents. Within the data folder, datasets MAY be further organized creating additional subfolders if necessary.</td>
 </tr>
 <tr>
 <td><i><b>schema</b></i></td>
@@ -248,7 +248,9 @@ possible parameters:
 </tbody>
 </table>
 
-<b>Source object:</b>
+<br/>
+<br/>
+<u><b>Source object:</b></u>
 <table>
 <thead>
 <tr>
@@ -292,8 +294,9 @@ possible parameters:
 </tbody>
 </table>
 
-
-<b>Contributor object:</b>
+<br/>
+<br/>
+<u><b>Contributor object:</b></u>
 <table>
 <thead>
 <tr>
@@ -355,8 +358,9 @@ Note on semantics: use of the "author" property does not imply that that person 
 </tbody>
 </table>
 
-
-<b>License object:</b>
+<br/>
+<br/>
+<u><b>License object:</b></u>
 <table>
 <thead>
 <tr>
