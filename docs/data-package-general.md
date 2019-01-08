@@ -186,6 +186,27 @@ Note1: According to the Data Resource specification: "A resource MUST contain a 
 Note2: CLARITY Data Packages ONLY support resources that describe their location with the "path" property. This is to avoid having Data Package descriptors (.json) files bloated with thousands of text lines enconding the data which would make unamageable and unreadable the descriptor. Instead of that, CLARITY Data Packages forces to store that data in a file and reference it within the Data Package itself or to a remote location.
 </td>
 </tr>
+<tr>
+<td><i><b>language</b></i></td>
+<td>String enumeration</td>
+<td>0/1</td>
+<td>N/A</td>
+<td>OPTIONAL</td>
+<td>
+ISO/TS 19139 alpha-3 (three characters) code denoting the language in which the textual information of the metadata is presented. 
+IF empty, it is assumed English ("eng")
+</td>
+</tr>
+<tr>
+<td><i><b>price</b></i></td>
+<td>Price object</td>
+<td>0/1</td>
+<td>N/A</td>
+<td>OPTIONAL</td>
+<td>
+Price of the datapackage. If empty, then assume that it is free.
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -342,8 +363,31 @@ Note on semantics: use of the "author" property does not imply that that person 
 <td>OPTIONAL</td>
 <td>A human-readable title</td>
 </tr>
+</tbody>
+</table>
+
+
+<br/>
+<br/>
+<u><b>Price object:</b></u>
+<table>
+<thead>
 <tr>
-<td><i><b>price</b></i></td>
+<th colspan="3">Attribute</th>
+<th colspan="2">Obligation / Condition</th>
+<th rowspan="2">Description</th>
+</tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Multiplicity</th>
+<th>FrictionlessData</th>
+<th>CSIS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><i><b>amount</b></i></td>
 <td>Float</td>
 <td>1</td>
 <td>N/A</td>
