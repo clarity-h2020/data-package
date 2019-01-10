@@ -273,18 +273,23 @@ Example:
 </tr>
 <tr>
 <td><i><b>extent</b></i></td>
-<td>List of two pairs of coordinates: [xmin, ymin, xmax, ymax]</td>
+<td>SpatialExtent object</td>
 <td>1</td>
 <td>N/A</td>
 <td>MANDATORY</td>
 <td>The extent property defines the minimum bounding rectangle (xmin, ymin and xmax, ymax) defined by coordinate pairs of the spatial data resource. All coordinates for the data source fall within this boundary. 
 
-E.g., "extent": [-180.0, -90.0, 180.0, 90.0]
+E.g., "extent": {
+   "xmin":-180.0,
+   "ymin":-90.0,
+   "xmax":180,
+   "ymax":90.0
+   }
 </td>
 </tr>
 <tr>
 <td><i><b>resolution</b></i></td>
-<td>SpatialResolution object</td>
+<td>SpatialResolutionByDistance OR SpatialResolutionByScale object</td>
 <td>1</td>
 <td>N/A</td>
 <td>MADATORY</td>
@@ -310,6 +315,132 @@ Examples:
 </tr>
 </tbody>
 </table>
+
+<br/>
+<br/>
+<u><b>SpatialResolutionByDistance object:</b></u>
+<table>
+<thead>
+<tr>
+<th colspan="3">Attribute</th>
+<th colspan="2">Obligation / Condition</th>
+<th rowspan="2">Description</th>
+</tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Multiplicity</th>
+<th>FrictionlessData</th>
+<th>CSIS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><i><b>distance</b></i></td>
+<td>Float</td>
+<td>1</td>
+<td>N/A</td>
+<td>MANDATORY</td>
+<td>The resolution expressed in distance</td>
+</tr>
+<tr>
+<td><i><b>uom</b></i></td>
+<td>CharacterString enumeration</td>
+<td>1</td>
+<td>N/A</td>
+<td>OPTIONAL</td>
+<td>The units of measurement used to define the distance. By default, in meters.
+ Possible values are: "m", "km", ...</td>
+</tr>
+</tbody>
+</table>
+
+<br/>
+<br/>
+<u><b>SpatialResolutionByScale object:</b></u>
+<table>
+<thead>
+<tr>
+<th colspan="3">Attribute</th>
+<th colspan="2">Obligation / Condition</th>
+<th rowspan="2">Description</th>
+</tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Multiplicity</th>
+<th>FrictionlessData</th>
+<th>CSIS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><i><b>scale</b></i></td>
+<td>Long</td>
+<td>1</td>
+<td>N/A</td>
+<td>MANDATORY</td>
+<td>The resolution expressed in scale</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<br/>
+<br/>
+<u><b>SpatialExtent object:</b></u>
+<table>
+<thead>
+<tr>
+<th colspan="3">Attribute</th>
+<th colspan="2">Obligation / Condition</th>
+<th rowspan="2">Description</th>
+</tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Multiplicity</th>
+<th>FrictionlessData</th>
+<th>CSIS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><i><b>xmin</b></i></td>
+<td>Float</td>
+<td>1</td>
+<td>N/A</td>
+<td>MANDATORY</td>
+<td>Minimum coordinate value in the "x" axis that defines the spatial extent.</td>
+</tr>
+<tr>
+<td><i><b>ymin</b></i></td>
+<td>Float</td>
+<td>1</td>
+<td>N/A</td>
+<td>MANDATORY</td>
+<td>Minimum coordinate value in the "y" axis that defines the spatial extent.</td>
+</tr>
+<tr>
+<td><i><b>xmax</b></i></td>
+<td>Float</td>
+<td>1</td>
+<td>N/A</td>
+<td>MANDATORY</td>
+<td>Maximum coordinate value in the "x" axis that defines the spatial extent.</td>
+</tr>
+<tr>
+<td><i><b>ymax</b></i></td>
+<td>Float</td>
+<td>1</td>
+<td>N/A</td>
+<td>MANDATORY</td>
+<td>maximum coordinate value in the "y" axis that defines the spatial extent.</td>
+</tr> 
+</tbody>
+</table>
+
 
 <br/>
 <br/>
@@ -457,6 +588,44 @@ Example:
 This is the start and the end marks of the union of all the time periods covered by the indicator values. 
 For example, if the indicator values existing in the dataset cover the years 2005, 2006, 2007 and 2008, the extent property must have the value "extent": { "start": 2005, "end": 2008}.
 </td>
+</tr>
+</tbody>
+</table>
+
+<br/>
+<br/>
+<u><b>TemporalExtent object:</b></u>
+<table>
+<thead>
+<tr>
+<th colspan="3">Attribute</th>
+<th colspan="2">Obligation / Condition</th>
+<th rowspan="2">Description</th>
+</tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Multiplicity</th>
+<th>FrictionlessData</th>
+<th>CSIS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><i><b>start</b></i></td>
+<td>Date</td>
+<td>1</td>
+<td>N/A</td>
+<td>MANDATORY</td>
+<td>The starting date</td>
+</tr>
+<tr>
+<td><i><b>end</b></i></td>
+<td>Date</td>
+<td>1</td>
+<td>N/A</td>
+<td>MANDATORY</td>
+<td>The ending date</td>
 </tr>
 </tbody>
 </table>
