@@ -346,19 +346,19 @@ Examples:
 <td>MANDATORY</td>
 <td>The bit depth (also known as pixel depth) of a cell determines the range of values that a particular raster file can store, which is based on the formula 2n (where n is the bit depth). For example, an 8-bit raster can have 256 unique values, which range from 0 to 255.
  
-Possible "bit_depth" values for this property are described in the first column of the following table:
+Possible "bit_depth" values for this property:
 
-<b>Bit depth	           Range of values that each cell can contain</b>
-1 bit	                           0 to 1
-2 bit	                           0 to 3
-4 bit	                           0 to 15
-Unsigned 8 bit	           0 to 255
-Signed 8 bit	           -128 to 127
-Unsigned 16 bit	           0 to 65535
-Signed 16 bit	           -32768 to 32767
-Unsigned 32 bit	           0 to 4294967295
-Signed 32 bit	           -2147483648 to 2147483647
-Floating-point 32 bit     -3.402823466e+38 to 3.402823466e+3
+Bit depth (Range of values that each cell can contain):
+* 1-bit (0 to 1)
+* 2-bit	(0 to 3)
+* 4-bit (0 to 15)
+* unsigned-8-bit	(0 to 255)
+* signed-8-bit (-128 to 127)
+* unsigned-16-bit (0 to 65535)
+* signed-16-bit (-32768 to 32767)
+* unsigned-32-bit (0 to 4294967295)
+* signed-32-bit (-2147483648 to 2147483647)
+* floating-point-32-bit (-3.402823466e+38 to 3.402823466e+3)
 </td>
 </tr>
 <tr>
