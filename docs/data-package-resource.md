@@ -201,16 +201,6 @@ If a string it must be a url-or-path as defined above, that is a fully qualified
 The next section provide a complete schema description with the parameters for each of the typical resources included in a CLARITY Data Package.</td>
 </tr>
 <tr>
-<td><i><b>language</b></i></td>
-<td>String enumeration</td>
-<td>0/1</td>
-<td>OPTIONAL</td>
-<td>OPTIONAL</td>
-<td>ISO/TS 19139 alpha-3 (three characters) code denoting the language in which the textual information of the metadata is presented. (E.g., ""language"": eng).
-
-IF empty, it is assumed english ("eng")</td>
-</tr>
-<tr>
 <td><i><b>quality</b></i></td>
 <td>Quality object</td>
 <td>0/1</td>
@@ -222,7 +212,7 @@ possible parameters:
 * fiability</td>
 </tr>
 <tr>
-<td><i><b>spatialcontext</b></i></td>
+<td><i><b>spatial_context</b></i></td>
 <td>SpatialContext object</td>
 <td>0/1</td>
 <td>OPTIONAL</td>
@@ -230,20 +220,20 @@ possible parameters:
 <td>MANDATORY if the resource is a spatial dataset. Otherwise, this property is empty.</td>
 </tr>
 <tr>
-<td><i><b>temporalcontext</b></i></td>
+<td><i><b>temporal_context</b></i></td>
 <td>TemporalContext object</td>
 <td>0/1</td>
 <td>OPTIONAL</td>
 <td>OPTIONAL(*)</td>
-<td></td>
+<td>MANDATORY if the resource is has a temporal component. Otherwise, this property is empty.</td>
 </tr>
 <tr>
-<td><i><b>analysiscontext</b></i></td>
+<td><i><b>analysis_context</b></i></td>
 <td>AnalysisContext object</td>
 <td>1</td>
 <td>N/A</td>
 <td>MANDATORY</td>
-<td></td>
+<td>This property describes contextual information needed by the CSIS in order to understand how to process this specific resource (e.g., in which step of the CSIS workflow it must be used, to which hazard the resource is related to, etc. </td>
 </tr>
 </tbody>
 </table>
@@ -400,23 +390,6 @@ Note on semantics: use of the "author" property does not imply that that person 
 <td>OPTIONAL</td>
 <td>OPTIONAL</td>
 <td>A human-readable title</td>
-</tr>
-<tr>
-<td><i><b>price</b></i></td>
-<td>Float</td>
-<td>1</td>
-<td>N/A</td>
-<td>MANDATORY</td>
-<td>The price of the data package. If the data package is free, then the value of this parameter MUST be 0.0</td>
-</tr>
-<tr>
-<td><i><b>currency</b></i></td>
-<td>String enumeration</td>
-<td>1</td>
-<td>N/A</td>
-<td>MANDATORY</td>
-<td>The currency property of a price is given. It must be one of of the codes listed here: https://www.currency-iso.org/en/home/tables/table-a1.html.
-By default, the currency code is "EUR"</td>
 </tr>
 </tbody>
 </table>
