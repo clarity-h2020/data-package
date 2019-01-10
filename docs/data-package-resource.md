@@ -629,3 +629,44 @@ For example, if the indicator values existing in the dataset cover the years 200
 </tr>
 </tbody>
 </table>
+
+
+
+<br/>
+<br/>
+<u><b>AnalysisContext object:</b></u>
+<table>
+<thead>
+<tr>
+<th colspan="3">Attribute</th>
+<th colspan="2">Obligation / Condition</th>
+<th rowspan="2">Description</th>
+</tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Multiplicity</th>
+<th>FrictionlessData</th>
+<th>CSIS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><i><b>workflow_step</b></i></td>
+<td>List of CharacterString enumeration</td>
+<td>1+</td>
+<td>N/A</td>
+<td>MANDATORY</td>
+<td>The list of workflow steps where the resource can be used</td>
+</tr>
+<tr>
+<td><i><b>uom</b></i></td>
+<td>CharacterString enumeration</td>
+<td>1</td>
+<td>N/A</td>
+<td>OPTIONAL</td>
+<td>The units of measurement used to define the distance. By default, in meters.
+ Possible values are: "m", "km", ...</td>
+</tr>
+</tbody>
+</table>
