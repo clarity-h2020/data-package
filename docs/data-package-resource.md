@@ -333,10 +333,10 @@ Examples:
 <tr>
 <td><i><b>bands</b></i></td>
 <td>Integer</td>
-<td>1</td>
+<td>0/1</td>
 <td>N/A</td>
-<td>MANDATORY</td>
-<td>Number of bands contained in the gridded dataset</td>
+<td>OPTIONAL</td>
+<td>Number of bands contained in the gridded dataset. If absent, it is assumed with only one band.</td>
 </tr>
 <tr>
 <td><i><b>bit_depth</b></i></td>
@@ -392,7 +392,17 @@ Bit depth (Range of values that each cell can contain):
 <td>N/A</td>
 <td>MANDATORY</td>
 <td>This property indicates the starting cell of the raster.
-Possible values are: top-left, bottom-right
+Possible values are: "top-left" or "bottom-right"
+</td>
+</tr>
+<tr>
+<td><i><b>compression_type</b></i></td>
+<td>CharacterString enumeration</td>
+<td>0/1</td>
+<td>N/A</td>
+<td>OPTIONAL</td>
+<td>This property indicates compression method used to compress the information contained in the raster.
+ Possible values are: "none", .... (to be completed).
 </td>
 </tr>
 </tbody>
@@ -400,7 +410,7 @@ Possible values are: top-left, bottom-right
 
 <br/>
 <br/>
-<u><b>License object:</b></u>
+<u><b>TemporalContext object:</b></u>
 <table>
 <thead>
 <tr>
@@ -418,28 +428,35 @@ Possible values are: top-left, bottom-right
 </thead>
 <tbody>
 <tr>
-<td><i><b>name</b></i></td>
-<td>String enumeration</td>
+<td><i><b>trs</b></i></td>
+<td>CharacterString enumeration</td>
 <td>0/1</td>
+<td>N/A</td>
 <td>OPTIONAL</td>
-<td>MANDATORY</td>
-<td>The name MUST be an Open Definition license ID (see https://licenses.opendefinition.org/)</td>
+<td>This property indicates the temporal reference system used to represent the time information. If the property is absent, default time reference system is "ISO 8601:2004" will be assummed.</td>
 </tr>
 <tr>
-<td><i><b>path</b></i></td>
-<td>Character string without length restriction</td>
-<td>0/1</td>
+<td><i><b>reference_period</b></i></td>
+<td>List of dates</td>
+<td>1</td>
+<td>N/A</td>
 <td>OPTIONAL</td>
-<td>MANDATORY</td>
-<td>A url-or-path string, that is a fully qualified HTTP address, or a relative POSIX path (see the url-or-path definition in Data Resource for details).</td>
+<td>The temporal reference property indicates an ordered list with all the years (or dates) comprehended in the information present in the dataset.
+
+Example:
+"reference_period": [2005, 2006, 2007, 2008]
+</td>
 </tr>
 <tr>
-<td><i><b>title</b></i></td>
-<td>Character string without length restriction</td>
-<td>0/1</td>
-<td>OPTIONAL</td>
-<td>OPTIONAL</td>
-<td>A human-readable title</td>
+<td><i><b>extent</b></i></td>
+<td>TemporalExtent Object</td>
+<td>1</td>
+<td>N/A</td>
+<td>MANDATORY</td>
+<td>The temporal extent property defines the global temporal extent of all the indicator values present in the dataset. 
+This is the start and the end marks of the union of all the time periods covered by the indicator values. 
+For example, if the indicator values existing in the dataset cover the years 2005, 2006, 2007 and 2008, the extent property must have the value "extent": { "start": 2005, "end": 2008}.
+</td>
 </tr>
 </tbody>
 </table>
