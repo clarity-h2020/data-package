@@ -62,7 +62,7 @@ For CSIS: http://data.myclimateservice.eu/schemas/clarity-data-resource-json-sch
 <td>1+</td>
 <td>N/A</td>
 <td>MANDATORY</td>
-<td>The raw sources that were used for producing this resource (see sources property in "General" tab).
+<td>The raw sources that were used for producing this resource. For further information, please check the sources property description at data package level.
 </td>
 </tr>
 <tr>
@@ -71,7 +71,7 @@ For CSIS: http://data.myclimateservice.eu/schemas/clarity-data-resource-json-sch
 <td>0+</td>
 <td>OPTIONAL</td>
 <td>MANDATORY</td>
-<td>The people or organizations who contributed to produce this resource (see contributors property in "General" tab).
+<td>The people or organizations who contributed to produce this resource. For further information, please check the contributors property description at data package level.
 </td>
 </tr>
 <tr>
@@ -80,7 +80,7 @@ For CSIS: http://data.myclimateservice.eu/schemas/clarity-data-resource-json-sch
 <td>0+</td>
 <td>OPTIONAL</td>
 <td>MANDATORY</td>
-<td>The license(s) under which the resource is provided (see licenses property in "General" tab). If not specified the resource inherits from the data package.</td>
+<td>The license(s) under which the resource is provided. If not specified the resource inherits from the data package. For further information, please check the license property description at data package level. </td>
 </tr>
 <tr>
 <td><i><b>format</b></i></td>
@@ -240,7 +240,7 @@ possible parameters:
 
 <br/>
 <br/>
-<u><b>Source object:</b></u>
+<u><b>SpatialContext object:</b></u>
 <table>
 <thead>
 <tr>
@@ -258,35 +258,62 @@ possible parameters:
 </thead>
 <tbody>
 <tr>
-<td><i><b>title</b></i></td>
-<td>Character string without length restriction</td>
-<td>0/1</td>
-<td>OPTIONAL</td>
+<td><i><b>crs</b></i></td>
+<td>CharacterString enumeration</td>
+<td>1</td>
+<td>N/A</td>
 <td>MANDATORY</td>
-<td>title of the source (e.g. document or organization name)</td>
+<td>Property indicating the Coordinate Reference System. Its value must be a valid EPSG code (https://sis.apache.org/tables/CoordinateReferenceSystems.html). 
+
+By default, CLARITY Data Packages use EPSG:3035
+
+Example:
+"crs": "EPSG:3035"
+</td>
 </tr>
 <tr>
-<td><i><b>path</b></i></td>
-<td>Character string without length restriction</td>
-<td>0/1</td>
-<td>OPTIONAL</td>
+<td><i><b>extent</b></i></td>
+<td>List of two pairs of coordinates: [xmin, ymin, xmax, ymax]</td>
+<td>1</td>
+<td>N/A</td>
 <td>MANDATORY</td>
-<td>A url-or-path string, that is a fully qualified HTTP address, or a relative POSIX path (see the url-or-path definition in Data Resource for details).</td>
+<td>The extent property defines the minimum bounding rectangle (xmin, ymin and xmax, ymax) defined by coordinate pairs of the spatial data resource. All coordinates for the data source fall within this boundary. 
+
+E.g., "extent": [-180.0, -90.0, 180.0, 90.0]
+</td>
 </tr>
 <tr>
-<td><i><b>email</b></i></td>
-<td>Character string without length restriction</td>
+<td><i><b>resolution</b></i></td>
+<td>SpatialResolution object</td>
+<td>1</td>
+<td>N/A</td>
+<td>MADATORY</td>
+<td>The spatial resolution property refers to the level of detail of the data set. It shall be expressed as a resolution distance value (typically for gridded data and imagery-derived products) or an equivalent scale value (typically for maps or map-derived products).
+
+Note 1: An equivalent scale is generally expressed as an integer value expressing the scale denominator. A resolution distance shall be expressed as a numerical value associated with a unit of length.
+
+Note 2: For grids it is assumed that the resolution of the cells is the same in the x and y axis
+
+Examples:
+* "resolution": { "scale": 50000 }
+* "resolution": { "distance": 12.5, "uom": "km"}
+</td>
+</tr>
+<tr>
+<td><i><b>grid_info</b></i></td>
+<td>GridInfo object</td>
 <td>0/1</td>
-<td>OPTIONAL</td>
-<td>OPTIONAL</td>
-<td>An email address </td>
+<td>N/A</td>
+<td>MADATORY(*)</td>
+<td>This property is MANDATORY if the resource is a raster. Please, see GridInfo object description for further details.
+</td>
 </tr>
 </tbody>
 </table>
 
 <br/>
 <br/>
-<u><b>Contributor object:</b></u>
+<u><b>GridInfo object:</b></u>
 <table>
 <thead>
 <tr>
@@ -304,46 +331,69 @@ possible parameters:
 </thead>
 <tbody>
 <tr>
-<td><i><b>title</b></i></td>
-<td>Character string without length restriction</td>
-<td>0/1</td>
-<td>OPTIONAL</td>
+<td><i><b>bands</b></i></td>
+<td>Integer</td>
+<td>1</td>
+<td>N/A</td>
 <td>MANDATORY</td>
-<td>name/title of the contributor (name for person, name/title of organization)</td>
+<td>Number of bands contained in the gridded dataset</td>
 </tr>
 <tr>
-<td><i><b>path</b></i></td>
-<td>Character string without length restriction</td>
-<td>0/1</td>
-<td>OPTIONAL</td>
+<td><i><b>bit_depth</b></i></td>
+<td>CharacterString enumeration</td>
+<td>1</td>
+<td>N/A</td>
 <td>MANDATORY</td>
-<td>A fully qualified http URL pointing to a relevant location online for the contributor.</td>
-</tr>
-<tr>
-<td><i><b>email</b></i></td>
-<td>Character string without length restriction</td>
-<td>0/1</td>
-<td>OPTIONAL</td>
-<td>OPTIONAL</td>
-<td>An email address</td>
-</tr>
-<tr>
-<td><i><b>role</b></i></td>
-<td>String enumeration</td>
-<td>0/1</td>
-<td>OPTIONAL</td>
-<td>MANDATORY</td>
-<td>A string describing the role of the contributor. It MUST be one of: author, publisher, maintainer, wrangler, and contributor. Defaults to contributor.
+<td>The bit depth (also known as pixel depth) of a cell determines the range of values that a particular raster file can store, which is based on the formula 2n (where n is the bit depth). For example, an 8-bit raster can have 256 unique values, which range from 0 to 255.
+ 
+Possible "bit_depth" values for this property are described in the first column of the following table:
 
-Note on semantics: use of the "author" property does not imply that that person was the original creator of the data in the data package - merely that they created and/or maintain the data package. It is common for data packages to "package" up data from elsewhere. The original origin of the data can be indicated with the sources property - see above.</td>
+<b>Bit depth	           Range of values that each cell can contain</b>
+1 bit	                           0 to 1
+2 bit	                           0 to 3
+4 bit	                           0 to 15
+Unsigned 8 bit	           0 to 255
+Signed 8 bit	           -128 to 127
+Unsigned 16 bit	           0 to 65535
+Signed 16 bit	           -32768 to 32767
+Unsigned 32 bit	           0 to 4294967295
+Signed 32 bit	           -2147483648 to 2147483647
+Floating-point 32 bit     -3.402823466e+38 to 3.402823466e+3
+</td>
 </tr>
 <tr>
-<td><i><b>organization</b></i></td>
+<td><i><b>columns</b></i></td>
+<td>Long</td>
+<td>1</td>
+<td>N/A</td>
+<td>MANDATORY</td>
+<td>This property indicates the number of columns in the grid</td>
+</tr>
+<tr>
+<td><i><b>rows</b></i></td>
+<td>Long</td>
+<td>1</td>
+<td>N/A</td>
+<td>MANDATORY</td>
+<td>This property indicates the number of rows in the grid</td>
+</tr>
+<tr>
+<td><i><b>no_data_value</b></i></td>
 <td>Character string without length restriction</td>
-<td>0/1</td>
-<td>OPTIONAL</td>
-<td>OPTIONAL</td>
-<td>A string describing the organization this contributor is affiliated to.</td>
+<td>1</td>
+<td>N/A</td>
+<td>MANDATORY</td>
+<td>Value used to represent the absence of data in a cell. The value must be in relation to the ranges used with the bit_depth property</td>
+</tr>
+<tr>
+<td><i><b>start_cell</b></i></td>
+<td>CharacterString enumeration</td>
+<td>1</td>
+<td>N/A</td>
+<td>MANDATORY</td>
+<td>This property indicates the starting cell of the raster.
+Possible values are: top-left, bottom-right
+</td>
 </tr>
 </tbody>
 </table>
