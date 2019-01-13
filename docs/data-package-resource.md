@@ -784,9 +784,9 @@ Note: the identifier can be just the hazard name or hazard:sub-hazard
 </tr>
 
 <tr>
-<td><i><b>thresholds</b></i></td>
+<td><i><b>threshold</b></i></td>
 <td>List of Threshold Objects</td>
-<td>0/1</td>
+<td>0/1+</td>
 <td>N/A</td>
 <td>OPTIONAL(*)</td>
 <td>
@@ -796,16 +796,97 @@ Note: the identifier can be just the hazard name or hazard:sub-hazard
 <tr>
 <td><i><b>emissions_scenario</b></i></td>
 <td>CharacterString enumeration</td>
-<td>1</td>
+<td>0/1</td>
 <td>N/A</td>
 <td>OPTIONAL(*)</td>
 <td>This property indicates to which emissions scenario this resource refers to.
 Possible emission scenario values are:
-* "early-response:rcp26"
-* "effective-measures:rcp45"
-* "business-as-usual:rcp85"
+* early-response:rcp26
+* effective-measures:rcp45
+* business-as-usual:rcp85
 </td>
 </tr>
+
+
+<tr>
+<td><i><b>element_at_risk</b></i></td>
+<td>List of CharacterString enumeration</td>
+<td>0/1+</td>
+<td>N/A</td>
+<td>OPTIONAL(*)</td>
+<td>This property indicates to which categories of elements at risk this resource refers to. It is MANDATORY if the resource contains elements at risk information.
+Possible element at risk category values are:
+* population
+* buildings
+* infrastructure
+</td>
+</tr>
+
+
+<tr>
+<td><i><b>element_at_risk_class</b></i></td>
+<td>List of CharacterString enumeration</td>
+<td>0/1+</td>
+<td>N/A</td>
+<td>OPTIONAL(*)</td>
+<td>This property indicates element at risk categories this resource refers to. It is MANDATORY is the resource contains information about categories of elements at risk.
+Possible element at riks class values are:
+
+For population:
+* population:age-group-0_14
+* population:age-group-15_65
+* population:age-group->65
+
+For buildings:
+* building:continuous-residential
+* building:discontinuous-residential:low-density
+* building:discontinuous-residential:medium-high-density
+
+For infrastructure (TBC):
+* infrastructure:roads
+* infrastructure:railway
+
+</td>
+</tr>
+
+<br/>
+<br/>
+<u><b>Threshold object:</b></u>
+<table>
+<thead>
+<tr>
+<th colspan="3">Attribute</th>
+<th colspan="2">Obligation / Condition</th>
+<th rowspan="2">Description</th>
+</tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Multiplicity</th>
+<th>FrictionlessData</th>
+<th>CSIS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><i><b>start</b></i></td>
+<td>Date</td>
+<td>1</td>
+<td>N/A</td>
+<td>MANDATORY</td>
+<td>The starting date</td>
+</tr>
+<tr>
+<td><i><b>end</b></i></td>
+<td>Date</td>
+<td>1</td>
+<td>N/A</td>
+<td>MANDATORY</td>
+<td>The ending date</td>
+</tr>
+</tbody>
+</table>
+
 
 </tbody>
 </table>
