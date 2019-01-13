@@ -872,20 +872,36 @@ For infrastructure (TBC):
 </thead>
 <tbody>
 <tr>
-<td><i><b>start</b></i></td>
-<td>Date</td>
+<td><i><b>name</b></i></td>
+<td>CharacterString</td>
 <td>1</td>
 <td>N/A</td>
 <td>MANDATORY</td>
-<td>The starting date</td>
+<td>The label of the threshold</td>
 </tr>
 <tr>
-<td><i><b>end</b></i></td>
-<td>Date</td>
-<td>1</td>
+<td><i><b>lower</b></i></td>
+<td>float</td>
+<td>0/1</td>
 <td>N/A</td>
-<td>MANDATORY</td>
-<td>The ending date</td>
+<td>OPTIONAL</td>
+<td>The lower boundary of the threshold</td>
 </tr>
+<tr>
+<td><i><b>upper</b></i></td>
+<td>float</td>
+<td>0/1</td>
+<td>N/A</td>
+<td>OPTIONAL</td>
+<td>The upper boundary of the threshold</td>
+<tr>
+<td><i><b>relative_to</b></i></td>
+<td>CharacterString enumeration</td>
+<td>0/1</td>
+<td>N/A</td>
+<td>OPTIONAL</td>
+<td>If present, it is used to indicate that upper and lower represent percentages of other values (e.g. "increase in baseline")</td>
+</tr>
+</tr> 
 </tbody>
 </table>
