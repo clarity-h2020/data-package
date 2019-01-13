@@ -713,7 +713,7 @@ Note: the identifier can be just the hazard name or hazard:sub-hazard
 <td>MANDATORY</td>
 <td>The resource_type property indicates which kind of resource is provided for the analysis within the CSIS. Possible values are:
 * feature-parameters: resource used as input for some internal process within the CSIS/external expert that will typically produce an output shown and analyzed by the user in the CSIS
-* index: raster resource refererring to a hazard, local effects, vulnerability, exposure or impact index. If this value is used, then the corresponding {hazard|local_effect|vulnerability|exposure|impact}_index property MUST be filled in as well.
+* index: raster resource refererring to a hazard, local effects, vulnerability, exposure or impact index. If this value is used, then the index property (corresponding to any of these index types hazard|local_effect|vulnerability|exposure|impact) MUST be filled in as well.
 * vulnerabilty-function: tbd
 * adaptation-measures: tbd
 </td>
@@ -733,7 +733,7 @@ Note: the identifier can be just the hazard name or hazard:sub-hazard
 <td>CharacterString enumeration</td>
 <td>0/1</td>
 <td>N/A</td>
-<td>OPTIONAL</td>
+<td>OPTIONAL(*)</td>
 <td>This property is MANDATORY if the resource is an index. Possible values are:
  
  For hazard and local-effects indexes:
@@ -766,20 +766,44 @@ Note: the identifier can be just the hazard name or hazard:sub-hazard
  
   
  For vulnerability indexes:
- *
- *
- *
+ * tbd
+ * tbd
+ * tbd
  
  For exposure indexes:
- *
- *
- *
+ * tbd
+ * tbd
+ * tbd
  
  For impact indexes:
- *
- *
- *
+ * tbd
+ * tbd
+ * tbd
  
+</td>
+</tr>
+
+<tr>
+<td><i><b>thresholds</b></i></td>
+<td>List of Threshold Objects</td>
+<td>0/1</td>
+<td>N/A</td>
+<td>OPTIONAL(*)</td>
+<td>
+</td>
+</tr>
+
+<tr>
+<td><i><b>emissions_scenario</b></i></td>
+<td>CharacterString enumeration</td>
+<td>1</td>
+<td>N/A</td>
+<td>OPTIONAL(*)</td>
+<td>This property indicates to which emissions scenario this resource refers to.
+Possible emission scenario values are:
+* "early-response:rcp26"
+* "effective-measures:rcp45"
+* "business-as-usual:rcp85"
 </td>
 </tr>
 
