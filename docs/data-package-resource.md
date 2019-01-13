@@ -801,6 +801,7 @@ Note: the identifier can be just the hazard name or hazard:sub-hazard
 <td>OPTIONAL(*)</td>
 <td>This property indicates to which emissions scenario this resource refers to.
 Possible emission scenario values are:
+
 * early-response:rcp26
 * effective-measures:rcp45
 * business-as-usual:rcp85
