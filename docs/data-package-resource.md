@@ -228,6 +228,20 @@ possible parameters:
 <td>MANDATORY if the resource is has a temporal component. Otherwise, this property is empty.</td>
 </tr>
 <tr>
+<td><i><b>mapping_service_type</b></i></td>
+<td>CharacterString enumeration</td>
+<td>0/1</td>
+<td>N/A</td>
+<td>OPTIONAL</td>
+<td>This property indicates if the (geo-)resource is being offered through an a commonly used mapping service. Possible values are:
+* wms
+* wfs
+* wcs
+* osm
+* tms
+</td>
+</tr>
+<tr>
 <td><i><b>analysis_context</b></i></td>
 <td>AnalysisContext object</td>
 <td>1</td>
@@ -668,12 +682,11 @@ For example, if the indicator values existing in the dataset cover the years 200
 </tr>
 <tr>
 <td><i><b>hazard</b></i></td>
-<td>CharacterString enumeration</td>
-<td>1</td>
+<td>List of CharacterString enumeration</td>
+<td>1+</td>
 <td>N/A</td>
 <td>MANDATORY</td>
-<td>"The hazard property describes to which hazard type is the resource related to. Its value can be one of the following list:
-
+<td>The hazard property describes to which hazard type is the resource related to. Its value can be one of the following list:
 * heat:heat-waves
 * heat:extreme-heat
 * flood:extreme-precipitation
@@ -690,6 +703,33 @@ For example, if the indicator values existing in the dataset cover the years 200
 * any: the resource can be used in relation to any hazard.
 
 Note: the identifier can be just the hazard name or hazard:sub-hazard
+</td>
+</tr>
+<tr>
+<td><i><b>resource_type</b></i></td>
+<td>CharacterString enumeration</td>
+<td>1</td>
+<td>N/A</td>
+<td>MANDATORY</td>
+<td>The resource_type property indicates which kind of resource is provided for the analysis within the CSIS. Possible values are:
+* background-layer: typically a WMS layer used as situational map to be displayed in the mapping component of the CSIS
+* feature-parameters: resource used as input for some internal process within the CSIS/external expert that will typically produce an output shown and analyzed by the user in the CSIS
+* index: raster resource refererring to a hazard, local effects, vulnerability, exposure or impact index.
+* vulnerabilty-function: tbd
+* adaptation-measures: tbd
+* 
+* 
+* 
+</td>
+</tr>
+<tr>
+<td><i><b>use_as_layer</b></i></td>
+<td>Boolean</td>
+<td>1</td>
+<td>N/A</td>
+<td>OPTIONAL</td>
+<td>This property indicates whether the resource should be used as layer in the CSIS map client. If the property is absent, then its default value is "false".
+(For the moment) The usage of this feature is is only valid for resources that provide the mapping_service_type property. 
 </td>
 </tr>
 </tbody>
