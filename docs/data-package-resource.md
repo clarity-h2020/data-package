@@ -233,7 +233,7 @@ possible parameters:
 <td>0/1</td>
 <td>N/A</td>
 <td>OPTIONAL</td>
-<td>This property indicates if the (geo-)resource is being offered through an a commonly used mapping service. Possible values are:
+<td>This property indicates if the (geo-)resource is being offered through any commonly used mapping service. Possible protocol values are:
 * wms
 * wfs
 * wcs
@@ -712,14 +712,10 @@ Note: the identifier can be just the hazard name or hazard:sub-hazard
 <td>N/A</td>
 <td>MANDATORY</td>
 <td>The resource_type property indicates which kind of resource is provided for the analysis within the CSIS. Possible values are:
-* background-layer: typically a WMS layer used as situational map to be displayed in the mapping component of the CSIS
 * feature-parameters: resource used as input for some internal process within the CSIS/external expert that will typically produce an output shown and analyzed by the user in the CSIS
-* index: raster resource refererring to a hazard, local effects, vulnerability, exposure or impact index.
+* index: raster resource refererring to a hazard, local effects, vulnerability, exposure or impact index. If this value is used, then the corresponding {hazard|local_effect|vulnerability|exposure|impact}_index property MUST be filled in as well.
 * vulnerabilty-function: tbd
 * adaptation-measures: tbd
-* 
-* 
-* 
 </td>
 </tr>
 <tr>
@@ -732,5 +728,60 @@ Note: the identifier can be just the hazard name or hazard:sub-hazard
 (For the moment) The usage of this feature is is only valid for resources that provide the mapping_service_type property. 
 </td>
 </tr>
+<tr>
+<td><i><b>index</b></i></td>
+<td>CharacterString enumeration</td>
+<td>0/1</td>
+<td>N/A</td>
+<td>OPTIONAL</td>
+<td>This property is MANDATORY if the resource is an index. Possible values are:
+ 
+ For hazard and local-effects indexes:
+ * hazard:heat-wave:consecutive-summer-days
+ * hazard:heat-wave:hot-period-duration
+ * hazard:extreme-heat:hot-days-75p
+ * hazard:extreme-heat:hot-days
+ * hazard:extreme-heat:summer-days
+ * hazard:extreme-heat:tropical-nights
+ * hazard:extreme-heat:tx90p
+ * hazard:flood:extreme-precipitation:rx1day
+ * hazard:flood:extreme-precipitation:rx5day
+ * hazard:flood:extreme-precipitation:snow-days
+ * hazard:flood:wet-periods:consecutive-wet-days
+ * hazard:flood:wet-periods:wet-days
+ * hazard:flood:wet-periods:very-heavy-precipitation-days
+ * hazard:flood:wet-periods:wet-days-90p
+ * hazard:flood:river-flooding:flood-recurrence
+ * hazard:flood:river-flooding:river-flow
+ * hazard:flood:pluvial-flooding:water-runoff
+ * hazard:drought:standardized-precipitation-index
+ * hazard:drought:consecutive-dry-days
+ * hazard:storm:????
+ * hazard:extreme-wind-speed
+ * hazard:forest-fire:fire-weather-index
+ * hazard:forest-fire:seasonal-severity-rating
+ * hazard:landslide:susceptibility-levels-at-continental-scale
+ * hazard:earthquake:????
+ * hazard:volcanic-eruption:volcanic-explosivity-index
+ 
+  
+ For vulnerability indexes:
+ *
+ *
+ *
+ 
+ For exposure indexes:
+ *
+ *
+ *
+ 
+ For impact indexes:
+ *
+ *
+ *
+ 
+</td>
+</tr>
+
 </tbody>
 </table>
