@@ -672,6 +672,7 @@ For example, if the indicator values existing in the dataset cover the years 200
 <td>N/A</td>
 <td>MANDATORY</td>
 <td>The list of workflow steps where the resource can be used. Allowed values are:
+ 
 * hazard-characterization:
 * hazard-local-effects:
 * exposure:
@@ -687,6 +688,7 @@ For example, if the indicator values existing in the dataset cover the years 200
 <td>N/A</td>
 <td>MANDATORY</td>
 <td>The hazard property describes to which hazard type is the resource related to. Its value can be one of the following list:
+ 
 * heat:heat-waves
 * heat:extreme-heat
 * flood:extreme-precipitation
@@ -712,6 +714,7 @@ Note: the identifier can be just the hazard name or hazard:sub-hazard
 <td>N/A</td>
 <td>MANDATORY</td>
 <td>The resource_type property indicates which kind of resource is provided for the analysis within the CSIS. Possible values are:
+ 
 * feature-parameters: resource used as input for some internal process within the CSIS/external expert that will typically produce an output shown and analyzed by the user in the CSIS
 * index: raster resource refererring to a hazard, local effects, vulnerability, exposure or impact index. If this value is used, then the index property (corresponding to any of these index types hazard|local_effect|vulnerability|exposure|impact) MUST be filled in as well.
 * vulnerabilty-function: tbd
@@ -737,6 +740,7 @@ Note: the identifier can be just the hazard name or hazard:sub-hazard
 <td>This property is MANDATORY if the resource is an index. Possible values are:
  
  For hazard and local-effects indexes:
+ 
  * hazard:heat-wave:consecutive-summer-days
  * hazard:heat-wave:hot-period-duration
  * hazard:extreme-heat:hot-days-75p
@@ -766,16 +770,19 @@ Note: the identifier can be just the hazard name or hazard:sub-hazard
  
   
  For vulnerability indexes:
+ 
  * tbd
  * tbd
  * tbd
  
  For exposure indexes:
+ 
  * tbd
  * tbd
  * tbd
  
  For impact indexes:
+ 
  * tbd
  * tbd
  * tbd
@@ -810,47 +817,40 @@ Possible emission scenario values are:
 
 
 <tr>
-<td><i><b>element_at_risk</b></i></td>
+<td><i><b>category</b></i></td>
 <td>List of CharacterString enumeration</td>
 <td>0/1+</td>
 <td>N/A</td>
 <td>OPTIONAL(*)</td>
-<td>This property indicates to which categories of elements at risk this resource refers to. It is MANDATORY if the resource contains elements at risk information.
+<td>
+ 
 Possible element at risk category values are:
-* population
-* buildings
-* infrastructure
-</td>
-</tr>
 
+* element_at_risk:population
+* element_at_risk:buildings
+* element_at_risk:infrastructure
 
-<tr>
-<td><i><b>element_at_risk_class</b></i></td>
-<td>List of CharacterString enumeration</td>
-<td>0/1+</td>
-<td>N/A</td>
-<td>OPTIONAL(*)</td>
-<td>This property indicates element at risk categories this resource refers to. It is MANDATORY is the resource contains information about categories of elements at risk.
 Possible element at riks class values are:
 
 For population:
-* population:age-group-0_14
-* population:age-group-15_65
-* population:age-group->65
+
+* element_at_risk_class:population:age-group-0_14
+* element_at_risk_class:population:age-group-15_65
+* element_at_risk_class:population:age-group->65
 
 For buildings:
-* building:continuous-residential
-* building:discontinuous-residential:low-density
-* building:discontinuous-residential:medium-high-density
+
+* element_at_risk_class:building:continuous-residential
+* element_at_risk_class:building:discontinuous-residential:low-density
+* element_at_risk_class:building:discontinuous-residential:medium-high-density
 
 For infrastructure (TBC):
-* infrastructure:roads
-* infrastructure:railway
+
+* element_at_risk_class:infrastructure:roads
+* element_at_risk_class:infrastructure:railway
+
 </td>
 </tr>
-</tbody>
-</table>
-
 
 <br/>
 <br/>
