@@ -846,9 +846,11 @@ For buildings:
 For infrastructure (TBC):
 * infrastructure:roads
 * infrastructure:railway
-
 </td>
 </tr>
+</tbody>
+</table>
+
 
 <br/>
 <br/>
@@ -885,9 +887,5 @@ For infrastructure (TBC):
 <td>MANDATORY</td>
 <td>The ending date</td>
 </tr>
-</tbody>
-</table>
-
-
 </tbody>
 </table>
