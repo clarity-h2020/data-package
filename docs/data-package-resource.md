@@ -657,16 +657,40 @@ For example, if the indicator values existing in the dataset cover the years 200
 <td>1+</td>
 <td>N/A</td>
 <td>MANDATORY</td>
-<td>The list of workflow steps where the resource can be used</td>
+<td>The list of workflow steps where the resource can be used. Allowed values are:
+* hazard-characterization:
+* hazard-local-effects:
+* exposure:
+* vulnerability:
+* risk-and-impact:
+* adaptation-options:
+</td>
 </tr>
 <tr>
-<td><i><b>uom</b></i></td>
+<td><i><b>hazard</b></i></td>
 <td>CharacterString enumeration</td>
 <td>1</td>
 <td>N/A</td>
-<td>OPTIONAL</td>
-<td>The units of measurement used to define the distance. By default, in meters.
- Possible values are: "m", "km", ...</td>
+<td>MANDATORY</td>
+<td>"The hazard property describes to which hazard type is the resource related to. Its value can be one of the following list:
+
+* heat:heat-waves
+* heat:extreme-heat
+* flood:extreme-precipitation
+* flood:wet-periods
+* flood:river-flooding        
+* flood:pluvial-flooding
+* drought
+* storm
+* extreme-wind-speed        
+* forest-fire
+* landslide
+* earthquake
+* volcanic-eruption
+* any: the resource can be used in relation to any hazard.
+
+Note: the identifier can be just the hazard name or hazard:sub-hazard
+</td>
 </tr>
 </tbody>
 </table>
