@@ -679,6 +679,7 @@ For example, if the indicator values existing in the dataset cover the years 200
 * vulnerability:
 * risk-and-impact:
 * adaptation-options:
+* any
 </td>
 </tr>
 <tr>
@@ -809,6 +810,7 @@ Note: the identifier can be just the hazard name or hazard:sub-hazard
 <td>This property indicates to which emissions scenario this resource refers to.
 Possible emission scenario values are:
 
+* baseline
 * early-response:rcp26
 * effective-measures:rcp45
 * business-as-usual:rcp85
