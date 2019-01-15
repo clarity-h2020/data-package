@@ -300,7 +300,7 @@ possible parameters:
 
 <br/>
 <br/>
-<u><b>SpatialContext object:</b></u>
+<u><b>SpatialContext object</b></u>
 <table>
 <thead>
 <tr>
@@ -378,7 +378,7 @@ Examples:
 
 <br/>
 <br/>
-<u><b>SpatialResolutionByDistance object:</b></u>
+<u><b>SpatialResolutionByDistance object</b></u>
 <table>
 <thead>
 <tr>
@@ -417,7 +417,7 @@ Examples:
 
 <br/>
 <br/>
-<u><b>SpatialResolutionByScale object:</b></u>
+<u><b>SpatialResolutionByScale object</b></u>
 <table>
 <thead>
 <tr>
@@ -449,7 +449,7 @@ Examples:
 
 <br/>
 <br/>
-<u><b>SpatialExtent object:</b></u>
+<u><b>SpatialExtent object</b></u>
 <table>
 <thead>
 <tr>
@@ -504,7 +504,7 @@ Examples:
 
 <br/>
 <br/>
-<u><b>GridInfo object:</b></u>
+<u><b>GridInfo object</b></u>
 <table>
 <thead>
 <tr>
@@ -601,7 +601,7 @@ Possible values are: "top-left" or "bottom-right"
 
 <br/>
 <br/>
-<u><b>TemporalContext object:</b></u>
+<u><b>TemporalContext object</b></u>
 <table>
 <thead>
 <tr>
@@ -654,7 +654,7 @@ For example, if the indicator values existing in the dataset cover the years 200
 
 <br/>
 <br/>
-<u><b>TemporalExtent object:</b></u>
+<u><b>TemporalExtent object</b></u>
 <table>
 <thead>
 <tr>
@@ -692,7 +692,7 @@ For example, if the indicator values existing in the dataset cover the years 200
 
 <br/>
 <br/>
-<u><b>Mapview object:</b></u>
+<u><b>Mapview object</b></u>
 <table>
 <thead>
 <tr>
@@ -731,7 +731,7 @@ For example, if the indicator values existing in the dataset cover the years 200
 
 <br/>
 <br/>
-<u><b>AnalysisContext object:</b></u>
+<u><b>AnalysisContext object</b></u>
 <table>
 <thead>
 <tr>
@@ -931,7 +931,7 @@ For infrastructure (TBC):
 
 <br/>
 <br/>
-<u><b>Threshold object:</b></u>
+<u><b>Threshold object</b></u>
 <table>
 <thead>
 <tr>
