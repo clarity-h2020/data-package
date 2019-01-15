@@ -228,15 +228,16 @@ possible parameters:
 <td>MANDATORY if the resource is has a temporal component. Otherwise, this property is empty.</td>
 </tr>
 <tr>
-<td><i><b>mapping_service_type</b></i></td>
+<td><i><b>service_type</b></i></td>
 <td>CharacterString enumeration</td>
 <td>0/1</td>
 <td>N/A</td>
 <td>OPTIONAL</td>
 <td>This property indicates if the (geo-)resource is being offered through any commonly used mapping service. Possible protocol values are:
-* wms
-* wfs
-* wcs
+* ogc:wms
+* ogc:wms-t
+* ogc:wfs
+* ogc:wcs
 * osm
 * tms
 </td>
