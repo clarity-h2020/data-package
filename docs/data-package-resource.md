@@ -23,9 +23,9 @@ The following is a list of attributes contained in the Data Resource section of 
 <td>N/A</td>
 <td>MANDATORY</td>
 <td>Unique identifier of the resource within the data package.
-The id value is built by appending to the datapackage id the following string "#r" plus [auto-generated-sequential-number (starting from 0)]
+The id value is built by appending to the datapackage id the following string "#r" plus [auto-generated-sequential-number (starting from 1)]
  
-E.g., "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r0"
+E.g., "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r1"
 </td>
 </tr>
 <tr>
@@ -37,9 +37,9 @@ E.g., "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r0
 <td>A resource MUST contain a name property. The name is a simple name or identifier to be used for this resource.
  
 If present, the name MUST be unique amongst all resources in this data package.
-It MUST consist only of lowercase alphanumeric characters plus ""."", ""-"" and ""_"".
+It MUST consist only of lowercase alphanumeric characters plus ".", "-" and "_".
 It would be usual for the name to correspond to the file name (minus the extension) of the data file the resource describes.
-The name SHOULD be invariant, meaning that it SHOULD NOT change when a data package is updated, unless the new package version should be considered a distinct package, e.g. due to significant changes in structure or interpretation. Version distinction SHOULD be left to the version property. As a corollary, the name also SHOULD NOT include an indication of time range covered.</td>
+The name SHOULD be invariant, meaning that it SHOULD NOT change when a resource is updated.</td>
 </tr>
 <tr>
 <td><i><b>profile</b></i></td>
