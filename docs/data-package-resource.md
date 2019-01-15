@@ -17,6 +17,18 @@ The following is a list of attributes contained in the Data Resource section of 
 </thead>
 <tbody>
 <tr>
+<td><i><b>id</b></i></td>
+<td>Character string without length restriction</td>
+<td>1</td>
+<td>N/A</td>
+<td>MANDATORY</td>
+<td>Unique identifier of the resource within the data package.
+The id value is built by appending to the datapackage id the following string "#r" plus [auto-generated-sequential-number (starting from 0)]
+ 
+E.g., "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r0"
+</td>
+</tr>
+<tr>
 <td><i><b>name</b></i></td>
 <td>Character string without length restriction</td>
 <td>0/1</td>
@@ -90,16 +102,26 @@ For CSIS: http://data.myclimateservice.eu/schemas/clarity-data-resource-json-sch
 <td>MANDATORY</td>
 <td>The value of this property would be expected to be the standard file extension for this type of resource.
 
-Currently, CLARITY Data Package only supports the following resource formats:
+Currently, CLARITY Data Package supports the following resource formats:
  * Tabular data:
-    - Comma Separated Values (.csv)
+    - "csv": Comma Separated Values
  * Vector based:
-    - GeoJson (.geojson)
-    - ESRI Shapefiles (.shp)
-    - OGC GeoPackage (.gpkg). 
+    - "geojson": GeoJson
+    - "shape": ESRI Shapefiles
+    - "shape-zip": Compressed ESRI Shapefiles
+    - "gpkg": OGC GeoPackage
+    - "gml2": GML 2
+    - "gml3": GML 3
+    - "gml32": GML 3.2
+    - "kml": OGC Keyhole Markup Language
  * Raster based:
-    - Geotiff (.tif, .tiff)
- 
+    - tif | tiff: (.tif, .tiff)
+    - jpeg
+    - png
+    - gif
+    - geotiff: Geo-tagged tif (.tif, .tiff)
+    - 
+    
 Note: the use of GeoPackages allows to overcome the limitations of ESRI Shapefiles (Check the list of limitations at http://switchfromshapefile.org/ and https://www.gis-blog.com/geopackage-vs-shapefile) and therefore, its use in Data Packages should be preferrable. Nevertheless, when using GeoPackages as resources within the Data Packages, in order to comply with the Data Package specification, take into account that a resource of this type can only have ONE dataset within the GeoPackage (although its specification allows having one or more different datasets).</td>
 </tr>
 <tr>
@@ -111,6 +133,18 @@ Note: the use of GeoPackages allows to overcome the limitations of ESRI Shapefil
 <td>The mediatype/mimetype of the resource e.g. ""text/csv"". Mediatypes are maintained by the Internet Assigned Numbers Authority (IANA) in a media type registry (https://www.iana.org/assignments/media-types/media-types.xhtml). 
 
 Note: it is possible that some particular GIS formats are not listed in the media type registry.
+
+Some typically used media types used in OGC services are:
+
+* application/gml+xml
+* application/x-gzip
+* image/jpeg
+* image/png
+* image/tiff
+* text/plain
+* text/xml
+* application/json
+
 </td>
 </tr>
 <tr>
