@@ -212,7 +212,7 @@ Price of the datapackage. If empty, then assume that it is free.
 
 <br/>
 <br/>
-<u><b>Source object:</b></u>
+<u><b>Source object</b></u>
 <table>
 <thead>
 <tr>
@@ -258,7 +258,7 @@ Price of the datapackage. If empty, then assume that it is free.
 
 <br/>
 <br/>
-<u><b>Contributor object:</b></u>
+<u><b>Contributor object</b></u>
 <table>
 <thead>
 <tr>
@@ -322,7 +322,7 @@ Note on semantics: use of the "author" property does not imply that that person 
 
 <br/>
 <br/>
-<u><b>License object:</b></u>
+<u><b>License object</b></u>
 <table>
 <thead>
 <tr>
@@ -369,7 +369,7 @@ Note on semantics: use of the "author" property does not imply that that person 
 
 <br/>
 <br/>
-<u><b>Price object:</b></u>
+<u><b>Price object</b></u>
 <table>
 <thead>
 <tr>
