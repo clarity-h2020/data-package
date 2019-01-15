@@ -278,6 +278,16 @@ possible parameters:
 </td>
 </tr>
 <tr>
+<td><i><b>mapview</b></i></td>
+<td>Mapview Object</td>
+<td>0/1</td>
+<td>N/A</td>
+<td>OPTIONAL</td>
+<td>This property provides another "view" of the data in the form of a visual map by indicating a path (url) to the mapping service. 
+This property is to be typically used when the resource is available via wfs or wcs (or even an static geo-resource) and we want to be able to easily visualize the data (e.g., using for instance the wms o osm protocols) which is more convenient and efficient than loading the heavy raster or vector-based data into the in a map client.
+</td>
+</tr>
+<tr>
 <td><i><b>analysis_context</b></i></td>
 <td>AnalysisContext object</td>
 <td>1</td>
@@ -710,7 +720,7 @@ For example, if the indicator values existing in the dataset cover the years 200
 <td>The list of workflow steps where the resource can be used. Allowed values are:
  
 * hazard-characterization:
-* hazard-local-effects:
+* hazard-characterization-local-effects:
 * exposure:
 * vulnerability:
 * risk-and-impact:
@@ -726,19 +736,19 @@ For example, if the indicator values existing in the dataset cover the years 200
 <td>MANDATORY</td>
 <td>The hazard property describes to which hazard type is the resource related to. Its value can be one of the following list:
  
-* heat:heat-waves
-* heat:extreme-heat
-* flood:extreme-precipitation
-* flood:wet-periods
-* flood:river-flooding        
-* flood:pluvial-flooding
-* drought
-* storm
-* extreme-wind-speed        
-* forest-fire
-* landslide
-* earthquake
-* volcanic-eruption
+* hazard:heat:heat-waves
+* hazard:heat:extreme-heat
+* hazard:flood:extreme-precipitation
+* hazard:flood:wet-periods
+* hazard:flood:river-flooding        
+* hazard:flood:pluvial-flooding
+* hazard:drought
+* hazard:storm
+* hazard:extreme-wind-speed        
+* hazard:forest-fire
+* hazard:landslide
+* hazard:earthquake
+* hazard:volcanic-eruption
 * any: the resource can be used in relation to any hazard.
 
 Note: the identifier can be just the hazard name or hazard:sub-hazard
@@ -759,16 +769,6 @@ Note: the identifier can be just the hazard name or hazard:sub-hazard
 </td>
 </tr>
 <tr>
-<td><i><b>use_as_layer</b></i></td>
-<td>Boolean</td>
-<td>1</td>
-<td>N/A</td>
-<td>OPTIONAL</td>
-<td>This property indicates whether the resource should be used as layer in the CSIS map client. If the property is absent, then its default value is "false".
-(For the moment) The usage of this feature is is only valid for resources that provide the mapping_service_type property. 
-</td>
-</tr>
-<tr>
 <td><i><b>index</b></i></td>
 <td>CharacterString enumeration</td>
 <td>0/1</td>
@@ -778,32 +778,32 @@ Note: the identifier can be just the hazard name or hazard:sub-hazard
  
  For hazard and local-effects indexes:
  
- * hazard:heat-wave:consecutive-summer-days
- * hazard:heat-wave:hot-period-duration
- * hazard:extreme-heat:hot-days-75p
- * hazard:extreme-heat:hot-days
- * hazard:extreme-heat:summer-days
- * hazard:extreme-heat:tropical-nights
- * hazard:extreme-heat:tx90p
- * hazard:flood:extreme-precipitation:rx1day
- * hazard:flood:extreme-precipitation:rx5day
- * hazard:flood:extreme-precipitation:snow-days
- * hazard:flood:wet-periods:consecutive-wet-days
- * hazard:flood:wet-periods:wet-days
- * hazard:flood:wet-periods:very-heavy-precipitation-days
- * hazard:flood:wet-periods:wet-days-90p
- * hazard:flood:river-flooding:flood-recurrence
- * hazard:flood:river-flooding:river-flow
- * hazard:flood:pluvial-flooding:water-runoff
- * hazard:drought:standardized-precipitation-index
- * hazard:drought:consecutive-dry-days
- * hazard:storm:????
- * hazard:extreme-wind-speed
- * hazard:forest-fire:fire-weather-index
- * hazard:forest-fire:seasonal-severity-rating
- * hazard:landslide:susceptibility-levels-at-continental-scale
- * hazard:earthquake:????
- * hazard:volcanic-eruption:volcanic-explosivity-index
+ * hazard:index:heat:heat-wave:consecutive-summer-days
+ * hazard:index:heat:heat-wave:hot-period-duration
+ * hazard:index:heat:extreme-heat:hot-days-75p
+ * hazard:index:heat:extreme-heat:hot-days
+ * hazard:index:heat:extreme-heat:summer-days
+ * hazard:index:heat:extreme-heat:tropical-nights
+ * hazard:index:heat:extreme-heat:tx90p
+ * hazard:index:flood:extreme-precipitation:rx1day
+ * hazard:index:flood:extreme-precipitation:rx5day
+ * hazard:index:flood:extreme-precipitation:snow-days
+ * hazard:index:flood:wet-periods:consecutive-wet-days
+ * hazard:index:flood:wet-periods:wet-days
+ * hazard:index:flood:wet-periods:very-heavy-precipitation-days
+ * hazard:index:flood:wet-periods:wet-days-90p
+ * hazard:index:flood:river-flooding:flood-recurrence
+ * hazard:index:flood:river-flooding:river-flow
+ * hazard:index:flood:pluvial-flooding:water-runoff
+ * hazard:index:drought:standardized-precipitation-index
+ * hazard:index:drought:consecutive-dry-days
+ * hazard:index:storm:????
+ * hazard:index:extreme-wind-speed
+ * hazard:index:forest-fire:fire-weather-index
+ * hazard:index:forest-fire:seasonal-severity-rating
+ * hazard:index:landslide:susceptibility-levels-at-continental-scale
+ * hazard:index:earthquake:????
+ * hazard:index:volcanic-eruption:volcanic-explosivity-index
  
   
  For vulnerability indexes:
