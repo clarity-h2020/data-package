@@ -909,9 +909,9 @@ Possible element at riks class values are:
 
 For population:
 
-* element_at_risk_class:population:age-group-0_14
-* element_at_risk_class:population:age-group-15_65
-* element_at_risk_class:population:age-group->65
+* element_at_risk_class:population:age_group_0to14
+* element_at_risk_class:population:age_group_15to65
+* element_at_risk_class:population:age_group_greaterthan65
 
 For buildings:
 
@@ -926,6 +926,8 @@ For infrastructure (TBC):
 
 </td>
 </tr>
+</tbody>
+</table>
 
 <br/>
 <br/>
