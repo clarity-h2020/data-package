@@ -235,6 +235,32 @@ If a string it must be a url-or-path as defined above, that is a fully qualified
 The next section provide a complete schema description with the parameters for each of the typical resources included in a CLARITY Data Package.</td>
 </tr>
 <tr>
+<td><i><b>service_type</b></i></td>
+<td>CharacterString enumeration</td>
+<td>0/1</td>
+<td>N/A</td>
+<td>OPTIONAL</td>
+<td>This property indicates if the (geo-)resource is being offered through any commonly used mapping service. Possible protocol values are:
+ 
+* ogc:wms
+* ogc:wms-t
+* ogc:wfs
+* ogc:wcs
+* osm
+* tms
+</td>
+</tr>
+<tr>
+<td><i><b>mapview</b></i></td>
+<td>Mapview Object</td>
+<td>0/1</td>
+<td>N/A</td>
+<td>OPTIONAL</td>
+<td>This property provides another "view" of the data in the form of a visual map by indicating a path (url) to the mapping service. 
+This property is to be typically used when the resource is available via wfs or wcs (or even an static geo-resource) and we want to be able to easily visualize the data (e.g., using for instance the wms o osm protocols) which is more convenient and efficient than loading the heavy raster or vector-based data into the in a map client.
+</td>
+</tr>
+<tr>
 <td><i><b>quality</b></i></td>
 <td>Quality object</td>
 <td>0/1</td>
@@ -260,32 +286,6 @@ possible parameters:
 <td>OPTIONAL</td>
 <td>OPTIONAL(*)</td>
 <td>MANDATORY if the resource is has a temporal component. Otherwise, this property is empty.</td>
-</tr>
-<tr>
-<td><i><b>service_type</b></i></td>
-<td>CharacterString enumeration</td>
-<td>0/1</td>
-<td>N/A</td>
-<td>OPTIONAL</td>
-<td>This property indicates if the (geo-)resource is being offered through any commonly used mapping service. Possible protocol values are:
- 
-* ogc:wms
-* ogc:wms-t
-* ogc:wfs
-* ogc:wcs
-* osm
-* tms
-</td>
-</tr>
-<tr>
-<td><i><b>mapview</b></i></td>
-<td>Mapview Object</td>
-<td>0/1</td>
-<td>N/A</td>
-<td>OPTIONAL</td>
-<td>This property provides another "view" of the data in the form of a visual map by indicating a path (url) to the mapping service. 
-This property is to be typically used when the resource is available via wfs or wcs (or even an static geo-resource) and we want to be able to easily visualize the data (e.g., using for instance the wms o osm protocols) which is more convenient and efficient than loading the heavy raster or vector-based data into the in a map client.
-</td>
 </tr>
 <tr>
 <td><i><b>analysis_context</b></i></td>
@@ -690,6 +690,43 @@ For example, if the indicator values existing in the dataset cover the years 200
 </tbody>
 </table>
 
+<br/>
+<br/>
+<u><b>Mapview object:</b></u>
+<table>
+<thead>
+<tr>
+<th colspan="3">Attribute</th>
+<th colspan="2">Obligation / Condition</th>
+<th rowspan="2">Description</th>
+</tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Multiplicity</th>
+<th>FrictionlessData</th>
+<th>CSIS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><i><b>service_type</b></i></td>
+<td>CharacterString enumeration</td>
+<td>1</td>
+<td>N/A</td>
+<td>MANDATORY</td>
+<td>The protocol (service type) of the mapping service. Similar to "service_type" property defined at resource level, but possible value is limited to "ogc:wms", "ogc:wms-t" and "osm" (maybe others?)</td>
+</tr>
+<tr>
+<td><i><b>url</b></i></td>
+<td>CharacterString without limitation</td>
+<td>1</td>
+<td>N/A</td>
+<td>MANDATORY</td>
+<td>The url with the complete WMS GetMap request (or similar request) used to obtain the rendered map image of the geospatial resource. Map clients using it should be able to use and modify the url in order to specifiy a different image format, width and height of the image or even provide a different SLD styling (if supported by both the client and the mapping service).</td>
+</tr>
+</tbody>
+</table>
 
 
 <br/>
