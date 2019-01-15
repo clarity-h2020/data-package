@@ -1,11 +1,15 @@
 {
-  "name": "clarity-data-package-naples-metropolitan-area",
-  "id": "http://github.com/clarity-h2020/data-package/examples/clarity-data-package-naples-metropolitan-area",
+  "name": "dc1-naples",
+  "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples",
   "version": "0.0.1",
   "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package.json",
-  "title": "Naples metropolitan area",
+  "title": "Naples Metropolitan Area data package",
   "description": "This is the CLARITY data package for the Naples metropolitan area corresponding to the Demonstrator Case (DC1). \r\n Further description to be completed",
-  "keywords": ["naples", "dc1", "TBC"],
+  "keywords": [
+    "naples",
+    "dc1",
+    "TBC"
+  ],
   "created": "2019-01-02T16:23:43Z",
   "homepage": "http://www.clarity-h2020.eu",
   "language": "eng",
@@ -14,7 +18,8 @@
     "currency": "EUR"
   },
   "sources": [],
-  "contributors": [{
+  "contributors": [
+    {
       "title": "Miguel Ángel Esbrí",
       "role": "author",
       "email": "miguel.esbri@atos.net",
@@ -50,1267 +55,909 @@
       "path": ""
     }
   ],
-  "licenses": [{
-    "name": "CC0-1.0",
-    "title": "Creative Commons CCZero 1.0",
-    "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-  }],
+  "licenses": [
+    {
+      "name": "CC0-1.0",
+      "title": "Creative Commons CCZero 1.0",
+      "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+    }
+  ],
   "image": "data/logo/MyCS_48x48.png",
-  "resources": [{
-    "name": "agricultural-areas",
-    "title": "Agricultural areas in Naples metropolitan area",
-    "description": "Agricultural areas in Naples metropolitan area",
-    "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
-    "encoding": "UTF-8",
-    "format": "geojson",
-    "mediatype": "application/json",
-    "bytes": "37087552",
-    "hash": "tbc",
-    "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:agricultural_areas&outputFormat=application/json",
-    "schema": {
-      "fields": [{
-          "name": "gid",
-          "title": "gid",
-          "type": "integer"
-        },
+  "resources": [
+    {
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r1",
+      "name": "agricultural-areas",
+      "title": "Agricultural areas in Naples metropolitan area",
+      "description": "Agricultural areas in Naples metropolitan area",
+      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "encoding": "binary",
+      "format": "shape-zip",
+      "mediatype": "application/shape-zip",
+      "bytes": "37087552",
+      "hash": "tbc",
+      "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:agricultural_areas&outputFormat=shape-zip",
+      "schema": {
+        "fields": [
+          {
+            "name": "gid",
+            "title": "gid",
+            "type": "integer"
+          },
+          {
+            "name": "area",
+            "title": "area",
+            "type": "double"
+          },
+          {
+            "name": "perimeter",
+            "title": "perimeter",
+            "type": "double"
+          },
+          {
+            "name": "code2012",
+            "title": "code2012",
+            "type": "string"
+          },
+          {
+            "name": "albedo",
+            "title": "albedo",
+            "type": "double"
+          },
+          {
+            "name": "emissivity",
+            "title": "emissivity",
+            "type": "double"
+          },
+          {
+            "name": "transmissivity",
+            "title": "transmissivity",
+            "type": "double"
+          },
+          {
+            "name": "vegetation_shadow",
+            "title": "vegetation shadow",
+            "type": "integer"
+          },
+          {
+            "name": "run_off_coefficient",
+            "title": "run off coefficient",
+            "type": "double"
+          },
+          {
+            "name": "building_shadow",
+            "title": "building shadow",
+            "type": "integer"
+          }
+        ]
+      },
+      "sources": [],
+      "licenses": [
         {
-          "name": "area",
-          "title": "area",
-          "type": "double"
-        },
-        {
-          "name": "perimeter",
-          "title": "perimeter",
-          "type": "double"
-        },
-        {
-          "name": "code2012",
-          "title": "code2012",
-          "type": "string"
-        },
-        {
-          "name": "albedo",
-          "title": "albedo",
-          "type": "double"
-        },
-        {
-          "name": "emissivity",
-          "title": "emissivity",
-          "type": "double"
-        },
-        {
-          "name": "transmissivity",
-          "title": "transmissivity",
-          "type": "double"
-        },
-        {
-          "name": "vegetation_shadow",
-          "title": "vegetation shadow",
-          "type": "integer"
-        },
-        {
-          "name": "run_off_coefficient",
-          "title": "run off coefficient",
-          "type": "double"
-        },
-        {
-          "name": "building_shadow",
-          "title": "building shadow",
-          "type": "integer"
+          "name": "CC0-1.0",
+          "title": "Creative Commons CCZero 1.0",
+          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
         }
-      ]
-    },
-    "sources": [],
-    "licenses": [{
-      "name": "CC0-1.0",
-      "title": "Creative Commons CCZero 1.0",
-      "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-    }],
-    "spatial_context": {
-      "crs": "EPSG:3035",
-      "extent": {
-        "xmin": 0.0,
-        "ymin": 0.0,
-        "xmax": 0.0,
-        "ymax": 0.0
+      ],
+      "service_type": "ogc:wfs",
+      "mapview": {
+        "service_type": "ogc:wms",
+        "url": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:agricultural_areas&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng"
       },
-      "resolution": {
-        "scale": 50000
-      }
-    },
-    "mapping_service_type": "wfs",
-    "analysis_context": {
-      "workflow_step": "any",
-      "hazard": "any",
-      "resource_type": "feature-parameters",
-      "use_as_layer": true
-    }
-  },
-  {
-    "name": "hot-days",
-    "title": "Hot days > 75th percentile",
-    "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep)",
-    "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
-    "format": "tif",
-    "mediatype": "application/tif",
-    "bytes": "358616146",
-    "hash": "tbc",
-    "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_historical_r12i1p1_SMHI-RCA4_v1_day_19710101-20001231_netcdf3&FORMAT=image/tiff",
-    "schema": {
-    },
-    "sources": [],
-    "licenses": [{
-      "name": "CC0-1.0",
-      "title": "Creative Commons CCZero 1.0",
-      "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-    }],
-    "spatial_context": {
-      "crs": "EPSG:3035",
-      "extent": {
-        "xmin": 2145500,
-        "ymin": 982500,
-        "xmax": 6606000,
-        "ymax": 5706500
-      },
-      "resolution": { "distance": 500, "uom": "m"},
-      "grid_info": {
-        "bands": 1,
-        "bit_depth": "unsigned-32-bit",
-        "columns": 9448,
-        "rows": 8921,
-        "no_data_value": 1e+20,
-        "start_cell": "top-left",
-        "compression_type": "none"
-      }
-    },
-    "temporal_context": {
-      "trs": "ISO 8601:2004",
-      "extent": {
-        "start": "1971-01-01",
-        "end": "2000-12-31" 
-      }
-    },
-    "mapping_service_type": "wcs",
-    "analysis_context": {
-      "workflow_step": "hazard-characterization",
-      "hazard": "heat:extreme-heat",
-      "resource_type": "index",
-      "index": "hazard:extreme-heat:hot-days-75p",
-      "use_as_layer": false,
-      "emissions_scenario": "baseline",
-      "threshold": [
-        {
-          "name": "low",
-          "lower": "to-be-defined"
+      "spatial_context": {
+        "crs": "EPSG:3035",
+        "extent": {
+          "xmin": 0.0,
+          "ymin": 0.0,
+          "xmax": 0.0,
+          "ymax": 0.0
         },
-        {
-          "name": "medium",
-          "lower": "to-be-defined",
-          "upper": "to-be-defined"
-        },
-        {
-          "name": "high",
-          "upper": "to-be-defined"
+        "resolution": {
+          "scale": 50000
         }
-      ]
-    }
-  },
-  {
-    "name": "hot-days",
-    "title": "Hot days > 75th percentile",
-    "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep)",
-    "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
-    "format": "png",
-    "mediatype": "image/png",
-    "bytes": "358616146",
-    "hash": "tbc",
-    "path": "https://clarity.meteogrid.com/geoserver/clarity/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_historical_r12i1p1_SMHI-RCA4_v1_day_19710101-20001231_netcdf3&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng",
-    "schema": {
-    },
-    "sources": [],
-    "licenses": [{
-      "name": "CC0-1.0",
-      "title": "Creative Commons CCZero 1.0",
-      "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-    }],
-    "spatial_context": {
-      "crs": "EPSG:3035",
-      "extent": {
-        "xmin": 2145500,
-        "ymin": 982500,
-        "xmax": 6606000,
-        "ymax": 5706500
       },
-      "resolution": { "distance": 500, "uom": "m"}
-    },
-    "temporal_context": {
-      "trs": "ISO 8601:2004",
-      "extent": {
-        "start": "1971-01-01",
-        "end": "2000-12-31" 
+      "mapping_service_type": "wfs",
+      "analysis_context": {
+        "workflow_step": "any",
+        "hazard": "any",
+        "resource_type": "feature-parameters"
       }
     },
-    "mapping_service_type": "wms",
-    "analysis_context": {
-      "workflow_step": "hazard-characterization",
-      "hazard": "heat:extreme-heat",
-      "resource_type": "index",
-      "index": "hazard:extreme-heat:hot-days-75p",
-      "use_as_layer": true,
-      "emissions_scenario": "baseline"
-    }
-  },
-  {
-    "name": "hot-days",
-    "title": "Hot days > 75th percentile",
-    "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep)",
-    "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
-    "format": "tif",
-    "mediatype": "application/tif",
-    "bytes": "358616146",
-    "hash": "tbc",
-    "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf3&FORMAT=image/tiff",
-    "schema": {
-    },
-    "sources": [],
-    "licenses": [{
-      "name": "CC0-1.0",
-      "title": "Creative Commons CCZero 1.0",
-      "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-    }],
-    "spatial_context": {
-      "crs": "EPSG:3035",
-      "extent": {
-        "xmin": 2145500,
-        "ymin": 982500,
-        "xmax": 6606000,
-        "ymax": 5706500
-      },
-      "resolution": { "distance": 500, "uom": "m"},
-      "grid_info": {
-        "bands": 1,
-        "bit_depth": "unsigned-32-bit",
-        "columns": 9448,
-        "rows": 8921,
-        "no_data_value": 1e+20,
-        "start_cell": "top-left",
-        "compression_type": "none"
-      }
-    },
-    "temporal_context": {
-      "trs": "ISO 8601:2004",
-      "extent": {
-        "start": "2011-01-01",
-        "end": "2040-12-31" 
-      }
-    },
-    "mapping_service_type": "wcs",
-    "analysis_context": {
-      "workflow_step": "hazard-characterization",
-      "hazard": "heat:extreme-heat",
-      "resource_type": "index",
-      "index": "hazard:extreme-heat:hot-days-75p",
-      "use_as_layer": false,
-      "emissions_scenario": "early-response:rcp26",
-      "threshold": [
+    {
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r2",
+      "name": "hot-days-historical_19710101-20001231",
+      "title": "Hot days > 75th percentile for the baseline emissions scenario in the 1971-2000 period",
+      "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the baseline emissions scenario in the 1971-2000 period",
+      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "format": "tif",
+      "mediatype": "application/x-gzip",
+      "bytes": "358616146",
+      "hash": "tbc",
+      "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_historical_r12i1p1_SMHI-RCA4_v1_day_19710101-20001231_netcdf3&FORMAT=application/x-gzip",
+      "schema": {},
+      "sources": [],
+      "licenses": [
         {
-          "name": "low",
-          "lower": "to-be-defined",
-          "relative_to": "baseline"
-        },
-        {
-          "name": "medium",
-          "lower": "to-be-defined",
-          "upper": "to-be-defined",
-          "relative_to": "baseline"
-        },
-        {
-          "name": "high",
-          "upper": "to-be-defined",
-          "relative_to": "baseline"
+          "name": "CC0-1.0",
+          "title": "Creative Commons CCZero 1.0",
+          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
         }
-      ]
-    }
-  },
-  {
-    "name": "hot-days",
-    "title": "Hot days > 75th percentile",
-    "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep)",
-    "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
-    "format": "png",
-    "mediatype": "image/png",
-    "bytes": "358616146",
-    "hash": "tbc",
-    "path": "https://clarity.meteogrid.com/geoserver/clarity/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity%3ATx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf3&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng",
-    "schema": {
-    },
-    "sources": [],
-    "licenses": [{
-      "name": "CC0-1.0",
-      "title": "Creative Commons CCZero 1.0",
-      "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-    }],
-    "spatial_context": {
-      "crs": "EPSG:3035",
-      "extent": {
-        "xmin": 2145500,
-        "ymin": 982500,
-        "xmax": 6606000,
-        "ymax": 5706500
+      ],
+      "service_type": "ogc:wcs",
+      "mapview": {
+        "service_type": "ogc:wms",
+        "url": "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_historical_r12i1p1_SMHI-RCA4_v1_day_19710101-20001231_netcdf3&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng"
       },
-      "resolution": { "distance": 500, "uom": "m"}
-    },
-    "temporal_context": {
-      "trs": "ISO 8601:2004",
-      "extent": {
-        "start": "2011-01-01",
-        "end": "2040-12-31" 
-      }
-    },
-    "mapping_service_type": "wms",
-    "analysis_context": {
-      "workflow_step": "hazard-characterization",
-      "hazard": "heat:extreme-heat",
-      "resource_type": "index",
-      "index": "hazard:extreme-heat:hot-days-75p",
-      "use_as_layer": true,
-      "emissions_scenario": "early-response:rcp26"
-    }
-  },  
-  {
-    "name": "hot-days",
-    "title": "Hot days > 75th percentile",
-    "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep)",
-    "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
-    "format": "tif",
-    "mediatype": "application/tif",
-    "bytes": "358616146",
-    "hash": "tbc",
-    "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&FORMAT=image/tiff",
-    "schema": {
-    },
-    "sources": [],
-    "licenses": [{
-      "name": "CC0-1.0",
-      "title": "Creative Commons CCZero 1.0",
-      "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-    }],
-    "spatial_context": {
-      "crs": "EPSG:3035",
-      "extent": {
-        "xmin": 2145500,
-        "ymin": 982500,
-        "xmax": 6606000,
-        "ymax": 5706500
-      },
-      "resolution": { "distance": 500, "uom": "m"},
-      "grid_info": {
-        "bands": 1,
-        "bit_depth": "unsigned-32-bit",
-        "columns": 9448,
-        "rows": 8921,
-        "no_data_value": 1e+20,
-        "start_cell": "top-left",
-        "compression_type": "none"
-      }
-    },
-    "temporal_context": {
-      "trs": "ISO 8601:2004",
-      "extent": {
-        "start": "2041-01-01",
-        "end": "2070-12-31" 
-      }
-    },
-    "mapping_service_type": "wcs",
-    "analysis_context": {
-      "workflow_step": "hazard-characterization",
-      "hazard": "heat:extreme-heat",
-      "resource_type": "index",
-      "index": "hazard:extreme-heat:hot-days-75p",
-      "use_as_layer": false,
-      "emissions_scenario": "early-response:rcp26",
-      "threshold": [
-        {
-          "name": "low",
-          "lower": "to-be-defined",
-          "relative_to": "baseline"
+      "spatial_context": {
+        "crs": "EPSG:3035",
+        "extent": {
+          "xmin": 2145500,
+          "ymin": 982500,
+          "xmax": 6606000,
+          "ymax": 5706500
         },
-        {
-          "name": "medium",
-          "lower": "to-be-defined",
-          "upper": "to-be-defined",
-          "relative_to": "baseline"
+        "resolution": {
+          "distance": 500,
+          "uom": "m"
         },
-        {
-          "name": "high",
-          "upper": "to-be-defined",
-          "relative_to": "baseline"
+        "grid_info": {
+          "bands": 1,
+          "bit_depth": "unsigned-32-bit",
+          "columns": 9448,
+          "rows": 8921,
+          "no_data_value": 1e+20,
+          "start_cell": "top-left",
+          "compression_type": "none"
         }
-      ]
-    }
-  },
-  {
-    "name": "hot-days",
-    "title": "Hot days > 75th percentile",
-    "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep)",
-    "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
-    "format": "png",
-    "mediatype": "image/png",
-    "bytes": "358616146",
-    "hash": "tbc",
-    "path": "https://clarity.meteogrid.com/geoserver/clarity/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity%3ATx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng",
-    "schema": {
-    },
-    "sources": [],
-    "licenses": [{
-      "name": "CC0-1.0",
-      "title": "Creative Commons CCZero 1.0",
-      "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-    }],
-    "spatial_context": {
-      "crs": "EPSG:3035",
-      "extent": {
-        "xmin": 2145500,
-        "ymin": 982500,
-        "xmax": 6606000,
-        "ymax": 5706500
       },
-      "resolution": { "distance": 500, "uom": "m"}
-    },
-    "temporal_context": {
-      "trs": "ISO 8601:2004",
-      "extent": {
-        "start": "2041-01-01",
-        "end": "2070-12-31" 
-      }
-    },
-    "mapping_service_type": "wms",
-    "analysis_context": {
-      "workflow_step": "hazard-characterization",
-      "hazard": "heat:extreme-heat",
-      "resource_type": "index",
-      "index": "hazard:extreme-heat:hot-days-75p",
-      "use_as_layer": true,
-      "emissions_scenario": "early-response:rcp26"
-    }
-  },
-  {
-    "name": "hot-days",
-    "title": "Hot days > 75th percentile",
-    "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep)",
-    "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
-    "format": "tif",
-    "mediatype": "application/tif",
-    "bytes": "358616146",
-    "hash": "tbc",
-    "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&FORMAT=image/tiff",
-    "schema": {
-    },
-    "sources": [],
-    "licenses": [{
-      "name": "CC0-1.0",
-      "title": "Creative Commons CCZero 1.0",
-      "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-    }],
-    "spatial_context": {
-      "crs": "EPSG:3035",
-      "extent": {
-        "xmin": 2145500,
-        "ymin": 982500,
-        "xmax": 6606000,
-        "ymax": 5706500
-      },
-      "resolution": { "distance": 500, "uom": "m"},
-      "grid_info": {
-        "bands": 1,
-        "bit_depth": "unsigned-32-bit",
-        "columns": 9448,
-        "rows": 8921,
-        "no_data_value": 1e+20,
-        "start_cell": "top-left",
-        "compression_type": "none"
-      }
-    },
-    "temporal_context": {
-      "trs": "ISO 8601:2004",
-      "extent": {
-        "start": "2071-01-01",
-        "end": "2100-12-31" 
-      }
-    },
-    "mapping_service_type": "wcs",
-    "analysis_context": {
-      "workflow_step": "hazard-characterization",
-      "hazard": "heat:extreme-heat",
-      "resource_type": "index",
-      "index": "hazard:extreme-heat:hot-days-75p",
-      "use_as_layer": false,
-      "emissions_scenario": "early-response:rcp26",
-      "threshold": [
-        {
-          "name": "low",
-          "lower": "to-be-defined",
-          "relative_to": "baseline"
-        },
-        {
-          "name": "medium",
-          "lower": "to-be-defined",
-          "upper": "to-be-defined",
-          "relative_to": "baseline"
-        },
-        {
-          "name": "high",
-          "upper": "to-be-defined",
-          "relative_to": "baseline"
+      "temporal_context": {
+        "trs": "ISO 8601:2004",
+        "extent": {
+          "start": "1971-01-01",
+          "end": "2000-12-31"
         }
-      ]
-    }
-  },
-  {
-    "name": "hot-days",
-    "title": "Hot days > 75th percentile",
-    "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep)",
-    "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
-    "format": "png",
-    "mediatype": "image/png",
-    "bytes": "358616146",
-    "hash": "tbc",
-    "path": "https://clarity.meteogrid.com/geoserver/clarity/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity%3ATx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng",
-    "schema": {
-    },
-    "sources": [],
-    "licenses": [{
-      "name": "CC0-1.0",
-      "title": "Creative Commons CCZero 1.0",
-      "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-    }],
-    "spatial_context": {
-      "crs": "EPSG:3035",
-      "extent": {
-        "xmin": 2145500,
-        "ymin": 982500,
-        "xmax": 6606000,
-        "ymax": 5706500
       },
-      "resolution": { "distance": 500, "uom": "m"}
-    },
-    "temporal_context": {
-      "trs": "ISO 8601:2004",
-      "extent": {
-        "start": "2071-01-01",
-        "end": "2100-12-31" 
+      "analysis_context": {
+        "workflow_step": "hazard-characterization",
+        "hazard": "hazard:heat:extreme-heat",
+        "resource_type": "index",
+        "index": "hazard:index:heat:extreme-heat:hot-days-75p",
+        "emissions_scenario": "baseline",
+        "threshold": [
+          {
+            "name": "low",
+            "lower": "to-be-defined"
+          },
+          {
+            "name": "medium",
+            "lower": "to-be-defined",
+            "upper": "to-be-defined"
+          },
+          {
+            "name": "high",
+            "upper": "to-be-defined"
+          }
+        ]
       }
     },
-    "mapping_service_type": "wms",
-    "analysis_context": {
-      "workflow_step": "hazard-characterization",
-      "hazard": "heat:extreme-heat",
-      "resource_type": "index",
-      "index": "hazard:extreme-heat:hot-days-75p",
-      "use_as_layer": true,
-      "emissions_scenario": "early-response:rcp26"
-    }
-  },
-  {
-    "name": "hot-days",
-    "title": "Hot days > 75th percentile",
-    "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep)",
-    "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
-    "format": "tif",
-    "mediatype": "application/tif",
-    "bytes": "358616146",
-    "hash": "tbc",
-    "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf3&FORMAT=image/tiff",
-    "schema": {
-    },
-    "sources": [],
-    "licenses": [{
-      "name": "CC0-1.0",
-      "title": "Creative Commons CCZero 1.0",
-      "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-    }],
-    "spatial_context": {
-      "crs": "EPSG:3035",
-      "extent": {
-        "xmin": 2145500,
-        "ymin": 982500,
-        "xmax": 6606000,
-        "ymax": 5706500
-      },
-      "resolution": { "distance": 500, "uom": "m"},
-      "grid_info": {
-        "bands": 1,
-        "bit_depth": "unsigned-32-bit",
-        "columns": 9448,
-        "rows": 8921,
-        "no_data_value": 1e+20,
-        "start_cell": "top-left",
-        "compression_type": "none"
-      }
-    },
-    "temporal_context": {
-      "trs": "ISO 8601:2004",
-      "extent": {
-        "start": "2011-01-01",
-        "end": "2040-12-31" 
-      }
-    },
-    "mapping_service_type": "wcs",
-    "analysis_context": {
-      "workflow_step": "hazard-characterization",
-      "hazard": "heat:extreme-heat",
-      "resource_type": "index",
-      "index": "hazard:extreme-heat:hot-days-75p",
-      "use_as_layer": false,
-      "emissions_scenario": "effective-measures:rcp45",
-      "threshold": [
+    {
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r3",
+      "name": "hot-days-rcp26_20110101-20401231",
+      "title": "Hot days > 75th percentile for the rcp26 emissions scenario in the 2011-2040 period",
+      "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp26 emissions scenario in the 2011-2040 period",
+      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "format": "tif",
+      "mediatype": "application/x-gzip",
+      "bytes": "358616146",
+      "hash": "tbc",
+      "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf3&FORMAT=application/x-gzip",
+      "schema": {},
+      "sources": [],
+      "licenses": [
         {
-          "name": "low",
-          "lower": "to-be-defined",
-          "relative_to": "baseline"
-        },
-        {
-          "name": "medium",
-          "lower": "to-be-defined",
-          "upper": "to-be-defined",
-          "relative_to": "baseline"
-        },
-        {
-          "name": "high",
-          "upper": "to-be-defined",
-          "relative_to": "baseline"
+          "name": "CC0-1.0",
+          "title": "Creative Commons CCZero 1.0",
+          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
         }
-      ]
-    }
-  },
-  {
-    "name": "hot-days",
-    "title": "Hot days > 75th percentile",
-    "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep)",
-    "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
-    "format": "png",
-    "mediatype": "image/png",
-    "bytes": "358616146",
-    "hash": "tbc",
-    "path": "https://clarity.meteogrid.com/geoserver/clarity/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity%3ATx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf3&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng",
-    "schema": {
-    },
-    "sources": [],
-    "licenses": [{
-      "name": "CC0-1.0",
-      "title": "Creative Commons CCZero 1.0",
-      "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-    }],
-    "spatial_context": {
-      "crs": "EPSG:3035",
-      "extent": {
-        "xmin": 2145500,
-        "ymin": 982500,
-        "xmax": 6606000,
-        "ymax": 5706500
+      ],
+      "service_type": "ogc:wcs",
+      "mapview": {
+        "service_type": "ogc:wms",
+        "url": "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng"
       },
-      "resolution": { "distance": 500, "uom": "m"}
-    },
-    "temporal_context": {
-      "trs": "ISO 8601:2004",
-      "extent": {
-        "start": "2011-01-01",
-        "end": "2040-12-31" 
-      }
-    },
-    "mapping_service_type": "wms",
-    "analysis_context": {
-      "workflow_step": "hazard-characterization",
-      "hazard": "heat:extreme-heat",
-      "resource_type": "index",
-      "index": "hazard:extreme-heat:hot-days-75p",
-      "use_as_layer": true,
-      "emissions_scenario": "effective-measures:rcp45"
-    }
-  },  
-  {
-    "name": "hot-days",
-    "title": "Hot days > 75th percentile",
-    "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep)",
-    "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
-    "format": "tif",
-    "mediatype": "application/tif",
-    "bytes": "358616146",
-    "hash": "tbc",
-    "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&FORMAT=image/tiff",
-    "schema": {
-    },
-    "sources": [],
-    "licenses": [{
-      "name": "CC0-1.0",
-      "title": "Creative Commons CCZero 1.0",
-      "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-    }],
-    "spatial_context": {
-      "crs": "EPSG:3035",
-      "extent": {
-        "xmin": 2145500,
-        "ymin": 982500,
-        "xmax": 6606000,
-        "ymax": 5706500
-      },
-      "resolution": { "distance": 500, "uom": "m"},
-      "grid_info": {
-        "bands": 1,
-        "bit_depth": "unsigned-32-bit",
-        "columns": 9448,
-        "rows": 8921,
-        "no_data_value": 1e+20,
-        "start_cell": "top-left",
-        "compression_type": "none"
-      }
-    },
-    "temporal_context": {
-      "trs": "ISO 8601:2004",
-      "extent": {
-        "start": "2041-01-01",
-        "end": "2070-12-31" 
-      }
-    },
-    "mapping_service_type": "wcs",
-    "analysis_context": {
-      "workflow_step": "hazard-characterization",
-      "hazard": "heat:extreme-heat",
-      "resource_type": "index",
-      "index": "hazard:extreme-heat:hot-days-75p",
-      "use_as_layer": false,
-      "emissions_scenario": "effective-measures:rcp45",
-      "threshold": [
-        {
-          "name": "low",
-          "lower": "to-be-defined",
-          "relative_to": "baseline"
+      "spatial_context": {
+        "crs": "EPSG:3035",
+        "extent": {
+          "xmin": 2145500,
+          "ymin": 982500,
+          "xmax": 6606000,
+          "ymax": 5706500
         },
-        {
-          "name": "medium",
-          "lower": "to-be-defined",
-          "upper": "to-be-defined",
-          "relative_to": "baseline"
+        "resolution": {
+          "distance": 500,
+          "uom": "m"
         },
-        {
-          "name": "high",
-          "upper": "to-be-defined",
-          "relative_to": "baseline"
+        "grid_info": {
+          "bands": 1,
+          "bit_depth": "unsigned-32-bit",
+          "columns": 9448,
+          "rows": 8921,
+          "no_data_value": 1e+20,
+          "start_cell": "top-left",
+          "compression_type": "none"
         }
-      ]
-    }
-  },
-  {
-    "name": "hot-days",
-    "title": "Hot days > 75th percentile",
-    "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep)",
-    "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
-    "format": "png",
-    "mediatype": "image/png",
-    "bytes": "358616146",
-    "hash": "tbc",
-    "path": "https://clarity.meteogrid.com/geoserver/clarity/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity%3ATx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng",
-    "schema": {
-    },
-    "sources": [],
-    "licenses": [{
-      "name": "CC0-1.0",
-      "title": "Creative Commons CCZero 1.0",
-      "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-    }],
-    "spatial_context": {
-      "crs": "EPSG:3035",
-      "extent": {
-        "xmin": 2145500,
-        "ymin": 982500,
-        "xmax": 6606000,
-        "ymax": 5706500
       },
-      "resolution": { "distance": 500, "uom": "m"}
-    },
-    "temporal_context": {
-      "trs": "ISO 8601:2004",
-      "extent": {
-        "start": "2041-01-01",
-        "end": "2070-12-31" 
-      }
-    },
-    "mapping_service_type": "wms",
-    "analysis_context": {
-      "workflow_step": "hazard-characterization",
-      "hazard": "heat:extreme-heat",
-      "resource_type": "index",
-      "index": "hazard:extreme-heat:hot-days-75p",
-      "use_as_layer": true,
-      "emissions_scenario": "effective-measures:rcp45"
-    }
-  },
-  {
-    "name": "hot-days",
-    "title": "Hot days > 75th percentile",
-    "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep)",
-    "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
-    "format": "tif",
-    "mediatype": "application/tif",
-    "bytes": "358616146",
-    "hash": "tbc",
-    "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&FORMAT=image/tiff",
-    "schema": {
-    },
-    "sources": [],
-    "licenses": [{
-      "name": "CC0-1.0",
-      "title": "Creative Commons CCZero 1.0",
-      "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-    }],
-    "spatial_context": {
-      "crs": "EPSG:3035",
-      "extent": {
-        "xmin": 2145500,
-        "ymin": 982500,
-        "xmax": 6606000,
-        "ymax": 5706500
-      },
-      "resolution": { "distance": 500, "uom": "m"},
-      "grid_info": {
-        "bands": 1,
-        "bit_depth": "unsigned-32-bit",
-        "columns": 9448,
-        "rows": 8921,
-        "no_data_value": 1e+20,
-        "start_cell": "top-left",
-        "compression_type": "none"
-      }
-    },
-    "temporal_context": {
-      "trs": "ISO 8601:2004",
-      "extent": {
-        "start": "2071-01-01",
-        "end": "2100-12-31" 
-      }
-    },
-    "mapping_service_type": "wcs",
-    "analysis_context": {
-      "workflow_step": "hazard-characterization",
-      "hazard": "heat:extreme-heat",
-      "resource_type": "index",
-      "index": "hazard:extreme-heat:hot-days-75p",
-      "use_as_layer": false,
-      "emissions_scenario": "effective-measures:rcp45",
-      "threshold": [
-        {
-          "name": "low",
-          "lower": "to-be-defined",
-          "relative_to": "baseline"
-        },
-        {
-          "name": "medium",
-          "lower": "to-be-defined",
-          "upper": "to-be-defined",
-          "relative_to": "baseline"
-        },
-        {
-          "name": "high",
-          "upper": "to-be-defined",
-          "relative_to": "baseline"
+      "temporal_context": {
+        "trs": "ISO 8601:2004",
+        "extent": {
+          "start": "2011-01-01",
+          "end": "2040-12-31"
         }
-      ]
-    }
-  },
-  {
-    "name": "hot-days",
-    "title": "Hot days > 75th percentile",
-    "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep)",
-    "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
-    "format": "png",
-    "mediatype": "image/png",
-    "bytes": "358616146",
-    "hash": "tbc",
-    "path": "https://clarity.meteogrid.com/geoserver/clarity/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity%3ATx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng",
-    "schema": {
-    },
-    "sources": [],
-    "licenses": [{
-      "name": "CC0-1.0",
-      "title": "Creative Commons CCZero 1.0",
-      "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-    }],
-    "spatial_context": {
-      "crs": "EPSG:3035",
-      "extent": {
-        "xmin": 2145500,
-        "ymin": 982500,
-        "xmax": 6606000,
-        "ymax": 5706500
       },
-      "resolution": { "distance": 500, "uom": "m"}
-    },
-    "temporal_context": {
-      "trs": "ISO 8601:2004",
-      "extent": {
-        "start": "2071-01-01",
-        "end": "2100-12-31" 
+      "analysis_context": {
+        "workflow_step": "hazard-characterization",
+        "hazard": "hazard:heat:extreme-heat",
+        "resource_type": "index",
+        "index": "hazard:index:heat:extreme-heat:hot-days-75p",
+        "emissions_scenario": "early-response:rcp26",
+        "threshold": [
+          {
+            "name": "low",
+            "lower": "to-be-defined",
+            "relative_to": "baseline"
+          },
+          {
+            "name": "medium",
+            "lower": "to-be-defined",
+            "upper": "to-be-defined",
+            "relative_to": "baseline"
+          },
+          {
+            "name": "high",
+            "upper": "to-be-defined",
+            "relative_to": "baseline"
+          }
+        ]
       }
     },
-    "mapping_service_type": "wms",
-    "analysis_context": {
-      "workflow_step": "hazard-characterization",
-      "hazard": "heat:extreme-heat",
-      "resource_type": "index",
-      "index": "hazard:extreme-heat:hot-days-75p",
-      "use_as_layer": true,
-      "emissions_scenario": "effective-measures:rcp45"
-    }
-  },
-  {
-    "name": "hot-days",
-    "title": "Hot days > 75th percentile",
-    "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep)",
-    "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
-    "format": "tif",
-    "mediatype": "application/tif",
-    "bytes": "358616146",
-    "hash": "tbc",
-    "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf3&FORMAT=image/tiff",
-    "schema": {
-    },
-    "sources": [],
-    "licenses": [{
-      "name": "CC0-1.0",
-      "title": "Creative Commons CCZero 1.0",
-      "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-    }],
-    "spatial_context": {
-      "crs": "EPSG:3035",
-      "extent": {
-        "xmin": 2145500,
-        "ymin": 982500,
-        "xmax": 6606000,
-        "ymax": 5706500
-      },
-      "resolution": { "distance": 500, "uom": "m"},
-      "grid_info": {
-        "bands": 1,
-        "bit_depth": "unsigned-32-bit",
-        "columns": 9448,
-        "rows": 8921,
-        "no_data_value": 1e+20,
-        "start_cell": "top-left",
-        "compression_type": "none"
-      }
-    },
-    "temporal_context": {
-      "trs": "ISO 8601:2004",
-      "extent": {
-        "start": "2011-01-01",
-        "end": "2040-12-31" 
-      }
-    },
-    "mapping_service_type": "wcs",
-    "analysis_context": {
-      "workflow_step": "hazard-characterization",
-      "hazard": "heat:extreme-heat",
-      "resource_type": "index",
-      "index": "hazard:extreme-heat:hot-days-75p",
-      "use_as_layer": false,
-      "emissions_scenario": "business-as-usual:rcp85",
-      "threshold": [
+    {
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r4",
+      "name": "hot-days-rcp26_20410101-20701231",
+      "title": "Hot days > 75th percentile for the rcp26 emissions scenario in the 2041-2070 period",
+      "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp26 emissions scenario in the 2041-2070 period",
+      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "format": "tif",
+      "mediatype": "application/x-gzip",
+      "bytes": "358616146",
+      "hash": "tbc",
+      "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&FORMAT=application/x-gzip",
+      "schema": {},
+      "sources": [],
+      "licenses": [
         {
-          "name": "low",
-          "lower": "to-be-defined",
-          "relative_to": "baseline"
-        },
-        {
-          "name": "medium",
-          "lower": "to-be-defined",
-          "upper": "to-be-defined",
-          "relative_to": "baseline"
-        },
-        {
-          "name": "high",
-          "upper": "to-be-defined",
-          "relative_to": "baseline"
+          "name": "CC0-1.0",
+          "title": "Creative Commons CCZero 1.0",
+          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
         }
-      ]
-    }
-  },
-  {
-    "name": "hot-days",
-    "title": "Hot days > 75th percentile",
-    "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep)",
-    "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
-    "format": "png",
-    "mediatype": "image/png",
-    "bytes": "358616146",
-    "hash": "tbc",
-    "path": "https://clarity.meteogrid.com/geoserver/clarity/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity%3ATx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf3&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng",
-    "schema": {
-    },
-    "sources": [],
-    "licenses": [{
-      "name": "CC0-1.0",
-      "title": "Creative Commons CCZero 1.0",
-      "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-    }],
-    "spatial_context": {
-      "crs": "EPSG:3035",
-      "extent": {
-        "xmin": 2145500,
-        "ymin": 982500,
-        "xmax": 6606000,
-        "ymax": 5706500
+      ],
+      "service_type": "ogc:wcs",
+      "mapview": {
+        "service_type": "ogc:wms",
+        "url": "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng"
       },
-      "resolution": { "distance": 500, "uom": "m"}
-    },
-    "temporal_context": {
-      "trs": "ISO 8601:2004",
-      "extent": {
-        "start": "2011-01-01",
-        "end": "2040-12-31" 
-      }
-    },
-    "mapping_service_type": "wms",
-    "analysis_context": {
-      "workflow_step": "hazard-characterization",
-      "hazard": "heat:extreme-heat",
-      "resource_type": "index",
-      "index": "hazard:extreme-heat:hot-days-75p",
-      "use_as_layer": true,
-      "emissions_scenario": "business-as-usual:rcp85"
-    }
-  },  
-  {
-    "name": "hot-days",
-    "title": "Hot days > 75th percentile",
-    "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep)",
-    "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
-    "format": "tif",
-    "mediatype": "application/tif",
-    "bytes": "358616146",
-    "hash": "tbc",
-    "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&FORMAT=image/tiff",
-    "schema": {
-    },
-    "sources": [],
-    "licenses": [{
-      "name": "CC0-1.0",
-      "title": "Creative Commons CCZero 1.0",
-      "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-    }],
-    "spatial_context": {
-      "crs": "EPSG:3035",
-      "extent": {
-        "xmin": 2145500,
-        "ymin": 982500,
-        "xmax": 6606000,
-        "ymax": 5706500
-      },
-      "resolution": { "distance": 500, "uom": "m"},
-      "grid_info": {
-        "bands": 1,
-        "bit_depth": "unsigned-32-bit",
-        "columns": 9448,
-        "rows": 8921,
-        "no_data_value": 1e+20,
-        "start_cell": "top-left",
-        "compression_type": "none"
-      }
-    },
-    "temporal_context": {
-      "trs": "ISO 8601:2004",
-      "extent": {
-        "start": "2041-01-01",
-        "end": "2070-12-31" 
-      }
-    },
-    "mapping_service_type": "wcs",
-    "analysis_context": {
-      "workflow_step": "hazard-characterization",
-      "hazard": "heat:extreme-heat",
-      "resource_type": "index",
-      "index": "hazard:extreme-heat:hot-days-75p",
-      "use_as_layer": false,
-      "emissions_scenario": "business-as-usual:rcp85",
-      "threshold": [
-        {
-          "name": "low",
-          "lower": "to-be-defined",
-          "relative_to": "baseline"
+      "spatial_context": {
+        "crs": "EPSG:3035",
+        "extent": {
+          "xmin": 2145500,
+          "ymin": 982500,
+          "xmax": 6606000,
+          "ymax": 5706500
         },
-        {
-          "name": "medium",
-          "lower": "to-be-defined",
-          "upper": "to-be-defined",
-          "relative_to": "baseline"
+        "resolution": {
+          "distance": 500,
+          "uom": "m"
         },
-        {
-          "name": "high",
-          "upper": "to-be-defined",
-          "relative_to": "baseline"
+        "grid_info": {
+          "bands": 1,
+          "bit_depth": "unsigned-32-bit",
+          "columns": 9448,
+          "rows": 8921,
+          "no_data_value": 1e+20,
+          "start_cell": "top-left",
+          "compression_type": "none"
         }
-      ]
-    }
-  },
-  {
-    "name": "hot-days",
-    "title": "Hot days > 75th percentile",
-    "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep)",
-    "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
-    "format": "png",
-    "mediatype": "image/png",
-    "bytes": "358616146",
-    "hash": "tbc",
-    "path": "https://clarity.meteogrid.com/geoserver/clarity/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity%3ATx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng",
-    "schema": {
-    },
-    "sources": [],
-    "licenses": [{
-      "name": "CC0-1.0",
-      "title": "Creative Commons CCZero 1.0",
-      "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-    }],
-    "spatial_context": {
-      "crs": "EPSG:3035",
-      "extent": {
-        "xmin": 2145500,
-        "ymin": 982500,
-        "xmax": 6606000,
-        "ymax": 5706500
       },
-      "resolution": { "distance": 500, "uom": "m"}
-    },
-    "temporal_context": {
-      "trs": "ISO 8601:2004",
-      "extent": {
-        "start": "2041-01-01",
-        "end": "2070-12-31" 
-      }
-    },
-    "mapping_service_type": "wms",
-    "analysis_context": {
-      "workflow_step": "hazard-characterization",
-      "hazard": "heat:extreme-heat",
-      "resource_type": "index",
-      "index": "hazard:extreme-heat:hot-days-75p",
-      "use_as_layer": true,
-      "emissions_scenario": "business-as-usual:rcp85"
-    }
-  },
-  {
-    "name": "hot-days",
-    "title": "Hot days > 75th percentile",
-    "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep)",
-    "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
-    "format": "tif",
-    "mediatype": "application/tif",
-    "bytes": "358616146",
-    "hash": "tbc",
-    "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&FORMAT=image/tiff",
-    "schema": {
-    },
-    "sources": [],
-    "licenses": [{
-      "name": "CC0-1.0",
-      "title": "Creative Commons CCZero 1.0",
-      "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-    }],
-    "spatial_context": {
-      "crs": "EPSG:3035",
-      "extent": {
-        "xmin": 2145500,
-        "ymin": 982500,
-        "xmax": 6606000,
-        "ymax": 5706500
-      },
-      "resolution": { "distance": 500, "uom": "m"},
-      "grid_info": {
-        "bands": 1,
-        "bit_depth": "unsigned-32-bit",
-        "columns": 9448,
-        "rows": 8921,
-        "no_data_value": 1e+20,
-        "start_cell": "top-left",
-        "compression_type": "none"
-      }
-    },
-    "temporal_context": {
-      "trs": "ISO 8601:2004",
-      "extent": {
-        "start": "2071-01-01",
-        "end": "2100-12-31" 
-      }
-    },
-    "mapping_service_type": "wcs",
-    "analysis_context": {
-      "workflow_step": "hazard-characterization",
-      "hazard": "heat:extreme-heat",
-      "resource_type": "index",
-      "index": "hazard:extreme-heat:hot-days-75p",
-      "use_as_layer": false,
-      "emissions_scenario": "business-as-usual:rcp85",
-      "threshold": [
-        {
-          "name": "low",
-          "lower": "to-be-defined",
-          "relative_to": "baseline"
-        },
-        {
-          "name": "medium",
-          "lower": "to-be-defined",
-          "upper": "to-be-defined",
-          "relative_to": "baseline"
-        },
-        {
-          "name": "high",
-          "upper": "to-be-defined",
-          "relative_to": "baseline"
+      "temporal_context": {
+        "trs": "ISO 8601:2004",
+        "extent": {
+          "start": "2041-01-01",
+          "end": "2070-12-31"
         }
-      ]
-    }
-  },
-  {
-    "name": "hot-days",
-    "title": "Hot days > 75th percentile",
-    "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep)",
-    "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
-    "format": "png",
-    "mediatype": "image/png",
-    "bytes": "358616146",
-    "hash": "tbc",
-    "path": "https://clarity.meteogrid.com/geoserver/clarity/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity%3ATx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng",
-    "schema": {
-    },
-    "sources": [],
-    "licenses": [{
-      "name": "CC0-1.0",
-      "title": "Creative Commons CCZero 1.0",
-      "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-    }],
-    "spatial_context": {
-      "crs": "EPSG:3035",
-      "extent": {
-        "xmin": 2145500,
-        "ymin": 982500,
-        "xmax": 6606000,
-        "ymax": 5706500
       },
-      "resolution": { "distance": 500, "uom": "m"}
-    },
-    "temporal_context": {
-      "trs": "ISO 8601:2004",
-      "extent": {
-        "start": "2071-01-01",
-        "end": "2100-12-31" 
+      "analysis_context": {
+        "workflow_step": "hazard-characterization",
+        "hazard": "hazard:heat:extreme-heat",
+        "resource_type": "index",
+        "index": "hazard:index:heat:extreme-heat:hot-days-75p",
+        "emissions_scenario": "early-response:rcp26",
+        "threshold": [
+          {
+            "name": "low",
+            "lower": "to-be-defined",
+            "relative_to": "baseline"
+          },
+          {
+            "name": "medium",
+            "lower": "to-be-defined",
+            "upper": "to-be-defined",
+            "relative_to": "baseline"
+          },
+          {
+            "name": "high",
+            "upper": "to-be-defined",
+            "relative_to": "baseline"
+          }
+        ]
       }
     },
-    "mapping_service_type": "wms",
-    "analysis_context": {
-      "workflow_step": "hazard-characterization",
-      "hazard": "heat:extreme-heat",
-      "resource_type": "index",
-      "index": "hazard:extreme-heat:hot-days-75p",
-      "use_as_layer": true,
-      "emissions_scenario": "business-as-usual:rcp85"
+    {
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r5",
+      "name": "hot-days-rcp26_20710101-21001231",
+      "title": "Hot days > 75th percentile for the rcp26 emissions scenario in the 2071-2100 period",
+      "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp26 emissions scenario in the 2071-2100 period",
+      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "format": "tif",
+      "mediatype": "application/x-gzip",
+      "bytes": "358616146",
+      "hash": "tbc",
+      "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&FORMAT=application/x-gzip",
+      "schema": {},
+      "sources": [],
+      "licenses": [
+        {
+          "name": "CC0-1.0",
+          "title": "Creative Commons CCZero 1.0",
+          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
+      ],
+      "service_type": "ogc:wcs",
+      "mapview": {
+        "service_type": "ogc:wms",
+        "url": "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng"
+      },
+      "spatial_context": {
+        "crs": "EPSG:3035",
+        "extent": {
+          "xmin": 2145500,
+          "ymin": 982500,
+          "xmax": 6606000,
+          "ymax": 5706500
+        },
+        "resolution": {
+          "distance": 500,
+          "uom": "m"
+        },
+        "grid_info": {
+          "bands": 1,
+          "bit_depth": "unsigned-32-bit",
+          "columns": 9448,
+          "rows": 8921,
+          "no_data_value": 1e+20,
+          "start_cell": "top-left",
+          "compression_type": "none"
+        }
+      },
+      "temporal_context": {
+        "trs": "ISO 8601:2004",
+        "extent": {
+          "start": "2071-01-01",
+          "end": "2100-12-31"
+        }
+      },
+      "analysis_context": {
+        "workflow_step": "hazard-characterization",
+        "hazard": "hazard:heat:extreme-heat",
+        "resource_type": "index",
+        "index": "hazard:index:heat:extreme-heat:hot-days-75p",
+        "emissions_scenario": "early-response:rcp26",
+        "threshold": [
+          {
+            "name": "low",
+            "lower": "to-be-defined",
+            "relative_to": "baseline"
+          },
+          {
+            "name": "medium",
+            "lower": "to-be-defined",
+            "upper": "to-be-defined",
+            "relative_to": "baseline"
+          },
+          {
+            "name": "high",
+            "upper": "to-be-defined",
+            "relative_to": "baseline"
+          }
+        ]
+      }
+    },
+    {
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r6",
+      "name": "hot-days-rcp45_20110101-20401231",
+      "title": "Hot days > 75th percentile for the rcp45 emissions scenario in the 2011-2040 period",
+      "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp45 emissions scenario in the 2011-2040 period",
+      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "format": "tif",
+      "mediatype": "application/x-gzip",
+      "bytes": "358616146",
+      "hash": "tbc",
+      "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf3&FORMAT=application/x-gzip",
+      "schema": {},
+      "sources": [],
+      "licenses": [
+        {
+          "name": "CC0-1.0",
+          "title": "Creative Commons CCZero 1.0",
+          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
+      ],
+      "service_type": "ogc:wcs",
+      "mapview": {
+        "service_type": "ogc:wms",
+        "url": "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf3&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng"
+      },
+      "spatial_context": {
+        "crs": "EPSG:3035",
+        "extent": {
+          "xmin": 2145500,
+          "ymin": 982500,
+          "xmax": 6606000,
+          "ymax": 5706500
+        },
+        "resolution": {
+          "distance": 500,
+          "uom": "m"
+        },
+        "grid_info": {
+          "bands": 1,
+          "bit_depth": "unsigned-32-bit",
+          "columns": 9448,
+          "rows": 8921,
+          "no_data_value": 1e+20,
+          "start_cell": "top-left",
+          "compression_type": "none"
+        }
+      },
+      "temporal_context": {
+        "trs": "ISO 8601:2004",
+        "extent": {
+          "start": "2011-01-01",
+          "end": "2040-12-31"
+        }
+      },
+      "analysis_context": {
+        "workflow_step": "hazard-characterization",
+        "hazard": "hazard:heat:extreme-heat",
+        "resource_type": "index",
+        "index": "hazard:index:heat:extreme-heat:hot-days-75p",
+        "emissions_scenario": "effective-measures:rcp45",
+        "threshold": [
+          {
+            "name": "low",
+            "lower": "to-be-defined",
+            "relative_to": "baseline"
+          },
+          {
+            "name": "medium",
+            "lower": "to-be-defined",
+            "upper": "to-be-defined",
+            "relative_to": "baseline"
+          },
+          {
+            "name": "high",
+            "upper": "to-be-defined",
+            "relative_to": "baseline"
+          }
+        ]
+      }
+    },
+    {
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r7",
+      "name": "hot-days-rcp45_20410101-20701231",
+      "title": "Hot days > 75th percentile for the rcp45 emissions scenario in the 2041-2070 period",
+      "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp45 emissions scenario in the 2041-2070 period",
+      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "format": "tif",
+      "mediatype": "application/x-gzip",
+      "bytes": "358616146",
+      "hash": "tbc",
+      "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&FORMAT=application/x-gzip",
+      "schema": {},
+      "sources": [],
+      "licenses": [
+        {
+          "name": "CC0-1.0",
+          "title": "Creative Commons CCZero 1.0",
+          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
+      ],
+      "service_type": "ogc:wcs",
+      "mapview": {
+        "service_type": "ogc:wms",
+        "url": "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng"
+      },
+      "spatial_context": {
+        "crs": "EPSG:3035",
+        "extent": {
+          "xmin": 2145500,
+          "ymin": 982500,
+          "xmax": 6606000,
+          "ymax": 5706500
+        },
+        "resolution": {
+          "distance": 500,
+          "uom": "m"
+        },
+        "grid_info": {
+          "bands": 1,
+          "bit_depth": "unsigned-32-bit",
+          "columns": 9448,
+          "rows": 8921,
+          "no_data_value": 1e+20,
+          "start_cell": "top-left",
+          "compression_type": "none"
+        }
+      },
+      "temporal_context": {
+        "trs": "ISO 8601:2004",
+        "extent": {
+          "start": "2041-01-01",
+          "end": "2070-12-31"
+        }
+      },
+      "analysis_context": {
+        "workflow_step": "hazard-characterization",
+        "hazard": "hazard:heat:extreme-heat",
+        "resource_type": "index",
+        "index": "hazard:index:heat:extreme-heat:hot-days-75p",
+        "emissions_scenario": "effective-measures:rcp45",
+        "threshold": [
+          {
+            "name": "low",
+            "lower": "to-be-defined",
+            "relative_to": "baseline"
+          },
+          {
+            "name": "medium",
+            "lower": "to-be-defined",
+            "upper": "to-be-defined",
+            "relative_to": "baseline"
+          },
+          {
+            "name": "high",
+            "upper": "to-be-defined",
+            "relative_to": "baseline"
+          }
+        ]
+      }
+    },
+    {
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r8",
+      "name": "hot-days-rcp45_20710101-21001231",
+      "title": "Hot days > 75th percentile for the rcp45 emissions scenario in the 2071-2100 period",
+      "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp45 emissions scenario in the 2071-2100 period",
+      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "format": "tif",
+      "mediatype": "application/x-gzip",
+      "bytes": "358616146",
+      "hash": "tbc",
+      "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&FORMAT=application/x-gzip",
+      "schema": {},
+      "sources": [],
+      "licenses": [
+        {
+          "name": "CC0-1.0",
+          "title": "Creative Commons CCZero 1.0",
+          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
+      ],
+      "service_type": "ogc:wcs",
+      "mapview": {
+        "service_type": "ogc:wms",
+        "url": "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng"
+      },
+      "spatial_context": {
+        "crs": "EPSG:3035",
+        "extent": {
+          "xmin": 2145500,
+          "ymin": 982500,
+          "xmax": 6606000,
+          "ymax": 5706500
+        },
+        "resolution": {
+          "distance": 500,
+          "uom": "m"
+        },
+        "grid_info": {
+          "bands": 1,
+          "bit_depth": "unsigned-32-bit",
+          "columns": 9448,
+          "rows": 8921,
+          "no_data_value": 1e+20,
+          "start_cell": "top-left",
+          "compression_type": "none"
+        }
+      },
+      "temporal_context": {
+        "trs": "ISO 8601:2004",
+        "extent": {
+          "start": "2071-01-01",
+          "end": "2100-12-31"
+        }
+      },
+      "analysis_context": {
+        "workflow_step": "hazard-characterization",
+        "hazard": "hazard:heat:extreme-heat",
+        "resource_type": "index",
+        "index": "hazard:index:heat:extreme-heat:hot-days-75p",
+        "emissions_scenario": "effective-measures:rcp45",
+        "threshold": [
+          {
+            "name": "low",
+            "lower": "to-be-defined",
+            "relative_to": "baseline"
+          },
+          {
+            "name": "medium",
+            "lower": "to-be-defined",
+            "upper": "to-be-defined",
+            "relative_to": "baseline"
+          },
+          {
+            "name": "high",
+            "upper": "to-be-defined",
+            "relative_to": "baseline"
+          }
+        ]
+      }
+    },
+    {
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r8",
+      "name": "hot-days-rcp85_20110101-20401231",
+      "title": "Hot days > 75th percentile for the rcp85 emissions scenario in the 2011-2040 period",
+      "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp85 emissions scenario in the 2011-2040 period",
+      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "format": "tif",
+      "mediatype": "application/x-gzip",
+      "bytes": "358616146",
+      "hash": "tbc",
+      "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf3&FORMAT=application/x-gzip",
+      "schema": {},
+      "sources": [],
+      "licenses": [
+        {
+          "name": "CC0-1.0",
+          "title": "Creative Commons CCZero 1.0",
+          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
+      ],
+      "service_type": "ogc:wcs",
+      "mapview": {
+        "service_type": "ogc:wms",
+        "url": "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf3&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng"
+      },
+      "spatial_context": {
+        "crs": "EPSG:3035",
+        "extent": {
+          "xmin": 2145500,
+          "ymin": 982500,
+          "xmax": 6606000,
+          "ymax": 5706500
+        },
+        "resolution": {
+          "distance": 500,
+          "uom": "m"
+        },
+        "grid_info": {
+          "bands": 1,
+          "bit_depth": "unsigned-32-bit",
+          "columns": 9448,
+          "rows": 8921,
+          "no_data_value": 1e+20,
+          "start_cell": "top-left",
+          "compression_type": "none"
+        }
+      },
+      "temporal_context": {
+        "trs": "ISO 8601:2004",
+        "extent": {
+          "start": "2011-01-01",
+          "end": "2040-12-31"
+        }
+      },
+      "analysis_context": {
+        "workflow_step": "hazard-characterization",
+        "hazard": "hazard:heat:extreme-heat",
+        "resource_type": "index",
+        "index": "hazard:index:heat:extreme-heat:hot-days-75p",
+        "emissions_scenario": "business-as-usual:rcp85",
+        "threshold": [
+          {
+            "name": "low",
+            "lower": "to-be-defined",
+            "relative_to": "baseline"
+          },
+          {
+            "name": "medium",
+            "lower": "to-be-defined",
+            "upper": "to-be-defined",
+            "relative_to": "baseline"
+          },
+          {
+            "name": "high",
+            "upper": "to-be-defined",
+            "relative_to": "baseline"
+          }
+        ]
+      }
+    },
+    {
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r9",
+      "name": "hot-days-rcp85_20410101-20701231",
+      "title": "Hot days > 75th percentile for the rcp85 emissions scenario in the 2041-2070 period",
+      "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp85 emissions scenario in the 2041-2070 period",
+      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "format": "tif",
+      "mediatype": "application/x-gzip",
+      "bytes": "358616146",
+      "hash": "tbc",
+      "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&FORMAT=application/x-gzip",
+      "schema": {},
+      "sources": [],
+      "licenses": [
+        {
+          "name": "CC0-1.0",
+          "title": "Creative Commons CCZero 1.0",
+          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
+      ],
+      "service_type": "ogc:wcs",
+      "mapview": {
+        "service_type": "ogc:wms",
+        "url": "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng"
+      },
+      "spatial_context": {
+        "crs": "EPSG:3035",
+        "extent": {
+          "xmin": 2145500,
+          "ymin": 982500,
+          "xmax": 6606000,
+          "ymax": 5706500
+        },
+        "resolution": {
+          "distance": 500,
+          "uom": "m"
+        },
+        "grid_info": {
+          "bands": 1,
+          "bit_depth": "unsigned-32-bit",
+          "columns": 9448,
+          "rows": 8921,
+          "no_data_value": 1e+20,
+          "start_cell": "top-left",
+          "compression_type": "none"
+        }
+      },
+      "temporal_context": {
+        "trs": "ISO 8601:2004",
+        "extent": {
+          "start": "2041-01-01",
+          "end": "2070-12-31"
+        }
+      },
+      "analysis_context": {
+        "workflow_step": "hazard-characterization",
+        "hazard": "hazard:heat:extreme-heat",
+        "resource_type": "index",
+        "index": "hazard:index:heat:extreme-heat:hot-days-75p",
+        "emissions_scenario": "business-as-usual:rcp85",
+        "threshold": [
+          {
+            "name": "low",
+            "lower": "to-be-defined",
+            "relative_to": "baseline"
+          },
+          {
+            "name": "medium",
+            "lower": "to-be-defined",
+            "upper": "to-be-defined",
+            "relative_to": "baseline"
+          },
+          {
+            "name": "high",
+            "upper": "to-be-defined",
+            "relative_to": "baseline"
+          }
+        ]
+      }
+    },
+    {
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r10",
+      "name": "hot-days_rcp85_20710101-21001231",
+      "title": "Hot days > 75th percentile for the rcp85 emissions scenario in the 2071-2100 period",
+      "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp85 emissions scenario in the 2071-2100 period",
+      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "format": "tif",
+      "mediatype": "application/x-gzip",
+      "bytes": "358616146",
+      "hash": "tbc",
+      "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&FORMAT=application/x-gzip",
+      "schema": {},
+      "sources": [],
+      "licenses": [
+        {
+          "name": "CC0-1.0",
+          "title": "Creative Commons CCZero 1.0",
+          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
+      ],
+      "service_type": "ogc:wcs",
+      "mapview": {
+        "service_type": "ogc:wms",
+        "url": "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng"
+      },
+      "spatial_context": {
+        "crs": "EPSG:3035",
+        "extent": {
+          "xmin": 2145500,
+          "ymin": 982500,
+          "xmax": 6606000,
+          "ymax": 5706500
+        },
+        "resolution": {
+          "distance": 500,
+          "uom": "m"
+        },
+        "grid_info": {
+          "bands": 1,
+          "bit_depth": "unsigned-32-bit",
+          "columns": 9448,
+          "rows": 8921,
+          "no_data_value": 1e+20,
+          "start_cell": "top-left",
+          "compression_type": "none"
+        }
+      },
+      "temporal_context": {
+        "trs": "ISO 8601:2004",
+        "extent": {
+          "start": "2071-01-01",
+          "end": "2100-12-31"
+        }
+      },
+      "analysis_context": {
+        "workflow_step": "hazard-characterization",
+        "hazard": "hazard:heat:extreme-heat",
+        "resource_type": "index",
+        "index": "hazard:index:heat:extreme-heat:hot-days-75p",
+        "emissions_scenario": "business-as-usual:rcp85",
+        "threshold": [
+          {
+            "name": "low",
+            "lower": "to-be-defined",
+            "relative_to": "baseline"
+          },
+          {
+            "name": "medium",
+            "lower": "to-be-defined",
+            "upper": "to-be-defined",
+            "relative_to": "baseline"
+          },
+          {
+            "name": "high",
+            "upper": "to-be-defined",
+            "relative_to": "baseline"
+          }
+        ]
+      }
     }
-  }]
+  ]
 }
