@@ -268,6 +268,7 @@ possible parameters:
 <td>N/A</td>
 <td>OPTIONAL</td>
 <td>This property indicates if the (geo-)resource is being offered through any commonly used mapping service. Possible protocol values are:
+ 
 * ogc:wms
 * ogc:wms-t
 * ogc:wfs
