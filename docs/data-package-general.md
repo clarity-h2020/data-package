@@ -72,7 +72,7 @@ Thus, in the context of the CSIS, we define a specialized general Data Package p
  
 The value of the profile property is a unique identifier for that profile. This unique identifier MUST be a string in the form of a fully-qualified URL, allowing thus ensuring its uniqueness, that points directly to a JSON Schema that can be used to validate the profile.
  
-The profile schema proposed for CLARITY Data Packages is "profile": http://data.myclimateservice.eu/schemas/clarity-data-package-json-schema.json
+The profile schema proposed for CLARITY Data Packages is "profile": http://csis.myclimateservice.eu/data/schemas/clarity-data-package-json-schema.json
 
 Note: pending to create clarity-data-package-json-schema.json schema
 </td>
