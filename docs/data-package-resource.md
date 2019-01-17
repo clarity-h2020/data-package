@@ -789,8 +789,6 @@ For example, if the indicator values existing in the dataset cover the years 200
 * hazard:earthquake --> https://csis.myclimateservice.eu/taxonomy/hazard/earthquake
 * hazard:volcanic-eruption --> https://csis.myclimateservice.eu/taxonomy/hazard/volcanic-eruption
 * any --> the resource can be used in relation to any hazard.
-
-Note: the identifier can be just the hazard name or hazard:sub-hazard
 </td>
 </tr>
 <tr>
