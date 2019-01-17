@@ -82,6 +82,11 @@
             "name": "gid",
             "title": "gid",
             "type": "integer"
+          },          
+          {
+            "name": "geometry",
+            "title": "geometry",
+            "type": "polygon"
           },
           {
             "name": "area",
@@ -138,7 +143,7 @@
           "path": "https://creativecommons.org/publicdomain/zero/1.0/"
         }
       ],
-      "service_type": "ogc:wfs",
+      "protocol": "ogc:wfs",
       "mapview": {
         "service_type": "ogc:wms",
         "url": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:agricultural_areas&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng"
@@ -155,8 +160,7 @@
           "scale": 50000
         }
       },
-      "mapping_service_type": "wfs",
-      "analysis_context": {
+      "eu_gl_context": {
         "workflow_step": "any",
         "hazard": "any",
         "resource_type": "feature-parameters"
@@ -182,7 +186,7 @@
           "path": "https://creativecommons.org/publicdomain/zero/1.0/"
         }
       ],
-      "service_type": "ogc:wcs",
+      "protocol": "ogc:wcs",
       "mapview": {
         "service_type": "ogc:wms",
         "url": "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_historical_r12i1p1_SMHI-RCA4_v1_day_19710101-20001231_netcdf3&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng"
@@ -200,7 +204,7 @@
           "uom": "m"
         },
         "grid_info": {
-          "bands": 1,
+          "band_count": 1,
           "bit_depth": "unsigned-32-bit",
           "columns": 9448,
           "rows": 8921,
@@ -216,11 +220,11 @@
           "end": "2000-12-31"
         }
       },
-      "analysis_context": {
+      "eu_gl_context": {
         "workflow_step": "hazard-characterization",
         "hazard": "hazard:heat:extreme-heat",
         "resource_type": "index",
-        "index": "hazard:index:heat:extreme-heat:hot-days-75p",
+        "index": "hazard:heat:extreme-heat:index:hot-days-75p",
         "emissions_scenario": "baseline",
         "threshold": [
           {
@@ -259,7 +263,7 @@
           "path": "https://creativecommons.org/publicdomain/zero/1.0/"
         }
       ],
-      "service_type": "ogc:wcs",
+      "protocol": "ogc:wcs",
       "mapview": {
         "service_type": "ogc:wms",
         "url": "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng"
@@ -277,7 +281,7 @@
           "uom": "m"
         },
         "grid_info": {
-          "bands": 1,
+          "band_count": 1,
           "bit_depth": "unsigned-32-bit",
           "columns": 9448,
           "rows": 8921,
@@ -293,11 +297,11 @@
           "end": "2040-12-31"
         }
       },
-      "analysis_context": {
+      "eu_gl_context": {
         "workflow_step": "hazard-characterization",
         "hazard": "hazard:heat:extreme-heat",
         "resource_type": "index",
-        "index": "hazard:index:heat:extreme-heat:hot-days-75p",
+        "index": "hazard:heat:extreme-heat:index:hot-days-75p",
         "emissions_scenario": "early-response:rcp26",
         "threshold": [
           {
@@ -339,7 +343,7 @@
           "path": "https://creativecommons.org/publicdomain/zero/1.0/"
         }
       ],
-      "service_type": "ogc:wcs",
+      "protocol": "ogc:wcs",
       "mapview": {
         "service_type": "ogc:wms",
         "url": "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng"
@@ -357,7 +361,7 @@
           "uom": "m"
         },
         "grid_info": {
-          "bands": 1,
+          "band_count": 1,
           "bit_depth": "unsigned-32-bit",
           "columns": 9448,
           "rows": 8921,
@@ -373,11 +377,11 @@
           "end": "2070-12-31"
         }
       },
-      "analysis_context": {
+      "eu_gl_context": {
         "workflow_step": "hazard-characterization",
         "hazard": "hazard:heat:extreme-heat",
         "resource_type": "index",
-        "index": "hazard:index:heat:extreme-heat:hot-days-75p",
+        "index": "hazard:heat:extreme-heat:index:hot-days-75p",
         "emissions_scenario": "early-response:rcp26",
         "threshold": [
           {
@@ -419,7 +423,7 @@
           "path": "https://creativecommons.org/publicdomain/zero/1.0/"
         }
       ],
-      "service_type": "ogc:wcs",
+      "protocol": "ogc:wcs",
       "mapview": {
         "service_type": "ogc:wms",
         "url": "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng"
@@ -437,7 +441,7 @@
           "uom": "m"
         },
         "grid_info": {
-          "bands": 1,
+          "band_count": 1,
           "bit_depth": "unsigned-32-bit",
           "columns": 9448,
           "rows": 8921,
@@ -453,11 +457,11 @@
           "end": "2100-12-31"
         }
       },
-      "analysis_context": {
+      "eu_gl_context": {
         "workflow_step": "hazard-characterization",
         "hazard": "hazard:heat:extreme-heat",
         "resource_type": "index",
-        "index": "hazard:index:heat:extreme-heat:hot-days-75p",
+        "index": "hazard:heat:extreme-heat:index:hot-days-75p",
         "emissions_scenario": "early-response:rcp26",
         "threshold": [
           {
@@ -499,7 +503,7 @@
           "path": "https://creativecommons.org/publicdomain/zero/1.0/"
         }
       ],
-      "service_type": "ogc:wcs",
+      "protocol": "ogc:wcs",
       "mapview": {
         "service_type": "ogc:wms",
         "url": "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf3&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng"
@@ -533,11 +537,11 @@
           "end": "2040-12-31"
         }
       },
-      "analysis_context": {
+      "eu_gl_context": {
         "workflow_step": "hazard-characterization",
         "hazard": "hazard:heat:extreme-heat",
         "resource_type": "index",
-        "index": "hazard:index:heat:extreme-heat:hot-days-75p",
+        "index": "hazard:heat:extreme-heat:index:hot-days-75p",
         "emissions_scenario": "effective-measures:rcp45",
         "threshold": [
           {
@@ -579,7 +583,7 @@
           "path": "https://creativecommons.org/publicdomain/zero/1.0/"
         }
       ],
-      "service_type": "ogc:wcs",
+      "protocol": "ogc:wcs",
       "mapview": {
         "service_type": "ogc:wms",
         "url": "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng"
@@ -597,7 +601,7 @@
           "uom": "m"
         },
         "grid_info": {
-          "bands": 1,
+          "band_count": 1,
           "bit_depth": "unsigned-32-bit",
           "columns": 9448,
           "rows": 8921,
@@ -613,11 +617,11 @@
           "end": "2070-12-31"
         }
       },
-      "analysis_context": {
+      "eu_gl_context": {
         "workflow_step": "hazard-characterization",
         "hazard": "hazard:heat:extreme-heat",
         "resource_type": "index",
-        "index": "hazard:index:heat:extreme-heat:hot-days-75p",
+        "index": "hazard:heat:extreme-heat:index:hot-days-75p",
         "emissions_scenario": "effective-measures:rcp45",
         "threshold": [
           {
@@ -659,7 +663,7 @@
           "path": "https://creativecommons.org/publicdomain/zero/1.0/"
         }
       ],
-      "service_type": "ogc:wcs",
+      "protocol": "ogc:wcs",
       "mapview": {
         "service_type": "ogc:wms",
         "url": "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng"
@@ -677,7 +681,7 @@
           "uom": "m"
         },
         "grid_info": {
-          "bands": 1,
+          "band_count": 1,
           "bit_depth": "unsigned-32-bit",
           "columns": 9448,
           "rows": 8921,
@@ -693,7 +697,7 @@
           "end": "2100-12-31"
         }
       },
-      "analysis_context": {
+      "eu_gl_context": {
         "workflow_step": "hazard-characterization",
         "hazard": "hazard:heat:extreme-heat",
         "resource_type": "index",
@@ -739,7 +743,7 @@
           "path": "https://creativecommons.org/publicdomain/zero/1.0/"
         }
       ],
-      "service_type": "ogc:wcs",
+      "protocol": "ogc:wcs",
       "mapview": {
         "service_type": "ogc:wms",
         "url": "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf3&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng"
@@ -757,7 +761,7 @@
           "uom": "m"
         },
         "grid_info": {
-          "bands": 1,
+          "band_count": 1,
           "bit_depth": "unsigned-32-bit",
           "columns": 9448,
           "rows": 8921,
@@ -773,11 +777,11 @@
           "end": "2040-12-31"
         }
       },
-      "analysis_context": {
+      "eu_gl_context": {
         "workflow_step": "hazard-characterization",
         "hazard": "hazard:heat:extreme-heat",
         "resource_type": "index",
-        "index": "hazard:index:heat:extreme-heat:hot-days-75p",
+        "index": "hazard:heat:extreme-heat:index:hot-days-75p",
         "emissions_scenario": "business-as-usual:rcp85",
         "threshold": [
           {
@@ -819,7 +823,7 @@
           "path": "https://creativecommons.org/publicdomain/zero/1.0/"
         }
       ],
-      "service_type": "ogc:wcs",
+      "protocol": "ogc:wcs",
       "mapview": {
         "service_type": "ogc:wms",
         "url": "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng"
@@ -837,7 +841,7 @@
           "uom": "m"
         },
         "grid_info": {
-          "bands": 1,
+          "band_count": 1,
           "bit_depth": "unsigned-32-bit",
           "columns": 9448,
           "rows": 8921,
@@ -853,7 +857,7 @@
           "end": "2070-12-31"
         }
       },
-      "analysis_context": {
+      "eu_gl_context": {
         "workflow_step": "hazard-characterization",
         "hazard": "hazard:heat:extreme-heat",
         "resource_type": "index",
@@ -899,7 +903,7 @@
           "path": "https://creativecommons.org/publicdomain/zero/1.0/"
         }
       ],
-      "service_type": "ogc:wcs",
+      "protocol": "ogc:wcs",
       "mapview": {
         "service_type": "ogc:wms",
         "url": "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng"
@@ -917,7 +921,7 @@
           "uom": "m"
         },
         "grid_info": {
-          "bands": 1,
+          "band_count": 1,
           "bit_depth": "unsigned-32-bit",
           "columns": 9448,
           "rows": 8921,
@@ -933,11 +937,11 @@
           "end": "2100-12-31"
         }
       },
-      "analysis_context": {
+      "eu_gl_context": {
         "workflow_step": "hazard-characterization",
         "hazard": "hazard:heat:extreme-heat",
         "resource_type": "index",
-        "index": "hazard:index:heat:extreme-heat:hot-days-75p",
+        "index": "hazard:heat:extreme-heat:index:hot-days-75p",
         "emissions_scenario": "business-as-usual:rcp85",
         "threshold": [
           {
