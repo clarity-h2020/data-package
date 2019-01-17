@@ -536,7 +536,7 @@ Possible values are:
 </thead>
 <tbody>
 <tr>
-<td><i><b>bands</b></i></td>
+<td><i><b>band_count</b></i></td>
 <td>Integer</td>
 <td>0/1</td>
 <td>N/A</td>
