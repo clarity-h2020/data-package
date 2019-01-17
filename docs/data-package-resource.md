@@ -31,7 +31,7 @@ E.g., "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r1
 <tr>
 <td><i><b>name</b></i></td>
 <td>CharacterString without length restriction</td>
-<td>0/1</td>
+<td>1</td>
 <td>MANDATORY</td>
 <td>MANDATORY</td>
 <td>A resource MUST contain a name property. The name is a simple name or identifier to be used for this resource.
@@ -750,7 +750,7 @@ For example, if the indicator values existing in the dataset cover the years 200
 </tr>
 <tr>
 <td><i><b>url</b></i></td>
-<td>CharacterString without limitation</td>
+<td>url CharacterString without length restriction</td>
 <td>1</td>
 <td>N/A</td>
 <td>MANDATORY</td>
