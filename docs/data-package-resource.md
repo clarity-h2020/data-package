@@ -331,7 +331,7 @@ possible parameters:
 <td>CharacterString enumeration</td>
 <td>1</td>
 <td>N/A</td>
-<td>MANDATORY</td>
+<td>OPTIONAL</td>
 <td>Property indicating the Coordinate Reference System. Its value must be a valid EPSG code (https://sis.apache.org/tables/CoordinateReferenceSystems.html). 
 
 By default, CLARITY Data Packages use EPSG:3035
@@ -378,7 +378,7 @@ Examples:
 <td>GridInfo object</td>
 <td>0/1</td>
 <td>N/A</td>
-<td>MADATORY(*)</td>
+<td>OPTIONAL(*)</td>
 <td>This property is MANDATORY if the resource is a raster. Please, see GridInfo object description for further details.
 </td>
 </tr>
@@ -419,7 +419,12 @@ Examples:
 <td>N/A</td>
 <td>OPTIONAL</td>
 <td>The units of measurement used to define the distance. By default, in meters.
- Possible values are: "m", "km", ...</td>
+Possible values are:
+ 
+ * "m" // urn:ogc:def:uom:OGC::m
+ * "km" // urn:ogc:def:uom:OGC::km
+ * ...
+ </td>
 </tr>
 </tbody>
 </table>
@@ -536,7 +541,7 @@ Examples:
 <td>0/1</td>
 <td>N/A</td>
 <td>OPTIONAL</td>
-<td>Number of bands contained in the gridded dataset. If absent, it is assumed with only one band.</td>
+<td>Number of bands contained in the gridded dataset. If absent, the raster is assumed with only one band.</td>
 </tr>
 <tr>
 <td><i><b>bit_depth</b></i></td>
@@ -592,7 +597,10 @@ Bit depth (Range of values that each cell can contain):
 <td>N/A</td>
 <td>MANDATORY</td>
 <td>This property indicates the starting cell of the raster.
-Possible values are: "top-left" or "bottom-right"
+Possible values are: 
+ 
+* "top-left"
+* "bottom-right"
 </td>
 </tr>
 <tr>
@@ -602,7 +610,15 @@ Possible values are: "top-left" or "bottom-right"
 <td>N/A</td>
 <td>OPTIONAL</td>
 <td>This property indicates compression method used to compress the information contained in the raster.
- Possible values are: "none", .... (to be completed).
+Possible values are:
+ 
+* uncompressed
+* packbits
+* lzw
+* deflate
+* jpeg
+* ....
+
 </td>
 </tr>
 </tbody>
@@ -724,7 +740,13 @@ For example, if the indicator values existing in the dataset cover the years 200
 <td>1</td>
 <td>N/A</td>
 <td>MANDATORY</td>
-<td>The protocol (service type) of the mapping service. Similar to "service_type" property defined at resource level, but possible value is limited to "ogc:wms", "ogc:wms-t" and "osm" (maybe others?)</td>
+<td>The protocol (service type) of the mapping service. Similar to "protocol" property defined at resource level, but possible values are limited to:
+ 
+ * ogc:wms
+ * ogc:wms-t
+ * osm
+ * (maybe others?)
+</td>
 </tr>
 <tr>
 <td><i><b>url</b></i></td>
@@ -812,6 +834,7 @@ For example, if the indicator values existing in the dataset cover the years 200
 * index: raster resource refererring to a hazard, local effects, vulnerability, exposure or impact index. If this value is used, then the index property (corresponding to any of these index types hazard|local_effect|vulnerability|exposure|impact) MUST be filled in as well.
 * vulnerabilty-function: tbd
 * adaptation-measures: tbd
+* others to be defined
 </td>
 </tr>
 <tr>
