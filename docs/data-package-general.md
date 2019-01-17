@@ -288,7 +288,7 @@ Price of the datapackage. If empty, then assume that it is free.
 <td>Character string without length restriction</td>
 <td>0/1</td>
 <td>OPTIONAL</td>
-<td>MANDATORY</td>
+<td>OPTIONAL</td>
 <td>A fully qualified http URL pointing to a relevant location online for the contributor.</td>
 </tr>
 <tr>
@@ -304,7 +304,7 @@ Price of the datapackage. If empty, then assume that it is free.
 <td>String enumeration</td>
 <td>0/1</td>
 <td>OPTIONAL</td>
-<td>MANDATORY</td>
+<td>OPTIONAL</td>
 <td>A string describing the role of the contributor. It MUST be one of: author, publisher, maintainer, wrangler, and contributor. Defaults to contributor.
 
 Note on semantics: use of the "author" property does not imply that that person was the original creator of the data in the data package - merely that they created and/or maintain the data package. It is common for data packages to "package" up data from elsewhere. The original origin of the data can be indicated with the sources property - see above.</td>
@@ -360,7 +360,7 @@ Note on semantics: use of the "author" property does not imply that that person 
 <td>Character string without length restriction</td>
 <td>0/1</td>
 <td>OPTIONAL</td>
-<td>OPTIONAL</td>
+<td>MANDATORY</td>
 <td>A human-readable title</td>
 </tr>
 </tbody>
