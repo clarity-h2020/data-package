@@ -885,10 +885,10 @@ Note: the identifier can be just the hazard name or hazard:sub-hazard
 <td>This property indicates to which emissions scenario this resource refers to.
 Possible emission scenario values are:
 
-* baseline
-* early-response:rcp26
-* effective-measures:rcp45
-* business-as-usual:rcp85
+* emissions-scenario:baseline --> https://csis.myclimateservice.eu/taxonomy/emissions-scenario/baseline
+* emissions-scenario:rcp26-early-response --> https://csis.myclimateservice.eu/taxonomy/emissions-scenario/rcp26-early-response
+* emissions-scenario:rcp45-effective-measures --> https://csis.myclimateservice.eu/taxonomy/emissions-scenario/rcp45-effective-measures
+* emissions-scenario:rcp85-business-as-usual --> https://csis.myclimateservice.eu/taxonomy/emissions-scenario/rcp85-business-as-usual
 </td>
 </tr>
 
