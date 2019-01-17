@@ -49,7 +49,7 @@ The name SHOULD be invariant, meaning that it SHOULD NOT change when a resource 
 <td>MANDATORY</td>
 <td>A string identifying the profile of this resource descriptor as per the profiles specification (see the profile property in "General" tab).
 
-For CSIS: http://data.myclimateservice.eu/schemas/clarity-data-resource-json-schema.json
+For CSIS: http://csis.myclimateservice.eu/data/schemas/clarity-data-resource-json-schema.json
 </td>
 </tr>
 <tr>
@@ -756,12 +756,14 @@ For example, if the indicator values existing in the dataset cover the years 200
 <td>MANDATORY</td>
 <td>The list of workflow steps where the resource can be used. Allowed values are:
  
-* hazard-characterization:
-* hazard-characterization-local-effects:
-* exposure:
-* vulnerability:
-* risk-and-impact:
-* adaptation-options:
+* eu-gl:hazard-characterization --> https://csis.myclimateservice.eu/taxonomy/eu-gl/hazard-characterization
+* eu-gl:hazard-characterization:local-effects --> https://csis.myclimateservice.eu/taxonomy/eu-gl/hazard-characterization/local-effects
+* eu-gl:exposure-evaluation --> https://csis.myclimateservice.eu/taxonomy/eu-gl/exposure-evaluation
+* eu-gl:vulnerability-analysis --> https://csis.myclimateservice.eu/taxonomy/eu-gl/vulnerability-analysis
+* eu-gl:risk-and-impact-assessment --> https://csis.myclimateservice.eu/taxonomy/eu-gl/risk-and-impact-assessment
+* eu-gl:adaptation-options:identification --> https://csis.myclimateservice.eu/taxonomy/eu-gl/adaptation-options/identification
+* eu-gl:adaptation-options:appraisal --> https://csis.myclimateservice.eu/taxonomy/eu-gl/adaptation-options/appraisal
+* eu-gl:adaptation-action-plans:implementation --> https://csis.myclimateservice.eu/taxonomy/eu-gl/adaptation-options/implementation
 * any
 </td>
 </tr>
@@ -773,20 +775,20 @@ For example, if the indicator values existing in the dataset cover the years 200
 <td>MANDATORY</td>
 <td>The hazard property describes to which hazard type is the resource related to. Its value can be one of the following list:
  
-* hazard:heat:heat-waves
-* hazard:heat:extreme-heat
-* hazard:flood:extreme-precipitation
-* hazard:flood:wet-periods
-* hazard:flood:river-flooding        
-* hazard:flood:pluvial-flooding
-* hazard:drought
-* hazard:storm
-* hazard:extreme-wind-speed        
-* hazard:forest-fire
-* hazard:landslide
-* hazard:earthquake
-* hazard:volcanic-eruption
-* any: the resource can be used in relation to any hazard.
+* hazard:heat:heat-wave --> https://csis.myclimateservice.eu/taxonomy/hazard/heat/heat-weave
+* hazard:heat:extreme-heat --> https://csis.myclimateservice.eu/taxonomy/hazard/heat/extreme-heat
+* hazard:flood:extreme-precipitation --> https://csis.myclimateservice.eu/taxonomy/hazard/flood/extreme-precipitation
+* hazard:flood:wet-periods --> https://csis.myclimateservice.eu/taxonomy/hazard/flood/wet-periods
+* hazard:flood:river-flooding --> https://csis.myclimateservice.eu/taxonomy/hazard/flood/river-flooding
+* hazard:flood:pluvial-flooding --> https://csis.myclimateservice.eu/taxonomy/hazard/flood/pluvial-flooding
+* hazard:drought --> https://csis.myclimateservice.eu/taxonomy/hazard/drought
+* hazard:storm --> https://csis.myclimateservice.eu/taxonomy/hazard/storm
+* hazard:extreme-wind-speed --> https://csis.myclimateservice.eu/taxonomy/hazard/extreme-wind-speed
+* hazard:forest-fire --> https://csis.myclimateservice.eu/taxonomy/hazard/forest-fire
+* hazard:landslide --> https://csis.myclimateservice.eu/taxonomy/hazard/landslide
+* hazard:earthquake --> https://csis.myclimateservice.eu/taxonomy/hazard/earthquake
+* hazard:volcanic-eruption --> https://csis.myclimateservice.eu/taxonomy/hazard/volcanic-eruption
+* any --> the resource can be used in relation to any hazard.
 
 Note: the identifier can be just the hazard name or hazard:sub-hazard
 </td>
@@ -815,32 +817,32 @@ Note: the identifier can be just the hazard name or hazard:sub-hazard
  
  For hazard and local-effects indexes:
  
- * hazard:index:heat:heat-wave:consecutive-summer-days
- * hazard:index:heat:heat-wave:hot-period-duration
- * hazard:index:heat:extreme-heat:hot-days-75p
- * hazard:index:heat:extreme-heat:hot-days
- * hazard:index:heat:extreme-heat:summer-days
- * hazard:index:heat:extreme-heat:tropical-nights
- * hazard:index:heat:extreme-heat:tx90p
- * hazard:index:flood:extreme-precipitation:rx1day
- * hazard:index:flood:extreme-precipitation:rx5day
- * hazard:index:flood:extreme-precipitation:snow-days
- * hazard:index:flood:wet-periods:consecutive-wet-days
- * hazard:index:flood:wet-periods:wet-days
- * hazard:index:flood:wet-periods:very-heavy-precipitation-days
- * hazard:index:flood:wet-periods:wet-days-90p
- * hazard:index:flood:river-flooding:flood-recurrence
- * hazard:index:flood:river-flooding:river-flow
- * hazard:index:flood:pluvial-flooding:water-runoff
- * hazard:index:drought:standardized-precipitation-index
- * hazard:index:drought:consecutive-dry-days
- * hazard:index:storm:????
- * hazard:index:extreme-wind-speed
- * hazard:index:forest-fire:fire-weather-index
- * hazard:index:forest-fire:seasonal-severity-rating
- * hazard:index:landslide:susceptibility-levels-at-continental-scale
- * hazard:index:earthquake:????
- * hazard:index:volcanic-eruption:volcanic-explosivity-index
+ * hazard:heat:heat-wave:index:consecutive-summer-days --> https://csis.myclimateservice.eu/taxonomy/hazard/heat/heat-weave/index/consecutive-summer-days
+ * hazard:heat:heat-wave:index:hot-period-duration --> https://csis.myclimateservice.eu/taxonomy/hazard/heat/heat-weave/index/hot-period-duration
+ * hazard:heat:extreme-heat:index:hot-days-75p --> https://csis.myclimateservice.eu/taxonomy/hazard/heat/heat-weaves
+ * hazard:heat:extreme-heat:index:hot-days --> https://csis.myclimateservice.eu/taxonomy/hazard/heat/heat-weaves
+ * hazard:heat:extreme-heat:index:summer-days --> https://csis.myclimateservice.eu/taxonomy/hazard/heat/extreme-heat/index/summer-days
+ * hazard:heat:extreme-heat:index:tropical-nights --> https://csis.myclimateservice.eu/taxonomy/hazard/heat/extreme-heat/index/tropical-nights
+ * hazard:heat:extreme-heat:index:tx90p --> https://csis.myclimateservice.eu/taxonomy/hazard/heat/extreme-heat/index/tx90p
+ * hazard:flood:extreme-precipitation:index:rx1day --> https://csis.myclimateservice.eu/taxonomy/hazard/flood/extreme-precipitation/index/rx1day
+ * hazard:flood:extreme-precipitation:index:rx5day --> https://csis.myclimateservice.eu/taxonomy/hazard/flood/extreme-precipitation/index/rx5day
+ * hazard:flood:extreme-precipitation:index:snow-days --> https://csis.myclimateservice.eu/taxonomy/hazard/flood/extreme-precipitation/index/snow-days
+ * hazard:flood:wet-periods:index:consecutive-wet-days --> https://csis.myclimateservice.eu/taxonomy/hazard/flood/wet-periods/index/consecutive-wet-days
+ * hazard:flood:wet-periods:index:wet-days --> https://csis.myclimateservice.eu/taxonomy/hazard/flood/wet-periods/index/wet-days
+ * hazard:flood:wet-periods:index:very-heavy-precipitation-days --> https://csis.myclimateservice.eu/taxonomy/hazard/flood/wet-periods/index/very-heavy-precipitation-days
+ * hazard:flood:wet-periods:index:wet-days-90p --> https://csis.myclimateservice.eu/taxonomy/hazard/flood/wet-periods/index/wet-days-90p
+ * hazard:flood:river-flooding:index:flood-recurrence --> https://csis.myclimateservice.eu/taxonomy/hazard/flood/river-flooding/index/
+ * hazard:flood:river-flooding:index:river-flow --> https://csis.myclimateservice.eu/taxonomy/hazard/flood/river-flooding/index/
+ * hazard:flood:pluvial-flooding:index:water-runoff --> https://csis.myclimateservice.eu/taxonomy/hazard/flood/pluvial-flooding/index/
+ * hazard:drought:index:standardized-precipitation-index --> https://csis.myclimateservice.eu/taxonomy/hazard/drought/index/
+ * hazard:drought:index:consecutive-dry-days --> https://csis.myclimateservice.eu/taxonomy/hazard/drought/index/
+ * hazard:storm:index:???? --> https://csis.myclimateservice.eu/taxonomy/hazard/storm/index/????
+ * hazard:extreme-wind-speed:index:???? --> https://csis.myclimateservice.eu/taxonomy/hazard/extreme-wind-speed/index/?????
+ * hazard:forest-fire:index:fire-weather-index --> https://csis.myclimateservice.eu/taxonomy/hazard/forest-fire/index/
+ * hazard:forest-fire:index:seasonal-severity-rating --> https://csis.myclimateservice.eu/taxonomy/hazard/forest-fire/index/
+ * hazard:landslide:index:susceptibility-levels-at-continental-scale --> https://csis.myclimateservice.eu/taxonomy/hazard/landslide/index/
+ * hazard:earthquake:index:???? --> https://csis.myclimateservice.eu/taxonomy/hazard/earthquake/index/????
+ * hazard:volcanic-eruption:index:volcanic-explosivity-index --> https://csis.myclimateservice.eu/taxonomy/hazard/volcanic-eruption/index/volcanic-explosivity-index
  
   
  For vulnerability indexes:
