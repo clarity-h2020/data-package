@@ -899,7 +899,7 @@ For example, if the indicator values existing in the dataset cover the years 200
 <tr>
 <td><i><b>threshold</b></i></td>
 <td>List of Threshold Objects</td>
-<td>0/1+</td>
+<td>0+</td>
 <td>N/A</td>
 <td>OPTIONAL(*)</td>
 <td>
@@ -926,7 +926,7 @@ Possible emission scenario values are:
 <tr>
 <td><i><b>category</b></i></td>
 <td>List of CharacterString enumeration</td>
-<td>0/1+</td>
+<td>0+</td>
 <td>N/A</td>
 <td>OPTIONAL(*)</td>
 <td>
