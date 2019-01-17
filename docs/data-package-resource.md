@@ -18,7 +18,7 @@ The following is a list of attributes contained in the Data Resource section of 
 <tbody>
 <tr>
 <td><i><b>id</b></i></td>
-<td>Character string without length restriction</td>
+<td>CharacterString without length restriction</td>
 <td>1</td>
 <td>N/A</td>
 <td>MANDATORY</td>
@@ -30,7 +30,7 @@ E.g., "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r1
 </tr>
 <tr>
 <td><i><b>name</b></i></td>
-<td>Character string without length restriction</td>
+<td>CharacterString without length restriction</td>
 <td>0/1</td>
 <td>MANDATORY</td>
 <td>MANDATORY</td>
@@ -71,9 +71,9 @@ For CSIS: http://csis.myclimateservice.eu/data/schemas/clarity-data-resource-jso
 <tr>
 <td><i><b>sources</b></i></td>
 <td>List of Source objects</td>
-<td>1+</td>
+<td>0+</td>
 <td>N/A</td>
-<td>MANDATORY</td>
+<td>OPTIONAL</td>
 <td>The raw sources that were used for producing this resource. For further information, please check the sources property description at data package level.
 </td>
 </tr>
@@ -82,7 +82,7 @@ For CSIS: http://csis.myclimateservice.eu/data/schemas/clarity-data-resource-jso
 <td>List of Contributor objects</td>
 <td>0+</td>
 <td>OPTIONAL</td>
-<td>MANDATORY</td>
+<td>OPTIONAL</td>
 <td>The people or organizations who contributed to produce this resource. For further information, please check the contributors property description at data package level.
 </td>
 </tr>
@@ -91,7 +91,7 @@ For CSIS: http://csis.myclimateservice.eu/data/schemas/clarity-data-resource-jso
 <td>List of License objects</td>
 <td>0+</td>
 <td>OPTIONAL</td>
-<td>MANDATORY</td>
+<td>OPTIONAL</td>
 <td>The license(s) under which the resource is provided. If not specified the resource inherits from the data package. For further information, please check the license property description at data package level. </td>
 </tr>
 <tr>
@@ -206,6 +206,8 @@ Examples:
  * fully qualified url
    - "path": "http://ex.datapackages.org/big-csv/my-big.csv"
    - "path": "http://demo.geo-solutions.it/geoserver/tiger/ows?service=WFS&version=1.1.0&request=GetFeature&typeName=tiger:tiger_roads&srsName=EPSG:3857&bbox=40.7,-74,40.8,-73,urn:ogc:def:crs:EPSG:4326&maxFeatures=1"
+   - "path": "jdbc:postgresql://localhost:5432/database"
+   - "path": "sftp://clarityftp@w.x.y.z/clarityftp/europe/population/population_naples_age_groups_500_LAEA.zip"
 
  * relative path (note: this will work both as a relative path on disk and on online)
    - "path": "data/my-csv.csv"
@@ -235,13 +237,20 @@ If a string it must be a url-or-path as defined above, that is a fully qualified
 The next section provide a complete schema description with the parameters for each of the typical resources included in a CLARITY Data Package.</td>
 </tr>
 <tr>
-<td><i><b>service_type</b></i></td>
+<td><i><b>protocol</b></i></td>
 <td>CharacterString enumeration</td>
 <td>0/1</td>
 <td>N/A</td>
 <td>OPTIONAL</td>
-<td>This property indicates if the (geo-)resource is being offered through any commonly used mapping service. Possible protocol values are:
- 
+<td>This property indicates what is the protocol being used to offer the (geo-)resource.
+In many cases this property is not necessary as it could be determined by parsing the url path (e.g., http, sftp, etc.). 
+This property is primarily to be used to support the client software (that has to process the data package) to identify if the resource is being offered via some commonly used (download) geoservice service (mainly OGC WFS or OGC WCS).
+
+Listed below there is a (non-exhaustive) list of possible protocol values:
+* http
+* https
+* jdbc
+* odbc
 * ogc:wms
 * ogc:wms-t
 * ogc:wfs
