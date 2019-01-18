@@ -114,6 +114,7 @@ Currently, CLARITY Data Package supports the following resource formats:
     - "gml3": GML 3
     - "gml32": GML 3.2
     - "kml": OGC Keyhole Markup Language
+    - "kmz": OGC Compressed Keyhole Markup Language
  * Raster based:
     - tif | tiff: (.tif, .tiff)
     - jpeg
@@ -193,10 +194,10 @@ Note: this property is not supported in CSIS Data Package Resources.</td>
 <tr>
 <td><i><b>path</b></i></td>
 <td>url-path character string without length restriction</td>
-<td>0/1</td>
+<td>1+</td>
 <td>OPTIONAL</td>
 <td>MANDATORY</td>
-<td>"Location property for data in files located online or locally on disk (within the Data Package itself).
+<td>Location property for data in files located online or locally on disk (within the Data Package itself).
  
 The path property MUST be a string -- or an array of strings (see "Data in Multiple Files"). Each string MUST be a "url-or-path" string, defined as the following:
  * URLs MUST be fully qualified. MUST be using either http or https scheme. (Absence of a scheme indicates MUST be a POSIX path)
