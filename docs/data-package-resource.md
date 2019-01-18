@@ -238,20 +238,14 @@ If a string it must be a url-or-path as defined above, that is a fully qualified
 The next section provide a complete schema description with the parameters for each of the typical resources included in a CLARITY Data Package.</td>
 </tr>
 <tr>
-<td><i><b>protocol</b></i></td>
+<td><i><b>service_type</b></i></td>
 <td>CharacterString enumeration</td>
 <td>0/1</td>
 <td>N/A</td>
 <td>OPTIONAL</td>
-<td>This property indicates what is the protocol being used to offer the (geo-)resource.
-In many cases this property is not necessary as it could be determined by parsing the url path (e.g., http, sftp, etc.). 
-This property is primarily to be used to support the client software (that has to process the data package) to identify if the resource is being offered via some commonly used (download) geoservice service (mainly OGC WFS or OGC WCS).
+<td>This property is primarily to be used to support the client software (that has to process the data package) to identify if the resource is being offered via some commonly used (download) geoservice service (mainly OGC WFS or OGC WCS).
 
 Listed below there is a (non-exhaustive) list of possible protocol values:
-* http
-* https
-* jdbc
-* odbc
 * ogc:wms
 * ogc:wms-t
 * ogc:wfs
