@@ -1,0 +1,70 @@
+{
+    "fields": [
+        {
+            "name": "geometry",
+            "description": "tbc",
+            "type": "point",
+            "uom": null
+        },
+        {
+            "name": "area",
+            "description": "tbc",
+            "type": "float",
+            "uom": "km2"
+        },
+        {
+            "name": "perimeter",
+            "description": "tbc",
+            "type": "float",
+            "uom": "km"
+        },
+        {
+            "name": "albedo",
+            "description": "tbc",
+            "type": "float",
+            "uom": null
+        },
+        {
+            "name": "emissivity",
+            "description": "tbc",
+            "type": "float",
+            "uom": null
+        },
+        {
+            "name": "transmissivity",
+            "description": "tbc",
+            "type": "float",
+            "uom": null
+        },
+        {
+            "name": "building_shadow",
+            "description": "tbc",
+            "type": "byte",
+            "uom": null,
+            "constraints": {
+                "allowed-values": [
+                    0,
+                    1
+                ]
+            }
+        },
+        {
+            "name": "vegetation_shadow",
+            "description": "tbc",
+            "type": "byte",
+            "uom": null,
+            "constraints": {
+                "allowed-values": [
+                    0,
+                    1
+                ]
+            }
+        },
+        {
+            "name": "run_off_coefficient",
+            "description": "tbc",
+            "type": "float",
+            "uom": null
+        }
+    ]
+}
