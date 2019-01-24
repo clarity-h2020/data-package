@@ -1,0 +1,16 @@
+{
+    "fields": [
+        {
+            "name": "geometry",
+            "description": "tbc",
+            "type": "linestring",
+            "uom": null
+        },        
+        {
+            "name": "lenght",
+            "description": "tbc",
+            "type": "float",
+            "uom": "km"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "fields": [
+        {
+            "name": "geometry",
+            "description": "tbc",
+            "type": "polygon",
+            "uom": null
+        },
+        {
+            "name": "temperature",
+            "description": "tbc",
+            "type": "float",
+            "uom": "K"
+        }
+    ]
+}

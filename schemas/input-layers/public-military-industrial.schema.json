@@ -1,0 +1,58 @@
+{
+    "fields": [
+        {
+            "name": "geometry",
+            "description": "tbc",
+            "type": "polygon",
+            "uom": null
+        },
+        {
+            "name": "area",
+            "description": "tbc",
+            "type": "float",
+            "uom": "km2"
+        },
+        {
+            "name": "perimeter",
+            "description": "tbc",
+            "type": "float",
+            "uom": "km"
+        },
+        {
+            "name": "context_shading_ventilation",
+            "description": "tbc",
+            "type": "float",
+            "uom": null
+        },
+        {
+            "name": "albedo",
+            "description": "tbc",
+            "type": "float",
+            "uom": null
+        },
+        {
+            "name": "emissivity",
+            "description": "tbc",
+            "type": "float",
+            "uom": null
+        },
+        {
+            "name": "transmissivity",
+            "description": "tbc",
+            "type": "float",
+            "uom": null
+        },
+        {
+            "name": "run_off_coefficient",
+            "description": "tbc",
+            "type": "float",
+            "uom": null
+        },
+        {
+            "name": "fua_tunnel",
+            "description": "tbc",
+            "type": "float",
+            "uom": null
+        }
+    ]
+}

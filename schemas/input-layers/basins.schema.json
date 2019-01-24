@@ -1,0 +1,22 @@
+{
+    "fields": [
+        {
+            "name": "geometry",
+            "description": "tbc",
+            "type": "polygon",
+            "uom": null
+        },
+        {
+            "name": "area",
+            "description": "tbc",
+            "type": "float",
+            "uom": "km2"
+        },
+        {
+            "name": "perimeter",
+            "description": "tbc",
+            "type": "float",
+            "uom": "km"
+        }
+    ]
+}
