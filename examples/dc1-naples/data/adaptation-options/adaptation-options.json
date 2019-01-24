@@ -1,0 +1,159 @@
+[
+    {
+        "id": "adaptation-option:constructions-on-piles",
+        "image": "https://github.com/clarity-h2020/data-package/tree/master/schemas/adaptation-options/icons/constructions-on-piles.png",
+        "xxx": [
+            {
+                "hazard": "hazard:flood:pluvial-flooding",
+                "variation": {
+                    " local_effect": 0,
+                    " vulnerability": 2
+                }
+            },
+            {
+                "hazard": "hazard:flood:river-flooding",
+                "variation": {
+                    "local_effect": 0,
+                    "vulnerability": 3
+                }
+            },
+            {
+                "hazard": "hazard:landslide",
+                "variation": {
+                    "local_effect": 0,
+                    "vulnerability": 3
+                }
+            }
+        ],
+        "cost": {
+            "new_development": 2,
+            "retroffiting": null
+        },
+        "co_benefits": [
+            {
+                "category": "biodiversity",
+                "value": 1
+            },
+            {
+                "category": "multifunctional-space-usage",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "id": "adaptation-option:porous-pavements",
+        "image": "https://github.com/clarity-h2020/data-package/tree/master/schemas/adaptation-options/icons/porous-pavements.png",
+        "xxx": [
+            {
+                "hazard": "hazard:flood:pluvial-flooding",
+                "variation": {
+                    "local_effect": 3,
+                    "vulnerability": 3
+                }
+            },
+            {
+                "hazard": "hazard:flood:river-flooding",
+                "variation": {
+                    "local_effect": 1,
+                    "vulnerability": 1
+                }
+            }
+        ],
+        "cost": {
+            "new_development": 1,
+            "retroffiting": 1
+        },
+        "co_benefits": [
+            {
+                "category": "biodiversity",
+                "value": 1
+            },
+            {
+                "category": "multifunctional-space-usage",
+                "value": 1
+            }
+        ]
+    },
+    {
+        "id": "adaptation-option:improve-soil-infiltration-capacity",
+        "image": "https://github.com/clarity-h2020/data-package/tree/master/schemas/adaptation-options/icons/improve-soil-infiltration-capacity.png",
+        "xxx": [
+            {
+                "hazard": "hazard:flood:pluvial-flooding",
+                "variation": {
+                    " local_effect": 3,
+                    " vulnerability": 0
+                }
+            },
+            {
+                "hazard": "hazard:flood:river-flooding",
+                "variation": {
+                    "local_effect": 1,
+                    "vulnerability": 0
+                }
+            },
+            {
+                "hazard": "hazard:landslide",
+                "variation": {
+                    "local_effect": 1,
+                    "vulnerability": 0
+                }
+            }
+        ],
+        "cost": {
+            "new_development": 1,
+            "retroffiting": 1
+        },
+        "co_benefits": [
+            {
+                "category": "biodiversity",
+                "value": 1
+            },
+            {
+                "category": "multifunctional-space-usage",
+                "value": 1
+            },
+            {
+                "category": "air-quality",
+                "value": 1
+            }            
+        ]
+    },
+    {
+        "id": "adaptation-option:gutter",
+        "image": "https://github.com/clarity-h2020/data-package/tree/master/schemas/adaptation-options/icons/gutter.png",
+        "xxx": [
+            {
+                "hazard": "hazard:flood:pluvial-flooding",
+                "variation": {
+                    " local_effect": 3,
+                    " vulnerability": 0
+                }
+            },
+            {
+                "hazard": "hazard:flood:river-flooding",
+                "variation": {
+                    "local_effect": 1,
+                    "vulnerability": 0
+                }
+            },
+            {
+                "hazard": "hazard:landslide",
+                "variation": {
+                    "local_effect": 1,
+                    "vulnerability": 0
+                }
+            }
+        ],
+        "cost": {
+            "new_development": 1,
+            "retroffiting": 1
+        },
+        "co_benefits": [
+            {
+                "category": "social-and-economic-importance",
+                "value": 1
+            }      
+        ]
+    }
+]

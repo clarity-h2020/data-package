@@ -1,0 +1,158 @@
+{
+    "fields": [
+        {
+            "name": "image",
+            "description": "Path of the image icon supporting the description of the adaptation option",
+            "type": "string",
+            "uom": null
+        },
+        {
+            "name": "id",
+            "description": "String identifier of the adaptation option",
+            "type": "string",
+            "uom": null,
+            "constraints": {
+                "allowed-values": [
+                    "adaptation-option:constructions-on-piles",
+                    "adaptation-option:porous-pavements",
+                    "adaptation-option:improve-soil-infiltration-capacity",
+                    "adaptation-option:gutter",
+                    "adaptation-option:rainwater-harvesting-and-reuse",
+                    "adaptation-option:emergency-overflow-retention-area",
+                    "adaptation-option:rainwater-retention-ponds",
+                    "adaptation-option:wadi",
+                    "adaptation-option:reduced-paved-surfaces",
+                    "adaptation-option:streetscape-greening",
+                    "adaptation-option:groundcover-and-shrubbery",
+                    "adaptation-option:green-roofs",
+                    "adaptation-option:green-facades",
+                    "adaptation-option:green-ventilation-grids",
+                    "adaptation-option:cool-roofs",
+                    "adaptation-option:cool-paving-and-building-materials",
+                    "adaptation-option:optimize-orientation-to-wind-and-sun",
+                    "adaptation-option:pergolas-and-canvas-above-streets",
+                    "adaptation-option:thermal-insulation",
+                    "adaptation-option:narrow-streets",
+                    "adaptation-option:high-rise-buildings",
+                    "adaptation-option:blinds"
+                ]
+            }
+        },
+        {
+            "name": "title",
+            "description": "Title/name of the adaptation option",
+            "type": "string",
+            "uom": null
+        },
+        {
+            "name": "hazard",
+            "description": "Towards which hazard this adaptation option can be used",
+            "type": "string",
+            "uom": null,
+            "constraints": {
+                "allowed-values": [
+                    "hazard:temperature:cold:cold-wave",
+                    "hazard:temperature:cold:extreme-cold",
+                    "hazard:drought",
+                    "hazard:earthquake",
+                    "hazard:flood:extreme-precipitation",
+                    "hazard:flood:pluvial-flooding",
+                    "hazard:flood:river-flooding",
+                    "hazard:flood:wet-periods",
+                    "hazard:forest-fire",
+                    "hazard:temperature:heat:extreme-heat",
+                    "hazard:temperature:heat:heat-wave",
+                    "hazard:landslide",
+                    "hazard:storm:extreme-wind-speed",
+                    "hazard:temperature:thermal-stress",
+                    "hazard:volcanic-eruption"
+                ]
+            }
+        },
+        {
+            "name": "variation_local_effect",
+            "description": "Variation on hazard's local effect",
+            "type": "byte",
+            "uom": null,
+            "constraints": {
+                "allowed-values": [
+                    0,
+                    1,
+                    2,
+                    3
+                ]
+            }
+        },
+        {
+            "name": "variation_vulnerability",
+            "description": "Variation on vulnerability of elements at risk",
+            "type": "byte",
+            "uom": null,
+            "constraints": {
+                "allowed-values": [
+                    0,
+                    1,
+                    2,
+                    3
+                ]
+            }
+        },
+        {
+            "name": "cost_new_development",
+            "description": "Cost of the adaptation option in new developments",
+            "type": "byte",
+            "uom": null,
+            "constraints": {
+                "allowed-values": [
+                    null,
+                    1,
+                    2,
+                    3
+                ]
+            }
+        },
+        {
+            "name": "cost_retroffiting",
+            "description": "Cost of the adaptation option in new developments",
+            "type": "byte",
+            "uom": null,
+            "constraints": {
+                "allowed-values": [
+                    null,
+                    1,
+                    2,
+                    3
+                ]
+            }
+        },
+        {
+            "name": "co_benefit_category",
+            "description": "Category name of the co-benefit of applying the adaptation option",
+            "type": "string",
+            "uom": null,
+            "constraints": {
+                "allowed-values": [
+                    "biodiversity",
+                    "air-quality",
+                    "energy-efficency",
+                    "social-and-economic-importance",
+                    "multifunctional-space-usage"
+                ]
+            }
+        },
+        {
+            "name": "co_benefit_value",
+            "description": "Value of the co-benefit of applying the adaptation option",
+            "type": "byte",
+            "uom": null,
+            "constraints": {
+                "allowed-values": [
+                    0,
+                    1,
+                    2,
+                    3
+                ]
+            }
+        }
+    ]
+}
