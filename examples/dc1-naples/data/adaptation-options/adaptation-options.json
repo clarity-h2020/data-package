@@ -1,9 +1,7 @@
-[
-    {
+[{
         "id": "adaptation-option:constructions-on-piles",
-        "image": "https://github.com/clarity-h2020/data-package/tree/master/schemas/adaptation-options/icons/constructions-on-piles.png",
-        "xxx": [
-            {
+        "image": "https://raw.githubusercontent.com/clarity-h2020/data-package/master/schemas/adaptation-options/icons/constructions-on-piles.png",
+        "variations": [{
                 "hazard": "hazard:flood:pluvial-flooding",
                 "variation": {
                     " local_effect": 0,
@@ -29,8 +27,7 @@
             "new_development": 2,
             "retroffiting": null
         },
-        "co_benefits": [
-            {
+        "co_benefits": [{
                 "category": "biodiversity",
                 "value": 1
             },
@@ -42,9 +39,8 @@
     },
     {
         "id": "adaptation-option:porous-pavements",
-        "image": "https://github.com/clarity-h2020/data-package/tree/master/schemas/adaptation-options/icons/porous-pavements.png",
-        "xxx": [
-            {
+        "image": "https://raw.githubusercontent.com/clarity-h2020/data-package/master/schemas/adaptation-options/icons/porous-pavements.png",
+        "variations": [{
                 "hazard": "hazard:flood:pluvial-flooding",
                 "variation": {
                     "local_effect": 3,
@@ -63,8 +59,7 @@
             "new_development": 1,
             "retroffiting": 1
         },
-        "co_benefits": [
-            {
+        "co_benefits": [{
                 "category": "biodiversity",
                 "value": 1
             },
@@ -76,9 +71,8 @@
     },
     {
         "id": "adaptation-option:improve-soil-infiltration-capacity",
-        "image": "https://github.com/clarity-h2020/data-package/tree/master/schemas/adaptation-options/icons/improve-soil-infiltration-capacity.png",
-        "xxx": [
-            {
+        "image": "https://raw.githubusercontent.com/clarity-h2020/data-package/master/schemas/adaptation-options/icons/improve-soil-infiltration-capacity.png",
+        "variations": [{
                 "hazard": "hazard:flood:pluvial-flooding",
                 "variation": {
                     " local_effect": 3,
@@ -104,8 +98,7 @@
             "new_development": 1,
             "retroffiting": 1
         },
-        "co_benefits": [
-            {
+        "co_benefits": [{
                 "category": "biodiversity",
                 "value": 1
             },
@@ -116,14 +109,13 @@
             {
                 "category": "air-quality",
                 "value": 1
-            }            
+            }
         ]
     },
     {
         "id": "adaptation-option:gutter",
-        "image": "https://github.com/clarity-h2020/data-package/tree/master/schemas/adaptation-options/icons/gutter.png",
-        "xxx": [
-            {
+        "image": "https://raw.githubusercontent.com/clarity-h2020/data-package/master/schemas/adaptation-options/icons/gutter.png",
+        "variations": [{
                 "hazard": "hazard:flood:pluvial-flooding",
                 "variation": {
                     " local_effect": 3,
@@ -149,11 +141,652 @@
             "new_development": 1,
             "retroffiting": 1
         },
-        "co_benefits": [
+        "co_benefits": [{
+            "category": "social-and-economic-importance",
+            "value": 1
+        }]
+    },
+    {
+        "id": "adaptation-option:rainwater-harvesting-and-reuse",
+        "image": "https://raw.githubusercontent.com/clarity-h2020/data-package/master/schemas/adaptation-options/icons/rainwater-harvesting-and-reuse.png",
+        "variations": [{
+            "hazard": "hazard:flood:pluvial-flooding",
+            "variation": {
+                " local_effect": 3,
+                " vulnerability": 0
+            }
+        }],
+        "cost": {
+            "new_development": 2,
+            "retroffiting": 2
+        },
+        "co_benefits": [{
+                "category": "social-and-economic-importance",
+                "value": 1
+            },
+            {
+                "category": "multifunctional-space-usage",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "id": "adaptation-option:emergency-overflow-retention-area",
+        "image": "https://raw.githubusercontent.com/clarity-h2020/data-package/master/schemas/adaptation-options/icons/emergency-overflow-retention-area.png",
+        "variations": [{
+                "hazard": "hazard:flood:pluvial-flooding",
+                "variation": {
+                    " local_effect": 3,
+                    " vulnerability": 0
+                }
+            },
+            {
+                "hazard": "hazard:flood:river-flooding",
+                "variation": {
+                    "local_effect": 3,
+                    "vulnerability": 0
+                }
+            },
+            {
+                "hazard": "hazard:landslide",
+                "variation": {
+                    "local_effect": 3,
+                    "vulnerability": 0
+                }
+            }
+        ],
+        "cost": {
+            "new_development": 3,
+            "retroffiting": 3
+        },
+        "co_benefits": [{
+                "category": "biodiversity",
+                "value": 1
+            },
+            {
+                "category": "multifunctional-space-usage",
+                "value": 2
+            },
             {
                 "category": "social-and-economic-importance",
                 "value": 1
-            }      
+            }
+        ]
+    },
+    {
+        "id": "adaptation-option:rainwater-retention-ponds",
+        "image": "https://raw.githubusercontent.com/clarity-h2020/data-package/master/schemas/adaptation-options/icons/rainwater-retention-ponds.png",
+        "variations": [{
+                "hazard": "hazard:flood:pluvial-flooding",
+                "variation": {
+                    " local_effect": 3,
+                    " vulnerability": 0
+                }
+            },
+            {
+                "hazard": "hazard:flood:river-flooding",
+                "variation": {
+                    "local_effect": 1,
+                    "vulnerability": 0
+                }
+            },
+            {
+                "hazard": "hazard:landslide",
+                "variation": {
+                    "local_effect": 1,
+                    "vulnerability": 0
+                }
+            },
+            {
+                "hazard": "hazard:temperature:heat:heat-wave",
+                "variation": {
+                    "local_effect": 2,
+                    "vulnerability": 0
+                }
+            }
+        ],
+        "cost": {
+            "new_development": 2,
+            "retroffiting": 2
+        },
+        "co_benefits": [{
+                "category": "biodiversity",
+                "value": 3
+            },
+            {
+                "category": "air-quality",
+                "value": 1
+            },
+            {
+                "category": "multifunctional-space-usage",
+                "value": 3
+            },
+            {
+                "category": "social-and-economic-importance",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "id": "adaptation-option:wadi",
+        "image": "https://raw.githubusercontent.com/clarity-h2020/data-package/master/schemas/adaptation-options/icons/wadi.png",
+        "variations": [{
+                "hazard": "hazard:flood:pluvial-flooding",
+                "variation": {
+                    " local_effect": 3,
+                    " vulnerability": 0
+                }
+            },
+            {
+                "hazard": "hazard:flood:river-flooding",
+                "variation": {
+                    "local_effect": 1,
+                    "vulnerability": 0
+                }
+            },
+            {
+                "hazard": "hazard:landslide",
+                "variation": {
+                    "local_effect": 1,
+                    "vulnerability": 0
+                }
+            },
+            {
+                "hazard": "hazard:temperature:heat:heat-wave",
+                "variation": {
+                    "local_effect": 3,
+                    "vulnerability": 0
+                }
+            }
+        ],
+        "cost": {
+            "new_development": 1,
+            "retroffiting": 1
+        },
+        "co_benefits": [{
+                "category": "biodiversity",
+                "value": 3
+            },
+            {
+                "category": "air-quality",
+                "value": 1
+            },
+            {
+                "category": "multifunctional-space-usage",
+                "value": 2
+            },
+            {
+                "category": "social-and-economic-importance",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "id": "adaptation-option:reduced-paved-surfaces",
+        "image": "https://raw.githubusercontent.com/clarity-h2020/data-package/master/schemas/adaptation-options/icons/reduced-paved-surfaces.png",
+        "variations": [{
+                "hazard": "hazard:flood:pluvial-flooding",
+                "variation": {
+                    " local_effect": 3,
+                    " vulnerability": 3
+                }
+            },
+            {
+                "hazard": "hazard:flood:river-flooding",
+                "variation": {
+                    "local_effect": 1,
+                    "vulnerability": 1
+                }
+            },
+            {
+                "hazard": "hazard:landslide",
+                "variation": {
+                    "local_effect": 1,
+                    "vulnerability": 0
+                }
+            },
+            {
+                "hazard": "hazard:temperature:heat:heat-wave",
+                "variation": {
+                    "local_effect": 3,
+                    "vulnerability": 0
+                }
+            }
+        ],
+        "cost": {
+            "new_development": 2,
+            "retroffiting": 2
+        },
+        "co_benefits": [{
+                "category": "biodiversity",
+                "value": 3
+            },
+            {
+                "category": "air-quality",
+                "value": 1
+            },
+            {
+                "category": "energy-efficency",
+                "value": 1
+            },
+            {
+                "category": "multifunctional-space-usage",
+                "value": 2
+            },
+            {
+                "category": "social-and-economic-importance",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "id": "adaptation-option:streetscape-greening",
+        "image": "https://raw.githubusercontent.com/clarity-h2020/data-package/master/schemas/adaptation-options/icons/streetscape-greening.png",
+        "variations": [{
+                "hazard": "hazard:flood:pluvial-flooding",
+                "variation": {
+                    " local_effect": 2,
+                    " vulnerability": 0
+                }
+            },
+            {
+                "hazard": "hazard:flood:river-flooding",
+                "variation": {
+                    "local_effect": 1,
+                    "vulnerability": 0
+                }
+            },
+            {
+                "hazard": "hazard:landslide",
+                "variation": {
+                    "local_effect": 1,
+                    "vulnerability": 0
+                }
+            },
+            {
+                "hazard": "hazard:temperature:heat:heat-wave",
+                "variation": {
+                    "local_effect": 3,
+                    "vulnerability": 0
+                }
+            }
+        ],
+        "cost": {
+            "new_development": 1,
+            "retroffiting": 1
+        },
+        "co_benefits": [{
+                "category": "biodiversity",
+                "value": 2
+            },
+            {
+                "category": "air-quality",
+                "value": 1
+            },
+            {
+                "category": "energy-efficency",
+                "value": 1
+            },
+            {
+                "category": "multifunctional-space-usage",
+                "value": 1
+            },
+            {
+                "category": "social-and-economic-importance",
+                "value": 3
+            }
+        ]
+    },
+    {
+        "id": "adaptation-option:groundcover-and-shrubbery",
+        "image": "https://raw.githubusercontent.com/clarity-h2020/data-package/master/schemas/adaptation-options/icons/groundcover-and-shrubbery.png",
+        "variations": [{
+                "hazard": "hazard:flood:pluvial-flooding",
+                "variation": {
+                    " local_effect": 3,
+                    " vulnerability": 0
+                }
+            },
+            {
+                "hazard": "hazard:flood:river-flooding",
+                "variation": {
+                    "local_effect": 1,
+                    "vulnerability": 0
+                }
+            },
+            {
+                "hazard": "hazard:landslide",
+                "variation": {
+                    "local_effect": 1,
+                    "vulnerability": 0
+                }
+            },
+            {
+                "hazard": "hazard:temperature:heat:heat-wave",
+                "variation": {
+                    "local_effect": 3,
+                    "vulnerability": 0
+                }
+            }
+        ],
+        "cost": {
+            "new_development": 2,
+            "retroffiting": 2
+        },
+        "co_benefits": [{
+                "category": "biodiversity",
+                "value": 3
+            },
+            {
+                "category": "air-quality",
+                "value": 2
+            },
+            {
+                "category": "energy-efficency",
+                "value": 1
+            },
+            {
+                "category": "multifunctional-space-usage",
+                "value": 3
+            },
+            {
+                "category": "social-and-economic-importance",
+                "value": 3
+            }
+        ]
+    },
+    {
+        "id": "adaptation-option:green-roofs",
+        "image": "https://raw.githubusercontent.com/clarity-h2020/data-package/master/schemas/adaptation-options/icons/green-roofs.png",
+        "variations": [{
+                "hazard": "hazard:flood:pluvial-flooding",
+                "variation": {
+                    " local_effect": 3,
+                    " vulnerability": 3
+                }
+            },
+            {
+                "hazard": "hazard:temperature:heat:heat-wave",
+                "variation": {
+                    "local_effect": 3,
+                    "vulnerability": 0
+                }
+            }
+        ],
+        "cost": {
+            "new_development": 2,
+            "retroffiting": 2
+        },
+        "co_benefits": [{
+                "category": "biodiversity",
+                "value": 3
+            },
+            {
+                "category": "air-quality",
+                "value": 1
+            },
+            {
+                "category": "energy-efficency",
+                "value": 2
+            },
+            {
+                "category": "multifunctional-space-usage",
+                "value": 2
+            },
+            {
+                "category": "social-and-economic-importance",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "id": "adaptation-option:green-facades",
+        "image": "https://raw.githubusercontent.com/clarity-h2020/data-package/master/schemas/adaptation-options/icons/green-facades.png",
+        "variations": [{
+            "hazard": "hazard:temperature:heat:heat-wave",
+            "variation": {
+                "local_effect": 3,
+                "vulnerability": 0
+            }
+        }],
+        "cost": {
+            "new_development": 2,
+            "retroffiting": 2
+        },
+        "co_benefits": [{
+                "category": "biodiversity",
+                "value": 3
+            },
+            {
+                "category": "air-quality",
+                "value": 1
+            },
+            {
+                "category": "energy-efficency",
+                "value": 1
+            },
+            {
+                "category": "multifunctional-space-usage",
+                "value": 2
+            },
+            {
+                "category": "social-and-economic-importance",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "id": "adaptation-option:green-ventilation-grids",
+        "image": "https://raw.githubusercontent.com/clarity-h2020/data-package/master/schemas/adaptation-options/icons/green-ventilation-grids.png",
+        "variations": [{
+            "hazard": "hazard:temperature:heat:heat-wave",
+            "variation": {
+                "local_effect": 3,
+                "vulnerability": 0
+            }
+        }],
+        "cost": {
+            "new_development": 2,
+            "retroffiting": null
+        },
+        "co_benefits": [{
+                "category": "biodiversity",
+                "value": 2
+            },
+            {
+                "category": "air-quality",
+                "value": 2
+            },
+            {
+                "category": "energy-efficency",
+                "value": 1
+            },
+            {
+                "category": "multifunctional-space-usage",
+                "value": 2
+            },
+            {
+                "category": "social-and-economic-importance",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "id": "adaptation-option:cool-roofs",
+        "image": "https://raw.githubusercontent.com/clarity-h2020/data-package/master/schemas/adaptation-options/icons/cool-roofs.png",
+        "variations": [{
+            "hazard": "hazard:temperature:heat:heat-wave",
+            "variation": {
+                "local_effect": 3,
+                "vulnerability": 0
+            }
+        }],
+        "cost": {
+            "new_development": 1,
+            "retroffiting": 1
+        },
+        "co_benefits": [{
+            "category": "multifunctional-space-usage",
+            "value": 1
+        }]
+    },
+    {
+        "id": "adaptation-option:cool-paving-and-building-materials",
+        "image": "https://raw.githubusercontent.com/clarity-h2020/data-package/master/schemas/adaptation-options/icons/cool-paving-and-building-materials.png",
+        "variations": [{
+            "hazard": "hazard:temperature:heat:heat-wave",
+            "variation": {
+                "local_effect": 3,
+                "vulnerability": 0
+            }
+        }],
+        "cost": {
+            "new_development": 1,
+            "retroffiting": 1
+        },
+        "co_benefits": [{
+                "category": "energy-efficency",
+                "value": 1
+            },
+            {
+                "category": "multifunctional-space-usage",
+                "value": 1
+            }
+        ]
+    },
+    {
+        "id": "adaptation-option:optimize-orientation-to-wind-and-sun",
+        "image": "https://raw.githubusercontent.com/clarity-h2020/data-package/master/schemas/adaptation-options/icons/optimize-orientation-to-wind-and-sun.png",
+        "variations": [{
+            "hazard": "hazard:temperature:heat:heat-wave",
+            "variation": {
+                "local_effect": 3,
+                "vulnerability": 0
+            }
+        }],
+        "cost": {
+            "new_development": 1,
+            "retroffiting": 1
+        },
+        "co_benefits": [{
+                "category": "energy-efficency",
+                "value": 2
+            },
+            {
+                "category": "multifunctional-space-usage",
+                "value": 1
+            }
+        ]
+    },
+    {
+        "id": "adaptation-option:pergolas-and-canvas-above-streets",
+        "image": "https://raw.githubusercontent.com/clarity-h2020/data-package/master/schemas/adaptation-options/icons/pergolas-and-canvas-above-streets.png",
+        "variations": [{
+            "hazard": "hazard:temperature:heat:heat-wave",
+            "variation": {
+                "local_effect": 2,
+                "vulnerability": 0
+            }
+        }],
+        "cost": {
+            "new_development": 1,
+            "retroffiting": 1
+        },
+        "co_benefits": [{
+            "category": "social-and-economic-importance",
+            "value": 1
+        }]
+    },
+    {
+        "id": "adaptation-option:thermal-insulation",
+        "image": "https://raw.githubusercontent.com/clarity-h2020/data-package/master/schemas/adaptation-options/icons/thermal-insulation.png",
+        "variations": [{
+            "hazard": "hazard:temperature:heat:heat-wave",
+            "variation": {
+                "local_effect": 3,
+                "vulnerability": 0
+            }
+        }],
+        "cost": {
+            "new_development": 1,
+            "retroffiting": 1
+        },
+        "co_benefits": [{
+                "category": "energy-efficiency",
+                "value": 2
+            },
+            {
+                "category": "social-and-economic-importance",
+                "value": 1
+            }
+        ]
+    },
+    {
+        "id": "adaptation-option:narrow-streets",
+        "image": "https://raw.githubusercontent.com/clarity-h2020/data-package/master/schemas/adaptation-options/icons/narrow-streets.png",
+        "variations": [{
+            "hazard": "hazard:temperature:heat:heat-wave",
+            "variation": {
+                "local_effect": 3,
+                "vulnerability": 0
+            }
+        }],
+        "cost": {
+            "new_development": null,
+            "retroffiting": null
+        },
+        "co_benefits": []
+    },
+    {
+        "id": "adaptation-option:high-rise-buildings",
+        "image": "https://raw.githubusercontent.com/clarity-h2020/data-package/master/schemas/adaptation-options/icons/high-rise-buildings.png",
+        "variations": [{
+            "hazard": "hazard:temperature:heat:heat-wave",
+            "variation": {
+                "local_effect": 2,
+                "vulnerability": 0
+            }
+        }],
+        "cost": {
+            "new_development": 2,
+            "retroffiting": null
+        },
+        "co_benefits": [{
+                "category": "energy-efficiency",
+                "value": 1
+            },
+            {
+                "category": "social-and-economic-importance",
+                "value": 1
+            }
+        ]
+    },
+    {
+        "id": "adaptation-option:blinds",
+        "image": "https://raw.githubusercontent.com/clarity-h2020/data-package/master/schemas/adaptation-options/icons/blinds.png",
+        "variations": [{
+            "hazard": "hazard:temperature:heat:heat-wave",
+            "variation": {
+                "local_effect": 3,
+                "vulnerability": 0
+            }
+        }],
+        "cost": {
+            "new_development": 1,
+            "retroffiting": 1
+        },
+        "co_benefits": [{
+                "category": "energy-efficiency",
+                "value": 1
+            },
+            {
+                "category": "social-and-economic-importance",
+                "value": 1
+            },
+            {
+                "category": "multifunctional-space-usage",
+                "value": 1
+            }
         ]
     }
 ]
