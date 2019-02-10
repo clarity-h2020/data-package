@@ -1,2 +1,2 @@
-A Foreign Key example linking two CSV files in the same data package
+This is the CLARITY Data Package descriptor for the Naples demonstrator case.
 
