@@ -1,14 +1,20 @@
 {
   "name": "dc1-naples",
   "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package.json",
-  "title": "Naples Metropolitan Area data package",
+  "title": "Naples Metropolitan Area Data Package",
   "description": "This is the CLARITY data package for the Naples metropolitan area corresponding to the Demonstrator Case (DC1). \r\n Further description to be completed",
   "keywords": [
     "naples",
     "dc1",
-    "TBC"
+    "adaptation measures",
+    "heat wave",
+    "pluvial flood",
+    "hazard index",
+    "vulnerability function",
+    "population",
+    "buildings"
   ],
   "created": "2019-01-02T16:23:43Z",
   "homepage": "http://www.clarity-h2020.eu",
@@ -18,7 +24,8 @@
     "currency": "EUR"
   },
   "sources": [],
-  "contributors": [{
+  "contributors": [
+    {
       "title": "Miguel Ángel Esbrí",
       "role": "author",
       "email": "miguel.esbri@atos.net",
@@ -33,32 +40,48 @@
       "path": "http://atos.net"
     },
     {
-      "title": "",
+      "title": "Alessandra Capolupo",
       "role": "author",
-      "email": "",
+      "email": "alessandra.capolupo@unina.it",
       "organization": "PLINIVS",
-      "path": ""
+      "path": "http://plinivs.it"
     },
     {
-      "title": "",
+      "title": "Mattia Leone",
       "role": "author",
-      "email": "",
+      "email": "mattia.leone@unina.it",
+      "organization": "PLINIVS",
+      "path": "http://plinivs.it"
+    },
+    {
+      "title": "Robert Goler",
+      "role": "author",
+      "email": "robert.goler@zamg.ac.at",
       "organization": "ZAMG",
-      "path": ""
+      "path": "https://www.zamg.ac.at"
     },
     {
-      "title": "",
+      "title": "Maja Zuvela-Aloise",
       "role": "author",
-      "email": "",
+      "email": "maja.zuvela-aloise@zamg.ac.at",
+      "organization": "ZAMG",
+      "path": "https://www.zamg.ac.at"
+    },
+    {
+      "title": "Luis Torres",
+      "role": "author",
+      "email": "luis@meteogrid.com",
       "organization": "METEOGRID",
-      "path": ""
+      "path": "https://www.meteogrid.com"
     }
   ],
-  "licenses": [{
-    "name": "CC0-1.0",
-    "title": "Creative Commons CCZero 1.0",
-    "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-  }],
+  "licenses": [
+    {
+      "name": "CC0-1.0",
+      "title": "Creative Commons CCZero 1.0",
+      "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+    }
+  ],
   "image": "data/logo/MyCS_48x48.png",
   "spatial_extent": {
     "xmin": 2145500,
@@ -66,7 +89,12 @@
     "xmax": 6606000,
     "ymax": 5706500
   },
-  "resources": [{
+  "temporal_extent": {
+    "start": "1971-01-01",
+    "end": "2100-12-31"
+  },
+  "resources": [
+    {
       "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r1",
       "name": "agricultural-areas",
       "title": "Agricultural areas in Naples metropolitan area",
@@ -80,11 +108,13 @@
       "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:agricultural_areas&outputFormat=shape-zip",
       "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/agricultural-areas.schema.json",
       "sources": [],
-      "licenses": [{
-        "name": "CC0-1.0",
-        "title": "Creative Commons CCZero 1.0",
-        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-      }],
+      "licenses": [
+        {
+          "name": "CC0-1.0",
+          "title": "Creative Commons CCZero 1.0",
+          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
+      ],
       "service_type": "ogc:wfs",
       "mapview": {
         "service_type": "ogc:wms",
@@ -92,17 +122,95 @@
       },
       "crs": "EPSG:3035",
       "spatial_extent": {
-        "xmin": 0.0,
-        "ymin": 0.0,
-        "xmax": 0.0,
-        "ymax": 0.0
+        "xmin": 2145500,
+        "ymin": 982500,
+        "xmax": 6606000,
+        "ymax": 5706500
       },
       "spatial_resolution": {
         "scale": 50000
       },
       "eu_gl": {
-        "workflow_step": "any",
-        "hazard": "any",
+        "resource_type": "feature-parameters"
+      }
+    },
+    {
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r2",
+      "name": "water-areas",
+      "title": "Water areas in Naples metropolitan area",
+      "description": "Water areas in Naples metropolitan area",
+      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "encoding": "binary",
+      "format": "shape-zip",
+      "mediatype": "application/shape-zip",
+      "bytes": "37087552",
+      "hash": "tbc",
+      "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity%3Awater&outputFormat=shape-zip",
+      "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/water.schema.json",
+      "sources": [],
+      "licenses": [
+        {
+          "name": "CC0-1.0",
+          "title": "Creative Commons CCZero 1.0",
+          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
+      ],
+      "service_type": "ogc:wfs",
+      "mapview": {
+        "service_type": "ogc:wms",
+        "url": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:water&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng"
+      },
+      "crs": "EPSG:3035",
+      "spatial_extent": {
+        "xmin": 2145500,
+        "ymin": 982500,
+        "xmax": 6606000,
+        "ymax": 5706500
+      },
+      "spatial_resolution": {
+        "scale": 50000
+      },
+      "eu_gl": {
+        "resource_type": "feature-parameters"
+      }
+    },
+    {
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r3",
+      "name": "public_military_industrial-areas",
+      "title": "Public, military and industrial areas in Naples metropolitan area",
+      "description": "Public, military and industrial areas in Naples metropolitan area",
+      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "encoding": "binary",
+      "format": "shape-zip",
+      "mediatype": "application/shape-zip",
+      "bytes": "37087552",
+      "hash": "tbc",
+      "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity%3Apublic_military_industrial&outputFormat=shape-zip",
+      "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/public-military-industrial.schema.json",
+      "sources": [],
+      "licenses": [
+        {
+          "name": "CC0-1.0",
+          "title": "Creative Commons CCZero 1.0",
+          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
+      ],
+      "service_type": "ogc:wfs",
+      "mapview": {
+        "service_type": "ogc:wms",
+        "url": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:public_military_industrial&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng"
+      },
+      "crs": "EPSG:3035",
+      "spatial_extent": {
+        "xmin": 2145500,
+        "ymin": 982500,
+        "xmax": 6606000,
+        "ymax": 5706500
+      },
+      "spatial_resolution": {
+        "scale": 50000
+      },
+      "eu_gl": {
         "resource_type": "feature-parameters"
       }
     },
@@ -119,11 +227,13 @@
       "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_historical_r12i1p1_SMHI-RCA4_v1_day_19710101-20001231_netcdf3&FORMAT=application/x-gzip",
       "schema": {},
       "sources": [],
-      "licenses": [{
-        "name": "CC0-1.0",
-        "title": "Creative Commons CCZero 1.0",
-        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-      }],
+      "licenses": [
+        {
+          "name": "CC0-1.0",
+          "title": "Creative Commons CCZero 1.0",
+          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
+      ],
       "service_type": "ogc:wcs",
       "mapview": {
         "service_type": "ogc:wms",
@@ -160,7 +270,8 @@
         "resource_type": "index",
         "index": "hazard:heat:extreme-heat:index:hot-days-75p",
         "emissions_scenario": "baseline",
-        "threshold": [{
+        "threshold": [
+          {
             "name": "low",
             "lower": "to-be-defined"
           },
@@ -189,11 +300,13 @@
       "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf3&FORMAT=application/x-gzip",
       "schema": {},
       "sources": [],
-      "licenses": [{
-        "name": "CC0-1.0",
-        "title": "Creative Commons CCZero 1.0",
-        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-      }],
+      "licenses": [
+        {
+          "name": "CC0-1.0",
+          "title": "Creative Commons CCZero 1.0",
+          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
+      ],
       "service_type": "ogc:wcs",
       "mapview": {
         "service_type": "ogc:wms",
@@ -230,7 +343,8 @@
         "resource_type": "index",
         "index": "hazard:heat:extreme-heat:index:hot-days-75p",
         "emissions_scenario": "early-response:rcp26",
-        "threshold": [{
+        "threshold": [
+          {
             "name": "low",
             "lower": "to-be-defined",
             "relative_to": "baseline"
@@ -262,11 +376,13 @@
       "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&FORMAT=application/x-gzip",
       "schema": {},
       "sources": [],
-      "licenses": [{
-        "name": "CC0-1.0",
-        "title": "Creative Commons CCZero 1.0",
-        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-      }],
+      "licenses": [
+        {
+          "name": "CC0-1.0",
+          "title": "Creative Commons CCZero 1.0",
+          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
+      ],
       "service_type": "ogc:wcs",
       "mapview": {
         "service_type": "ogc:wms",
@@ -303,7 +419,8 @@
         "resource_type": "index",
         "index": "hazard:heat:extreme-heat:index:hot-days-75p",
         "emissions_scenario": "early-response:rcp26",
-        "threshold": [{
+        "threshold": [
+          {
             "name": "low",
             "lower": "to-be-defined",
             "relative_to": "baseline"
@@ -335,11 +452,13 @@
       "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&FORMAT=application/x-gzip",
       "schema": {},
       "sources": [],
-      "licenses": [{
-        "name": "CC0-1.0",
-        "title": "Creative Commons CCZero 1.0",
-        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-      }],
+      "licenses": [
+        {
+          "name": "CC0-1.0",
+          "title": "Creative Commons CCZero 1.0",
+          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
+      ],
       "service_type": "ogc:wcs",
       "mapview": {
         "service_type": "ogc:wms",
@@ -376,7 +495,8 @@
         "resource_type": "index",
         "index": "hazard:heat:extreme-heat:index:hot-days-75p",
         "emissions_scenario": "early-response:rcp26",
-        "threshold": [{
+        "threshold": [
+          {
             "name": "low",
             "lower": "to-be-defined",
             "relative_to": "baseline"
@@ -394,7 +514,8 @@
           }
         ]
       }
-    }, {
+    },
+    {
       "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r6",
       "name": "hot-days-rcp45_20110101-20401231",
       "title": "Hot days > 75th percentile for the rcp45 emissions scenario in the 2011-2040 period",
@@ -407,11 +528,13 @@
       "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf3&FORMAT=application/x-gzip",
       "schema": {},
       "sources": [],
-      "licenses": [{
-        "name": "CC0-1.0",
-        "title": "Creative Commons CCZero 1.0",
-        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-      }],
+      "licenses": [
+        {
+          "name": "CC0-1.0",
+          "title": "Creative Commons CCZero 1.0",
+          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
+      ],
       "service_type": "ogc:wcs",
       "mapview": {
         "service_type": "ogc:wms",
@@ -448,7 +571,8 @@
         "resource_type": "index",
         "index": "hazard:heat:extreme-heat:index:hot-days-75p",
         "emissions_scenario": "effective-measures:rcp45",
-        "threshold": [{
+        "threshold": [
+          {
             "name": "low",
             "lower": "to-be-defined",
             "relative_to": "baseline"
@@ -466,7 +590,8 @@
           }
         ]
       }
-    }, {
+    },
+    {
       "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r7",
       "name": "hot-days-rcp45_20410101-20701231",
       "title": "Hot days > 75th percentile for the rcp45 emissions scenario in the 2041-2070 period",
@@ -479,11 +604,13 @@
       "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&FORMAT=application/x-gzip",
       "schema": {},
       "sources": [],
-      "licenses": [{
-        "name": "CC0-1.0",
-        "title": "Creative Commons CCZero 1.0",
-        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-      }],
+      "licenses": [
+        {
+          "name": "CC0-1.0",
+          "title": "Creative Commons CCZero 1.0",
+          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
+      ],
       "service_type": "ogc:wcs",
       "mapview": {
         "service_type": "ogc:wms",
@@ -520,7 +647,8 @@
         "resource_type": "index",
         "index": "hazard:heat:extreme-heat:index:hot-days-75p",
         "emissions_scenario": "effective-measures:rcp45",
-        "threshold": [{
+        "threshold": [
+          {
             "name": "low",
             "lower": "to-be-defined",
             "relative_to": "baseline"
@@ -538,7 +666,8 @@
           }
         ]
       }
-    }, {
+    },
+    {
       "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r8",
       "name": "hot-days-rcp45_20710101-21001231",
       "title": "Hot days > 75th percentile for the rcp45 emissions scenario in the 2071-2100 period",
@@ -551,11 +680,13 @@
       "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&FORMAT=application/x-gzip",
       "schema": {},
       "sources": [],
-      "licenses": [{
-        "name": "CC0-1.0",
-        "title": "Creative Commons CCZero 1.0",
-        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-      }],
+      "licenses": [
+        {
+          "name": "CC0-1.0",
+          "title": "Creative Commons CCZero 1.0",
+          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
+      ],
       "service_type": "ogc:wcs",
       "mapview": {
         "service_type": "ogc:wms",
@@ -580,7 +711,6 @@
         "no_data_value": 1e+20,
         "start_cell": "top-left",
         "compression_type": "none"
-
       },
       "trs": "ISO 8601:2004",
       "temporal_extent": {
@@ -593,7 +723,8 @@
         "resource_type": "index",
         "index": "hazard:index:heat:extreme-heat:hot-days-75p",
         "emissions_scenario": "effective-measures:rcp45",
-        "threshold": [{
+        "threshold": [
+          {
             "name": "low",
             "lower": "to-be-defined",
             "relative_to": "baseline"
@@ -611,7 +742,8 @@
           }
         ]
       }
-    }, {
+    },
+    {
       "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r8",
       "name": "hot-days-rcp85_20110101-20401231",
       "title": "Hot days > 75th percentile for the rcp85 emissions scenario in the 2011-2040 period",
@@ -624,11 +756,13 @@
       "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf3&FORMAT=application/x-gzip",
       "schema": {},
       "sources": [],
-      "licenses": [{
-        "name": "CC0-1.0",
-        "title": "Creative Commons CCZero 1.0",
-        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-      }],
+      "licenses": [
+        {
+          "name": "CC0-1.0",
+          "title": "Creative Commons CCZero 1.0",
+          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
+      ],
       "service_type": "ogc:wcs",
       "mapview": {
         "service_type": "ogc:wms",
@@ -665,7 +799,8 @@
         "resource_type": "index",
         "index": "hazard:heat:extreme-heat:index:hot-days-75p",
         "emissions_scenario": "business-as-usual:rcp85",
-        "threshold": [{
+        "threshold": [
+          {
             "name": "low",
             "lower": "to-be-defined",
             "relative_to": "baseline"
@@ -683,7 +818,8 @@
           }
         ]
       }
-    }, {
+    },
+    {
       "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r9",
       "name": "hot-days-rcp85_20410101-20701231",
       "title": "Hot days > 75th percentile for the rcp85 emissions scenario in the 2041-2070 period",
@@ -696,11 +832,13 @@
       "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&FORMAT=application/x-gzip",
       "schema": {},
       "sources": [],
-      "licenses": [{
-        "name": "CC0-1.0",
-        "title": "Creative Commons CCZero 1.0",
-        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-      }],
+      "licenses": [
+        {
+          "name": "CC0-1.0",
+          "title": "Creative Commons CCZero 1.0",
+          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
+      ],
       "service_type": "ogc:wcs",
       "mapview": {
         "service_type": "ogc:wms",
@@ -737,7 +875,8 @@
         "resource_type": "index",
         "index": "hazard:index:heat:extreme-heat:hot-days-75p",
         "emissions_scenario": "business-as-usual:rcp85",
-        "threshold": [{
+        "threshold": [
+          {
             "name": "low",
             "lower": "to-be-defined",
             "relative_to": "baseline"
@@ -755,7 +894,8 @@
           }
         ]
       }
-    }, {
+    },
+    {
       "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r10",
       "name": "hot-days_rcp85_20710101-21001231",
       "title": "Hot days > 75th percentile for the rcp85 emissions scenario in the 2071-2100 period",
@@ -768,11 +908,13 @@
       "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&FORMAT=application/x-gzip",
       "schema": {},
       "sources": [],
-      "licenses": [{
-        "name": "CC0-1.0",
-        "title": "Creative Commons CCZero 1.0",
-        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-      }],
+      "licenses": [
+        {
+          "name": "CC0-1.0",
+          "title": "Creative Commons CCZero 1.0",
+          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
+      ],
       "service_type": "ogc:wcs",
       "mapview": {
         "service_type": "ogc:wms",
@@ -809,7 +951,8 @@
         "resource_type": "index",
         "index": "hazard:heat:extreme-heat:index:hot-days-75p",
         "emissions_scenario": "business-as-usual:rcp85",
-        "threshold": [{
+        "threshold": [
+          {
             "name": "low",
             "lower": "to-be-defined",
             "relative_to": "baseline"
