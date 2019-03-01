@@ -152,7 +152,7 @@
       "mediatype": "application/shape-zip",
       "bytes": "37087552",
       "hash": "tbc",
-      "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity%3Awater&outputFormat=shape-zip",
+      "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:water&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
       "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/water.schema.json",
       "sources": [
         {
@@ -171,14 +171,14 @@
       "service_type": "ogc:wfs",
       "mapview": {
         "service_type": "ogc:wms",
-        "url": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:water&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng"
+        "url": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:water&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"
       },
       "crs": "EPSG:3035",
       "spatial_extent": {
-        "xmin": 2145500,
-        "ymin": 982500,
-        "xmax": 6606000,
-        "ymax": 5706500
+        "xmin": 4658356,
+        "ymin": 1961196,
+        "xmax": 4720778,
+        "ymax": 2003734
       },
       "spatial_resolution": {
         "scale": 50000
@@ -199,7 +199,7 @@
       "mediatype": "application/shape-zip",
       "bytes": "37087552",
       "hash": "tbc",
-      "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity%3Apublic_military_industrial&outputFormat=shape-zip",
+      "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:public_military_industrial&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
       "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/public-military-industrial.schema.json",
       "sources": [
         {
@@ -218,14 +218,108 @@
       "service_type": "ogc:wfs",
       "mapview": {
         "service_type": "ogc:wms",
-        "url": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:public_military_industrial&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng"
+        "url": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:public_military_industrial&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"
       },
       "crs": "EPSG:3035",
       "spatial_extent": {
-        "xmin": 2145500,
-        "ymin": 982500,
-        "xmax": 6606000,
-        "ymax": 5706500
+        "xmin": 4658356,
+        "ymin": 1961196,
+        "xmax": 4720778,
+        "ymax": 2003734
+      },
+      "spatial_resolution": {
+        "scale": 50000
+      },
+      "eu_gl": {
+        "workflow_steps": ["eu-gl:hazard-characterization:local-effects"],
+        "resource_type": "feature-parameters"
+      }
+    },
+    {
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r4",
+      "name": "basins",
+      "title": "Basins in Naples metropolitan area",
+      "description": "Basins in Naples metropolitan area",
+      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "encoding": "binary",
+      "format": "shape-zip",
+      "mediatype": "application/shape-zip",
+      "bytes": "37087552",
+      "hash": "tbc",
+      "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:basins&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
+      "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/basins.schema.json",
+      "sources": [
+        {
+          "title": "",
+          "path": "",
+          "email": ""
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC0-1.0",
+          "title": "Creative Commons CCZero 1.0",
+          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
+      ],
+      "service_type": "ogc:wfs",
+      "mapview": {
+        "service_type": "ogc:wms",
+        "url": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:basins&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"
+      },
+      "crs": "EPSG:3035",
+      "spatial_extent": {
+        "xmin": 4658356,
+        "ymin": 1961196,
+        "xmax": 4720778,
+        "ymax": 2003734
+      },
+      "spatial_resolution": {
+        "scale": 50000
+      },
+      "eu_gl": {
+        "workflow_steps": ["eu-gl:hazard-characterization:local-effects"],
+        "resource_type": "feature-parameters"
+      }
+    },
+    {
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r5",
+      "name": "buildings",
+      "title": "Buildings in Naples metropolitan area",
+      "description": "Buildings in Naples metropolitan area",
+      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "encoding": "binary",
+      "format": "shape-zip",
+      "mediatype": "application/shape-zip",
+      "bytes": "37087552",
+      "hash": "tbc",
+      "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:buildings&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
+      "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/buildings.schema.json",
+      "sources": [
+        {
+          "title": "Copernicus Land Monitoring Service - European Settlement Map 2012",
+          "path": "https://land.copernicus.eu/pan-european/GHSL/european-settlement-map",
+          "email": "copernicus@eea.europa.eu"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC0-1.0",
+          "title": "Creative Commons CCZero 1.0",
+          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
+      ],
+      "service_type": "ogc:wfs",
+      "mapview": {
+        "service_type": "ogc:wms",
+        "url": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:buildings&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"
+      },
+      "crs": "EPSG:3035",
+      "spatial_extent": {
+        "xmin": 4658356,
+        "ymin": 1961196,
+        "xmax": 4720778,
+        "ymax": 2003734
       },
       "spatial_resolution": {
         "scale": 50000
