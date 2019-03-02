@@ -330,6 +330,439 @@
       }
     },
     {
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r6",
+      "name": "built_open_spaces",
+      "title": "Built open spaces in Naples metropolitan area",
+      "description": "Built open spaces in Naples metropolitan area",
+      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "encoding": "binary",
+      "format": "shape-zip",
+      "mediatype": "application/shape-zip",
+      "bytes": "37087552",
+      "hash": "tbc",
+      "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:built_open_spaces&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
+      "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/built_open_spaces.schema.json",
+      "sources": [
+        {
+          "title": "Copernicus Land Monitoring Service - European Settlement Map 2012",
+          "path": "https://land.copernicus.eu/pan-european/GHSL/european-settlement-map",
+          "email": "copernicus@eea.europa.eu"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC0-1.0",
+          "title": "Creative Commons CCZero 1.0",
+          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
+      ],
+      "service_type": "ogc:wfs",
+      "mapview": {
+        "service_type": "ogc:wms",
+        "url": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:built_open_spaces&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"
+      },
+      "crs": "EPSG:3035",
+      "spatial_extent": {
+        "xmin": 4658356,
+        "ymin": 1961196,
+        "xmax": 4720778,
+        "ymax": 2003734
+      },
+      "spatial_resolution": {
+        "scale": 50000
+      },
+      "eu_gl": {
+        "workflow_steps": ["eu-gl:hazard-characterization:local-effects"],
+        "resource_type": "feature-parameters"
+      }
+    },
+    {
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r7",
+      "name": "dense_urban_fabric",
+      "title": "Dense urban fabric spaces in Naples metropolitan area",
+      "description": "Dense urban fabric spaces in Naples metropolitan area",
+      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "encoding": "binary",
+      "format": "shape-zip",
+      "mediatype": "application/shape-zip",
+      "bytes": "37087552",
+      "hash": "tbc",
+      "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:dense_urban_fabric&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
+      "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/dense_urban_fabric.schema.json",
+      "sources": [
+        {
+          "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
+          "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
+          "email": "copernicus@eea.europa.eu"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC0-1.0",
+          "title": "Creative Commons CCZero 1.0",
+          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
+      ],
+      "service_type": "ogc:wfs",
+      "mapview": {
+        "service_type": "ogc:wms",
+        "url": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:dense_urban_fabric&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"
+      },
+      "crs": "EPSG:3035",
+      "spatial_extent": {
+        "xmin": 4658356,
+        "ymin": 1961196,
+        "xmax": 4720778,
+        "ymax": 2003734
+      },
+      "spatial_resolution": {
+        "scale": 50000
+      },
+      "eu_gl": {
+        "workflow_steps": ["eu-gl:hazard-characterization:local-effects"],
+        "resource_type": "feature-parameters"
+      }
+    },
+    {
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r8",
+      "name": "low_urban_fabric",
+      "title": "Low urban fabric spaces in Naples metropolitan area",
+      "description": "Low urban fabric spaces in Naples metropolitan area",
+      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "encoding": "binary",
+      "format": "shape-zip",
+      "mediatype": "application/shape-zip",
+      "bytes": "37087552",
+      "hash": "tbc",
+      "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:low_urban_fabric&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
+      "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/low_urban_fabric.schema.json",
+      "sources": [
+        {
+          "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
+          "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
+          "email": "copernicus@eea.europa.eu"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC0-1.0",
+          "title": "Creative Commons CCZero 1.0",
+          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
+      ],
+      "service_type": "ogc:wfs",
+      "mapview": {
+        "service_type": "ogc:wms",
+        "url": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:low_urban_fabric&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"
+      },
+      "crs": "EPSG:3035",
+      "spatial_extent": {
+        "xmin": 4658356,
+        "ymin": 1961196,
+        "xmax": 4720778,
+        "ymax": 2003734
+      },
+      "spatial_resolution": {
+        "scale": 50000
+      },
+      "eu_gl": {
+        "workflow_steps": ["eu-gl:hazard-characterization:local-effects"],
+        "resource_type": "feature-parameters"
+      }
+    },
+    {
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r9",
+      "name": "medium_urban_fabric",
+      "title": "Medium urban fabric spaces in Naples metropolitan area",
+      "description": "Medium urban fabric spaces in Naples metropolitan area",
+      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "encoding": "binary",
+      "format": "shape-zip",
+      "mediatype": "application/shape-zip",
+      "bytes": "37087552",
+      "hash": "tbc",
+      "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:medium_urban_fabric&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
+      "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/medium_urban_fabric.schema.json",
+      "sources": [
+        {
+          "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
+          "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
+          "email": "copernicus@eea.europa.eu"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC0-1.0",
+          "title": "Creative Commons CCZero 1.0",
+          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
+      ],
+      "service_type": "ogc:wfs",
+      "mapview": {
+        "service_type": "ogc:wms",
+        "url": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:medium_urban_fabric&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"
+      },
+      "crs": "EPSG:3035",
+      "spatial_extent": {
+        "xmin": 4658356,
+        "ymin": 1961196,
+        "xmax": 4720778,
+        "ymax": 2003734
+      },
+      "spatial_resolution": {
+        "scale": 50000
+      },
+      "eu_gl": {
+        "workflow_steps": ["eu-gl:hazard-characterization:local-effects"],
+        "resource_type": "feature-parameters"
+      }
+    },
+    {
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r10",
+      "name": "railways",
+      "title": "Railways transport infrastructure in Naples metropolitan area",
+      "description": "Railways transport infrastructure in Naples metropolitan area",
+      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "encoding": "binary",
+      "format": "shape-zip",
+      "mediatype": "application/shape-zip",
+      "bytes": "37087552",
+      "hash": "tbc",
+      "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:railways&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
+      "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/railways.schema.json",
+      "sources": [
+        {
+          "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
+          "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
+          "email": "copernicus@eea.europa.eu"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC0-1.0",
+          "title": "Creative Commons CCZero 1.0",
+          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
+      ],
+      "service_type": "ogc:wfs",
+      "mapview": {
+        "service_type": "ogc:wms",
+        "url": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:railways&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"
+      },
+      "crs": "EPSG:3035",
+      "spatial_extent": {
+        "xmin": 4658356,
+        "ymin": 1961196,
+        "xmax": 4720778,
+        "ymax": 2003734
+      },
+      "spatial_resolution": {
+        "scale": 50000
+      },
+      "eu_gl": {
+        "workflow_steps": ["eu-gl:hazard-characterization:local-effects"],
+        "resource_type": "feature-parameters"
+      }
+    },
+    {
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r11",
+      "name": "roads",
+      "title": "Roads transport infrastructure in Naples metropolitan area",
+      "description": "Roads transport infrastructure in Naples metropolitan area",
+      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "encoding": "binary",
+      "format": "shape-zip",
+      "mediatype": "application/shape-zip",
+      "bytes": "37087552",
+      "hash": "tbc",
+      "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:roads&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
+      "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/roads.schema.json",
+      "sources": [
+        {
+          "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
+          "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
+          "email": "copernicus@eea.europa.eu"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC0-1.0",
+          "title": "Creative Commons CCZero 1.0",
+          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
+      ],
+      "service_type": "ogc:wfs",
+      "mapview": {
+        "service_type": "ogc:wms",
+        "url": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:roads&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"
+      },
+      "crs": "EPSG:3035",
+      "spatial_extent": {
+        "xmin": 4658356,
+        "ymin": 1961196,
+        "xmax": 4720778,
+        "ymax": 2003734
+      },
+      "spatial_resolution": {
+        "scale": 50000
+      },
+      "eu_gl": {
+        "workflow_steps": ["eu-gl:hazard-characterization:local-effects"],
+        "resource_type": "feature-parameters"
+      }
+    },
+    {
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r12",
+      "name": "streams",
+      "title": "Streams in Naples metropolitan area",
+      "description": "Streams in Naples metropolitan area",
+      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "encoding": "binary",
+      "format": "shape-zip",
+      "mediatype": "application/shape-zip",
+      "bytes": "37087552",
+      "hash": "tbc",
+      "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:streams&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
+      "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/streams.schema.json",
+      "sources": [
+        {
+          "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
+          "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
+          "email": "copernicus@eea.europa.eu"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC0-1.0",
+          "title": "Creative Commons CCZero 1.0",
+          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
+      ],
+      "service_type": "ogc:wfs",
+      "mapview": {
+        "service_type": "ogc:wms",
+        "url": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:streams&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"
+      },
+      "crs": "EPSG:3035",
+      "spatial_extent": {
+        "xmin": 4658356,
+        "ymin": 1961196,
+        "xmax": 4720778,
+        "ymax": 2003734
+      },
+      "spatial_resolution": {
+        "scale": 50000
+      },
+      "eu_gl": {
+        "workflow_steps": ["eu-gl:hazard-characterization:local-effects"],
+        "resource_type": "feature-parameters"
+      }
+    },
+    {
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r13",
+      "name": "trees",
+      "title": "Trees in Naples metropolitan area",
+      "description": "Trees in Naples metropolitan area",
+      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "encoding": "binary",
+      "format": "shape-zip",
+      "mediatype": "application/shape-zip",
+      "bytes": "37087552",
+      "hash": "tbc",
+      "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:trees&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
+      "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/trees.schema.json",
+      "sources": [
+        {
+          "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
+          "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
+          "email": "copernicus@eea.europa.eu"
+        },
+        {
+          "title": "Copernicus Land Monitoring Service - European Settlement Map 2012",
+          "path": "https://land.copernicus.eu/pan-european/GHSL/european-settlement-map",
+          "email": "copernicus@eea.europa.eu"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC0-1.0",
+          "title": "Creative Commons CCZero 1.0",
+          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
+      ],
+      "service_type": "ogc:wfs",
+      "mapview": {
+        "service_type": "ogc:wms",
+        "url": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:trees&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"
+      },
+      "crs": "EPSG:3035",
+      "spatial_extent": {
+        "xmin": 4658356,
+        "ymin": 1961196,
+        "xmax": 4720778,
+        "ymax": 2003734
+      },
+      "spatial_resolution": {
+        "scale": 50000
+      },
+      "eu_gl": {
+        "workflow_steps": ["eu-gl:hazard-characterization:local-effects"],
+        "resource_type": "feature-parameters"
+      }
+    },
+    {
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r14",
+      "name": "vegetation",
+      "title": "Vegetation in Naples metropolitan area",
+      "description": "Vegetation in Naples metropolitan area",
+      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "encoding": "binary",
+      "format": "shape-zip",
+      "mediatype": "application/shape-zip",
+      "bytes": "37087552",
+      "hash": "tbc",
+      "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:vegetation&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
+      "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/vegetation.schema.json",
+      "sources": [
+        {
+          "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
+          "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
+          "email": "copernicus@eea.europa.eu"
+        },
+        {
+          "title": "Copernicus Land Monitoring Service - Street Tree Layer (STL) 2012",
+          "path": "https://land.copernicus.eu/local/urban-atlas/street-tree-layer-stl",
+          "email": "copernicus@eea.europa.eu"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC0-1.0",
+          "title": "Creative Commons CCZero 1.0",
+          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
+      ],
+      "service_type": "ogc:wfs",
+      "mapview": {
+        "service_type": "ogc:wms",
+        "url": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:vegetation&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"
+      },
+      "crs": "EPSG:3035",
+      "spatial_extent": {
+        "xmin": 4658356,
+        "ymin": 1961196,
+        "xmax": 4720778,
+        "ymax": 2003734
+      },
+      "spatial_resolution": {
+        "scale": 50000
+      },
+      "eu_gl": {
+        "workflow_steps": ["eu-gl:hazard-characterization:local-effects"],
+        "resource_type": "feature-parameters"
+      }
+    },    
+    {
       "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r2",
       "name": "hot-days-historical_19710101-20001231",
       "title": "Hot days > 75th percentile for the baseline emissions scenario in the 1971-2000 period",
