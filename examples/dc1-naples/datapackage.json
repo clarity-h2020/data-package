@@ -761,9 +761,9 @@
         "workflow_steps": ["eu-gl:hazard-characterization:local-effects"],
         "resource_type": "feature-parameters"
       }
-    },    
+    },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r2",
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r15",
       "name": "hot-days-historical_19710101-20001231",
       "title": "Hot days > 75th percentile for the baseline emissions scenario in the 1971-2000 period",
       "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the baseline emissions scenario in the 1971-2000 period",
@@ -772,9 +772,15 @@
       "mediatype": "application/x-gzip",
       "bytes": "358616146",
       "hash": "tbc",
-      "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_historical_r12i1p1_SMHI-RCA4_v1_day_19710101-20001231_netcdf3&FORMAT=application/x-gzip",
+      "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_historical_r12i1p1_SMHI-RCA4_v1_day_19710101-20001231_netcdf3&FORMAT=application/x-gzip&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
       "schema": {},
-      "sources": [],
+      "sources": [
+        {
+          "title": "EURO-CORDEX",
+          "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
+          "email": "ipoc@cordex.org"
+        }
+      ],
       "licenses": [
         {
           "name": "CC0-1.0",
@@ -785,7 +791,7 @@
       "service_type": "ogc:wcs",
       "mapview": {
         "service_type": "ogc:wms",
-        "url": "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_historical_r12i1p1_SMHI-RCA4_v1_day_19710101-20001231_netcdf3&bbox=2145500.0%2C982500.0%2C6606000.0%2C5706500.0&width=725&height=768&srs=EPSG%3A3035&format=image%2Fpng"
+        "url": "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_historical_r12i1p1_SMHI-RCA4_v1_day_19710101-20001231_netcdf3&bbox=2145500,982500,6606000,57065000&width=725&height=768&srs=EPSG:3035&format=image/png"
       },
       "crs": "EPSG:3035",
       "spatial_extent": {
@@ -800,12 +806,19 @@
       },
       "grid_info": {
         "band_count": 1,
-        "bit_depth": "unsigned-32-bit",
-        "columns": 9448,
         "rows": 8921,
-        "no_data_value": 1e+20,
+        "columns": 9448,
         "start_cell": "top-left",
-        "compression_type": "none"
+        "bands": [
+          {
+            "id": 1,
+            "name": "hot-days-historical_19710101-20001231",
+            "description": "Hot days > 75th percentile for the baseline emissions scenario in the 1971-2000 period",
+            "bit_depth": "unsigned-32-bit",
+            "no_data_value": 1e20,
+            "compression_type": "none"
+          }
+        ]
       },
       "trs": "ISO 8601:2004",
       "temporal_extent": {
@@ -813,12 +826,12 @@
         "end": "2000-12-31"
       },
       "eu_gl": {
-        "workflow_step": "hazard-characterization",
-        "hazard": "hazard:heat:extreme-heat",
-        "resource_type": "index",
-        "index": "hazard:heat:extreme-heat:index:hot-days-75p",
+        "workflow_step": ["hazard-characterization"],
+        "hazards": ["hazard:temperature:heat:heat-wave"],
+        "resource_type": "hazard-index",
+        "index": "hazard:temperature:heat:extreme-heat:index:hot-days",
         "emissions_scenario": "baseline",
-        "threshold": [
+        "thresholds": [
           {
             "name": "low",
             "lower": "to-be-defined"
@@ -876,7 +889,7 @@
         "bit_depth": "unsigned-32-bit",
         "columns": 9448,
         "rows": 8921,
-        "no_data_value": 1e+20,
+        "no_data_value": 1e20,
         "start_cell": "top-left",
         "compression_type": "none"
       },
@@ -952,7 +965,7 @@
         "bit_depth": "unsigned-32-bit",
         "columns": 9448,
         "rows": 8921,
-        "no_data_value": 1e+20,
+        "no_data_value": 1e20,
         "start_cell": "top-left",
         "compression_type": "none"
       },
@@ -1028,7 +1041,7 @@
         "bit_depth": "unsigned-32-bit",
         "columns": 9448,
         "rows": 8921,
-        "no_data_value": 1e+20,
+        "no_data_value": 1e20,
         "start_cell": "top-left",
         "compression_type": "none"
       },
@@ -1104,7 +1117,7 @@
         "bit_depth": "unsigned-32-bit",
         "columns": 9448,
         "rows": 8921,
-        "no_data_value": 1e+20,
+        "no_data_value": 1e20,
         "start_cell": "top-left",
         "compression_type": "none"
       },
@@ -1180,7 +1193,7 @@
         "bit_depth": "unsigned-32-bit",
         "columns": 9448,
         "rows": 8921,
-        "no_data_value": 1e+20,
+        "no_data_value": 1e20,
         "start_cell": "top-left",
         "compression_type": "none"
       },
@@ -1256,7 +1269,7 @@
         "bit_depth": "unsigned-32-bit",
         "columns": 9448,
         "rows": 8921,
-        "no_data_value": 1e+20,
+        "no_data_value": 1e20,
         "start_cell": "top-left",
         "compression_type": "none"
       },
@@ -1332,7 +1345,7 @@
         "bit_depth": "unsigned-32-bit",
         "columns": 9448,
         "rows": 8921,
-        "no_data_value": 1e+20,
+        "no_data_value": 1e20,
         "start_cell": "top-left",
         "compression_type": "none"
       },
@@ -1408,7 +1421,7 @@
         "bit_depth": "unsigned-32-bit",
         "columns": 9448,
         "rows": 8921,
-        "no_data_value": 1e+20,
+        "no_data_value": 1e20,
         "start_cell": "top-left",
         "compression_type": "none"
       },
@@ -1484,7 +1497,7 @@
         "bit_depth": "unsigned-32-bit",
         "columns": 9448,
         "rows": 8921,
-        "no_data_value": 1e+20,
+        "no_data_value": 1e20,
         "start_cell": "top-left",
         "compression_type": "none"
       },
