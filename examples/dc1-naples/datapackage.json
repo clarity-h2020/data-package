@@ -24,8 +24,7 @@
     "currency": "EUR"
   },
   "sources": [],
-  "contributors": [
-    {
+  "contributors": [{
       "title": "Miguel Ángel Esbrí",
       "role": "author",
       "email": "miguel.esbri@atos.net",
@@ -75,13 +74,11 @@
       "path": "https://www.meteogrid.com"
     }
   ],
-  "licenses": [
-    {
-      "name": "CC0-1.0",
-      "title": "Creative Commons CCZero 1.0",
-      "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-    }
-  ],
+  "licenses": [{
+    "name": "CC0-1.0",
+    "title": "Creative Commons CCZero 1.0",
+    "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+  }],
   "image": "data/logo/MyCS_48x48.png",
   "spatial_extent": {
     "xmin": 4658356,
@@ -93,8 +90,7 @@
     "start": "1971-01-01",
     "end": "2100-12-31"
   },
-  "resources": [
-    {
+  "resources": [{
       "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r1",
       "name": "agricultural-areas",
       "title": "Agricultural areas in Naples metropolitan area",
@@ -107,20 +103,16 @@
       "hash": "tbc",
       "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:agricultural_areas&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
       "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/agricultural-areas.schema.json",
-      "sources": [
-        {
-          "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
-          "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
-          "email": "copernicus@eea.europa.eu"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
+      "sources": [{
+        "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
+        "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
+        "email": "copernicus@eea.europa.eu"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "service_type": "ogc:wfs",
       "mapview": {
         "service_type": "ogc:wms",
@@ -154,20 +146,16 @@
       "hash": "tbc",
       "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:water&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
       "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/water.schema.json",
-      "sources": [
-        {
-          "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
-          "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
-          "email": "copernicus@eea.europa.eu"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
+      "sources": [{
+        "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
+        "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
+        "email": "copernicus@eea.europa.eu"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "service_type": "ogc:wfs",
       "mapview": {
         "service_type": "ogc:wms",
@@ -201,20 +189,16 @@
       "hash": "tbc",
       "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:public_military_industrial&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
       "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/public-military-industrial.schema.json",
-      "sources": [
-        {
-          "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
-          "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
-          "email": "copernicus@eea.europa.eu"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
+      "sources": [{
+        "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
+        "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
+        "email": "copernicus@eea.europa.eu"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "service_type": "ogc:wfs",
       "mapview": {
         "service_type": "ogc:wms",
@@ -248,20 +232,16 @@
       "hash": "tbc",
       "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:basins&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
       "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/basins.schema.json",
-      "sources": [
-        {
-          "title": "",
-          "path": "",
-          "email": ""
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
+      "sources": [{
+        "title": "",
+        "path": "",
+        "email": ""
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "service_type": "ogc:wfs",
       "mapview": {
         "service_type": "ogc:wms",
@@ -295,20 +275,16 @@
       "hash": "tbc",
       "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:buildings&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
       "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/buildings.schema.json",
-      "sources": [
-        {
-          "title": "Copernicus Land Monitoring Service - European Settlement Map 2012",
-          "path": "https://land.copernicus.eu/pan-european/GHSL/european-settlement-map",
-          "email": "copernicus@eea.europa.eu"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
+      "sources": [{
+        "title": "Copernicus Land Monitoring Service - European Settlement Map 2012",
+        "path": "https://land.copernicus.eu/pan-european/GHSL/european-settlement-map",
+        "email": "copernicus@eea.europa.eu"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "service_type": "ogc:wfs",
       "mapview": {
         "service_type": "ogc:wms",
@@ -342,20 +318,16 @@
       "hash": "tbc",
       "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:built_open_spaces&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
       "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/built_open_spaces.schema.json",
-      "sources": [
-        {
-          "title": "Copernicus Land Monitoring Service - European Settlement Map 2012",
-          "path": "https://land.copernicus.eu/pan-european/GHSL/european-settlement-map",
-          "email": "copernicus@eea.europa.eu"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
+      "sources": [{
+        "title": "Copernicus Land Monitoring Service - European Settlement Map 2012",
+        "path": "https://land.copernicus.eu/pan-european/GHSL/european-settlement-map",
+        "email": "copernicus@eea.europa.eu"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "service_type": "ogc:wfs",
       "mapview": {
         "service_type": "ogc:wms",
@@ -389,20 +361,16 @@
       "hash": "tbc",
       "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:dense_urban_fabric&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
       "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/dense_urban_fabric.schema.json",
-      "sources": [
-        {
-          "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
-          "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
-          "email": "copernicus@eea.europa.eu"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
+      "sources": [{
+        "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
+        "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
+        "email": "copernicus@eea.europa.eu"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "service_type": "ogc:wfs",
       "mapview": {
         "service_type": "ogc:wms",
@@ -436,20 +404,16 @@
       "hash": "tbc",
       "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:low_urban_fabric&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
       "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/low_urban_fabric.schema.json",
-      "sources": [
-        {
-          "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
-          "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
-          "email": "copernicus@eea.europa.eu"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
+      "sources": [{
+        "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
+        "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
+        "email": "copernicus@eea.europa.eu"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "service_type": "ogc:wfs",
       "mapview": {
         "service_type": "ogc:wms",
@@ -483,20 +447,16 @@
       "hash": "tbc",
       "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:medium_urban_fabric&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
       "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/medium_urban_fabric.schema.json",
-      "sources": [
-        {
-          "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
-          "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
-          "email": "copernicus@eea.europa.eu"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
+      "sources": [{
+        "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
+        "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
+        "email": "copernicus@eea.europa.eu"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "service_type": "ogc:wfs",
       "mapview": {
         "service_type": "ogc:wms",
@@ -530,20 +490,16 @@
       "hash": "tbc",
       "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:railways&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
       "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/railways.schema.json",
-      "sources": [
-        {
-          "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
-          "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
-          "email": "copernicus@eea.europa.eu"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
+      "sources": [{
+        "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
+        "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
+        "email": "copernicus@eea.europa.eu"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "service_type": "ogc:wfs",
       "mapview": {
         "service_type": "ogc:wms",
@@ -577,20 +533,16 @@
       "hash": "tbc",
       "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:roads&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
       "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/roads.schema.json",
-      "sources": [
-        {
-          "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
-          "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
-          "email": "copernicus@eea.europa.eu"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
+      "sources": [{
+        "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
+        "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
+        "email": "copernicus@eea.europa.eu"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "service_type": "ogc:wfs",
       "mapview": {
         "service_type": "ogc:wms",
@@ -624,20 +576,16 @@
       "hash": "tbc",
       "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:streams&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
       "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/streams.schema.json",
-      "sources": [
-        {
-          "title": "Copernicus Land Monitoring Service - Integrated EU-Hydro Database",
-          "path": "https://land.copernicus.eu/imagery-in-situ/eu-hydro/eu-hydro-public-beta/integrated-eu-hydro-database-hydrographic-and-drainage-database",
-          "email": "copernicus@eea.europa.eu"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
+      "sources": [{
+        "title": "Copernicus Land Monitoring Service - Integrated EU-Hydro Database",
+        "path": "https://land.copernicus.eu/imagery-in-situ/eu-hydro/eu-hydro-public-beta/integrated-eu-hydro-database-hydrographic-and-drainage-database",
+        "email": "copernicus@eea.europa.eu"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "service_type": "ogc:wfs",
       "mapview": {
         "service_type": "ogc:wms",
@@ -675,8 +623,7 @@
       "hash": "tbc",
       "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:trees&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
       "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/trees.schema.json",
-      "sources": [
-        {
+      "sources": [{
           "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
           "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
           "email": "copernicus@eea.europa.eu"
@@ -687,13 +634,11 @@
           "email": "copernicus@eea.europa.eu"
         }
       ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "service_type": "ogc:wfs",
       "mapview": {
         "service_type": "ogc:wms",
@@ -727,8 +672,7 @@
       "hash": "tbc",
       "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:vegetation&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
       "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/vegetation.schema.json",
-      "sources": [
-        {
+      "sources": [{
           "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
           "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
           "email": "copernicus@eea.europa.eu"
@@ -739,13 +683,11 @@
           "email": "copernicus@eea.europa.eu"
         }
       ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "service_type": "ogc:wfs",
       "mapview": {
         "service_type": "ogc:wms",
@@ -778,20 +720,16 @@
       "hash": "tbc",
       "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_historical_r12i1p1_SMHI-RCA4_v1_day_19710101-20001231_netcdf3&FORMAT=geotiff&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
       "schema": {},
-      "sources": [
-        {
-          "title": "EURO-CORDEX",
-          "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
-          "email": "ipoc@cordex.org"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
+      "sources": [{
+        "title": "EURO-CORDEX",
+        "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
+        "email": "ipoc@cordex.org"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "service_type": "ogc:wcs",
       "mapview": {
         "service_type": "ogc:wms",
@@ -813,16 +751,14 @@
         "rows": 8921,
         "columns": 9448,
         "start_cell": "top-left",
-        "bands": [
-          {
-            "id": 1,
-            "name": "hot-days-historical_19710101-20001231",
-            "description": "Hot days > 75th percentile for the baseline emissions scenario in the 1971-2000 period",
-            "bit_depth": "unsigned-32-bit",
-            "no_data_value": 1e20,
-            "compression_type": "none"
-          }
-        ]
+        "bands": [{
+          "id": 1,
+          "name": "hot-days-historical_19710101-20001231",
+          "description": "Hot days > 75th percentile for the baseline emissions scenario in the 1971-2000 period",
+          "bit_depth": "unsigned-32-bit",
+          "no_data_value": 1e20,
+          "compression_type": "none"
+        }]
       },
       "trs": "ISO 8601:2004",
       "temporal_extent": {
@@ -830,13 +766,12 @@
         "end": "2000-12-31"
       },
       "eu_gl": {
-        "workflow_step": ["hazard-characterization"],
+        "workflow_step": ["eu-gl:hazard-characterization"],
         "hazards": ["hazard:temperature:heat:heat-wave"],
         "resource_type": "hazard-index",
         "index": "hazard:temperature:heat:extreme-heat:index:hot-days",
         "emissions_scenario": "baseline",
-        "thresholds": [
-          {
+        "thresholds": [{
             "name": "low",
             "lower": 13.47,
             "expression": "value < lower"
@@ -867,20 +802,16 @@
       "hash": "tbc",
       "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf3&FORMAT=geotiff&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
       "schema": {},
-      "sources": [
-        {
-          "title": "EURO-CORDEX",
-          "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
-          "email": "ipoc@cordex.org"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
+      "sources": [{
+        "title": "EURO-CORDEX",
+        "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
+        "email": "ipoc@cordex.org"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "service_type": "ogc:wcs",
       "mapview": {
         "service_type": "ogc:wms",
@@ -902,16 +833,14 @@
         "rows": 8921,
         "columns": 9448,
         "start_cell": "top-left",
-        "bands": [
-          {
-            "id": 1,
-            "name": "hot-days-rcp26_20110101-20401231",
-            "description": "Hot days > 75th percentile for the rcp26 emissions scenario in the 2011-2040 period",
-            "bit_depth": "unsigned-32-bit",
-            "no_data_value": 1e20,
-            "compression_type": "none"
-          }
-        ]
+        "bands": [{
+          "id": 1,
+          "name": "hot-days-rcp26_20110101-20401231",
+          "description": "Hot days > 75th percentile for the rcp26 emissions scenario in the 2011-2040 period",
+          "bit_depth": "unsigned-32-bit",
+          "no_data_value": 1e20,
+          "compression_type": "none"
+        }]
       },
       "trs": "ISO 8601:2004",
       "temporal_extent": {
@@ -919,7 +848,7 @@
         "end": "2040-12-31"
       },
       "eu_gl": {
-        "workflow_step": ["hazard-characterization"],
+        "workflow_step": ["eu-gl:hazard-characterization"],
         "hazards": ["hazard:temperature:heat:heat-wave"],
         "resource_type": "hazard-index",
         "index": "hazard:temperature:heat:extreme-heat:index:hot-days",
@@ -938,20 +867,16 @@
       "hash": "tbc",
       "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&FORMAT=geotiff&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
       "schema": {},
-      "sources": [
-        {
-          "title": "EURO-CORDEX",
-          "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
-          "email": "ipoc@cordex.org"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
+      "sources": [{
+        "title": "EURO-CORDEX",
+        "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
+        "email": "ipoc@cordex.org"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "service_type": "ogc:wcs",
       "mapview": {
         "service_type": "ogc:wms",
@@ -973,16 +898,14 @@
         "rows": 8921,
         "columns": 9448,
         "start_cell": "top-left",
-        "bands": [
-          {
-            "id": 1,
-            "name": "hot-days-rcp26_20410101-20701231",
-            "description": "Hot days > 75th percentile for the rcp26 emissions scenario in the 2041-2070 period",
-            "bit_depth": "unsigned-32-bit",
-            "no_data_value": 1e20,
-            "compression_type": "none"
-          }
-        ]
+        "bands": [{
+          "id": 1,
+          "name": "hot-days-rcp26_20410101-20701231",
+          "description": "Hot days > 75th percentile for the rcp26 emissions scenario in the 2041-2070 period",
+          "bit_depth": "unsigned-32-bit",
+          "no_data_value": 1e20,
+          "compression_type": "none"
+        }]
       },
       "trs": "ISO 8601:2004",
       "temporal_extent": {
@@ -990,7 +913,7 @@
         "end": "2070-12-31"
       },
       "eu_gl": {
-        "workflow_step": ["hazard-characterization"],
+        "workflow_step": ["eu-gl:hazard-characterization"],
         "hazards": ["hazard:temperature:heat:heat-wave"],
         "resource_type": "hazard-index",
         "index": "hazard:temperature:heat:extreme-heat:index:hot-days",
@@ -1009,20 +932,16 @@
       "hash": "tbc",
       "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&FORMAT=geotiff&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
       "schema": {},
-      "sources": [
-        {
-          "title": "EURO-CORDEX",
-          "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
-          "email": "ipoc@cordex.org"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
+      "sources": [{
+        "title": "EURO-CORDEX",
+        "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
+        "email": "ipoc@cordex.org"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "service_type": "ogc:wcs",
       "mapview": {
         "service_type": "ogc:wms",
@@ -1044,16 +963,14 @@
         "rows": 8921,
         "columns": 9448,
         "start_cell": "top-left",
-        "bands": [
-          {
-            "id": 1,
-            "name": "hot-days-rcp26_20710101-21001231",
-            "description": "Hot days > 75th percentile for the rcp26 emissions scenario in the 2071-2100 period",
-            "bit_depth": "unsigned-32-bit",
-            "no_data_value": 1e20,
-            "compression_type": "none"
-          }
-        ]
+        "bands": [{
+          "id": 1,
+          "name": "hot-days-rcp26_20710101-21001231",
+          "description": "Hot days > 75th percentile for the rcp26 emissions scenario in the 2071-2100 period",
+          "bit_depth": "unsigned-32-bit",
+          "no_data_value": 1e20,
+          "compression_type": "none"
+        }]
       },
       "trs": "ISO 8601:2004",
       "temporal_extent": {
@@ -1061,7 +978,7 @@
         "end": "2100-12-31"
       },
       "eu_gl": {
-        "workflow_step": ["hazard-characterization"],
+        "workflow_step": ["eu-gl:hazard-characterization"],
         "hazards": ["hazard:temperature:heat:heat-wave"],
         "resource_type": "hazard-index",
         "index": "hazard:temperature:heat:extreme-heat:index:hot-days",
@@ -1080,20 +997,16 @@
       "hash": "tbc",
       "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf3&FORMAT=geotiff&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
       "schema": {},
-      "sources": [
-        {
-          "title": "EURO-CORDEX",
-          "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
-          "email": "ipoc@cordex.org"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
+      "sources": [{
+        "title": "EURO-CORDEX",
+        "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
+        "email": "ipoc@cordex.org"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "service_type": "ogc:wcs",
       "mapview": {
         "service_type": "ogc:wms",
@@ -1115,16 +1028,14 @@
         "rows": 8921,
         "columns": 9448,
         "start_cell": "top-left",
-        "bands": [
-          {
-            "id": 1,
-            "name": "hot-days-rcp45_20110101-20401231",
-            "description": "Hot days > 75th percentile for the rcp45 emissions scenario in the 2011-2040 period",
-            "bit_depth": "unsigned-32-bit",
-            "no_data_value": 1e20,
-            "compression_type": "none"
-          }
-        ]
+        "bands": [{
+          "id": 1,
+          "name": "hot-days-rcp45_20110101-20401231",
+          "description": "Hot days > 75th percentile for the rcp45 emissions scenario in the 2011-2040 period",
+          "bit_depth": "unsigned-32-bit",
+          "no_data_value": 1e20,
+          "compression_type": "none"
+        }]
       },
       "trs": "ISO 8601:2004",
       "temporal_extent": {
@@ -1132,13 +1043,12 @@
         "end": "2040-12-31"
       },
       "eu_gl": {
-        "workflow_step": ["hazard-characterization"],
+        "workflow_step": ["eu-gl:hazard-characterization"],
         "hazards": ["hazard:temperature:heat:heat-wave"],
         "resource_type": "hazard-index",
         "index": "hazard:temperature:heat:extreme-heat:index:hot-days",
         "emissions_scenario": "effective-measures:rcp45",
-        "thresholds": [
-          {
+        "thresholds": [{
             "name": "low",
             "lower": 9.13,
             "expression": "value < lower",
@@ -1172,20 +1082,16 @@
       "hash": "tbc",
       "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&FORMAT=geotiff&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
       "schema": {},
-      "sources": [
-        {
-          "title": "EURO-CORDEX",
-          "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
-          "email": "ipoc@cordex.org"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
+      "sources": [{
+        "title": "EURO-CORDEX",
+        "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
+        "email": "ipoc@cordex.org"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "service_type": "ogc:wcs",
       "mapview": {
         "service_type": "ogc:wms",
@@ -1207,16 +1113,14 @@
         "rows": 8921,
         "columns": 9448,
         "start_cell": "top-left",
-        "bands": [
-          {
-            "id": 1,
-            "name": "hot-days-rcp45_20410101-20701231",
-            "description": "Hot days > 75th percentile for the rcp45 emissions scenario in the 2041-2070 period",
-            "bit_depth": "unsigned-32-bit",
-            "no_data_value": 1e20,
-            "compression_type": "none"
-          }
-        ]
+        "bands": [{
+          "id": 1,
+          "name": "hot-days-rcp45_20410101-20701231",
+          "description": "Hot days > 75th percentile for the rcp45 emissions scenario in the 2041-2070 period",
+          "bit_depth": "unsigned-32-bit",
+          "no_data_value": 1e20,
+          "compression_type": "none"
+        }]
       },
       "trs": "ISO 8601:2004",
       "temporal_extent": {
@@ -1224,13 +1128,12 @@
         "end": "2070-12-31"
       },
       "eu_gl": {
-        "workflow_step": ["hazard-characterization"],
+        "workflow_step": ["eu-gl:hazard-characterization"],
         "hazards": ["hazard:temperature:heat:heat-wave"],
         "resource_type": "hazard-index",
         "index": "hazard:temperature:heat:extreme-heat:index:hot-days",
         "emissions_scenario": "effective-measures:rcp45",
-        "thresholds": [
-          {
+        "thresholds": [{
             "name": "low",
             "lower": 9.13,
             "expression": "value < lower",
@@ -1264,20 +1167,16 @@
       "hash": "tbc",
       "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&FORMAT=geotiff&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
       "schema": {},
-      "sources": [
-        {
-          "title": "EURO-CORDEX",
-          "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
-          "email": "ipoc@cordex.org"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
+      "sources": [{
+        "title": "EURO-CORDEX",
+        "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
+        "email": "ipoc@cordex.org"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "service_type": "ogc:wcs",
       "mapview": {
         "service_type": "ogc:wms",
@@ -1299,16 +1198,14 @@
         "rows": 8921,
         "columns": 9448,
         "start_cell": "top-left",
-        "bands": [
-          {
-            "id": 1,
-            "name": "hot-days-rcp45_20710101-21001231",
-            "description": "Hot days > 75th percentile for the rcp45 emissions scenario in the 2071-2100 period",
-            "bit_depth": "unsigned-32-bit",
-            "no_data_value": 1e20,
-            "compression_type": "none"
-          }
-        ]
+        "bands": [{
+          "id": 1,
+          "name": "hot-days-rcp45_20710101-21001231",
+          "description": "Hot days > 75th percentile for the rcp45 emissions scenario in the 2071-2100 period",
+          "bit_depth": "unsigned-32-bit",
+          "no_data_value": 1e20,
+          "compression_type": "none"
+        }]
       },
       "trs": "ISO 8601:2004",
       "temporal_extent": {
@@ -1316,13 +1213,12 @@
         "end": "2100-12-31"
       },
       "eu_gl": {
-        "workflow_step": ["hazard-characterization"],
+        "workflow_step": ["eu-gl:hazard-characterization"],
         "hazards": ["hazard:temperature:heat:heat-wave"],
         "resource_type": "hazard-index",
         "index": "hazard:temperature:heat:extreme-heat:index:hot-days",
         "emissions_scenario": "effective-measures:rcp45",
-        "thresholds": [
-          {
+        "thresholds": [{
             "name": "low",
             "lower": 9.13,
             "expression": "value < lower",
@@ -1356,20 +1252,16 @@
       "hash": "tbc",
       "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf3&FORMAT=geotiff&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
       "schema": {},
-      "sources": [
-        {
-          "title": "EURO-CORDEX",
-          "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
-          "email": "ipoc@cordex.org"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
+      "sources": [{
+        "title": "EURO-CORDEX",
+        "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
+        "email": "ipoc@cordex.org"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "service_type": "ogc:wcs",
       "mapview": {
         "service_type": "ogc:wms",
@@ -1391,16 +1283,14 @@
         "rows": 8921,
         "columns": 9448,
         "start_cell": "top-left",
-        "bands": [
-          {
-            "id": 1,
-            "name": "hot-days-rcp85_20110101-20401231",
-            "description": "Hot days > 75th percentile for the rcp85 emissions scenario in the 2011-2040 period",
-            "bit_depth": "unsigned-32-bit",
-            "no_data_value": 1e20,
-            "compression_type": "none"
-          }
-        ]
+        "bands": [{
+          "id": 1,
+          "name": "hot-days-rcp85_20110101-20401231",
+          "description": "Hot days > 75th percentile for the rcp85 emissions scenario in the 2011-2040 period",
+          "bit_depth": "unsigned-32-bit",
+          "no_data_value": 1e20,
+          "compression_type": "none"
+        }]
       },
       "trs": "ISO 8601:2004",
       "temporal_extent": {
@@ -1408,7 +1298,7 @@
         "end": "2040-12-31"
       },
       "eu_gl": {
-        "workflow_step": ["hazard-characterization"],
+        "workflow_step": ["eu-gl:hazard-characterization"],
         "hazards": ["hazard:temperature:heat:heat-wave"],
         "resource_type": "hazard-index",
         "index": "hazard:temperature:heat:extreme-heat:index:hot-days",
@@ -1427,20 +1317,16 @@
       "hash": "tbc",
       "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&FORMAT=geotiff&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
       "schema": {},
-      "sources": [
-        {
-          "title": "EURO-CORDEX",
-          "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
-          "email": "ipoc@cordex.org"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
+      "sources": [{
+        "title": "EURO-CORDEX",
+        "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
+        "email": "ipoc@cordex.org"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "service_type": "ogc:wcs",
       "mapview": {
         "service_type": "ogc:wms",
@@ -1462,16 +1348,14 @@
         "rows": 8921,
         "columns": 9448,
         "start_cell": "top-left",
-        "bands": [
-          {
-            "id": 1,
-            "name": "hot-days-rcp85_20410101-20701231",
-            "description": "Hot days > 75th percentile for the rcp85 emissions scenario in the 2041-2070 period",
-            "bit_depth": "unsigned-32-bit",
-            "no_data_value": 1e20,
-            "compression_type": "none"
-          }
-        ]
+        "bands": [{
+          "id": 1,
+          "name": "hot-days-rcp85_20410101-20701231",
+          "description": "Hot days > 75th percentile for the rcp85 emissions scenario in the 2041-2070 period",
+          "bit_depth": "unsigned-32-bit",
+          "no_data_value": 1e20,
+          "compression_type": "none"
+        }]
       },
       "trs": "ISO 8601:2004",
       "temporal_extent": {
@@ -1479,7 +1363,7 @@
         "end": "2070-12-31"
       },
       "eu_gl": {
-        "workflow_step": ["hazard-characterization"],
+        "workflow_step": ["eu-gl:hazard-characterization"],
         "hazards": ["hazard:temperature:heat:heat-wave"],
         "resource_type": "hazard-index",
         "index": "hazard:temperature:heat:extreme-heat:index:hot-days",
@@ -1498,20 +1382,16 @@
       "hash": "tbc",
       "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&FORMAT=geotiff&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
       "schema": {},
-      "sources": [
-        {
-          "title": "EURO-CORDEX",
-          "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
-          "email": "ipoc@cordex.org"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
+      "sources": [{
+        "title": "EURO-CORDEX",
+        "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
+        "email": "ipoc@cordex.org"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "service_type": "ogc:wcs",
       "mapview": {
         "service_type": "ogc:wms",
@@ -1533,16 +1413,14 @@
         "rows": 8921,
         "columns": 9448,
         "start_cell": "top-left",
-        "bands": [
-          {
-            "id": 1,
-            "name": "hot-days_rcp85_20710101-21001231",
-            "description": "Hot days > 75th percentile for the rcp85 emissions scenario in the 2071-2100 period",
-            "bit_depth": "unsigned-32-bit",
-            "no_data_value": 1e20,
-            "compression_type": "none"
-          }
-        ]
+        "bands": [{
+          "id": 1,
+          "name": "hot-days_rcp85_20710101-21001231",
+          "description": "Hot days > 75th percentile for the rcp85 emissions scenario in the 2071-2100 period",
+          "bit_depth": "unsigned-32-bit",
+          "no_data_value": 1e20,
+          "compression_type": "none"
+        }]
       },
       "trs": "ISO 8601:2004",
       "temporal_extent": {
@@ -1550,11 +1428,36 @@
         "end": "2100-12-31"
       },
       "eu_gl": {
-        "workflow_step": ["hazard-characterization"],
+        "workflow_step": ["eu-gl:hazard-characterization"],
         "hazards": ["hazard:temperature:heat:heat-wave"],
         "resource_type": "hazard-index",
         "index": "hazard:temperature:heat:extreme-heat:index:hot-days",
         "emissions_scenario": "business-as-usual:rcp85"
+      }
+    },
+    {
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r25",
+      "name": "adaptation-options",
+      "title": "General list of possible adaptation options for application",
+      "description": "General list of possible adaptation options for application",
+      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "format": "json",
+      "mediatype": "text/json",
+      "bytes": "",
+      "hash": "tbc",
+      "path": "https://raw.githubusercontent.com/clarity-h2020/data-package/master/examples/dc1-naples/data/adaptation-options/adaptation-options.json",
+      "schema": "https://raw.githubusercontent.com/clarity-h2020/data-package/master/schemas/adaptation-options/adaptation-options.schema.json",
+      "sources": [],
+      "licenses": [],
+      "eu_gl": {
+        "workflow_step": ["eu-gl:adaptation-options:identification"],
+        "hazards": [
+          "hazard:flood:pluvial-flooding",
+          "hazard:flood:river-flooding",
+          "hazard:temperature:heat:heat-wave",
+          "hazard:landslide"
+        ],
+        "resource_type": "adaptation-options"
       }
     }
   ]
