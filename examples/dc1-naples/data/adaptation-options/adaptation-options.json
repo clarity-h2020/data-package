@@ -1,11 +1,12 @@
 [{
         "id": "adaptation-option:constructions-on-piles",
         "image": "https://raw.githubusercontent.com/clarity-h2020/data-package/master/schemas/adaptation-options/icons/constructions-on-piles.png",
+        "targeted_elements_at_risk": ["building"],
         "variations": [{
                 "hazard": "hazard:flood:pluvial-flooding",
                 "variation": {
-                    " local_effect": 0,
-                    " vulnerability": 2
+                    "local_effect": 0,
+                    "vulnerability": 2
                 }
             },
             {
@@ -35,6 +36,11 @@
                 "category": "multifunctional-space-usage",
                 "value": 2
             }
+        ],
+        "local_effects_parameters": [
+            "emissivity",
+            "transmissivity",
+            "hillshade_building"
         ]
     },
     {
@@ -67,6 +73,12 @@
                 "category": "multifunctional-space-usage",
                 "value": 1
             }
+        ],
+        "local_effects_parameters": [
+            "albedo",
+            "emissivity",
+            "transmissivity",
+            "run-off_coefficient"
         ]
     },
     {
@@ -75,8 +87,8 @@
         "variations": [{
                 "hazard": "hazard:flood:pluvial-flooding",
                 "variation": {
-                    " local_effect": 3,
-                    " vulnerability": 0
+                    "local_effect": 3,
+                    "vulnerability": 0
                 }
             },
             {
@@ -110,6 +122,12 @@
                 "category": "air-quality",
                 "value": 1
             }
+        ],
+        "local_effects_parameters": [
+            "albedo",
+            "emissivity",
+            "transmissivity",
+            "run-off_coefficient"
         ]
     },
     {
@@ -118,8 +136,8 @@
         "variations": [{
                 "hazard": "hazard:flood:pluvial-flooding",
                 "variation": {
-                    " local_effect": 3,
-                    " vulnerability": 0
+                    "local_effect": 3,
+                    "vulnerability": 0
                 }
             },
             {
@@ -144,7 +162,10 @@
         "co_benefits": [{
             "category": "social-and-economic-importance",
             "value": 1
-        }]
+        }],
+        "local_effects_parameters": [
+            "run-off_coefficient"
+        ]
     },
     {
         "id": "adaptation-option:rainwater-harvesting-and-reuse",
@@ -152,8 +173,8 @@
         "variations": [{
             "hazard": "hazard:flood:pluvial-flooding",
             "variation": {
-                " local_effect": 3,
-                " vulnerability": 0
+                "local_effect": 3,
+                "vulnerability": 0
             }
         }],
         "cost": {
@@ -168,6 +189,9 @@
                 "category": "multifunctional-space-usage",
                 "value": 2
             }
+        ],
+        "local_effects_parameters": [
+            "run-off_coefficient"
         ]
     },
     {
@@ -176,8 +200,8 @@
         "variations": [{
                 "hazard": "hazard:flood:pluvial-flooding",
                 "variation": {
-                    " local_effect": 3,
-                    " vulnerability": 0
+                    "local_effect": 3,
+                    "vulnerability": 0
                 }
             },
             {
@@ -211,6 +235,12 @@
                 "category": "social-and-economic-importance",
                 "value": 1
             }
+        ],
+        "local_effects_parameters": [
+            "albedo",
+            "emissivity",
+            "transmissivity",
+            "run-off_coefficient"
         ]
     },
     {
@@ -219,8 +249,8 @@
         "variations": [{
                 "hazard": "hazard:flood:pluvial-flooding",
                 "variation": {
-                    " local_effect": 3,
-                    " vulnerability": 0
+                    "local_effect": 3,
+                    "vulnerability": 0
                 }
             },
             {
@@ -265,6 +295,12 @@
                 "category": "social-and-economic-importance",
                 "value": 2
             }
+        ],
+        "local_effects_parameters": [
+            "albedo",
+            "emissivity",
+            "transmissivity",
+            "run-off_coefficient"
         ]
     },
     {
@@ -273,8 +309,8 @@
         "variations": [{
                 "hazard": "hazard:flood:pluvial-flooding",
                 "variation": {
-                    " local_effect": 3,
-                    " vulnerability": 0
+                    "local_effect": 3,
+                    "vulnerability": 0
                 }
             },
             {
@@ -319,6 +355,12 @@
                 "category": "social-and-economic-importance",
                 "value": 2
             }
+        ],
+        "local_effects_parameters": [
+            "albedo",
+            "emissivity",
+            "transmissivity",
+            "run-off_coefficient"
         ]
     },
     {
@@ -327,8 +369,8 @@
         "variations": [{
                 "hazard": "hazard:flood:pluvial-flooding",
                 "variation": {
-                    " local_effect": 3,
-                    " vulnerability": 3
+                    "local_effect": 3,
+                    "vulnerability": 3
                 }
             },
             {
@@ -377,6 +419,14 @@
                 "category": "social-and-economic-importance",
                 "value": 2
             }
+        ],
+        "local_effects_parameters": [
+            "albedo",
+            "emissivity",
+            "transmissivity",
+            "hillshade_green_fraction",
+            "run-off_coefficient",
+            "fua_tunnel"
         ]
     },
     {
@@ -385,8 +435,8 @@
         "variations": [{
                 "hazard": "hazard:flood:pluvial-flooding",
                 "variation": {
-                    " local_effect": 2,
-                    " vulnerability": 0
+                    "local_effect": 2,
+                    "vulnerability": 0
                 }
             },
             {
@@ -435,6 +485,13 @@
                 "category": "social-and-economic-importance",
                 "value": 3
             }
+        ],
+        "local_effects_parameters": [
+            "albedo",
+            "emissivity",
+            "transmissivity",
+            "hillshade_green_fraction",
+            "run-off_coefficient"
         ]
     },
     {
@@ -443,8 +500,8 @@
         "variations": [{
                 "hazard": "hazard:flood:pluvial-flooding",
                 "variation": {
-                    " local_effect": 3,
-                    " vulnerability": 0
+                    "local_effect": 3,
+                    "vulnerability": 0
                 }
             },
             {
@@ -493,6 +550,12 @@
                 "category": "social-and-economic-importance",
                 "value": 3
             }
+        ],
+        "local_effects_parameters": [
+            "albedo",
+            "emissivity",
+            "transmissivity",
+            "hillshade_green_fraction"
         ]
     },
     {
@@ -501,8 +564,8 @@
         "variations": [{
                 "hazard": "hazard:flood:pluvial-flooding",
                 "variation": {
-                    " local_effect": 3,
-                    " vulnerability": 3
+                    "local_effect": 3,
+                    "vulnerability": 3
                 }
             },
             {
@@ -537,6 +600,13 @@
                 "category": "social-and-economic-importance",
                 "value": 2
             }
+        ],
+        "local_effects_parameters": [
+            "albedo",
+            "emissivity",
+            "transmissivity",
+            "hillshade_green_fraction",
+            "run-off_coefficient"
         ]
     },
     {
@@ -573,6 +643,11 @@
                 "category": "social-and-economic-importance",
                 "value": 2
             }
+        ],
+        "local_effects_parameters": [
+            "albedo",
+            "emissivity",
+            "transmissivity"
         ]
     },
     {
@@ -609,6 +684,12 @@
                 "category": "social-and-economic-importance",
                 "value": 2
             }
+        ],
+        "local_effects_parameters": [
+            "emissivity",
+            "transmissivity",
+            "hillshade_green_fraction",
+            "fua_tunnel"
         ]
     },
     {
@@ -628,7 +709,12 @@
         "co_benefits": [{
             "category": "multifunctional-space-usage",
             "value": 1
-        }]
+        }],
+        "local_effects_parameters": [
+            "albedo",
+            "emissivity",
+            "transmissivity"
+        ]
     },
     {
         "id": "adaptation-option:cool-paving-and-building-materials",
@@ -652,6 +738,11 @@
                 "category": "multifunctional-space-usage",
                 "value": 1
             }
+        ],
+        "local_effects_parameters": [
+            "albedo",
+            "emissivity",
+            "transmissivity"
         ]
     },
     {
@@ -676,6 +767,9 @@
                 "category": "multifunctional-space-usage",
                 "value": 1
             }
+        ],
+        "local_effects_parameters": [
+            "hillshade_building"
         ]
     },
     {
@@ -695,7 +789,13 @@
         "co_benefits": [{
             "category": "social-and-economic-importance",
             "value": 1
-        }]
+        }],
+        "local_effects_parameters": [
+            "albedo",
+            "emissivity",
+            "transmissivity",
+            "hillshade_building"
+        ]
     },
     {
         "id": "adaptation-option:thermal-insulation",
@@ -719,6 +819,10 @@
                 "category": "social-and-economic-importance",
                 "value": 1
             }
+        ],
+        "local_effects_parameters": [
+            "emissivity",
+            "transmissivity"
         ]
     },
     {
@@ -735,7 +839,11 @@
             "new_development": null,
             "retroffiting": null
         },
-        "co_benefits": []
+        "co_benefits": [],
+        "local_effects_parameters": [
+            "hillshade_building",
+            "fua_tunnel"
+        ]
     },
     {
         "id": "adaptation-option:high-rise-buildings",
@@ -759,6 +867,9 @@
                 "category": "social-and-economic-importance",
                 "value": 1
             }
+        ],
+        "local_effects_parameters": [
+            "hillshade_building"
         ]
     },
     {
@@ -787,6 +898,9 @@
                 "category": "multifunctional-space-usage",
                 "value": 1
             }
+        ],
+        "local_effects_parameters": [
+            "hillshade_building"
         ]
     }
 ]
