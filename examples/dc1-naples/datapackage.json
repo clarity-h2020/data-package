@@ -773,10 +773,10 @@
       "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the baseline emissions scenario in the 1971-2000 period",
       "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
       "format": "tif",
-      "mediatype": "application/x-gzip",
+      "mediatype": "geotiff",
       "bytes": "358616146",
       "hash": "tbc",
-      "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_historical_r12i1p1_SMHI-RCA4_v1_day_19710101-20001231_netcdf3&FORMAT=application/x-gzip&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
+      "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_historical_r12i1p1_SMHI-RCA4_v1_day_19710101-20001231_netcdf3&FORMAT=geotiff&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
       "schema": {},
       "sources": [
         {
@@ -862,10 +862,10 @@
       "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp26 emissions scenario in the 2011-2040 period",
       "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
       "format": "tif",
-      "mediatype": "application/x-gzip",
+      "mediatype": "geotiff",
       "bytes": "358616146",
       "hash": "tbc",
-      "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf3&FORMAT=application/x-gzip&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
+      "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf3&FORMAT=geotiff&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
       "schema": {},
       "sources": [
         {
@@ -933,10 +933,10 @@
       "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp26 emissions scenario in the 2041-2070 period",
       "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
       "format": "tif",
-      "mediatype": "application/x-gzip",
+      "mediatype": "geotiff",
       "bytes": "358616146",
       "hash": "tbc",
-      "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&FORMAT=application/x-gzip&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
+      "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&FORMAT=geotiff&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
       "schema": {},
       "sources": [
         {
@@ -1004,10 +1004,10 @@
       "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp26 emissions scenario in the 2071-2100 period",
       "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
       "format": "tif",
-      "mediatype": "application/x-gzip",
+      "mediatype": "geotiff",
       "bytes": "358616146",
       "hash": "tbc",
-      "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&FORMAT=application/x-gzip&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
+      "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&FORMAT=geotiff&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
       "schema": {},
       "sources": [
         {
@@ -1075,10 +1075,10 @@
       "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp45 emissions scenario in the 2011-2040 period",
       "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
       "format": "tif",
-      "mediatype": "application/x-gzip",
+      "mediatype": "geotiff",
       "bytes": "358616146",
       "hash": "tbc",
-      "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf3&FORMAT=application/x-gzip&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
+      "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf3&FORMAT=geotiff&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
       "schema": {},
       "sources": [
         {
@@ -1167,10 +1167,10 @@
       "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp45 emissions scenario in the 2041-2070 period",
       "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
       "format": "tif",
-      "mediatype": "application/x-gzip",
+      "mediatype": "geotiff",
       "bytes": "358616146",
       "hash": "tbc",
-      "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&FORMAT=application/x-gzip&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
+      "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&FORMAT=geotiff&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
       "schema": {},
       "sources": [
         {
@@ -1234,20 +1234,20 @@
             "name": "low",
             "lower": 9.13,
             "expression": "value < lower",
-            "relative_to": "baseline"
+            "relative_to": "increase in baseline"
           },
           {
             "name": "medium",
             "lower": 9.13,
             "upper": 16.6,
             "expression": "lower <= value <= upper",
-            "relative_to": "baseline"
+            "relative_to": "increase in baseline"
           },
           {
             "name": "high",
             "upper": 16.6,
             "expression": "value > upper",
-            "relative_to": "baseline"
+            "relative_to": "increase in baseline"
           }
         ]
       }
@@ -1259,10 +1259,10 @@
       "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp45 emissions scenario in the 2071-2100 period",
       "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
       "format": "tif",
-      "mediatype": "application/x-gzip",
+      "mediatype": "geotiff",
       "bytes": "358616146",
       "hash": "tbc",
-      "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&FORMAT=application/x-gzip&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
+      "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&FORMAT=geotiff&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
       "schema": {},
       "sources": [
         {
@@ -1326,20 +1326,20 @@
             "name": "low",
             "lower": 9.13,
             "expression": "value < lower",
-            "relative_to": "baseline"
+            "relative_to": "increase in baseline"
           },
           {
             "name": "medium",
             "lower": 9.13,
             "upper": 16.6,
             "expression": "lower <= value <= upper",
-            "relative_to": "baseline"
+            "relative_to": "increase in baseline"
           },
           {
             "name": "high",
             "upper": 16.6,
             "expression": "value > upper",
-            "relative_to": "baseline"
+            "relative_to": "increase in baseline"
           }
         ]
       }
@@ -1351,10 +1351,10 @@
       "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp85 emissions scenario in the 2011-2040 period",
       "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
       "format": "tif",
-      "mediatype": "application/x-gzip",
+      "mediatype": "geotiff",
       "bytes": "358616146",
       "hash": "tbc",
-      "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf3&FORMAT=application/x-gzip&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
+      "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf3&FORMAT=geotiff&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
       "schema": {},
       "sources": [
         {
@@ -1422,10 +1422,10 @@
       "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp85 emissions scenario in the 2041-2070 period",
       "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
       "format": "tif",
-      "mediatype": "application/x-gzip",
+      "mediatype": "geotiff",
       "bytes": "358616146",
       "hash": "tbc",
-      "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&FORMAT=application/x-gzip&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
+      "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&FORMAT=geotiff&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
       "schema": {},
       "sources": [
         {
@@ -1493,10 +1493,10 @@
       "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp85 emissions scenario in the 2071-2100 period",
       "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
       "format": "tif",
-      "mediatype": "application/x-gzip",
+      "mediatype": "geotiff",
       "bytes": "358616146",
       "hash": "tbc",
-      "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&FORMAT=application/x-gzip&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
+      "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&FORMAT=geotiff&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
       "schema": {},
       "sources": [
         {
