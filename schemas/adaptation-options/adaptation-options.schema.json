@@ -45,8 +45,23 @@
             "uom": null
         },
         {
+            "name": "targeted_element_at_risk",
+            "description": "Towards which elements at risk this adaptation option can be used",
+            "type": "string",
+            "uom": null,
+            "constraints": {
+                "allowed-values": [
+                    "population",
+                    "building",
+                    "infrastructure:bridge",
+                    "infrastructure:transportation-network:road",
+                    "infrastructure:transportation-network:railway"
+                ]
+            }
+        },        
+        {
             "name": "hazard",
-            "description": "Towards which hazard this adaptation option can be used",
+            "description": "Against which hazards this adaptation option can be used",
             "type": "string",
             "uom": null,
             "constraints": {
@@ -151,6 +166,27 @@
                     1,
                     2,
                     3
+                ]
+            }
+        },
+        {
+            "name": "local_effects_parameters",
+            "description": "List of parameters used in the local-effects formulas",
+            "type": "string",
+            "uom": null,
+            "constraints": {
+                "allowed-values": [
+                    "albedo",
+                    "emissivity",
+                    "transmissivity",
+                    "hillshade_building",
+                    "hillshade_green_fraction",
+                    "building_shadow",
+                    "vegetation_shadow",
+                    "run-off_coefficient",
+                    "fua_tunnel",
+                    "altitude",
+                    "surface_temperature"
                 ]
             }
         }
