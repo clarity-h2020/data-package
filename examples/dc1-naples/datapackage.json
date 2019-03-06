@@ -710,7 +710,7 @@
     },
     {
       "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r15",
-      "name": "hot-wave-duration_historical_19710101-20001231",
+      "name": "heat-wave-duration_historical_19710101-20001231",
       "title": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the baseline emissions scenario in the 1971-2000 period",
       "description": "Maximum number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the baseline emissions scenario in the 1971-2000 period",
       "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
@@ -753,7 +753,7 @@
         "start_cell": "top-left",
         "bands": [{
           "id": 1,
-          "name": "hot-wave-duration_historical_19710101-20001231",
+          "name": "heat-wave-duration_historical_19710101-20001231",
           "description": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the baseline emissions scenario in the 1971-2000 period",
           "bit_depth": "unsigned-32-bit",
           "no_data_value": 1e20,
@@ -792,7 +792,7 @@
     },
     {
       "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r16",
-      "name": "hot-wave-duration_rcp26_20110101-20401231",
+      "name": "heat-wave-duration_rcp26_20110101-20401231",
       "title": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp26 emissions scenario in the 2011-2040 period",
       "description": "Maxium number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp26 emissions scenario in the 2011-2040 period",
       "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
@@ -835,7 +835,7 @@
         "start_cell": "top-left",
         "bands": [{
           "id": 1,
-          "name": "hot-wave-duration_rcp26_20110101-20401231",
+          "name": "heat-wave-duration_rcp26_20110101-20401231",
           "description": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp26 emissions scenario in the 2011-2040 period",
           "bit_depth": "unsigned-32-bit",
           "no_data_value": 1e20,
@@ -857,7 +857,7 @@
     },
     {
       "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r17",
-      "name": "hot-wave-duration_rcp26_20410101-20701231",
+      "name": "heat-wave-duration_rcp26_20410101-20701231",
       "title": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp26 emissions scenario in the 2041-2070 period",
       "description": "Maxium number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp26 emissions scenario in the 2041-2070 period",
       "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
@@ -900,7 +900,7 @@
         "start_cell": "top-left",
         "bands": [{
           "id": 1,
-          "name": "hot-wave-duration_rcp26_20410101-20701231",
+          "name": "heat-wave-duration_rcp26_20410101-20701231",
           "description": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp26 emissions scenario in the 2041-2070 period",
           "bit_depth": "unsigned-32-bit",
           "no_data_value": 1e20,
@@ -922,7 +922,7 @@
     },
     {
       "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r18",
-      "name": "hot-wave-duration_rcp26_20710101-21001231",
+      "name": "heat-wave-duration_rcp26_20710101-21001231",
       "title": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp26 emissions scenario in the 2071-2100 period",
       "description": "Maxium number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp26 emissions scenario in the 2071-2100 period",
       "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
@@ -965,7 +965,7 @@
         "start_cell": "top-left",
         "bands": [{
           "id": 1,
-          "name": "hot-wave-duration_rcp26_20710101-21001231",
+          "name": "heat-wave-duration_rcp26_20710101-21001231",
           "description": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp26 emissions scenario in the 2071-2100 period",
           "bit_depth": "unsigned-32-bit",
           "no_data_value": 1e20,
@@ -987,7 +987,7 @@
     },
     {
       "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r19",
-      "name": "hot-wave-duration_rcp45_20110101-20401231",
+      "name": "heat-wave-duration_rcp45_20110101-20401231",
       "title": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp45 emissions scenario in the 2011-2040 period",
       "description": "Maxium number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp45 emissions scenario in the 2011-2040 period",
       "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
@@ -1030,7 +1030,7 @@
         "start_cell": "top-left",
         "bands": [{
           "id": 1,
-          "name": "hot-wave-duration_rcp45_20110101-20401231",
+          "name": "heat-wave-duration_rcp45_20110101-20401231",
           "description": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp45 emissions scenario in the 2011-2040 period",
           "bit_depth": "unsigned-32-bit",
           "no_data_value": 1e20,
@@ -1072,7 +1072,7 @@
     },
     {
       "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r20",
-      "name": "hot-wave-duration_rcp45_20410101-20701231",
+      "name": "heat-wave-duration_rcp45_20410101-20701231",
       "title": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp45 emissions scenario in the 2041-2070 period",
       "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp45 emissions scenario in the 2041-2070 period",
       "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
@@ -1115,7 +1115,7 @@
         "start_cell": "top-left",
         "bands": [{
           "id": 1,
-          "name": "hot-wave-duration_rcp45_20410101-20701231",
+          "name": "heat-wave-duration_rcp45_20410101-20701231",
           "description": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp45 emissions scenario in the 2041-2070 period",
           "bit_depth": "unsigned-32-bit",
           "no_data_value": 1e20,
@@ -1157,7 +1157,7 @@
     },
     {
       "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r21",
-      "name": "hot-wave-duration_rcp45_20710101-21001231",
+      "name": "heat-wave-duration_rcp45_20710101-21001231",
       "title": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp45 emissions scenario in the 2071-2100 period",
       "description": "Maxium number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp45 emissions scenario in the 2071-2100 period",
       "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
@@ -1200,7 +1200,7 @@
         "start_cell": "top-left",
         "bands": [{
           "id": 1,
-          "name": "hot-wave-duration_rcp45_20710101-21001231",
+          "name": "heat-wave-duration_rcp45_20710101-21001231",
           "description": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp45 emissions scenario in the 2071-2100 period",
           "bit_depth": "unsigned-32-bit",
           "no_data_value": 1e20,
@@ -1242,7 +1242,7 @@
     },
     {
       "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r22",
-      "name": "hot-wave-duration_rcp85_20110101-20401231",
+      "name": "heat-wave-duration_rcp85_20110101-20401231",
       "title": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp85 emissions scenario in the 2011-2040 period",
       "description": "Maxium number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp85 emissions scenario in the 2011-2040 period",
       "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
@@ -1285,7 +1285,7 @@
         "start_cell": "top-left",
         "bands": [{
           "id": 1,
-          "name": "hot-wave-duration_rcp85_20110101-20401231",
+          "name": "heat-wave-duration_rcp85_20110101-20401231",
           "description": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp85 emissions scenario in the 2011-2040 period",
           "bit_depth": "unsigned-32-bit",
           "no_data_value": 1e20,
@@ -1307,7 +1307,7 @@
     },
     {
       "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r23",
-      "name": "hot-wave-duration_rcp85_20410101-20701231",
+      "name": "heat-wave-duration_rcp85_20410101-20701231",
       "title": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp85 emissions scenario in the 2041-2070 period",
       "description": "Maxium number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp85 emissions scenario in the 2041-2070 period",
       "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
@@ -1350,7 +1350,7 @@
         "start_cell": "top-left",
         "bands": [{
           "id": 1,
-          "name": "hot-wave-duration_rcp85_20410101-20701231",
+          "name": "heat-wave-duration_rcp85_20410101-20701231",
           "description": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp85 emissions scenario in the 2041-2070 period",
           "bit_depth": "unsigned-32-bit",
           "no_data_value": 1e20,
@@ -1372,7 +1372,7 @@
     },
     {
       "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r24",
-      "name": "hot-wave-duration_rcp85_20710101-21001231",
+      "name": "heat-wave-duration_rcp85_20710101-21001231",
       "title": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp85 emissions scenario in the 2071-2100 period",
       "description": "Maximum number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp85 emissions scenario in the 2071-2100 period",
       "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
@@ -1415,7 +1415,7 @@
         "start_cell": "top-left",
         "bands": [{
           "id": 1,
-          "name": "hot-wave-duration_rcp85_20710101-21001231",
+          "name": "heat-wave-duration_rcp85_20710101-21001231",
           "description": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp85 emissions scenario in the 2071-2100 period",
           "bit_depth": "unsigned-32-bit",
           "no_data_value": 1e20,
