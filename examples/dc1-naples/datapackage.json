@@ -1459,6 +1459,426 @@
         ],
         "resource_type": "adaptation-options"
       }
+    },
+    {
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r26",
+      "name": "local-effects_hazard_heat-wave_baseline_temperature28c_naples",
+      "title": "",
+      "description": "",
+      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "format": "tif",
+      "mediatype": "geotiff",
+      "bytes": "",
+      "hash": "",
+      "path": "https://clarity.meteogrid.com/geoserver/Local_Effects/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=Local_Effects:Heat_wave_temperature_historical_low_hazard_Naples&FORMAT=geotiff&boundingbox=4647500,1947000,4720500,2008000,urn:ogc:def:crs:EPSG::3035",
+      "schema": {},
+      "sources": [],
+      "licenses": [{
+        "name": "",
+        "title": "",
+        "path": ""
+      }],
+      "service_type": "ogc:wcs",
+      "mapview": {
+        "service_type": "ogc:wms",
+        "url": "https://clarity.meteogrid.com/geoserver/Local_Effects/wms?service=WMS&version=1.1.0&request=GetMap&layers=Local_Effects:Heat_wave_temperature_historical_low_hazard_Naples&bbox=4647500,1947000,4720500,2008000&width=725&height=768&srs=EPSG:3035&format=image/png"
+      },
+      "crs": "EPSG:3035",
+      "spatial_extent": {
+        "xmin": 4647500,
+        "ymin": 1947000,
+        "xmax": 4720500,
+        "ymax": 2008000
+      },
+      "spatial_resolution": {
+        "distance": 500,
+        "uom": "m"
+      },
+      "grid_info": {
+        "band_count": 1,
+        "rows": 122,
+        "columns": 146,
+        "start_cell": "top-left",
+        "bands": [{
+          "id": 1,
+          "name": "local-effects_hazard_heat-wave_baseline_temperature28c_naples",
+          "description": "",
+          "bit_depth": "unsigned-32-bit",
+          "no_data_value": -3.40282e+38,
+          "compression_type": "none"
+        }]
+      },
+      "trs": "ISO 8601:2004",
+      "temporal_extent": {
+        "start": "",
+        "end": ""
+      },
+      "eu_gl": {
+        "workflow_step": ["eu-gl:hazard-characterization:local-effects"],
+        "hazards": ["hazard:temperature:heat:heat-wave"],
+        "resource_type": "",
+        "emissions_scenario": "baseline"
+      }
+    },
+    {
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r27",
+      "name": "local-effects_hazard_heat-wave_baseline_temperature30c_naples",
+      "title": "",
+      "description": "",
+      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "format": "tif",
+      "mediatype": "geotiff",
+      "bytes": "",
+      "hash": "",
+      "path": "https://clarity.meteogrid.com/geoserver/Local_Effects/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=Local_Effects:Heat_wave_temperature_historical_medium_hazard_Naples&FORMAT=geotiff&boundingbox=4647500,1947000,4720500,2008000,urn:ogc:def:crs:EPSG::3035",
+      "schema": {},
+      "sources": [],
+      "licenses": [{
+        "name": "",
+        "title": "",
+        "path": ""
+      }],
+      "service_type": "ogc:wcs",
+      "mapview": {
+        "service_type": "ogc:wms",
+        "url": "https://clarity.meteogrid.com/geoserver/Local_Effects/wms?service=WMS&version=1.1.0&request=GetMap&layers=Local_Effects:Heat_wave_temperature_historical_medium_hazard_Naples&bbox=4647500,1947000,4720500,2008000&width=725&height=768&srs=EPSG:3035&format=image/png"
+      },
+      "crs": "EPSG:3035",
+      "spatial_extent": {
+        "xmin": 4647500,
+        "ymin": 1947000,
+        "xmax": 4720500,
+        "ymax": 2008000
+      },
+      "spatial_resolution": {
+        "distance": 500,
+        "uom": "m"
+      },
+      "grid_info": {
+        "band_count": 1,
+        "rows": 122,
+        "columns": 146,
+        "start_cell": "top-left",
+        "bands": [{
+          "id": 1,
+          "name": "local-effects_hazard_heat-wave_baseline_temperature30c_naples",
+          "description": "",
+          "bit_depth": "unsigned-32-bit",
+          "no_data_value": -3.40282e+38,
+          "compression_type": "none"
+        }]
+      },
+      "trs": "ISO 8601:2004",
+      "temporal_extent": {
+        "start": "",
+        "end": ""
+      },
+      "eu_gl": {
+        "workflow_step": ["eu-gl:hazard-characterization:local-effects"],
+        "hazards": ["hazard:temperature:heat:heat-wave"],
+        "resource_type": "",
+        "emissions_scenario": "baseline"
+      }
+    },
+    {
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r27",
+      "name": "local-effects_hazard_heat-wave_baseline_temperature32c_naples",
+      "title": "",
+      "description": "",
+      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "format": "tif",
+      "mediatype": "geotiff",
+      "bytes": "",
+      "hash": "",
+      "path": "https://clarity.meteogrid.com/geoserver/Local_Effects/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=Local_Effects:Heat_wave_temperature_historical_hight_hazard_Naples&FORMAT=geotiff&boundingbox=4647500,1947000,4720500,2008000,urn:ogc:def:crs:EPSG::3035",
+      "schema": {},
+      "sources": [],
+      "licenses": [{
+        "name": "",
+        "title": "",
+        "path": ""
+      }],
+      "service_type": "ogc:wcs",
+      "mapview": {
+        "service_type": "ogc:wms",
+        "url": "https://clarity.meteogrid.com/geoserver/Local_Effects/wms?service=WMS&version=1.1.0&request=GetMap&layers=Local_Effects:Heat_wave_temperature_historical_hight_hazard_Naples&bbox=4647500,1947000,4720500,2008000&width=725&height=768&srs=EPSG:3035&format=image/png"
+      },
+      "crs": "EPSG:3035",
+      "spatial_extent": {
+        "xmin": 4647500,
+        "ymin": 1947000,
+        "xmax": 4720500,
+        "ymax": 2008000
+      },
+      "spatial_resolution": {
+        "distance": 500,
+        "uom": "m"
+      },
+      "grid_info": {
+        "band_count": 1,
+        "rows": 122,
+        "columns": 146,
+        "start_cell": "top-left",
+        "bands": [{
+          "id": 1,
+          "name": "local-effects_hazard_heat-wave_baseline_temperature32c_naples",
+          "description": "",
+          "bit_depth": "unsigned-32-bit",
+          "no_data_value": -3.40282e+38,
+          "compression_type": "none"
+        }]
+      },
+      "trs": "ISO 8601:2004",
+      "temporal_extent": {
+        "start": "",
+        "end": ""
+      },
+      "eu_gl": {
+        "workflow_step": ["eu-gl:hazard-characterization:local-effects"],
+        "hazards": ["hazard:temperature:heat:heat-wave"],
+        "resource_type": "",
+        "emissions_scenario": "baseline"
+      }
+    },
+    {
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r28",
+      "name": "local-effects_hazard_heat-wave_baseline_temperature34c_naples",
+      "title": "",
+      "description": "",
+      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "format": "tif",
+      "mediatype": "geotiff",
+      "bytes": "",
+      "hash": "",
+      "path": "https://clarity.meteogrid.com/geoserver/Local_Effects/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=Local_Effects:Heat_wave_temperature_historical_very_hight_hazard_Naples&FORMAT=geotiff&boundingbox=4647500,1947000,4720500,2008000,urn:ogc:def:crs:EPSG::3035",
+      "schema": {},
+      "sources": [],
+      "licenses": [{
+        "name": "",
+        "title": "",
+        "path": ""
+      }],
+      "service_type": "ogc:wcs",
+      "mapview": {
+        "service_type": "ogc:wms",
+        "url": "https://clarity.meteogrid.com/geoserver/Local_Effects/wms?service=WMS&version=1.1.0&request=GetMap&layers=Local_Effects:Heat_wave_temperature_historical_very_hight_hazard_Naples&bbox=4647500,1947000,4720500,2008000&width=725&height=768&srs=EPSG:3035&format=image/png"
+      },
+      "crs": "EPSG:3035",
+      "spatial_extent": {
+        "xmin": 4647500,
+        "ymin": 1947000,
+        "xmax": 4720500,
+        "ymax": 2008000
+      },
+      "spatial_resolution": {
+        "distance": 500,
+        "uom": "m"
+      },
+      "grid_info": {
+        "band_count": 1,
+        "rows": 122,
+        "columns": 146,
+        "start_cell": "top-left",
+        "bands": [{
+          "id": 1,
+          "name": "local-effects_hazard_heat-wave_baseline_temperature34c_naples",
+          "description": "",
+          "bit_depth": "unsigned-32-bit",
+          "no_data_value": -3.40282e+38,
+          "compression_type": "none"
+        }]
+      },
+      "trs": "ISO 8601:2004",
+      "temporal_extent": {
+        "start": "",
+        "end": ""
+      },
+      "eu_gl": {
+        "workflow_step": ["eu-gl:hazard-characterization:local-effects"],
+        "hazards": ["hazard:temperature:heat:heat-wave"],
+        "resource_type": "",
+        "emissions_scenario": "baseline"
+      }
+    },
+    {
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r29",
+      "name": "exposure_population_age_lt15_naples",
+      "title": "",
+      "description": "",
+      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "format": "tif",
+      "mediatype": "geotiff",
+      "bytes": "",
+      "hash": "",
+      "path": "https://clarity.meteogrid.com/geoserver/Exposure/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=Exposure:Population_men15_naples&FORMAT=geotiff&boundingbox=4647500,1947000,4716000,2003000,urn:ogc:def:crs:EPSG::3035",
+      "schema": {},
+      "sources": [],
+      "licenses": [{
+        "name": "",
+        "title": "",
+        "path": ""
+      }],
+      "service_type": "ogc:wcs",
+      "mapview": {
+        "service_type": "ogc:wms",
+        "url": "https://clarity.meteogrid.com/geoserver/Exposure/wms?service=WMS&version=1.1.0&request=GetMap&layers=Exposure:Population_men15_naples&bbox=4647500,1947000,4716000,2003000&width=725&height=768&srs=EPSG:3035&format=image/png"
+      },
+      "crs": "EPSG:3035",
+      "spatial_extent": {
+        "xmin": 4647500,
+        "ymin": 1947000,
+        "xmax": 4716000,
+        "ymax": 2003000
+      },
+      "spatial_resolution": {
+        "distance": 500,
+        "uom": "m"
+      },
+      "grid_info": {
+        "band_count": 1,
+        "rows": 111,
+        "columns": 137,
+        "start_cell": "top-left",
+        "bands": [{
+          "id": 1,
+          "name": "exposure_population_age_lt15_naples",
+          "description": "",
+          "bit_depth": "unsigned-32-bit",
+          "no_data_value": -3.40282e+38,
+          "compression_type": "none"
+        }]
+      },
+      "trs": "ISO 8601:2004",
+      "temporal_extent": {
+        "start": "",
+        "end": ""
+      },
+      "eu_gl": {
+        "workflow_step": ["eu-gl:exposureevaluation"],
+        "resource_type": "",
+        "elements_at_risk": ["population"],
+        "vulnerability_classes": ["element_at_risk:population:vulnerability_class:<15"]
+      }
+    },
+    {
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r30",
+      "name": "exposure_population_age_15-65_naples",
+      "title": "",
+      "description": "",
+      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "format": "tif",
+      "mediatype": "geotiff",
+      "bytes": "",
+      "hash": "",
+      "path": "https://clarity.meteogrid.com/geoserver/Exposure/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=Exposure:Population_15to65_naples&FORMAT=geotiff&boundingbox=4647500,1947000,4716000,2003000,urn:ogc:def:crs:EPSG::3035",
+      "schema": {},
+      "sources": [],
+      "licenses": [{
+        "name": "",
+        "title": "",
+        "path": ""
+      }],
+      "service_type": "ogc:wcs",
+      "mapview": {
+        "service_type": "ogc:wms",
+        "url": "https://clarity.meteogrid.com/geoserver/Exposure/wms?service=WMS&version=1.1.0&request=GetMap&layers=Exposure:Population_15to65_naples&bbox=4647500,1947000,4716000,2003000&width=725&height=768&srs=EPSG:3035&format=image/png"
+      },
+      "crs": "EPSG:3035",
+      "spatial_extent": {
+        "xmin": 4647500,
+        "ymin": 1947000,
+        "xmax": 4716000,
+        "ymax": 2003000
+      },
+      "spatial_resolution": {
+        "distance": 500,
+        "uom": "m"
+      },
+      "grid_info": {
+        "band_count": 1,
+        "rows": 111,
+        "columns": 137,
+        "start_cell": "top-left",
+        "bands": [{
+          "id": 1,
+          "name": "exposure_population_age_15-65_naples",
+          "description": "",
+          "bit_depth": "unsigned-32-bit",
+          "no_data_value": -3.40282e+38,
+          "compression_type": "none"
+        }]
+      },
+      "trs": "ISO 8601:2004",
+      "temporal_extent": {
+        "start": "",
+        "end": ""
+      },
+      "eu_gl": {
+        "workflow_step": ["eu-gl:exposureevaluation"],
+        "resource_type": "",
+        "elements_at_risk": ["population"],
+        "vulnerability_classes": ["element_at_risk:population:vulnerability_class:15-65"]
+      }
+    },
+    {
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r31",
+      "name": "exposure_population_age_gt65_naples",
+      "title": "",
+      "description": "",
+      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "format": "tif",
+      "mediatype": "geotiff",
+      "bytes": "",
+      "hash": "",
+      "path": "https://clarity.meteogrid.com/geoserver/Exposure/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=Exposure:Population_mayor65_naples&FORMAT=geotiff&boundingbox=4647500,1947000,4716000,2003000,urn:ogc:def:crs:EPSG::3035",
+      "schema": {},
+      "sources": [],
+      "licenses": [{
+        "name": "",
+        "title": "",
+        "path": ""
+      }],
+      "service_type": "ogc:wcs",
+      "mapview": {
+        "service_type": "ogc:wms",
+        "url": "https://clarity.meteogrid.com/geoserver/Exposure/wms?service=WMS&version=1.1.0&request=GetMap&layers=Exposure:Population_mayor65_naples&bbox=4647500,1947000,4716000,2003000&width=725&height=768&srs=EPSG:3035&format=image/png"
+      },
+      "crs": "EPSG:3035",
+      "spatial_extent": {
+        "xmin": 4647500,
+        "ymin": 1947000,
+        "xmax": 4716000,
+        "ymax": 2003000
+      },
+      "spatial_resolution": {
+        "distance": 500,
+        "uom": "m"
+      },
+      "grid_info": {
+        "band_count": 1,
+        "rows": 111,
+        "columns": 137,
+        "start_cell": "top-left",
+        "bands": [{
+          "id": 1,
+          "name": "exposure_population_age_gt65_naples",
+          "description": "",
+          "bit_depth": "unsigned-32-bit",
+          "no_data_value": -3.40282e+38,
+          "compression_type": "none"
+        }]
+      },
+      "trs": "ISO 8601:2004",
+      "temporal_extent": {
+        "start": "",
+        "end": ""
+      },
+      "eu_gl": {
+        "workflow_step": ["eu-gl:exposureevaluation"],
+        "resource_type": "",
+        "elements_at_risk": ["population"],
+        "vulnerability_classes": ["element_at_risk:population:vulnerability_class:>65"]
+      }
     }
   ]
 }
