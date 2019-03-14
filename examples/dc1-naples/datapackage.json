@@ -1643,8 +1643,8 @@
     {
       "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r29",
       "name": "local-effects_hazard_heat-wave_baseline_temperature34c_naples",
-      "title": "",
-      "description": "",
+      "title": "Historical heat wave temperature in Naples (34ºC)(local effects)",
+      "description": "Historical heat wave temperature in Naples (34ºC)(local effects)",
       "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
       "format": "tif",
       "mediatype": "geotiff",
@@ -1682,7 +1682,7 @@
         "bands": [{
           "id": 1,
           "name": "local-effects_hazard_heat-wave_baseline_temperature34c_naples",
-          "description": "",
+          "description": "Historical heat wave temperature in Naples (34ºC)(local effects)",
           "bit_depth": "unsigned-32-bit",
           "no_data_value": -3.40282e+38,
           "compression_type": "none"
