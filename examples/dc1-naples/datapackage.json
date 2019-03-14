@@ -770,7 +770,7 @@
         "hazards": ["hazard:temperature:heat:heat-wave"],
         "resource_type": "hazard-index",
         "index": "hazard:temperature:heat:heat-wave:index:heat-wave-duration",
-        "emissions_scenario": "baseline",
+        "emissions_scenario": "emissions-scenario:baseline",
         "thresholds": [{
             "name": "low",
             "lower": 13.47,
@@ -852,7 +852,7 @@
         "hazards": ["hazard:temperature:heat:heat-wave"],
         "resource_type": "hazard-index",
         "index": "hazard:temperature:heat:heat-wave:index:heat-wave-duration",
-        "emissions_scenario": "early-response:rcp26"
+        "emissions_scenario": "emissions-scenario:early-response"
       }
     },
     {
@@ -917,7 +917,7 @@
         "hazards": ["hazard:temperature:heat:heat-wave"],
         "resource_type": "hazard-index",
         "index": "hazard:temperature:heat:heat-wave:index:heat-wave-duration",
-        "emissions_scenario": "early-response:rcp26"
+        "emissions_scenario": "emissions-scenario:early-response"
       }
     },
     {
@@ -982,7 +982,7 @@
         "hazards": ["hazard:temperature:heat:heat-wave"],
         "resource_type": "hazard-index",
         "index": "hazard:temperature:heat:heat-wave:index:heat-wave-duration",
-        "emissions_scenario": "early-response:rcp26"
+        "emissions_scenario": "emissions-scenario:early-response"
       }
     },
     {
@@ -1047,7 +1047,7 @@
         "hazards": ["hazard:temperature:heat:heat-wave"],
         "resource_type": "hazard-index",
         "index": "hazard:temperature:heat:heat-wave:index:heat-wave-duration",
-        "emissions_scenario": "effective-measures:rcp45",
+        "emissions_scenario": "emissions-scenario:effective-measures",
         "thresholds": [{
             "name": "low",
             "lower": 9.13,
@@ -1132,7 +1132,7 @@
         "hazards": ["hazard:temperature:heat:heat-wave"],
         "resource_type": "hazard-index",
         "index": "hazard:temperature:heat:heat-wave:index:heat-wave-duration",
-        "emissions_scenario": "effective-measures:rcp45",
+        "emissions_scenario": "emissions-scenario:effective-measures",
         "thresholds": [{
             "name": "low",
             "lower": 9.13,
@@ -1217,7 +1217,7 @@
         "hazards": ["hazard:temperature:heat:heat-wave"],
         "resource_type": "hazard-index",
         "index": "hazard:temperature:heat:heat-wave:index:heat-wave-duration",
-        "emissions_scenario": "effective-measures:rcp45",
+        "emissions_scenario": "emissions-scenario:effective-measures",
         "thresholds": [{
             "name": "low",
             "lower": 9.13,
@@ -1302,7 +1302,7 @@
         "hazards": ["hazard:temperature:heat:heat-wave"],
         "resource_type": "hazard-index",
         "index": "hazard:temperature:heat:heat-wave:index:heat-wave-duration",
-        "emissions_scenario": "business-as-usual:rcp85"
+        "emissions_scenario": "emissions-scenario:business-as-usual"
       }
     },
     {
@@ -1367,7 +1367,7 @@
         "hazards": ["hazard:temperature:heat:heat-wave"],
         "resource_type": "hazard-index",
         "index": "hazard:temperature:heat:heat-wave:index:heat-wave-duration",
-        "emissions_scenario": "business-as-usual:rcp85"
+        "emissions_scenario": "emissions-scenario:business-as-usual"
       }
     },
     {
@@ -1432,7 +1432,7 @@
         "hazards": ["hazard:temperature:heat:heat-wave"],
         "resource_type": "hazard-index",
         "index": "hazard:temperature:heat:heat-wave:index:heat-wave-duration",
-        "emissions_scenario": "business-as-usual:rcp85"
+        "emissions_scenario": "emissions-scenario:business-as-usual"
       }
     },
     {
@@ -1517,7 +1517,7 @@
         "workflow_step": ["eu-gl:hazard-characterization:local-effects"],
         "hazards": ["hazard:temperature:heat:heat-wave"],
         "resource_type": "",
-        "emissions_scenario": "baseline"
+        "emissions_scenario": "emissions-scenario:baseline"
       }
     },
     {
@@ -1577,7 +1577,7 @@
         "workflow_step": ["eu-gl:hazard-characterization:local-effects"],
         "hazards": ["hazard:temperature:heat:heat-wave"],
         "resource_type": "",
-        "emissions_scenario": "baseline"
+        "emissions_scenario": "emissions-scenario:baseline"
       }
     },
     {
@@ -1637,7 +1637,7 @@
         "workflow_step": ["eu-gl:hazard-characterization:local-effects"],
         "hazards": ["hazard:temperature:heat:heat-wave"],
         "resource_type": "",
-        "emissions_scenario": "baseline"
+        "emissions_scenario": "emissions-scenario:baseline"
       }
     },
     {
@@ -1697,7 +1697,7 @@
         "workflow_step": ["eu-gl:hazard-characterization:local-effects"],
         "hazards": ["hazard:temperature:heat:heat-wave"],
         "resource_type": "",
-        "emissions_scenario": "baseline"
+        "emissions_scenario": "emissions-scenario:baseline"
       }
     },
     {
@@ -1754,10 +1754,10 @@
         "end": ""
       },
       "eu_gl": {
-        "workflow_step": ["eu-gl:exposureevaluation"],
+        "workflow_step": ["eu-gl:exposure-evaluation"],
         "resource_type": "",
-        "elements_at_risk": ["population"],
-        "vulnerability_classes": ["element_at_risk:population:vulnerability_class:<15"]
+        "elements_at_risk": ["element-at-risk:population"],
+        "vulnerability_classes": ["element-at-risk:population:vulnerability-class:age-group<15"]
       }
     },
     {
@@ -1814,10 +1814,10 @@
         "end": ""
       },
       "eu_gl": {
-        "workflow_step": ["eu-gl:exposureevaluation"],
+        "workflow_step": ["eu-gl:exposure-evaluation"],
         "resource_type": "",
-        "elements_at_risk": ["population"],
-        "vulnerability_classes": ["element_at_risk:population:vulnerability_class:15-65"]
+        "elements_at_risk": ["element-at-risk:population"],
+        "vulnerability_classes": ["element-at-risk:population:vulnerability-class:age-group15-65"]
       }
     },
     {
@@ -1874,10 +1874,10 @@
         "end": ""
       },
       "eu_gl": {
-        "workflow_step": ["eu-gl:exposureevaluation"],
+        "workflow_step": ["eu-gl:exposure-evaluation"],
         "resource_type": "",
-        "elements_at_risk": ["population"],
-        "vulnerability_classes": ["element_at_risk:population:vulnerability_class:>65"]
+        "elements_at_risk": ["element-at-risk:population"],
+        "vulnerability_classes": ["element-at-risk:population:vulnerability-class:age-group>65"]
       }
     }
   ]
