@@ -264,17 +264,17 @@
     },
     {
       "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r5",
-      "name": "buildings",
-      "title": "Buildings in Naples metropolitan area",
-      "description": "Buildings in Naples metropolitan area",
+      "name": "built_up",
+      "title": "Built-up in Naples metropolitan area",
+      "description": "Built-up in Naples metropolitan area",
       "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
       "encoding": "binary",
       "format": "shape-zip",
       "mediatype": "application/shape-zip",
       "bytes": "37087552",
       "hash": "tbc",
-      "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:buildings&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
-      "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/buildings.schema.json",
+      "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:built_up&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
+      "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/built-up.schema.json",
       "sources": [{
         "title": "Copernicus Land Monitoring Service - European Settlement Map 2012",
         "path": "https://land.copernicus.eu/pan-european/GHSL/european-settlement-map",
@@ -288,7 +288,7 @@
       "service_type": "ogc:wfs",
       "mapview": {
         "service_type": "ogc:wms",
-        "url": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:buildings&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"
+        "url": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:built_up&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"
       },
       "crs": "EPSG:3035",
       "spatial_extent": {
