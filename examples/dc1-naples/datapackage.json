@@ -1463,8 +1463,8 @@
     {
       "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r26",
       "name": "local-effects_hazard_heat-wave_baseline_temperature28c_naples",
-      "title": "",
-      "description": "",
+      "title": "Historical heat wave temperature in Naples (28ºC)(local effects)",
+      "description": "Historical heat wave temperature in Naples (28ºC)(local effects)",
       "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
       "format": "tif",
       "mediatype": "geotiff",
@@ -1502,7 +1502,7 @@
         "bands": [{
           "id": 1,
           "name": "local-effects_hazard_heat-wave_baseline_temperature28c_naples",
-          "description": "",
+          "description": "Historical heat wave temperature in Naples (28ºC)(local effects)",
           "bit_depth": "unsigned-32-bit",
           "no_data_value": -3.40282e+38,
           "compression_type": "none"
@@ -1523,8 +1523,8 @@
     {
       "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r27",
       "name": "local-effects_hazard_heat-wave_baseline_temperature30c_naples",
-      "title": "",
-      "description": "",
+      "title": "Historical heat wave temperature in Naples (30ºC)(local effects)",
+      "description": "Historical heat wave temperature in Naples (30ºC)(local effects)",
       "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
       "format": "tif",
       "mediatype": "geotiff",
@@ -1562,7 +1562,7 @@
         "bands": [{
           "id": 1,
           "name": "local-effects_hazard_heat-wave_baseline_temperature30c_naples",
-          "description": "",
+          "description": "Historical heat wave temperature in Naples (30ºC)(local effects)",
           "bit_depth": "unsigned-32-bit",
           "no_data_value": -3.40282e+38,
           "compression_type": "none"
@@ -1581,10 +1581,10 @@
       }
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r27",
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r28",
       "name": "local-effects_hazard_heat-wave_baseline_temperature32c_naples",
-      "title": "",
-      "description": "",
+      "title": "Historical heat wave temperature in Naples (32ºC)(local effects)",
+      "description": "Historical heat wave temperature in Naples (32ºC)(local effects)",
       "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
       "format": "tif",
       "mediatype": "geotiff",
@@ -1622,7 +1622,7 @@
         "bands": [{
           "id": 1,
           "name": "local-effects_hazard_heat-wave_baseline_temperature32c_naples",
-          "description": "",
+          "description": "Historical heat wave temperature in Naples (32ºC)(local effects)",
           "bit_depth": "unsigned-32-bit",
           "no_data_value": -3.40282e+38,
           "compression_type": "none"
@@ -1641,7 +1641,7 @@
       }
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r28",
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r29",
       "name": "local-effects_hazard_heat-wave_baseline_temperature34c_naples",
       "title": "",
       "description": "",
@@ -1701,7 +1701,7 @@
       }
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r29",
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r30",
       "name": "exposure_population_age_lt15_naples",
       "title": "",
       "description": "",
@@ -1761,7 +1761,7 @@
       }
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r30",
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r31",
       "name": "exposure_population_age_15-65_naples",
       "title": "",
       "description": "",
@@ -1821,7 +1821,7 @@
       }
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r31",
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r32",
       "name": "exposure_population_age_gt65_naples",
       "title": "",
       "description": "",
