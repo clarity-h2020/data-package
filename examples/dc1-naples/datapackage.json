@@ -1585,14 +1585,14 @@
     {
       "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r26",
       "name": "local-effects_hazard_heat-wave_baseline_temperature28c_naples",
-      "title": "Historical heat wave temperature in Naples (28ºC)(local effects)",
-      "description": "Historical heat wave temperature in Naples (28ºC)(local effects)",
+      "title": "Historical heat wave temperature in Naples (28ºC)(local effects)(1971-2000)",
+      "description": "Historical heat wave temperature in Naples (28ºC)(local effects)(1971-2000)",
       "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
       "format": "tif",
       "mediatype": "geotiff",
       "bytes": "",
       "hash": "",
-      "path": "https://clarity.meteogrid.com/geoserver/Local_Effects/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=Local_Effects:Heat_wave_temperature_historical_low_hazard_Naples&FORMAT=geotiff&boundingbox=4647500,1947000,4720500,2008000,urn:ogc:def:crs:EPSG::3035",
+      "path": "https://clarity.meteogrid.com/geoserver/Local_Effects/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=Local_Effects:LE_Tmrt_FrequentEvent_1971-2000_observations_Naples&FORMAT=geotiff&boundingbox=4647500,1947000,4720500,2008000,urn:ogc:def:crs:EPSG::3035",
       "schema": {},
       "sources": [],
       "licenses": [
@@ -1605,7 +1605,7 @@
       "service_type": "ogc:wcs",
       "mapview": {
         "service_type": "ogc:wms",
-        "url": "https://clarity.meteogrid.com/geoserver/Local_Effects/wms?service=WMS&version=1.1.0&request=GetMap&layers=Local_Effects:Heat_wave_temperature_historical_low_hazard_Naples&bbox=4647500,1947000,4720500,2008000&width=725&height=768&srs=EPSG:3035&format=image/png"
+        "url": "https://clarity.meteogrid.com/geoserver/Local_Effects/wms?service=WMS&version=1.1.0&request=GetMap&layers=Local_Effects:LE_Tmrt_FrequentEvent_1971-2000_observations_Naples&bbox=4647500,1947000,4720500,2008000&width=725&height=768&srs=EPSG:3035&format=image/png"
       },
       "crs": "EPSG:3035",
       "spatial_extent": {
@@ -1627,7 +1627,7 @@
           {
             "id": 1,
             "name": "local-effects_hazard_heat-wave_baseline_temperature28c_naples",
-            "description": "Historical heat wave temperature in Naples (28ºC)(local effects)",
+            "description": "Historical heat wave temperature in Naples (28ºC)(local effects)(1971-2000)",
             "bit_depth": "unsigned-32-bit",
             "no_data_value": -3.40282e38,
             "compression_type": "none"
@@ -1636,8 +1636,8 @@
       },
       "trs": "ISO 8601:2004",
       "temporal_extent": {
-        "start": "",
-        "end": ""
+        "start": "1971",
+        "end": "2000"
       },
       "eu_gl": {
         "workflow_step": [
@@ -1652,14 +1652,14 @@
     {
       "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r27",
       "name": "local-effects_hazard_heat-wave_baseline_temperature30c_naples",
-      "title": "Historical heat wave temperature in Naples (30ºC)(local effects)",
-      "description": "Historical heat wave temperature in Naples (30ºC)(local effects)",
+      "title": "Historical heat wave temperature in Naples (30ºC)(local effects)(1971-2000)",
+      "description": "Historical heat wave temperature in Naples (30ºC)(local effects)(1971-2000)",
       "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
       "format": "tif",
       "mediatype": "geotiff",
       "bytes": "",
       "hash": "",
-      "path": "https://clarity.meteogrid.com/geoserver/Local_Effects/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=Local_Effects:Heat_wave_temperature_historical_medium_hazard_Naples&FORMAT=geotiff&boundingbox=4647500,1947000,4720500,2008000,urn:ogc:def:crs:EPSG::3035",
+      "path": "https://clarity.meteogrid.com/geoserver/Local_Effects/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=Local_Effects:LE_Tmrt_OcasionalEvent_1971-2000_observations_Naples&FORMAT=geotiff&boundingbox=4647500,1947000,4720500,2008000,urn:ogc:def:crs:EPSG::3035",
       "schema": {},
       "sources": [],
       "licenses": [
@@ -1672,7 +1672,7 @@
       "service_type": "ogc:wcs",
       "mapview": {
         "service_type": "ogc:wms",
-        "url": "https://clarity.meteogrid.com/geoserver/Local_Effects/wms?service=WMS&version=1.1.0&request=GetMap&layers=Local_Effects:Heat_wave_temperature_historical_medium_hazard_Naples&bbox=4647500,1947000,4720500,2008000&width=725&height=768&srs=EPSG:3035&format=image/png"
+        "url": "https://clarity.meteogrid.com/geoserver/Local_Effects/wms?service=WMS&version=1.1.0&request=GetMap&layers=Local_Effects:LE_Tmrt_OcasionalEvent_1971-2000_observations_Naples&bbox=4647500,1947000,4720500,2008000&width=725&height=768&srs=EPSG:3035&format=image/png"
       },
       "crs": "EPSG:3035",
       "spatial_extent": {
@@ -1694,7 +1694,7 @@
           {
             "id": 1,
             "name": "local-effects_hazard_heat-wave_baseline_temperature30c_naples",
-            "description": "Historical heat wave temperature in Naples (30ºC)(local effects)",
+            "description": "Historical heat wave temperature in Naples (30ºC)(local effects)(1971-2000)",
             "bit_depth": "unsigned-32-bit",
             "no_data_value": -3.40282e38,
             "compression_type": "none"
@@ -1703,8 +1703,8 @@
       },
       "trs": "ISO 8601:2004",
       "temporal_extent": {
-        "start": "",
-        "end": ""
+        "start": "1971",
+        "end": "2000"
       },
       "eu_gl": {
         "workflow_step": [
@@ -1719,14 +1719,14 @@
     {
       "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r28",
       "name": "local-effects_hazard_heat-wave_baseline_temperature32c_naples",
-      "title": "Historical heat wave temperature in Naples (32ºC)(local effects)",
-      "description": "Historical heat wave temperature in Naples (32ºC)(local effects)",
+      "title": "Historical heat wave temperature in Naples (32ºC)(local effects)(1971-2000)",
+      "description": "Historical heat wave temperature in Naples (32ºC)(local effects)(1971-2000)",
       "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
       "format": "tif",
       "mediatype": "geotiff",
       "bytes": "",
       "hash": "",
-      "path": "https://clarity.meteogrid.com/geoserver/Local_Effects/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=Local_Effects:Heat_wave_temperature_historical_hight_hazard_Naples&FORMAT=geotiff&boundingbox=4647500,1947000,4720500,2008000,urn:ogc:def:crs:EPSG::3035",
+      "path": "https://clarity.meteogrid.com/geoserver/Local_Effects/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=Local_Effects:LE_Tmrt_RareEvent_1971-2000_observations_Naples&FORMAT=geotiff&boundingbox=4647500,1947000,4720500,2008000,urn:ogc:def:crs:EPSG::3035",
       "schema": {},
       "sources": [],
       "licenses": [
@@ -1739,7 +1739,7 @@
       "service_type": "ogc:wcs",
       "mapview": {
         "service_type": "ogc:wms",
-        "url": "https://clarity.meteogrid.com/geoserver/Local_Effects/wms?service=WMS&version=1.1.0&request=GetMap&layers=Local_Effects:Heat_wave_temperature_historical_hight_hazard_Naples&bbox=4647500,1947000,4720500,2008000&width=725&height=768&srs=EPSG:3035&format=image/png"
+        "url": "https://clarity.meteogrid.com/geoserver/Local_Effects/wms?service=WMS&version=1.1.0&request=GetMap&layers=Local_Effects:LE_Tmrt_RareEvent_1971-2000_observations_Naples&bbox=4647500,1947000,4720500,2008000&width=725&height=768&srs=EPSG:3035&format=image/png"
       },
       "crs": "EPSG:3035",
       "spatial_extent": {
@@ -1770,8 +1770,8 @@
       },
       "trs": "ISO 8601:2004",
       "temporal_extent": {
-        "start": "",
-        "end": ""
+        "start": "1971",
+        "end": "2000"
       },
       "eu_gl": {
         "workflow_step": [
@@ -1786,8 +1786,8 @@
     {
       "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r29",
       "name": "local-effects_hazard_heat-wave_baseline_temperature34c_naples",
-      "title": "Historical heat wave temperature in Naples (34ºC)(local effects)",
-      "description": "Historical heat wave temperature in Naples (34ºC)(local effects)",
+      "title": "Historical heat wave temperature in Naples (34ºC)(local effects)(1971-2000)",
+      "description": "Historical heat wave temperature in Naples (34ºC)(local effects)(1971-2000)",
       "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
       "format": "tif",
       "mediatype": "geotiff",
@@ -1828,7 +1828,7 @@
           {
             "id": 1,
             "name": "local-effects_hazard_heat-wave_baseline_temperature34c_naples",
-            "description": "Historical heat wave temperature in Naples (34ºC)(local effects)",
+            "description": "Historical heat wave temperature in Naples (34ºC)(local effects)(1971-2000)",
             "bit_depth": "unsigned-32-bit",
             "no_data_value": -3.40282e38,
             "compression_type": "none"
@@ -1837,8 +1837,8 @@
       },
       "trs": "ISO 8601:2004",
       "temporal_extent": {
-        "start": "",
-        "end": ""
+        "start": "1971",
+        "end": "2000"
       },
       "eu_gl": {
         "workflow_step": [
@@ -1915,6 +1915,7 @@
       },
       "eu_gl": {
         "workflow_step": ["eu-gl:exposure-evaluation"],
+        "hazards": ["hazard:temperature:heat:heat-wave"],
         "resource_type": "",
         "elements_at_risk": ["element-at-risk:population"],
         "vulnerability_classes": [
@@ -1987,6 +1988,7 @@
       },
       "eu_gl": {
         "workflow_step": ["eu-gl:exposure-evaluation"],
+        "hazards": ["hazard:temperature:heat:heat-wave"],
         "resource_type": "",
         "elements_at_risk": ["element-at-risk:population"],
         "vulnerability_classes": [
@@ -2059,10 +2061,145 @@
       },
       "eu_gl": {
         "workflow_step": ["eu-gl:exposure-evaluation"],
+        "hazards": ["hazard:temperature:heat:heat-wave"],
         "resource_type": "",
         "elements_at_risk": ["element-at-risk:population"],
         "vulnerability_classes": [
           "element-at-risk:population:vulnerability-class:age-group>65"
+        ]
+      }
+    },
+    {
+      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r33",
+      "name": "vulnerability_population",
+      "title": "",
+      "description": "",
+      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "format": "",
+      "mediatype": "",
+      "bytes": "",
+      "hash": "",
+      "path": "https://service.emikat.at",
+      "schema": {},
+      "sources": [],
+      "mapview": {
+        "service_type": "ogc:wms",
+        "url": "https://service.emikat.at/geoserver/clarity/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:view.2813&styles=DamageLevel1Q&bbox=4650500.0,1942000.0,4713000.0,1995500.0&width=768&height=657&srs=EPSG:3035&format=image/gif&cql_filter=HAZARD_EVENT_ID=1"
+      },
+      "crs": "EPSG:3035",
+      "spatial_extent": {
+        "xmin": 4647500,
+        "ymin": 1947000,
+        "xmax": 4716000,
+        "ymax": 2003000
+      },
+      "spatial_resolution": {
+        "distance": 500,
+        "uom": "m"
+      },
+      "trs": "ISO 8601:2004",
+      "temporal_extent": {
+        "start": "2011",
+        "end": "2011"
+      },
+      "eu_gl": {
+        "workflow_step": [
+          "eu-gl:vulnerability-analysis",
+          "eu-gl:risk-and-impact-assessment"
+        ],
+        "hazards": ["hazard:temperature:heat:heat-wave"],
+        "index": "hazard:temperature:heat:heat-wave:index:heat-wave-duration",
+        "resource_type": "",
+        "elements_at_risk": ["element-at-risk:population"],
+        "vulnerability_classes": [
+          "element-at-risk:population:vulnerability-class:age-group<15",
+          "element-at-risk:population:vulnerability-class:age-group15-65",
+          "element-at-risk:population:vulnerability-class:age-group>65"
+        ],
+        "damage_classes": [
+          "element-at-risk:population:damage-class:d1",
+          "element-at-risk:population:damage-class:d2",
+          "element-at-risk:population:damage-class:d3",
+          "element-at-risk:population:damage-class:d4",
+          "element-at-risk:population:damage-class:d5"
+        ],
+        "hazard_events": [
+          {
+            "name": "Heat wave event (temperature 28ºC, duration 6 days)",
+            "type": "hazard:temperature:heat:heat-wave:index:heat-wave-duration:event:$temperature$duration",
+            "description": "Heat wave event (temperature 28ºC, duration 6 days)",
+            "parameters": [
+              {
+                "name": "temperature",
+                "type": "float",
+                "uom": "c",
+                "value": "28"
+              },
+              {
+                "name": "duration",
+                "type": "integer",
+                "uom": "days",
+                "value": "6"
+              }
+            ]
+          },
+          {
+            "name": "Heat wave event (temperature 30ºC, duration 6 days)",
+            "type": "hazard:temperature:heat:heat-wave:index:heat-wave-duration:event:$temperature$duration",
+            "description": "Heat wave event (temperature 30ºC, duration 6 days)",
+            "parameters": [
+              {
+                "name": "temperature",
+                "type": "float",
+                "uom": "c",
+                "value": "30"
+              },
+              {
+                "name": "duration",
+                "type": "integer",
+                "uom": "days",
+                "value": "6"
+              }
+            ]
+          },
+          {
+            "name": "Heat wave event (temperature 32ºC, duration 6 days)",
+            "type": "hazard:temperature:heat:heat-wave:index:heat-wave-duration:event:$temperature$duration",
+            "description": "Heat wave event (temperature 32ºC, duration 6 days)",
+            "parameters": [
+              {
+                "name": "temperature",
+                "type": "float",
+                "uom": "c",
+                "value": "32"
+              },
+              {
+                "name": "duration",
+                "type": "integer",
+                "uom": "days",
+                "value": "6"
+              }
+            ]
+          },
+          {
+            "name": "Heat wave event (temperature 36ºC, duration 6 days)",
+            "type": "hazard:temperature:heat:heat-wave:index:heat-wave-duration:event:$temperature$duration",
+            "description": "Heat wave event (temperature 36ºC, duration 6 days)",
+            "parameters": [
+              {
+                "name": "temperature",
+                "type": "float",
+                "uom": "c",
+                "value": "36"
+              },
+              {
+                "name": "duration",
+                "type": "integer",
+                "uom": "days",
+                "value": "6"
+              }
+            ]
+          }
         ]
       }
     }
