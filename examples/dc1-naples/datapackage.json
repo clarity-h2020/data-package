@@ -2078,7 +2078,7 @@
       "format": "",
       "mediatype": "",
       "bytes": "",
-      "hash": "",
+      "hash": "https://service.emikat.at/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:view.2813&maxFeatures=50&outputFormat=text%2Fxml%3B%20subtype%3Dgml%2F2.1.2",
       "path": "https://service.emikat.at/EmiKatTst/api/scenarios/2846/feature/view.2813/table/csv?rownum=1000",
       "schema": {},
       "sources": [],
