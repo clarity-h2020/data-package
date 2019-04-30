@@ -1,0 +1,591 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "CLARITY Common Dictionary",
+	"description": "CLARITY Common Dictionary is a respository of reusable components/types for specifying the Data Package and Resource properties.",
+	"definitions": {
+		"profile": {
+			"title": "Profile",
+			"description": "The profile of this descriptor.",
+			"context": "Every Package and Resource descriptor has a profile. The default profile, if none is declared, is `clarity-data-package` for Package and `clarity-data-resource` for Resource.",
+			"type": "string",
+			"minLength": 1,
+			"examples": [
+				"{\n  \"profile\": \"tabular-data-package\"\n}\n",
+				"{\n  \"profile\": \"http://example.com/my-profiles-json-schema.json\"\n}\n"
+			]
+		},
+		"name": {
+			"title": "Name",
+			"description": "An identifier string. Lower case characters with `.`, `_`, `-` and `/` are allowed.",
+			"type": "string",
+			"pattern": "^([-a-z0-9._/])+$",
+			"context": "This is ideally a url-usable and human-readable name. Name `SHOULD` be invariant, meaning it `SHOULD NOT` change when its parent descriptor is updated.",
+			"examples": [
+				"{\n  \"name\": \"my-nice-name\"\n}\n"
+			]
+		},
+		"id": {
+			"title": "ID",
+			"description": "A property reserved for globally unique identifiers. Examples of identifiers that are unique include UUIDs and DOIs.",
+			"context": "A common usage pattern for Data Packages is as a packaging format within the bounds of a system or platform. In these cases, a unique identifier for a package is desired for common data handling workflows, such as updating an existing package. While at the level of the specification, global uniqueness cannot be validated, consumers using the `id` property `MUST` ensure identifiers are globally unique.",
+			"type": "string",
+			"examples": [
+				"{\n  \"id\": \"b03ec84-77fd-4270-813b-0c698943f7ce\"\n}\n",
+				"{\n  \"id\": \"http://dx.doi.org/10.1594/PANGAEA.726855\"\n}\n"
+			]
+		},
+		"title": {
+			"title": "Title",
+			"description": "A human-readable title.",
+			"type": "string",
+			"examples": [
+				"{\n  \"title\": \"My Package Title\"\n}\n"
+			]
+		},
+		"description": {
+			"title": "Description",
+			"description": "A text description. Markdown is encouraged.",
+			"type": "string",
+			"format": "textarea",
+			"examples": [
+				"{\n  \"description\": \"# My Package description\\nAll about my package.\"\n}\n"
+			]
+		},
+		"homepage": {
+			"title": "Home Page",
+			"description": "The home on the web that is related to this data package.",
+			"$ref": "#/definitions/uri",
+			"examples": [
+				"{\n  \"homepage\": \"http://example.com/\"\n}\n"
+			]
+		},
+		"uri": {
+			"title": "URI",
+			"description": "Uniform Resource Identifier",
+			"type": "string",
+			"pattern": "^(?:http(s)?:\\/\\/)?[\\w.-]+(?:\\.[\\w\\.-]+)+[\\w\\-\\._~:/?#[\\]@!\\$&'\\(\\)\\*\\+,;=.]+$",
+			"format": "uri"
+		},
+		"date": {
+			"title": "Date",
+			"description": "The date type definition",
+			"context": "The date must conform to the string formats for datetime as described in [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.6)",
+			"type": "string",
+			"format": "date-time",
+			"pattern": "^\\d{4}-(0?[1-9]|1[0-2])-(0?[1-9]|[12]\\d|3[01])"
+		},
+		"datetime": {
+			"title": "DateTime",
+			"description": "The datetime type definition",
+			"context": "The datetime must conform to the string formats for datetime as described in [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.6)",
+			"type": "string",
+			"format": "date-time",
+			"pattern": "^\\d{4}-(0?[1-9]|1[0-2])-(0?[1-9]|[12]\\d|3[01])T(00|[0-9]|1[0-9]|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?Z?$"
+		},
+		"email": {
+			"title": "Email",
+			"description": "An email address.",
+			"type": "string",
+			"format": "email",
+			"pattern": "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$",
+			"examples": [
+				"{\n  \"email\": \"example@example.com\"\n}\n"
+			]
+		},
+		"path": {
+			"title": "Path",
+			"description": "A fully qualified URL, or a POSIX file path..",
+			"type": "string",
+			"pattern": "^(?=^[^./~])(^((?!\\.{2}).)*$).*$",
+			"examples": [
+				"{\n  \"path\": \"file.csv\"\n}\n",
+				"{\n  \"path\": \"http://example.com/file.csv\"\n}\n"
+			],
+			"context": "Implementations need to negotiate the type of path provided, and dereference the data accordingly."
+		},
+		"pathArray": {
+			"type": "array",
+			"minItems": 1,
+			"uniqueItems": true,
+			"items": {
+				"$ref": "#/definitions/path"
+			},
+			"examples": [
+				"[ \"file.csv\" ]\n",
+				"[ \"http://example.com/file.csv\" ]\n"
+			]
+		},
+		"contributor": {
+			"title": "Contributor",
+			"description": "A contributor to this descriptor.",
+			"type": "object",
+			"properties": {
+				"title": {
+					"$ref": "#/definitions/title"
+				},
+				"organisation": {
+					"title": "Organization",
+					"description": "An organizational affiliation for this contributor.",
+					"type": "string"
+				},
+				"path": {
+					"$ref": "#/definitions/path"
+				},
+				"email": {
+					"$ref": "#/definitions/email"
+				},
+				"role": {
+					"type": "string",
+					"enum": [
+						"publisher",
+						"author",
+						"maintainer",
+						"wrangler",
+						"contributor"
+					],
+					"default": "contributor"
+				}
+			},
+			"required": [
+				"title",
+				"role"
+			],
+			"context": "Use of this property does not imply that the person was the original creator of, or a contributor to, the data in the descriptor, but refers to the composition of the descriptor itself."
+		},
+		"contributors": {
+			"title": "Contributors",
+			"description": "The contributors to this descriptor.",
+			"type": "array",
+			"minItems": 1,
+			"uniqueItems": true,
+			"items": {
+				"$ref": "#/definitions/contributor"
+			},
+			"examples": [
+				"{\n  \"contributors\": [\n    {\n      \"title\": \"Joe Bloggs\"\n    }\n  ]\n}\n",
+				"{\n  \"contributors\": [\n    {\n      \"title\": \"Joe Bloggs\",\n      \"email\": \"joe@example.com\",\n      \"role\": \"author\"\n    }\n  ]\n}\n"
+			]
+		},
+		"license": {
+			"title": "License",
+			"description": "A license for this descriptor.",
+			"type": "object",
+			"properties": {
+				"name": {
+					"title": "Open Definition license identifier",
+					"description": "MUST be an Open Definition license identifier, see http://licenses.opendefinition.org/",
+					"type": "string",
+					"pattern": "^([-a-zA-Z0-9._])+$"
+				},
+				"title": {
+					"$ref": "#/definitions/title"
+				},
+				"path": {
+					"$ref": "#/definitions/path"
+				}
+			},
+			"required": [
+				"name",
+				"path",
+				"title"
+			],
+			"context": "Use of this property does not imply that the person was the original creator of, or a contributor to, the data in the descriptor, but refers to the composition of the descriptor itself."
+		},
+		"licenses": {
+			"title": "Licenses",
+			"description": "The license(s) under which this package/resource is published.",
+			"type": "array",
+			"minItems": 1,
+			"uniqueItems": true,
+			"items": {
+				"$ref": "#/definitions/license"
+			},
+			"context": "This property is not legally binding and does not guarantee that the package/resource is licensed under the terms defined herein.",
+			"examples": [
+				"{\n  \"licenses\": [\n    {\n      \"name\": \"odc-pddl-1.0\",\n      \"path\": \"http://opendatacommons.org/licenses/pddl/\",\n      \"title\": \"Open Data Commons Public Domain Dedication and License v1.0\"\n    }\n  ]\n}\n"
+			]
+		},
+		"source": {
+			"title": "Source",
+			"description": "A source file.",
+			"type": "object",
+			"required": [
+				"title",
+				"path"
+			],
+			"properties": {
+				"title": {
+					"$ref": "#/definitions/title"
+				},
+				"path": {
+					"$ref": "#/definitions/path"
+				},
+				"email": {
+					"$ref": "#/definitions/email"
+				}
+			}
+		},
+		"sources": {
+			"title": "Sources",
+			"description": "The raw sources for this data package/resource.",
+			"type": "array",
+			"minItems": 0,
+			"uniqueItems": true,
+			"items": {
+				"$ref": "#/definitions/source"
+			},
+			"examples": [
+				"{\n  \"sources\": [\n    {\n      \"title\": \"World Bank and OECD\",\n      \"path\": \"http://data.worldbank.org/indicator/NY.GDP.MKTP.CD\"\n    }\n  ]\n}\n"
+			]
+		},
+		"countryCode": {
+			"title": "ISO 3166-1 Alpha-2 Country code",
+			"description": "A valid 2-digit ISO country code (ISO 3166-1 alpha-2), or, an array of valid ISO codes.",
+			"oneOf": [
+				{
+					"type": "string",
+					"pattern": "^[A-Z]{2}$"
+				},
+				{
+					"type": "array",
+					"minItems": 1,
+					"uniqueItems": true,
+					"items": {
+						"type": "string",
+						"pattern": "^[A-Z]{2}$"
+					}
+				}
+			]
+		},
+		"language": {
+			"title": "Language",
+			"description": "ISO/TS 19139 alpha-3 (three lower-case characters) code denoting the language in which the textual information of the data package metadata is presented.",
+			"context": "If empty, it is assumed English (`eng`)",
+			"type": "string",
+			"pattern": "^[a-z]{3}$",
+			"default": "eng"
+		},
+		"uom": {
+			"title": "Unit of Measurement",
+			"description": "Unit of Measurement",
+			"type": "string",
+			"minLength": 1
+		},
+		"crs": {
+			"title": "CRS",
+			"description": "Coordinate Reference System",
+			"type": "string",
+			"pattern": "^(epsg:)\\d{4}$"
+		},
+		"spatialExtent": {
+			"title": "Spatial Extent",
+			"description": "The minimum spatial envelop that contains the contents of this data package/resource.",
+			"context": "This property is MANDATORY if the datapackage contains at least one geo-resource.\n\nWith the existence of this property in the datapackage, a program can easily make a geospatial query for finding datapackages containing resources that at contained in the requested bbox (instead of having to check resource by resource).",
+			"type": "object",
+			"properties": {
+				"xmin": {
+					"title": "XMin",
+					"description": "Minimum coordinate value in the \"x\" axis that defines the spatial extent.",
+					"type": "number"
+				},
+				"xmax": {
+					"title": "XMax",
+					"description": "Maximum coordinate value in the \"x\" axis that defines the spatial extent.",
+					"type": "number"
+				},
+				"ymin": {
+					"title": "YMin",
+					"description": "Minimum coordinate value in the \"y\" axis that defines the spatial extent.",
+					"type": "number"
+				},
+				"ymax": {
+					"title": "YMax",
+					"description": "Maximum coordinate value in the \"y\" axis that defines the spatial extent.",
+					"type": "number"
+				}
+			}
+		},
+		"temporalExtent": {
+			"description": "Start and end of the temporal range for the contents of this data package/resource.\n\nThe temporal reference system in which start and end datetime values are encoded is ISO 8601:2004\n",
+			"type": "object",
+			"properties": {
+				"start": {
+					"title": "Start",
+					"description": "A string describing the start of the temporal interval for the contents of this data package/resource.",
+					"$ref": "#/definitions/datetime"
+				},
+				"end": {
+					"title": "End",
+					"description": "A string describing the end of the temporal interval  for the contents of this data package/resource.",
+					"$ref": "#/definitions/datetime"
+				}
+			},
+			"required": [
+				"start",
+				"end"
+			],
+			"examples": [
+				"{\"temporal_extent\": { \"start\": 2005, \"end\": 2008}\"}"
+			]
+		},
+		"referencePeriods": {
+			"title": "Reference Periods",
+			"description": "The temporal reference property indicates all the years (or dates) for the information present in the dataset. Values are according to the default temporal referece system ISO 8601:2004",
+			"type": "array",
+			"items": {
+				"oneOf": [
+					{
+						"$ref": "#/definitions/datetime"
+					},
+					{
+						"$ref": "#/definitions/date"
+					}
+				]
+			},
+			"minItems": 1,
+			"examples": [
+				"{\"reference_periods\": [2005, 2006, 2007, 2008]}"
+			]
+		},
+		"spatialResolutionByDistance": {
+			"title": "Spatial Resolution (Distance)",
+			"description": "Spatial resolution described in terms of \"distance\". A resolution distance shall be expressed as a numerical value associated with a unit of length.",
+			"type": "object",
+			"properties": {
+				"distance": {
+					"title": "Distance",
+					"description": "Numerical value expressing the distance.\n\nDefault grid resolution for CLARITY datasets is 500m",
+					"type": "number",
+					"minimum": 0.0,
+					"default": 500.0
+				},
+				"uom": {
+					"description": "The units of measurement used to define the distance. By default, in meters (m).",
+					"$ref": "#/definitions/uom",
+					"default": "m"
+				}
+			},
+			"required": [
+				"distance",
+				"uom"
+			]
+		},
+		"spatialResolutionByScale": {
+			"title": "Spatial Resolution (Distance)",
+			"description": "Spatial resolution described in terms of \"scale\". An equivalent scale is generally expressed as an integer value expressing the scale denominator.",
+			"type": "object",
+			"properties": {
+				"scale": {
+					"description": "Integer value expressing the scale denominator.",
+					"type": "integer",
+					"minimum": 1
+				}
+			}
+		},
+		"spatialResolution": {
+			"title": "Spatial Resolution",
+			"description": "Spatial resolution refers to the level of detail of the data set. It shall be expressed as a set of zero to many resolution distances (typically for gridded data and imagery-derived products) or equivalent scales (typically for maps or map-derived product.",
+			"context": "Note 1: An equivalent scale is generally expressed as an integer value expressing the scale denominator. A resolution distance shall be expressed as a numerical value associated with a unit of length.\n\nNote 2: For grids it is assumed that the resolution of the cells is the same in the x and y axes.",
+			"oneOf": [
+				{
+					"$ref": "#/definitions/spatialResolutionByDistance"
+				},
+				{
+					"$ref": "#/definitions/spatialResolutionByScale"
+				}
+			]
+		},
+		"metadata": {
+			"title": "Metadata",
+			"description": "Pointer to metadata record providing further information about this data package/resource",
+			"context": "Typically, the metadata record will be located in a metadata catalogue (e.g., OGC Catalog or CKAN catalogue",
+			"$ref": "#/definitions/path"
+		},
+		"gridInfo": {
+			"title": "Grid Info",
+			"description": "Raster information attributes",
+			"type": "object",
+			"required": [
+				"band_count",
+				"columns",
+				"rows",
+				"bands"
+			],
+			"properties": {
+				"band_count": {
+					"title": "Band Count",
+					"description": "Number of bands contained in the gridded dataset. If absent, it is assumed that the raster has only one band",
+					"type": "integer",
+					"minimum": 1
+				},
+				"columns": {
+					"title": "Columns",
+					"description": "This property indicates the number of columns in the grid",
+					"type": "integer",
+					"minimum": 1
+				},
+				"rows": {
+					"title": "Rows",
+					"description": "This property indicates the number of rows in the grid",
+					"type": "integer",
+					"minimum": 1
+				},
+				"start_cell": {
+					"title": "Start Cell",
+					"description": "This property indicates the starting cell of the raster.\nPossible values are: top-left, bottom-right",
+					"type": "string",
+					"enum": [
+						"bottom-right",
+						"top-left"
+					],
+					"default": "top-left"
+				},
+				"bands": {
+					"title": "Bands",
+					"description": "List of bands that compose the grid",
+					"type": "array",
+					"minItems": 1,
+					"uniqueItems": true,
+					"items": {
+						"$ref": "#/definitions/gridBandInfo"
+					}
+				}
+			}
+		},
+		"gridBandInfo": {
+			"title": "Grid Band Info",
+			"description": "Information about a specific band contained in the grid",
+			"type": "object",
+			"required": [
+				"id",
+				"name",
+				"bit_depth"
+			],
+			"properties": {
+				"id": {
+					"title": "ID",
+					"description": "Numeric identifier of the band",
+					"type": "integer",
+					"minimum": 0
+				},
+				"name": {
+					"description": "Name of the band",
+					"$ref": "#/definitions/name"
+				},
+				"description": {
+					"description": "Description of the band",
+					"$ref": "#/definitions/description"
+				},
+				"bit_depth": {
+					"title": "Bit Depth",
+					"description": "The bit depth (also known as pixel depth) of a cell determines the range of values that a particular raster file can store, which is based on the formula 2n (where n is the bit depth). For example, an 8-bit raster can have 256 unique values, which range from 0 to 255.",
+					"type": "string",
+					"enum": [
+						"1-bit",
+						"2-bit",
+						"4-bit",
+						"8-bit-signed",
+						"8-bit-unsigned",
+						"16-bit-signed",
+						"16-bit-unsigned",
+						"32-bit-signed",
+						"32-bit-unsigned",
+						"32-bit-floating-point",
+						"64-bit-unsigned"
+					]
+				},
+				"compression_type": {
+					"title": "Compression Method",
+					"description": "This property indicates compression method used to compress the information contained in the raster.",
+					"type": "string",
+					"enum": [
+						"deflate",
+						"jpeg",
+						"lzw",
+						"none",
+						"packbits"
+					],
+					"default": "none"
+				},
+				"nodata": {
+					"description": "Value used to represent the absence of data in a cell. The value must be in relation to the ranges used with the bit_depth property",
+					"oneOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "string",
+							"enum": [
+								"null"
+							]
+						}
+					]
+				}
+			}
+		},
+		"parameter": {
+			"title": "Parameter",
+			"description": "Parameter definition",
+			"type": "object",
+			"required": [
+				"name",
+				"type",
+				"uom",
+				"value"
+			],
+			"properties": {
+				"name": {
+					"description": "Name of the parameter",
+					"$ref": "#/definitions/name"
+				},
+				"type": {
+					"title": "Type",
+					"description": "Parameter type",
+					"type": "string",
+					"enum": [
+						"string",
+						"boolean",
+						"number",
+						"integer"
+					]
+				},
+				"uom": {
+					"description": "Unit of measurement of the parameter",
+					"$ref": "#/definitions/uom",
+					"default": "null"
+				},
+				"value": {
+					"title": "Value",
+					"description": "Parameter value",
+					"oneOf": [
+						{
+							"type": "boolean"
+						},
+						{
+							"type": "string"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				}
+			}
+		},
+		"parameters": {
+			"title": "Parameters",
+			"description": "An `array` of parameters",
+			"type": "array",
+			"minItems": 1,
+			"uniqueItems": true,
+			"items": {
+				"$ref": "#/definitions/parameter"
+			},
+			"examples": [
+				"{\n  \"thresholds\": [\n    {\n      \"name\": \"treshold-low\",\n      \"lower\": 2.5\n      ],\n      \"upper\": 10\n    }\n  ]\n}\n"
+			]
+		}
+	}
+}

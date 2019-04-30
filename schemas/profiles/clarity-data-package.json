@@ -1,0 +1,133 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "CLARITY Data Package",
+	"description": "CLARITY Data Package is a simple specification for data access and delivery.",
+	"type": "object",
+	"required": [
+		"profile",
+		"id",
+		"version",
+		"name",
+		"title",
+		"description",
+		"created",
+		"resources"
+	],
+	"definitions": {
+	},
+	"properties": {
+		"profile": {
+			"$ref": "dictionary.json#/definitions/profile",
+			"default": "clarity-data-package"
+		},
+		"name": {
+			"$ref": "dictionary.json#/definitions/name"
+		},
+		"id": {
+			"$ref": "dictionary.json#/definitions/id"
+		},
+		"version": {
+			"title": "Version",
+			"description": "A unique version number for this descriptor.",
+			"context": "It should conform to the Semantic Versioning requirements (http://semver.org/) and should follow the Data Package Version pattern (https://frictionlessdata.io/specs/patterns/#data-package-version): MAJOR.MINOR.PATCH (e.g., 1.0.0)",
+			"type": "string",
+			"pattern": "^(\\d+\\.)?(\\d+\\.)?(\\*|\\d+)$",
+			"examples": [
+				"{\n  \"version\": \"0.0.1\"\n}\n",
+				"{\n  \"version\": \"1.0.1-beta\"\n}\n"
+			]
+		},
+		"title": {
+			"$ref": "dictionary.json#/definitions/title"
+		},
+		"description": {
+			"$ref": "dictionary.json#/definitions/description"
+		},
+		"homepage": {
+			"$ref": "dictionary.json#/definitions/homepage"
+		},
+		"created": {
+			"$ref": "dictionary.json#/definitions/datetime",
+			"title": "Created",
+			"description": "The datetime on which this descriptor was created.",
+			"examples": [
+				"{\n  \"created\": \"1985-04-12T23:20:50.52Z\"\n}\n"
+			]
+		},
+		"image": {
+			"$ref": "dictionary.json#/definitions/path",
+			"title": "Image",
+			"description": "A image to represent a data package.",
+			"examples": [
+				"{\n  \"image\": \"http://example.com/image.jpg\"\n}\n",
+				"{\n  \"image\": \"relative/to/image.jpg\"\n}\n"
+			]
+		},
+		"keywords": {
+			"title": "Keywords",
+			"description": "A list of keywords that describe this package.",
+			"type": "array",
+			"minItems": 1,
+			"uniqueItems": true,
+			"items": {
+				"type": "string"
+			},
+			"examples": [
+				"{\n  \"keywords\": [\n    \"data\",\n    \"hazard\",\n    \"eu-gl\"\n  ]\n}\n"
+			]
+		},
+		"language": {
+			"$ref": "dictionary.json#/definitions/language"
+		},
+		"contributors": {
+			"$ref": "dictionary.json#/definitions/contributors"
+		},
+		"licenses": {
+			"$ref": "dictionary.json#/definitions/licenses"
+		},
+		"sources": {
+			"$ref": "dictionary.json#/definitions/sources"
+		},
+		"price": {
+			"title": "Price",
+			"description": "The monetary cost at which the data package is offered (in EURO if not indicated otherwise).",
+			"type": "object",
+			"properties": {
+				"amount": {
+					"title": "Amount",
+					"description": "The price of the data package. If the data package is free, then the value of this parameter MUST be 0.0",
+					"type": "number",
+					"minimum": 0.0,
+					"default": 0.0
+				},
+				"currency": {
+					"title": "Currency",
+					"description": "The currency property of a price is given. \n\nIt MUST be one of the codes listed here: https://www.currency-iso.org/en/home/tables/table-a1.html. By default, the currency code is \"EUR\"",
+					"type": "string",
+					"pattern": "^[A-Z]{3}$"
+				}
+			},
+			"required": [
+				"amount",
+				"currency"
+			]
+		},
+		"spatial_extent": {
+			"$ref": "dictionary.json#/definitions/spatialExtent"
+		},
+		"temporal_extent": {
+			"$ref": "dictionary.json#/definitions/temporalExtent"
+		},
+		"metadata": {
+			"$ref": "dictionary.json#/definitions/metadata"
+		},
+		"resources": {
+			"$ref": "clarity-data-resource.json#/definitions/resources"
+		},
+		"css_style": {
+			"title": "CSS Style",
+			"description": "The css_style property is a pointer to a default CSS file containing the styling configuration for several elements within the data package (e.g., threholds values colouring, vector and raster maps colouring, etc.).\n\nPlease, check the following links for further information:\n# https://www.w3.org/TR/css-2018/ \n# https://docs.geoserver.org/latest/en/user/styling/css/cookbook/index.html",
+			"$ref": "dictionary.json#/definitions/path"
+		}
+	}
+}
