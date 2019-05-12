@@ -1,16 +1,16 @@
 {
   "name": "dc1-naples",
   "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples",
-  "version": "0.1.0",
-  "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package.json",
+  "version": "1.1.0",
+  "profile": "clarity-data-package.json",
   "title": "Naples Metropolitan Area Data Package",
   "description": "This is the CLARITY data package for the Naples metropolitan area corresponding to the Demonstrator Case (DC1). \r\n Further description to be completed",
   "keywords": [
     "naples",
     "dc1",
     "adaptation measures",
-    "heat wave",
-    "pluvial flood",
+    "heat-wave",
+    "pluvial-flood",
     "hazard index",
     "vulnerability function",
     "population",
@@ -24,8 +24,7 @@
     "currency": "EUR"
   },
   "sources": [],
-  "contributors": [
-    {
+  "contributors": [{
       "title": "Miguel Ángel Esbrí",
       "role": "author",
       "email": "miguel.esbri@atos.net",
@@ -75,13 +74,11 @@
       "path": "https://www.meteogrid.com"
     }
   ],
-  "licenses": [
-    {
-      "name": "CC0-1.0",
-      "title": "Creative Commons CCZero 1.0",
-      "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-    }
-  ],
+  "licenses": [{
+    "name": "CC0-1.0",
+    "title": "Creative Commons CCZero 1.0",
+    "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+  }],
   "image": "data/logo/MyCS_48x48.png",
   "spatial_extent": {
     "xmin": 4658356,
@@ -93,39 +90,28 @@
     "start": "1971-01-01",
     "end": "2100-12-31"
   },
-  "resources": [
-    {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r1",
+  "resources": [{
       "name": "agricultural-areas",
       "title": "Agricultural areas in Naples metropolitan area",
       "description": "Agricultural areas in Naples metropolitan area",
-      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "profile": "clarity-data-package-resource.json",
       "encoding": "binary",
       "format": "shape-zip",
       "mediatype": "application/shape-zip",
       "bytes": "37087552",
-      "hash": "tbc",
+      "hash": "",
       "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:agricultural_areas&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
       "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/agricultural-areas.schema.json",
-      "sources": [
-        {
-          "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
-          "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
-          "email": "copernicus@eea.europa.eu"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
-      "service_type": "ogc:wfs",
-      "mapview": {
-        "service_type": "ogc:wms",
-        "url": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:agricultural_areas&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"
-      },
+      "sources": [{
+        "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
+        "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
+        "email": "copernicus@eea.europa.eu"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "crs": "EPSG:3035",
       "spatial_extent": {
         "xmin": 4658356,
@@ -136,43 +122,37 @@
       "spatial_resolution": {
         "scale": 50000
       },
-      "eu_gl": {
-        "workflow_steps": ["eu-gl:hazard-characterization:local-effects"],
-        "resource_type": "feature-parameters"
-      }
+      "tags": [
+        "service-type:ogc:wfs",
+        "resource-type:local-effects-parameter",
+        "eu-gl:hazard-characterization:local-effects"
+      ],
+      "references": [
+        ["@mapview:ogc:wms", "#/path", "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:agricultural_areas&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"]
+      ]
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r2",
       "name": "water-areas",
       "title": "Water areas in Naples metropolitan area",
       "description": "Water areas in Naples metropolitan area",
-      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "profile": "clarity-data-package-resource.json",
       "encoding": "binary",
       "format": "shape-zip",
       "mediatype": "application/shape-zip",
       "bytes": "37087552",
-      "hash": "tbc",
+      "hash": "",
       "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:water&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
       "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/water.schema.json",
-      "sources": [
-        {
-          "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
-          "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
-          "email": "copernicus@eea.europa.eu"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
-      "service_type": "ogc:wfs",
-      "mapview": {
-        "service_type": "ogc:wms",
-        "url": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:water&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"
-      },
+      "sources": [{
+        "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
+        "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
+        "email": "copernicus@eea.europa.eu"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "crs": "EPSG:3035",
       "spatial_extent": {
         "xmin": 4658356,
@@ -183,43 +163,37 @@
       "spatial_resolution": {
         "scale": 50000
       },
-      "eu_gl": {
-        "workflow_steps": ["eu-gl:hazard-characterization:local-effects"],
-        "resource_type": "feature-parameters"
-      }
+      "tags": [
+        "service-type:ogc:wfs",
+        "resource-type:local-effects-parameter",
+        "eu-gl:hazard-characterization:local-effects"
+      ],
+      "references": [
+        ["@mapview:ogc:wms", "#/path", "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:water&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"]
+      ]
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r3",
       "name": "public_military_industrial-areas",
       "title": "Public, military and industrial areas in Naples metropolitan area",
       "description": "Public, military and industrial areas in Naples metropolitan area",
-      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "profile": "clarity-data-package-resource.json",
       "encoding": "binary",
       "format": "shape-zip",
       "mediatype": "application/shape-zip",
       "bytes": "37087552",
-      "hash": "tbc",
+      "hash": "",
       "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:public_military_industrial&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
       "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/public-military-industrial.schema.json",
-      "sources": [
-        {
-          "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
-          "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
-          "email": "copernicus@eea.europa.eu"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
-      "service_type": "ogc:wfs",
-      "mapview": {
-        "service_type": "ogc:wms",
-        "url": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:public_military_industrial&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"
-      },
+      "sources": [{
+        "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
+        "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
+        "email": "copernicus@eea.europa.eu"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "crs": "EPSG:3035",
       "spatial_extent": {
         "xmin": 4658356,
@@ -230,43 +204,37 @@
       "spatial_resolution": {
         "scale": 50000
       },
-      "eu_gl": {
-        "workflow_steps": ["eu-gl:hazard-characterization:local-effects"],
-        "resource_type": "feature-parameters"
-      }
+      "tags": [
+        "service-type:ogc:wfs",
+        "resource-type:local-effects-parameter",
+        "eu-gl:hazard-characterization:local-effects"
+      ],
+      "references": [
+        ["@mapview:ogc:wms", "#/path", "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:public_military_industrial&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"]
+      ]
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r4",
       "name": "basins",
       "title": "Basins in Naples metropolitan area",
       "description": "Basins in Naples metropolitan area",
-      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "profile": "clarity-data-package-resource.json",
       "encoding": "binary",
       "format": "shape-zip",
       "mediatype": "application/shape-zip",
       "bytes": "37087552",
-      "hash": "tbc",
+      "hash": "",
       "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:basins&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
       "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/basins.schema.json",
-      "sources": [
-        {
-          "title": "",
-          "path": "",
-          "email": ""
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
-      "service_type": "ogc:wfs",
-      "mapview": {
-        "service_type": "ogc:wms",
-        "url": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:basins&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"
-      },
+      "sources": [{
+        "title": "",
+        "path": "",
+        "email": ""
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "crs": "EPSG:3035",
       "spatial_extent": {
         "xmin": 4658356,
@@ -277,43 +245,37 @@
       "spatial_resolution": {
         "scale": 50000
       },
-      "eu_gl": {
-        "workflow_steps": ["eu-gl:hazard-characterization:local-effects"],
-        "resource_type": "feature-parameters"
-      }
+      "tags": [
+        "service-type:ogc:wfs",
+        "resource-type:local-effects-parameter",
+        "eu-gl:hazard-characterization:local-effects"
+      ],
+      "references": [
+        ["@mapview:ogc:wms", "#/path", "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:basins&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"]
+      ]
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r5",
-      "name": "built_up",
+      "name": "built-up",
       "title": "Built-up in Naples metropolitan area",
       "description": "Built-up in Naples metropolitan area",
-      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "profile": "clarity-data-package-resource.json",
       "encoding": "binary",
       "format": "shape-zip",
       "mediatype": "application/shape-zip",
       "bytes": "37087552",
-      "hash": "tbc",
+      "hash": "",
       "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:built_up&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
       "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/built-up.schema.json",
-      "sources": [
-        {
-          "title": "Copernicus Land Monitoring Service - European Settlement Map 2012",
-          "path": "https://land.copernicus.eu/pan-european/GHSL/european-settlement-map",
-          "email": "copernicus@eea.europa.eu"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
-      "service_type": "ogc:wfs",
-      "mapview": {
-        "service_type": "ogc:wms",
-        "url": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:built_up&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"
-      },
+      "sources": [{
+        "title": "Copernicus Land Monitoring Service - European Settlement Map 2012",
+        "path": "https://land.copernicus.eu/pan-european/GHSL/european-settlement-map",
+        "email": "copernicus@eea.europa.eu"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "crs": "EPSG:3035",
       "spatial_extent": {
         "xmin": 4658356,
@@ -324,17 +286,20 @@
       "spatial_resolution": {
         "scale": 50000
       },
-      "eu_gl": {
-        "workflow_steps": ["eu-gl:hazard-characterization:local-effects"],
-        "resource_type": "feature-parameters"
-      }
+      "tags": [
+        "service-type:ogc:wfs",
+        "resource-type:local-effects-parameter",
+        "eu-gl:hazard-characterization:local-effects"
+      ],
+      "references": [
+        ["@mapview:ogc:wms", "#/path", "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:built_up&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"]
+      ]
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r6",
       "name": "built_open_spaces",
       "title": "Built open spaces in Naples metropolitan area",
       "description": "Built open spaces in Naples metropolitan area",
-      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "profile": "clarity-data-package-resource.json",
       "encoding": "binary",
       "format": "shape-zip",
       "mediatype": "application/shape-zip",
@@ -342,25 +307,16 @@
       "hash": "tbc",
       "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:built_open_spaces&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
       "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/built_open_spaces.schema.json",
-      "sources": [
-        {
-          "title": "Copernicus Land Monitoring Service - European Settlement Map 2012",
-          "path": "https://land.copernicus.eu/pan-european/GHSL/european-settlement-map",
-          "email": "copernicus@eea.europa.eu"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
-      "service_type": "ogc:wfs",
-      "mapview": {
-        "service_type": "ogc:wms",
-        "url": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:built_open_spaces&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"
-      },
+      "sources": [{
+        "title": "Copernicus Land Monitoring Service - European Settlement Map 2012",
+        "path": "https://land.copernicus.eu/pan-european/GHSL/european-settlement-map",
+        "email": "copernicus@eea.europa.eu"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "crs": "EPSG:3035",
       "spatial_extent": {
         "xmin": 4658356,
@@ -371,43 +327,37 @@
       "spatial_resolution": {
         "scale": 50000
       },
-      "eu_gl": {
-        "workflow_steps": ["eu-gl:hazard-characterization:local-effects"],
-        "resource_type": "feature-parameters"
-      }
+      "tags": [
+        "service-type:ogc:wfs",
+        "resource-type:local-effects-parameter",
+        "eu-gl:hazard-characterization:local-effects"
+      ],
+      "references": [
+        ["@mapview:ogc:wms", "#/path", "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:built_open_spaces&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"]
+      ]
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r7",
       "name": "dense_urban_fabric",
       "title": "Dense urban fabric spaces in Naples metropolitan area",
       "description": "Dense urban fabric spaces in Naples metropolitan area",
-      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "profile": "clarity-data-package-resource.json",
       "encoding": "binary",
       "format": "shape-zip",
       "mediatype": "application/shape-zip",
       "bytes": "37087552",
-      "hash": "tbc",
+      "hash": "",
       "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:dense_urban_fabric&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
       "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/dense_urban_fabric.schema.json",
-      "sources": [
-        {
-          "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
-          "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
-          "email": "copernicus@eea.europa.eu"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
-      "service_type": "ogc:wfs",
-      "mapview": {
-        "service_type": "ogc:wms",
-        "url": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:dense_urban_fabric&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"
-      },
+      "sources": [{
+        "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
+        "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
+        "email": "copernicus@eea.europa.eu"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "crs": "EPSG:3035",
       "spatial_extent": {
         "xmin": 4658356,
@@ -418,43 +368,37 @@
       "spatial_resolution": {
         "scale": 50000
       },
-      "eu_gl": {
-        "workflow_steps": ["eu-gl:hazard-characterization:local-effects"],
-        "resource_type": "feature-parameters"
-      }
+      "tags": [
+        "service-type:ogc:wfs",
+        "resource-type:local-effects-parameter",
+        "eu-gl:hazard-characterization:local-effects"
+      ],
+      "references": [
+        ["@mapview:ogc:wms", "#/path", "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:dense_urban_fabric&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"]
+      ]
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r8",
       "name": "low_urban_fabric",
       "title": "Low urban fabric spaces in Naples metropolitan area",
       "description": "Low urban fabric spaces in Naples metropolitan area",
-      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "profile": "clarity-data-package-resource.json",
       "encoding": "binary",
       "format": "shape-zip",
       "mediatype": "application/shape-zip",
       "bytes": "37087552",
-      "hash": "tbc",
+      "hash": "",
       "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:low_urban_fabric&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
       "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/low_urban_fabric.schema.json",
-      "sources": [
-        {
-          "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
-          "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
-          "email": "copernicus@eea.europa.eu"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
-      "service_type": "ogc:wfs",
-      "mapview": {
-        "service_type": "ogc:wms",
-        "url": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:low_urban_fabric&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"
-      },
+      "sources": [{
+        "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
+        "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
+        "email": "copernicus@eea.europa.eu"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "crs": "EPSG:3035",
       "spatial_extent": {
         "xmin": 4658356,
@@ -465,43 +409,37 @@
       "spatial_resolution": {
         "scale": 50000
       },
-      "eu_gl": {
-        "workflow_steps": ["eu-gl:hazard-characterization:local-effects"],
-        "resource_type": "feature-parameters"
-      }
+      "tags": [
+        "service-type:ogc:wfs",
+        "resource-type:local-effects-parameter",
+        "eu-gl:hazard-characterization:local-effects"
+      ],
+      "references": [
+        ["@mapview:ogc:wms", "#/path", "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:low_urban_fabric&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"]
+      ]
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r9",
       "name": "medium_urban_fabric",
       "title": "Medium urban fabric spaces in Naples metropolitan area",
       "description": "Medium urban fabric spaces in Naples metropolitan area",
-      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "profile": "clarity-data-package-resource.json",
       "encoding": "binary",
       "format": "shape-zip",
       "mediatype": "application/shape-zip",
       "bytes": "37087552",
-      "hash": "tbc",
+      "hash": "",
       "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:medium_urban_fabric&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
       "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/medium_urban_fabric.schema.json",
-      "sources": [
-        {
-          "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
-          "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
-          "email": "copernicus@eea.europa.eu"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
-      "service_type": "ogc:wfs",
-      "mapview": {
-        "service_type": "ogc:wms",
-        "url": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:medium_urban_fabric&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"
-      },
+      "sources": [{
+        "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
+        "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
+        "email": "copernicus@eea.europa.eu"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "crs": "EPSG:3035",
       "spatial_extent": {
         "xmin": 4658356,
@@ -512,43 +450,37 @@
       "spatial_resolution": {
         "scale": 50000
       },
-      "eu_gl": {
-        "workflow_steps": ["eu-gl:hazard-characterization:local-effects"],
-        "resource_type": "feature-parameters"
-      }
+      "tags": [
+        "service-type:ogc:wfs",
+        "resource-type:local-effects-parameter",
+        "eu-gl:hazard-characterization:local-effects"
+      ],
+      "references": [
+        ["@mapview:ogc:wms", "#/path", "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:medium_urban_fabric&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"]
+      ]
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r10",
       "name": "railways",
       "title": "Railways transport infrastructure in Naples metropolitan area",
       "description": "Railways transport infrastructure in Naples metropolitan area",
-      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "profile": "clarity-data-package-resource.json",
       "encoding": "binary",
       "format": "shape-zip",
       "mediatype": "application/shape-zip",
       "bytes": "37087552",
-      "hash": "tbc",
+      "hash": "",
       "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:railways&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
       "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/railways.schema.json",
-      "sources": [
-        {
-          "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
-          "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
-          "email": "copernicus@eea.europa.eu"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
-      "service_type": "ogc:wfs",
-      "mapview": {
-        "service_type": "ogc:wms",
-        "url": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:railways&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"
-      },
+      "sources": [{
+        "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
+        "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
+        "email": "copernicus@eea.europa.eu"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "crs": "EPSG:3035",
       "spatial_extent": {
         "xmin": 4658356,
@@ -559,43 +491,37 @@
       "spatial_resolution": {
         "scale": 50000
       },
-      "eu_gl": {
-        "workflow_steps": ["eu-gl:hazard-characterization:local-effects"],
-        "resource_type": "feature-parameters"
-      }
+      "tags": [
+        "service-type:ogc:wfs",
+        "resource-type:local-effects-parameter",
+        "eu-gl:hazard-characterization:local-effects"
+      ],
+      "references": [
+        ["@mapview:ogc:wms", "#/path", "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:railways&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"]
+      ]
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r11",
       "name": "roads",
       "title": "Roads transport infrastructure in Naples metropolitan area",
       "description": "Roads transport infrastructure in Naples metropolitan area",
-      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "profile": "clarity-data-package-resource.json",
       "encoding": "binary",
       "format": "shape-zip",
       "mediatype": "application/shape-zip",
       "bytes": "37087552",
-      "hash": "tbc",
+      "hash": "",
       "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:roads&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
       "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/roads.schema.json",
-      "sources": [
-        {
-          "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
-          "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
-          "email": "copernicus@eea.europa.eu"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
-      "service_type": "ogc:wfs",
-      "mapview": {
-        "service_type": "ogc:wms",
-        "url": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:roads&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"
-      },
+      "sources": [{
+        "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
+        "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
+        "email": "copernicus@eea.europa.eu"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "crs": "EPSG:3035",
       "spatial_extent": {
         "xmin": 4658356,
@@ -606,43 +532,37 @@
       "spatial_resolution": {
         "scale": 50000
       },
-      "eu_gl": {
-        "workflow_steps": ["eu-gl:hazard-characterization:local-effects"],
-        "resource_type": "feature-parameters"
-      }
+      "tags": [
+        "service-type:ogc:wfs",
+        "resource-type:local-effects-parameter",
+        "eu-gl:hazard-characterization:local-effects"
+      ],
+      "references": [
+        ["@mapview:ogc:wms", "#/path", "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:roads&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"]
+      ]
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r12",
       "name": "streams",
       "title": "Streams in Naples metropolitan area",
       "description": "Streams in Naples metropolitan area",
-      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "profile": "clarity-data-package-resource.json",
       "encoding": "binary",
       "format": "shape-zip",
       "mediatype": "application/shape-zip",
       "bytes": "37087552",
-      "hash": "tbc",
+      "hash": "",
       "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:streams&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
       "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/streams.schema.json",
-      "sources": [
-        {
-          "title": "Copernicus Land Monitoring Service - Integrated EU-Hydro Database",
-          "path": "https://land.copernicus.eu/imagery-in-situ/eu-hydro/eu-hydro-public-beta/integrated-eu-hydro-database-hydrographic-and-drainage-database",
-          "email": "copernicus@eea.europa.eu"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
-      "service_type": "ogc:wfs",
-      "mapview": {
-        "service_type": "ogc:wms",
-        "url": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:streams&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"
-      },
+      "sources": [{
+        "title": "Copernicus Land Monitoring Service - Integrated EU-Hydro Database",
+        "path": "https://land.copernicus.eu/imagery-in-situ/eu-hydro/eu-hydro-public-beta/integrated-eu-hydro-database-hydrographic-and-drainage-database",
+        "email": "copernicus@eea.europa.eu"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "crs": "EPSG:3035",
       "spatial_extent": {
         "xmin": 4658356,
@@ -657,26 +577,28 @@
         "start": "2006",
         "end": "2012"
       },
-      "eu_gl": {
-        "workflow_steps": ["eu-gl:hazard-characterization:local-effects"],
-        "resource_type": "feature-parameters"
-      }
+      "tags": [
+        "service-type:ogc:wfs",
+        "resource-type:local-effects-parameter",
+        "eu-gl:hazard-characterization:local-effects"
+      ],
+      "references": [
+        ["@mapview:ogc:wms", "#/path", "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:streams&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"]
+      ]
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r13",
       "name": "trees",
       "title": "Trees in Naples metropolitan area",
       "description": "Trees in Naples metropolitan area",
-      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "profile": "clarity-data-package-resource.json",
       "encoding": "binary",
       "format": "shape-zip",
       "mediatype": "application/shape-zip",
       "bytes": "37087552",
-      "hash": "tbc",
+      "hash": "",
       "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:trees&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
       "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/trees.schema.json",
-      "sources": [
-        {
+      "sources": [{
           "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
           "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
           "email": "copernicus@eea.europa.eu"
@@ -687,18 +609,11 @@
           "email": "copernicus@eea.europa.eu"
         }
       ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
-      "service_type": "ogc:wfs",
-      "mapview": {
-        "service_type": "ogc:wms",
-        "url": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:trees&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"
-      },
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "crs": "EPSG:3035",
       "spatial_extent": {
         "xmin": 4658356,
@@ -709,26 +624,28 @@
       "spatial_resolution": {
         "scale": 50000
       },
-      "eu_gl": {
-        "workflow_steps": ["eu-gl:hazard-characterization:local-effects"],
-        "resource_type": "feature-parameters"
-      }
+      "tags": [
+        "service-type:ogc:wfs",
+        "resource-type:local-effects-parameter",
+        "eu-gl:hazard-characterization:local-effects"
+      ],
+      "references": [
+        ["@mapview:ogc:wms", "#/path", "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:trees&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"]
+      ]
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r14",
       "name": "vegetation",
       "title": "Vegetation in Naples metropolitan area",
       "description": "Vegetation in Naples metropolitan area",
-      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "profile": "clarity-data-package-resource.json",
       "encoding": "binary",
       "format": "shape-zip",
       "mediatype": "application/shape-zip",
       "bytes": "37087552",
-      "hash": "tbc",
+      "hash": "",
       "path": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:vegetation&outputFormat=shape-zip&srsName=EPSG:3035&bbox=4658356,1961196,4720778,2003734",
       "schema": "https://github.com/clarity-h2020/data-package/blob/master/schemas/input-layers/vegetation.schema.json",
-      "sources": [
-        {
+      "sources": [{
           "title": "Copernicus Land Monitoring Service - Urban Atlas 2012",
           "path": "https://land.copernicus.eu/local/urban-atlas/urban-atlas-2012",
           "email": "copernicus@eea.europa.eu"
@@ -739,18 +656,11 @@
           "email": "copernicus@eea.europa.eu"
         }
       ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
-      "service_type": "ogc:wfs",
-      "mapview": {
-        "service_type": "ogc:wms",
-        "url": "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:vegetation&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"
-      },
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "crs": "EPSG:3035",
       "spatial_extent": {
         "xmin": 4658356,
@@ -761,42 +671,35 @@
       "spatial_resolution": {
         "scale": 50000
       },
-      "eu_gl": {
-        "workflow_steps": ["eu-gl:hazard-characterization:local-effects"],
-        "resource_type": "feature-parameters"
-      }
+      "tags": [
+        "service-type:ogc:wfs",
+        "resource-type:local-effects-parameter",
+        "eu-gl:hazard-characterization:local-effects"
+      ],
+      "references": [
+        ["@mapview:ogc:wms", "#/path", "http://services.clarity-h2020.eu:8080/geoserver/clarity/ows?service=WMS&version=1.1.0&request=GetMap&layers=clarity:vegetation&bbox=4658356,1961196,4720778,2003734&width=725&height=768&srs=EPSG:3035&format=image/png"]
+      ]
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r15",
       "name": "heat-wave-duration_historical_19710101-20001231",
       "title": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the baseline emissions scenario in the 1971-2000 period",
       "description": "Maximum number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the baseline emissions scenario in the 1971-2000 period",
-      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "profile": "clarity-data-package-resource.json",
       "format": "tif",
       "mediatype": "geotiff",
       "bytes": "358616146",
-      "hash": "tbc",
+      "hash": "",
       "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_historical_r12i1p1_SMHI-RCA4_v1_day_19710101-20001231_netcdf3&FORMAT=geotiff&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
-      "schema": {},
-      "sources": [
-        {
-          "title": "EURO-CORDEX",
-          "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
-          "email": "ipoc@cordex.org"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
-      "service_type": "ogc:wcs",
-      "mapview": {
-        "service_type": "ogc:wms",
-        "url": "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_historical_r12i1p1_SMHI-RCA4_v1_day_19710101-20001231_netcdf3&bbox=2145500,982500,6606000,57065000&width=725&height=768&srs=EPSG:3035&format=image/png"
-      },
+      "sources": [{
+        "title": "EURO-CORDEX",
+        "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
+        "email": "ipoc@cordex.org"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "crs": "EPSG:3035",
       "spatial_extent": {
         "xmin": 2145500,
@@ -805,7 +708,7 @@
         "ymax": 5706500
       },
       "resolution": {
-        "distance": 500,
+        "distance": 500.0,
         "uom": "m"
       },
       "grid_info": {
@@ -813,79 +716,69 @@
         "rows": 8921,
         "columns": 9448,
         "start_cell": "top-left",
-        "bands": [
-          {
-            "id": 1,
-            "name": "heat-wave-duration_historical_19710101-20001231",
-            "description": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the baseline emissions scenario in the 1971-2000 period",
-            "bit_depth": "unsigned-32-bit",
-            "no_data_value": 1e20,
-            "compression_type": "none"
-          }
-        ]
+        "bands": [{
+          "id": 1,
+          "name": "heat-wave-duration_historical_19710101-20001231",
+          "description": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the baseline emissions scenario in the 1971-2000 period",
+          "bit_depth": "32-bit-unsigned",
+          "no_data_value": 1e20,
+          "compression_type": "none"
+        }]
       },
       "trs": "ISO 8601:2004",
       "temporal_extent": {
         "start": "1971-01-01",
         "end": "2000-12-31"
       },
-      "eu_gl": {
-        "workflow_step": ["eu-gl:hazard-characterization"],
-        "hazards": ["hazard:temperature:heat:heat-wave"],
-        "resource_type": "hazard-index",
-        "index": "hazard:temperature:heat:heat-wave:index:heat-wave-duration",
-        "emissions_scenario": "emissions-scenario:baseline",
-        "thresholds": [
-          {
-            "name": "low",
-            "lower": 13.47,
-            "expression": "value < lower"
-          },
-          {
-            "name": "medium",
-            "lower": 13.47,
-            "upper": 15.9,
-            "expression": "lower <= value <= upper"
-          },
-          {
-            "name": "high",
-            "upper": 15.9,
-            "expression": "value > upper"
-          }
-        ]
-      }
+      "tags": [
+        "service-type:ogc:wcs",
+        "resource-type:hazard-index",
+        "eu-gl:hazard-characterization",
+        "hazard:temperature:heat:heat-wave",
+        "hazard:temperature:heat:heat-wave:index:heat-wave-duration",
+        "emissions-scenario:baseline"
+      ],
+      "references": [
+        ["@mapview:ogc:wms", "#/path", "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_historical_r12i1p1_SMHI-RCA4_v1_day_19710101-20001231_netcdf3&bbox=2145500,982500,6606000,57065000&width=725&height=768&srs=EPSG:3035&format=image/png"]
+      ],
+      "thresholds": [{
+          "name": "low",
+          "lower": 13.47,
+          "expression": "value < lower"
+        },
+        {
+          "name": "medium",
+          "lower": 13.47,
+          "upper": 15.9,
+          "expression": "lower <= value <= upper"
+        },
+        {
+          "name": "high",
+          "upper": 15.9,
+          "expression": "value > upper"
+        }
+      ]
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r16",
       "name": "heat-wave-duration_rcp26_20110101-20401231",
       "title": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp26 emissions scenario in the 2011-2040 period",
       "description": "Maxium number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp26 emissions scenario in the 2011-2040 period",
-      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "profile": "clarity-data-package-resource.json",
       "format": "tif",
       "mediatype": "geotiff",
       "bytes": "358616146",
-      "hash": "tbc",
+      "hash": "",
       "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf3&FORMAT=geotiff&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
-      "schema": {},
-      "sources": [
-        {
-          "title": "EURO-CORDEX",
-          "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
-          "email": "ipoc@cordex.org"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
-      "service_type": "ogc:wcs",
-      "mapview": {
-        "service_type": "ogc:wms",
-        "url": "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf&bbox=2145500,982500,6606000,57065000&width=725&height=768&srs=EPSG:3035&format=image/png"
-      },
+      "sources": [{
+        "title": "EURO-CORDEX",
+        "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
+        "email": "ipoc@cordex.org"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "crs": "EPSG:3035",
       "spatial_extent": {
         "xmin": 2145500,
@@ -902,61 +795,52 @@
         "rows": 8921,
         "columns": 9448,
         "start_cell": "top-left",
-        "bands": [
-          {
-            "id": 1,
-            "name": "heat-wave-duration_rcp26_20110101-20401231",
-            "description": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp26 emissions scenario in the 2011-2040 period",
-            "bit_depth": "unsigned-32-bit",
-            "no_data_value": 1e20,
-            "compression_type": "none"
-          }
-        ]
+        "bands": [{
+          "id": 1,
+          "name": "heat-wave-duration_rcp26_20110101-20401231",
+          "description": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp26 emissions scenario in the 2011-2040 period",
+          "bit_depth": "32-bit-unsigned",
+          "no_data_value": 1e20,
+          "compression_type": "none"
+        }]
       },
       "trs": "ISO 8601:2004",
       "temporal_extent": {
         "start": "2011-01-01",
         "end": "2040-12-31"
       },
-      "eu_gl": {
-        "workflow_step": ["eu-gl:hazard-characterization"],
-        "hazards": ["hazard:temperature:heat:heat-wave"],
-        "resource_type": "hazard-index",
-        "index": "hazard:temperature:heat:heat-wave:index:heat-wave-duration",
-        "emissions_scenario": "emissions-scenario:early-response"
-      }
+      "tags": [
+        "service-type:ogc:wcs",
+        "resource-type:hazard-index",
+        "eu-gl:hazard-characterization",
+        "hazard:temperature:heat:heat-wave",
+        "hazard:temperature:heat:heat-wave:index:heat-wave-duration",
+        "emissions-scenario:early-response"
+      ],
+      "references": [
+        ["@mapview:ogc:wms", "#/path", "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf&bbox=2145500,982500,6606000,57065000&width=725&height=768&srs=EPSG:3035&format=image/png"]
+      ]
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r17",
       "name": "heat-wave-duration_rcp26_20410101-20701231",
       "title": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp26 emissions scenario in the 2041-2070 period",
       "description": "Maxium number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp26 emissions scenario in the 2041-2070 period",
-      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "profile": "clarity-data-package-resource.json",
       "format": "tif",
       "mediatype": "geotiff",
       "bytes": "358616146",
-      "hash": "tbc",
+      "hash": "",
       "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&FORMAT=geotiff&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
-      "schema": {},
-      "sources": [
-        {
-          "title": "EURO-CORDEX",
-          "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
-          "email": "ipoc@cordex.org"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
-      "service_type": "ogc:wcs",
-      "mapview": {
-        "service_type": "ogc:wms",
-        "url": "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&bbox=2145500,982500,6606000,57065000&width=725&height=768&srs=EPSG:3035&format=image/png"
-      },
+      "sources": [{
+        "title": "EURO-CORDEX",
+        "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
+        "email": "ipoc@cordex.org"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "crs": "EPSG:3035",
       "spatial_extent": {
         "xmin": 2145500,
@@ -973,61 +857,52 @@
         "rows": 8921,
         "columns": 9448,
         "start_cell": "top-left",
-        "bands": [
-          {
-            "id": 1,
-            "name": "heat-wave-duration_rcp26_20410101-20701231",
-            "description": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp26 emissions scenario in the 2041-2070 period",
-            "bit_depth": "unsigned-32-bit",
-            "no_data_value": 1e20,
-            "compression_type": "none"
-          }
-        ]
+        "bands": [{
+          "id": 1,
+          "name": "heat-wave-duration_rcp26_20410101-20701231",
+          "description": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp26 emissions scenario in the 2041-2070 period",
+          "bit_depth": "32-bit-unsigned",
+          "no_data_value": 1e20,
+          "compression_type": "none"
+        }]
       },
       "trs": "ISO 8601:2004",
       "temporal_extent": {
         "start": "2041-01-01",
         "end": "2070-12-31"
       },
-      "eu_gl": {
-        "workflow_step": ["eu-gl:hazard-characterization"],
-        "hazards": ["hazard:temperature:heat:heat-wave"],
-        "resource_type": "hazard-index",
-        "index": "hazard:temperature:heat:heat-wave:index:heat-wave-duration",
-        "emissions_scenario": "emissions-scenario:early-response"
-      }
+      "tags": [
+        "service-type:ogc:wcs",
+        "resource-type:hazard-index",
+        "eu-gl:hazard-characterization",
+        "hazard:temperature:heat:heat-wave",
+        "hazard:temperature:heat:heat-wave:index:heat-wave-duration",
+        "emissions-scenario:early-response"
+      ],
+      "references": [
+        ["@mapview:ogc:wms", "#/path", "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&bbox=2145500,982500,6606000,57065000&width=725&height=768&srs=EPSG:3035&format=image/png"]
+      ]
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r18",
       "name": "heat-wave-duration_rcp26_20710101-21001231",
       "title": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp26 emissions scenario in the 2071-2100 period",
       "description": "Maxium number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp26 emissions scenario in the 2071-2100 period",
-      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "profile": "clarity-data-package-resource.json",
       "format": "tif",
       "mediatype": "geotiff",
       "bytes": "358616146",
-      "hash": "tbc",
+      "hash": "",
       "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&FORMAT=geotiff&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
-      "schema": {},
-      "sources": [
-        {
-          "title": "EURO-CORDEX",
-          "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
-          "email": "ipoc@cordex.org"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
-      "service_type": "ogc:wcs",
-      "mapview": {
-        "service_type": "ogc:wms",
-        "url": "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&bbox=2145500,982500,6606000,57065000&width=725&height=768&srs=EPSG:3035&format=image/png"
-      },
+      "sources": [{
+        "title": "EURO-CORDEX",
+        "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
+        "email": "ipoc@cordex.org"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "crs": "EPSG:3035",
       "spatial_extent": {
         "xmin": 2145500,
@@ -1044,61 +919,53 @@
         "rows": 8921,
         "columns": 9448,
         "start_cell": "top-left",
-        "bands": [
-          {
-            "id": 1,
-            "name": "heat-wave-duration_rcp26_20710101-21001231",
-            "description": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp26 emissions scenario in the 2071-2100 period",
-            "bit_depth": "unsigned-32-bit",
-            "no_data_value": 1e20,
-            "compression_type": "none"
-          }
-        ]
+        "bands": [{
+          "id": 1,
+          "name": "heat-wave-duration_rcp26_20710101-21001231",
+          "description": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp26 emissions scenario in the 2071-2100 period",
+          "bit_depth": "32-bit-unsigned",
+          "no_data_value": 1e20,
+          "compression_type": "none"
+        }]
       },
       "trs": "ISO 8601:2004",
       "temporal_extent": {
         "start": "2071-01-01",
         "end": "2100-12-31"
       },
-      "eu_gl": {
-        "workflow_step": ["eu-gl:hazard-characterization"],
-        "hazards": ["hazard:temperature:heat:heat-wave"],
-        "resource_type": "hazard-index",
-        "index": "hazard:temperature:heat:heat-wave:index:heat-wave-duration",
-        "emissions_scenario": "emissions-scenario:early-response"
-      }
+      "tags": [
+        "service-type:ogc:wcs",
+        "resource-type:hazard-index",
+        "eu-gl:hazard-characterization",
+        "hazard:temperature:heat:heat-wave",
+        "hazard:temperature:heat:heat-wave:index:heat-wave-duration",
+        "emissions-scenario:early-response"
+      ],
+      "references": [
+        ["@mapview:ogc:wms", "#/path", "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp26_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&bbox=2145500,982500,6606000,57065000&width=725&height=768&srs=EPSG:3035&format=image/png"]
+      ]
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r19",
       "name": "heat-wave-duration_rcp45_20110101-20401231",
       "title": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp45 emissions scenario in the 2011-2040 period",
       "description": "Maxium number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp45 emissions scenario in the 2011-2040 period",
-      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "profile": "clarity-data-package-resource.json",
       "format": "tif",
       "mediatype": "geotiff",
       "bytes": "358616146",
       "hash": "tbc",
       "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf3&FORMAT=geotiff&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
       "schema": {},
-      "sources": [
-        {
-          "title": "EURO-CORDEX",
-          "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
-          "email": "ipoc@cordex.org"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
-      "service_type": "ogc:wcs",
-      "mapview": {
-        "service_type": "ogc:wms",
-        "url": "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf3&bbox=2145500,982500,6606000,57065000&width=725&height=768&srs=EPSG:3035&format=image/png"
-      },
+      "sources": [{
+        "title": "EURO-CORDEX",
+        "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
+        "email": "ipoc@cordex.org"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "crs": "EPSG:3035",
       "spatial_extent": {
         "xmin": 2145500,
@@ -1115,82 +982,73 @@
         "rows": 8921,
         "columns": 9448,
         "start_cell": "top-left",
-        "bands": [
-          {
-            "id": 1,
-            "name": "heat-wave-duration_rcp45_20110101-20401231",
-            "description": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp45 emissions scenario in the 2011-2040 period",
-            "bit_depth": "unsigned-32-bit",
-            "no_data_value": 1e20,
-            "compression_type": "none"
-          }
-        ]
+        "bands": [{
+          "id": 1,
+          "name": "heat-wave-duration_rcp45_20110101-20401231",
+          "description": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp45 emissions scenario in the 2011-2040 period",
+          "bit_depth": "32-bit-unsigned",
+          "no_data_value": 1e20,
+          "compression_type": "none"
+        }]
       },
       "trs": "ISO 8601:2004",
       "temporal_extent": {
         "start": "2011-01-01",
         "end": "2040-12-31"
       },
-      "eu_gl": {
-        "workflow_step": ["eu-gl:hazard-characterization"],
-        "hazards": ["hazard:temperature:heat:heat-wave"],
-        "resource_type": "hazard-index",
-        "index": "hazard:temperature:heat:heat-wave:index:heat-wave-duration",
-        "emissions_scenario": "emissions-scenario:effective-measures",
-        "thresholds": [
-          {
-            "name": "low",
-            "lower": 9.13,
-            "expression": "value < lower",
-            "relative_to": "increase in baseline"
-          },
-          {
-            "name": "medium",
-            "lower": 9.13,
-            "upper": 16.6,
-            "expression": "lower <= value <= upper",
-            "relative_to": "increase in baseline"
-          },
-          {
-            "name": "high",
-            "upper": 16.6,
-            "expression": "value > upper",
-            "relative_to": "increase in baseline"
-          }
-        ]
-      }
+      "thresholds": [{
+          "name": "low",
+          "lower": 9.13,
+          "expression": "value < lower",
+          "relative_to": "increase in baseline"
+        },
+        {
+          "name": "medium",
+          "lower": 9.13,
+          "upper": 16.6,
+          "expression": "lower <= value <= upper",
+          "relative_to": "increase in baseline"
+        },
+        {
+          "name": "high",
+          "upper": 16.6,
+          "expression": "value > upper",
+          "relative_to": "increase in baseline"
+        }
+      ],
+      "tags": [
+        "service-type:ogc:wcs",
+        "resource-type:hazard-index",
+        "eu-gl:hazard-characterization",
+        "hazard:temperature:heat:heat-wave",
+        "hazard:temperature:heat:heat-wave:index:heat-wave-duration",
+        "emissions-scenario:effective-measures"
+      ],
+      "references": [
+        ["@mapview:ogc:wms", "#/path", "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf3&bbox=2145500,982500,6606000,57065000&width=725&height=768&srs=EPSG:3035&format=image/png"]
+      ]
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r20",
       "name": "heat-wave-duration_rcp45_20410101-20701231",
       "title": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp45 emissions scenario in the 2041-2070 period",
       "description": "Number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp45 emissions scenario in the 2041-2070 period",
-      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "profile": "clarity-data-package-resource.json",
       "format": "tif",
       "mediatype": "geotiff",
       "bytes": "358616146",
-      "hash": "tbc",
+      "hash": "",
       "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&FORMAT=geotiff&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
       "schema": {},
-      "sources": [
-        {
-          "title": "EURO-CORDEX",
-          "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
-          "email": "ipoc@cordex.org"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
-      "service_type": "ogc:wcs",
-      "mapview": {
-        "service_type": "ogc:wms",
-        "url": "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&bbox=2145500,982500,6606000,57065000&width=725&height=768&srs=EPSG:3035&format=image/png"
-      },
+      "sources": [{
+        "title": "EURO-CORDEX",
+        "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
+        "email": "ipoc@cordex.org"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "crs": "EPSG:3035",
       "spatial_extent": {
         "xmin": 2145500,
@@ -1207,82 +1065,72 @@
         "rows": 8921,
         "columns": 9448,
         "start_cell": "top-left",
-        "bands": [
-          {
-            "id": 1,
-            "name": "heat-wave-duration_rcp45_20410101-20701231",
-            "description": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp45 emissions scenario in the 2041-2070 period",
-            "bit_depth": "unsigned-32-bit",
-            "no_data_value": 1e20,
-            "compression_type": "none"
-          }
-        ]
+        "bands": [{
+          "id": 1,
+          "name": "heat-wave-duration_rcp45_20410101-20701231",
+          "description": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp45 emissions scenario in the 2041-2070 period",
+          "bit_depth": "32-bit-unsigned",
+          "no_data_value": 1e20,
+          "compression_type": "none"
+        }]
       },
       "trs": "ISO 8601:2004",
       "temporal_extent": {
         "start": "2041-01-01",
         "end": "2070-12-31"
       },
-      "eu_gl": {
-        "workflow_step": ["eu-gl:hazard-characterization"],
-        "hazards": ["hazard:temperature:heat:heat-wave"],
-        "resource_type": "hazard-index",
-        "index": "hazard:temperature:heat:heat-wave:index:heat-wave-duration",
-        "emissions_scenario": "emissions-scenario:effective-measures",
-        "thresholds": [
-          {
-            "name": "low",
-            "lower": 9.13,
-            "expression": "value < lower",
-            "relative_to": "increase in baseline"
-          },
-          {
-            "name": "medium",
-            "lower": 9.13,
-            "upper": 16.6,
-            "expression": "lower <= value <= upper",
-            "relative_to": "increase in baseline"
-          },
-          {
-            "name": "high",
-            "upper": 16.6,
-            "expression": "value > upper",
-            "relative_to": "increase in baseline"
-          }
-        ]
-      }
+      "thresholds": [{
+          "name": "low",
+          "lower": 9.13,
+          "expression": "value < lower",
+          "relative_to": "increase in baseline"
+        },
+        {
+          "name": "medium",
+          "lower": 9.13,
+          "upper": 16.6,
+          "expression": "lower <= value <= upper",
+          "relative_to": "increase in baseline"
+        },
+        {
+          "name": "high",
+          "upper": 16.6,
+          "expression": "value > upper",
+          "relative_to": "increase in baseline"
+        }
+      ],
+      "tags": [
+        "service-type:ogc:wcs",
+        "resource-type:hazard-index",
+        "eu-gl:hazard-characterization",
+        "hazard:temperature:heat:heat-wave",
+        "hazard:temperature:heat:heat-wave:index:heat-wave-duration",
+        "emissions-scenario:effective-measures"
+      ],
+      "references": [
+        ["@mapview:ogc:wms", "#/path", "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&bbox=2145500,982500,6606000,57065000&width=725&height=768&srs=EPSG:3035&format=image/png"]
+      ]
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r21",
       "name": "heat-wave-duration_rcp45_20710101-21001231",
       "title": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp45 emissions scenario in the 2071-2100 period",
       "description": "Maxium number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp45 emissions scenario in the 2071-2100 period",
-      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "profile": "clarity-data-package-resource.json",
       "format": "tif",
       "mediatype": "geotiff",
       "bytes": "358616146",
-      "hash": "tbc",
+      "hash": "",
       "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&FORMAT=geotiff&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
-      "schema": {},
-      "sources": [
-        {
-          "title": "EURO-CORDEX",
-          "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
-          "email": "ipoc@cordex.org"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
-      "service_type": "ogc:wcs",
-      "mapview": {
-        "service_type": "ogc:wms",
-        "url": "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&bbox=2145500,982500,6606000,57065000&width=725&height=768&srs=EPSG:3035&format=image/png"
-      },
+      "sources": [{
+        "title": "EURO-CORDEX",
+        "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
+        "email": "ipoc@cordex.org"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "crs": "EPSG:3035",
       "spatial_extent": {
         "xmin": 2145500,
@@ -1299,82 +1147,72 @@
         "rows": 8921,
         "columns": 9448,
         "start_cell": "top-left",
-        "bands": [
-          {
-            "id": 1,
-            "name": "heat-wave-duration_rcp45_20710101-21001231",
-            "description": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp45 emissions scenario in the 2071-2100 period",
-            "bit_depth": "unsigned-32-bit",
-            "no_data_value": 1e20,
-            "compression_type": "none"
-          }
-        ]
+        "bands": [{
+          "id": 1,
+          "name": "heat-wave-duration_rcp45_20710101-21001231",
+          "description": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp45 emissions scenario in the 2071-2100 period",
+          "bit_depth": "32-bit-unsigned",
+          "no_data_value": 1e20,
+          "compression_type": "none"
+        }]
       },
       "trs": "ISO 8601:2004",
       "temporal_extent": {
         "start": "2071-01-01",
         "end": "2100-12-31"
       },
-      "eu_gl": {
-        "workflow_step": ["eu-gl:hazard-characterization"],
-        "hazards": ["hazard:temperature:heat:heat-wave"],
-        "resource_type": "hazard-index",
-        "index": "hazard:temperature:heat:heat-wave:index:heat-wave-duration",
-        "emissions_scenario": "emissions-scenario:effective-measures",
-        "thresholds": [
-          {
-            "name": "low",
-            "lower": 9.13,
-            "expression": "value < lower",
-            "relative_to": "increase in baseline"
-          },
-          {
-            "name": "medium",
-            "lower": 9.13,
-            "upper": 16.6,
-            "expression": "lower <= value <= upper",
-            "relative_to": "increase in baseline"
-          },
-          {
-            "name": "high",
-            "upper": 16.6,
-            "expression": "value > upper",
-            "relative_to": "increase in baseline"
-          }
-        ]
-      }
+      "thresholds": [{
+          "name": "low",
+          "lower": 9.13,
+          "expression": "value < lower",
+          "relative_to": "increase in baseline"
+        },
+        {
+          "name": "medium",
+          "lower": 9.13,
+          "upper": 16.6,
+          "expression": "lower <= value <= upper",
+          "relative_to": "increase in baseline"
+        },
+        {
+          "name": "high",
+          "upper": 16.6,
+          "expression": "value > upper",
+          "relative_to": "increase in baseline"
+        }
+      ],
+      "tags": [
+        "service-type:ogc:wcs",
+        "resource-type:hazard-index",
+        "eu-gl:hazard-characterization",
+        "hazard:temperature:heat:heat-wave",
+        "hazard:temperature:heat:heat-wave:index:heat-wave-duration",
+        "emissions-scenario:effective-measures"
+      ],
+      "references": [
+        ["@mapview:ogc:wms", "#/path", "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp45_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&bbox=2145500,982500,6606000,57065000&width=725&height=768&srs=EPSG:3035&format=image/png"]
+      ]
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r22",
       "name": "heat-wave-duration_rcp85_20110101-20401231",
       "title": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp85 emissions scenario in the 2011-2040 period",
       "description": "Maxium number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp85 emissions scenario in the 2011-2040 period",
-      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "profile": "clarity-data-package-resource.json",
       "format": "tif",
       "mediatype": "geotiff",
       "bytes": "358616146",
-      "hash": "tbc",
+      "hash": "",
       "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf3&FORMAT=geotiff&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
-      "schema": {},
-      "sources": [
-        {
-          "title": "EURO-CORDEX",
-          "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
-          "email": "ipoc@cordex.org"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
-      "service_type": "ogc:wcs",
-      "mapview": {
-        "service_type": "ogc:wms",
-        "url": "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf3&bbox=2145500,982500,6606000,57065000&width=725&height=768&srs=EPSG:3035&format=image/png"
-      },
+      "sources": [{
+        "title": "EURO-CORDEX",
+        "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
+        "email": "ipoc@cordex.org"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "crs": "EPSG:3035",
       "spatial_extent": {
         "xmin": 2145500,
@@ -1391,61 +1229,52 @@
         "rows": 8921,
         "columns": 9448,
         "start_cell": "top-left",
-        "bands": [
-          {
-            "id": 1,
-            "name": "heat-wave-duration_rcp85_20110101-20401231",
-            "description": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp85 emissions scenario in the 2011-2040 period",
-            "bit_depth": "unsigned-32-bit",
-            "no_data_value": 1e20,
-            "compression_type": "none"
-          }
-        ]
+        "bands": [{
+          "id": 1,
+          "name": "heat-wave-duration_rcp85_20110101-20401231",
+          "description": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp85 emissions scenario in the 2011-2040 period",
+          "bit_depth": "32-bit-unsigned",
+          "no_data_value": 1e20,
+          "compression_type": "none"
+        }]
       },
       "trs": "ISO 8601:2004",
       "temporal_extent": {
         "start": "2011-01-01",
         "end": "2040-12-31"
       },
-      "eu_gl": {
-        "workflow_step": ["eu-gl:hazard-characterization"],
-        "hazards": ["hazard:temperature:heat:heat-wave"],
-        "resource_type": "hazard-index",
-        "index": "hazard:temperature:heat:heat-wave:index:heat-wave-duration",
-        "emissions_scenario": "emissions-scenario:business-as-usual"
-      }
+      "tags": [
+        "service-type:ogc:wcs",
+        "resource-type:hazard-index",
+        "eu-gl:hazard-characterization",
+        "hazard:temperature:heat:heat-wave",
+        "hazard:temperature:heat:heat-wave:index:heat-wave-duration",
+        "emissions-scenario:business-as-usual"
+      ],
+      "references": [
+        ["@mapview:ogc:wms", "#/path", "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20110101-20401231_netcdf3&bbox=2145500,982500,6606000,57065000&width=725&height=768&srs=EPSG:3035&format=image/png"]
+      ]
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r23",
       "name": "heat-wave-duration_rcp85_20410101-20701231",
       "title": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp85 emissions scenario in the 2041-2070 period",
       "description": "Maxium number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp85 emissions scenario in the 2041-2070 period",
-      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "profile": "clarity-data-package-resource.json",
       "format": "tif",
       "mediatype": "geotiff",
       "bytes": "358616146",
-      "hash": "tbc",
+      "hash": "",
       "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&FORMAT=geotiff&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
-      "schema": {},
-      "sources": [
-        {
-          "title": "EURO-CORDEX",
-          "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
-          "email": "ipoc@cordex.org"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
-      "service_type": "ogc:wcs",
-      "mapview": {
-        "service_type": "ogc:wms",
-        "url": "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&bbox=2145500,982500,6606000,57065000&width=725&height=768&srs=EPSG:3035&format=image/png"
-      },
+      "sources": [{
+        "title": "EURO-CORDEX",
+        "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
+        "email": "ipoc@cordex.org"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "crs": "EPSG:3035",
       "spatial_extent": {
         "xmin": 2145500,
@@ -1462,61 +1291,52 @@
         "rows": 8921,
         "columns": 9448,
         "start_cell": "top-left",
-        "bands": [
-          {
-            "id": 1,
-            "name": "heat-wave-duration_rcp85_20410101-20701231",
-            "description": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp85 emissions scenario in the 2041-2070 period",
-            "bit_depth": "unsigned-32-bit",
-            "no_data_value": 1e20,
-            "compression_type": "none"
-          }
-        ]
+        "bands": [{
+          "id": 1,
+          "name": "heat-wave-duration_rcp85_20410101-20701231",
+          "description": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp85 emissions scenario in the 2041-2070 period",
+          "bit_depth": "32-bit-unsigned",
+          "no_data_value": 1e20,
+          "compression_type": "none"
+        }]
       },
       "trs": "ISO 8601:2004",
       "temporal_extent": {
         "start": "2041-01-01",
         "end": "2070-12-31"
       },
-      "eu_gl": {
-        "workflow_step": ["eu-gl:hazard-characterization"],
-        "hazards": ["hazard:temperature:heat:heat-wave"],
-        "resource_type": "hazard-index",
-        "index": "hazard:temperature:heat:heat-wave:index:heat-wave-duration",
-        "emissions_scenario": "emissions-scenario:business-as-usual"
-      }
+      "tags": [
+        "service-type:ogc:wcs",
+        "resource-type:hazard-index",
+        "eu-gl:hazard-characterization",
+        "hazard:temperature:heat:heat-wave",
+        "hazard:temperature:heat:heat-wave:index:heat-wave-duration",
+        "emissions-scenario:business-as-usual"
+      ],
+      "references": [
+        ["@mapview:ogc:wms", "#/path", "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20410101-20701231_netcdf3&bbox=2145500,982500,6606000,57065000&width=725&height=768&srs=EPSG:3035&format=image/png"]
+      ]
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r24",
       "name": "heat-wave-duration_rcp85_20710101-21001231",
       "title": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp85 emissions scenario in the 2071-2100 period",
       "description": "Maximum number of days per year with a mean air temperature at 2 m above ground above the 75th percentile during summer months (Apr-Sep) for the rcp85 emissions scenario in the 2071-2100 period",
-      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "profile": "clarity-data-package-resource.json",
       "format": "tif",
       "mediatype": "geotiff",
       "bytes": "358616146",
-      "hash": "tbc",
+      "hash": "",
       "path": "https://clarity.meteogrid.com/geoserver/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&FORMAT=geotiff&boundingbox=2145500,982500,6606000,5706500,urn:ogc:def:crs:EPSG::3035",
-      "schema": {},
-      "sources": [
-        {
-          "title": "EURO-CORDEX",
-          "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
-          "email": "ipoc@cordex.org"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC0-1.0",
-          "title": "Creative Commons CCZero 1.0",
-          "path": "https://creativecommons.org/publicdomain/zero/1.0/"
-        }
-      ],
-      "service_type": "ogc:wcs",
-      "mapview": {
-        "service_type": "ogc:wms",
-        "url": "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&bbox=2145500,982500,6606000,57065000&width=725&height=768&srs=EPSG:3035&format=image/png"
-      },
+      "sources": [{
+        "title": "EURO-CORDEX",
+        "path": "https://esgf-data.dkrz.de/search/cordex-dkrz/",
+        "email": "ipoc@cordex.org"
+      }],
+      "licenses": [{
+        "name": "CC0-1.0",
+        "title": "Creative Commons CCZero 1.0",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }],
       "crs": "EPSG:3035",
       "spatial_extent": {
         "xmin": 2145500,
@@ -1533,80 +1353,70 @@
         "rows": 8921,
         "columns": 9448,
         "start_cell": "top-left",
-        "bands": [
-          {
-            "id": 1,
-            "name": "heat-wave-duration_rcp85_20710101-21001231",
-            "description": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp85 emissions scenario in the 2071-2100 period",
-            "bit_depth": "unsigned-32-bit",
-            "no_data_value": 1e20,
-            "compression_type": "none"
-          }
-        ]
+        "bands": [{
+          "id": 1,
+          "name": "heat-wave-duration_rcp85_20710101-21001231",
+          "description": "Maximum number of consecutive days when Tmax > 75th percentile of the Apr-Sep days for the rcp85 emissions scenario in the 2071-2100 period",
+          "bit_depth": "32-bit-unsigned",
+          "no_data_value": 1e20,
+          "compression_type": "none"
+        }]
       },
       "trs": "ISO 8601:2004",
       "temporal_extent": {
         "start": "2071-01-01",
         "end": "2100-12-31"
       },
-      "eu_gl": {
-        "workflow_step": ["eu-gl:hazard-characterization"],
-        "hazards": ["hazard:temperature:heat:heat-wave"],
-        "resource_type": "hazard-index",
-        "index": "hazard:temperature:heat:heat-wave:index:heat-wave-duration",
-        "emissions_scenario": "emissions-scenario:business-as-usual"
-      }
+      "tags": [
+        "service-type:ogc:wcs",
+        "resource-type:hazard-index",
+        "eu-gl:hazard-characterization",
+        "hazard:temperature:heat:heat-wave",
+        "hazard:temperature:heat:heat-wave:index:heat-wave-duration",
+        "emissions-scenario:business-as-usual"
+      ],
+      "references": [
+        ["@mapview:ogc:wms", "#/path", "https://clarity.meteogrid.com/geoserver/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:Tx75p_consecutive_max_EUR-11_ICHEC-EC-EARTH_rcp85_r12i1p1_SMHI-RCA4_v1_day_20710101-21001231_netcdf3&bbox=2145500,982500,6606000,57065000&width=725&height=768&srs=EPSG:3035&format=image/png"]
+      ]
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r25",
       "name": "adaptation-options",
       "title": "General list of possible adaptation options for application",
       "description": "General list of possible adaptation options for application",
-      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "profile": "clarity-data-package-resource.json",
       "format": "json",
       "mediatype": "text/json",
       "bytes": "",
-      "hash": "tbc",
+      "hash": "",
       "path": "https://raw.githubusercontent.com/clarity-h2020/data-package/master/examples/dc1-naples/data/adaptation-options/adaptation-options.json",
       "schema": "https://raw.githubusercontent.com/clarity-h2020/data-package/master/schemas/adaptation-options/adaptation-options.schema.json",
       "sources": [],
       "licenses": [],
-      "eu_gl": {
-        "workflow_step": ["eu-gl:adaptation-options:identification"],
-        "hazards": [
-          "hazard:flood:pluvial-flooding",
-          "hazard:flood:river-flooding",
-          "hazard:temperature:heat:heat-wave",
-          "hazard:landslide"
-        ],
-        "resource_type": "adaptation-options"
-      }
+      "tags": [
+        "resource-type:adaptation-options",
+        "eu-gl:adaptation-options:identification",
+        "hazard:flood:pluvial-flooding",
+        "hazard:flood:river-flooding",
+        "hazard:temperature:heat:heat-wave",
+        "hazard:landslide"        
+      ]
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r26",
       "name": "local-effects_hazard_heat-wave_baseline_temperature28c_naples",
       "title": "Historical heat wave temperature in Naples (28ºC)(local effects)(1971-2000)",
       "description": "Historical heat wave temperature in Naples (28ºC)(local effects)(1971-2000)",
-      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "profile": "clarity-data-package-resource.json",
       "format": "tif",
       "mediatype": "geotiff",
       "bytes": "",
       "hash": "",
       "path": "https://clarity.meteogrid.com/geoserver/Local_Effects/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=Local_Effects:LE_Tmrt_FrequentEvent_1971-2000_observations_Naples&FORMAT=geotiff&boundingbox=4647500,1947000,4720500,2008000,urn:ogc:def:crs:EPSG::3035",
-      "schema": {},
       "sources": [],
-      "licenses": [
-        {
-          "name": "",
-          "title": "",
-          "path": ""
-        }
-      ],
-      "service_type": "ogc:wcs",
-      "mapview": {
-        "service_type": "ogc:wms",
-        "url": "https://clarity.meteogrid.com/geoserver/Local_Effects/wms?service=WMS&version=1.1.0&request=GetMap&layers=Local_Effects:LE_Tmrt_FrequentEvent_1971-2000_observations_Naples&bbox=4647500,1947000,4720500,2008000&width=725&height=768&srs=EPSG:3035&format=image/png"
-      },
+      "licenses": [{
+        "name": "",
+        "title": "",
+        "path": ""
+      }],
       "crs": "EPSG:3035",
       "spatial_extent": {
         "xmin": 4647500,
@@ -1623,57 +1433,48 @@
         "rows": 122,
         "columns": 146,
         "start_cell": "top-left",
-        "bands": [
-          {
-            "id": 1,
-            "name": "local-effects_hazard_heat-wave_baseline_temperature28c_naples",
-            "description": "Historical heat wave temperature in Naples (28ºC)(local effects)(1971-2000)",
-            "bit_depth": "unsigned-32-bit",
-            "no_data_value": -3.40282e38,
-            "compression_type": "none"
-          }
-        ]
+        "bands": [{
+          "id": 1,
+          "name": "local-effects_hazard_heat-wave_baseline_temperature28c_naples",
+          "description": "Historical heat wave temperature in Naples (28ºC)(local effects)(1971-2000)",
+          "bit_depth": "32-bit-unsigned",
+          "no_data_value": -3.40282e38,
+          "compression_type": "none"
+        }]
       },
       "trs": "ISO 8601:2004",
       "temporal_extent": {
         "start": "1971",
         "end": "2000"
       },
-      "eu_gl": {
-        "workflow_step": [
-          "eu-gl:hazard-characterization:local-effects",
-          "eu-gl:risk-and-impact-assessment"
-        ],
-        "hazards": ["hazard:temperature:heat:heat-wave"],
-        "resource_type": "",
-        "emissions_scenario": "emissions-scenario:baseline"
-      }
+      "tags": [
+        "service-type:ogc:wcs",
+        "resource-type:????",
+        "eu-gl:hazard-characterization:local-effects",
+        "eu-gl:risk-and-impact-assessment",
+        "hazard:temperature:heat:heat-wave",
+        "emissions-scenario:baseline"
+      ],
+      "references": [
+        ["@mapview:ogc:wms", "#/path", "https://clarity.meteogrid.com/geoserver/Local_Effects/wms?service=WMS&version=1.1.0&request=GetMap&layers=Local_Effects:LE_Tmrt_FrequentEvent_1971-2000_observations_Naples&bbox=4647500,1947000,4720500,2008000&width=725&height=768&srs=EPSG:3035&format=image/png"]
+      ]
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r27",
       "name": "local-effects_hazard_heat-wave_baseline_temperature30c_naples",
       "title": "Historical heat wave temperature in Naples (30ºC)(local effects)(1971-2000)",
       "description": "Historical heat wave temperature in Naples (30ºC)(local effects)(1971-2000)",
-      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "profile": "clarity-data-package-resource.json",
       "format": "tif",
       "mediatype": "geotiff",
       "bytes": "",
       "hash": "",
       "path": "https://clarity.meteogrid.com/geoserver/Local_Effects/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=Local_Effects:LE_Tmrt_OcasionalEvent_1971-2000_observations_Naples&FORMAT=geotiff&boundingbox=4647500,1947000,4720500,2008000,urn:ogc:def:crs:EPSG::3035",
-      "schema": {},
       "sources": [],
-      "licenses": [
-        {
-          "name": "",
-          "title": "",
-          "path": ""
-        }
-      ],
-      "service_type": "ogc:wcs",
-      "mapview": {
-        "service_type": "ogc:wms",
-        "url": "https://clarity.meteogrid.com/geoserver/Local_Effects/wms?service=WMS&version=1.1.0&request=GetMap&layers=Local_Effects:LE_Tmrt_OcasionalEvent_1971-2000_observations_Naples&bbox=4647500,1947000,4720500,2008000&width=725&height=768&srs=EPSG:3035&format=image/png"
-      },
+      "licenses": [{
+        "name": "",
+        "title": "",
+        "path": ""
+      }],
       "crs": "EPSG:3035",
       "spatial_extent": {
         "xmin": 4647500,
@@ -1690,57 +1491,48 @@
         "rows": 122,
         "columns": 146,
         "start_cell": "top-left",
-        "bands": [
-          {
-            "id": 1,
-            "name": "local-effects_hazard_heat-wave_baseline_temperature30c_naples",
-            "description": "Historical heat wave temperature in Naples (30ºC)(local effects)(1971-2000)",
-            "bit_depth": "unsigned-32-bit",
-            "no_data_value": -3.40282e38,
-            "compression_type": "none"
-          }
-        ]
+        "bands": [{
+          "id": 1,
+          "name": "local-effects_hazard_heat-wave_baseline_temperature30c_naples",
+          "description": "Historical heat wave temperature in Naples (30ºC)(local effects)(1971-2000)",
+          "bit_depth": "32-bit-unsigned",
+          "no_data_value": -3.40282e38,
+          "compression_type": "none"
+        }]
       },
       "trs": "ISO 8601:2004",
       "temporal_extent": {
         "start": "1971",
         "end": "2000"
       },
-      "eu_gl": {
-        "workflow_step": [
-          "eu-gl:hazard-characterization:local-effects",
-          "eu-gl:risk-and-impact-assessment"
-        ],
-        "hazards": ["hazard:temperature:heat:heat-wave"],
-        "resource_type": "",
-        "emissions_scenario": "emissions-scenario:baseline"
-      }
+      "tags": [
+        "service-type:ogc:wcs",
+        "resource-type:????",
+        "eu-gl:hazard-characterization:local-effects",
+        "eu-gl:risk-and-impact-assessment",
+        "hazard:temperature:heat:heat-wave",
+        "emissions-scenario:baseline"
+      ],
+      "references": [
+        ["@mapview:ogc:wms", "#/path", "https://clarity.meteogrid.com/geoserver/Local_Effects/wms?service=WMS&version=1.1.0&request=GetMap&layers=Local_Effects:LE_Tmrt_OcasionalEvent_1971-2000_observations_Naples&bbox=4647500,1947000,4720500,2008000&width=725&height=768&srs=EPSG:3035&format=image/png"]
+      ]
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r28",
       "name": "local-effects_hazard_heat-wave_baseline_temperature32c_naples",
       "title": "Historical heat wave temperature in Naples (32ºC)(local effects)(1971-2000)",
       "description": "Historical heat wave temperature in Naples (32ºC)(local effects)(1971-2000)",
-      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "profile": "clarity-data-package-resource.json",
       "format": "tif",
       "mediatype": "geotiff",
       "bytes": "",
       "hash": "",
       "path": "https://clarity.meteogrid.com/geoserver/Local_Effects/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=Local_Effects:LE_Tmrt_RareEvent_1971-2000_observations_Naples&FORMAT=geotiff&boundingbox=4647500,1947000,4720500,2008000,urn:ogc:def:crs:EPSG::3035",
-      "schema": {},
       "sources": [],
-      "licenses": [
-        {
-          "name": "",
-          "title": "",
-          "path": ""
-        }
-      ],
-      "service_type": "ogc:wcs",
-      "mapview": {
-        "service_type": "ogc:wms",
-        "url": "https://clarity.meteogrid.com/geoserver/Local_Effects/wms?service=WMS&version=1.1.0&request=GetMap&layers=Local_Effects:LE_Tmrt_RareEvent_1971-2000_observations_Naples&bbox=4647500,1947000,4720500,2008000&width=725&height=768&srs=EPSG:3035&format=image/png"
-      },
+      "licenses": [{
+        "name": "",
+        "title": "",
+        "path": ""
+      }],
       "crs": "EPSG:3035",
       "spatial_extent": {
         "xmin": 4647500,
@@ -1757,130 +1549,52 @@
         "rows": 122,
         "columns": 146,
         "start_cell": "top-left",
-        "bands": [
-          {
-            "id": 1,
-            "name": "local-effects_hazard_heat-wave_baseline_temperature32c_naples",
-            "description": "Historical heat wave temperature in Naples (32ºC)(local effects)",
-            "bit_depth": "unsigned-32-bit",
-            "no_data_value": -3.40282e38,
-            "compression_type": "none"
-          }
-        ]
+        "bands": [{
+          "id": 1,
+          "name": "local-effects_hazard_heat-wave_baseline_temperature32c_naples",
+          "description": "Historical heat wave temperature in Naples (32ºC)(local effects)",
+          "bit_depth": "32-bit-unsigned",
+          "no_data_value": -3.40282e38,
+          "compression_type": "none"
+        }]
       },
       "trs": "ISO 8601:2004",
       "temporal_extent": {
         "start": "1971",
         "end": "2000"
       },
-      "eu_gl": {
-        "workflow_step": [
-          "eu-gl:hazard-characterization:local-effects",
-          "eu-gl:risk-and-impact-assessment"
-        ],
-        "hazards": ["hazard:temperature:heat:heat-wave"],
-        "resource_type": "",
-        "emissions_scenario": "emissions-scenario:baseline"
-      }
-    },
-    {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r29",
-      "name": "local-effects_hazard_heat-wave_baseline_temperature34c_naples",
-      "title": "Historical heat wave temperature in Naples (34ºC)(local effects)(1971-2000)",
-      "description": "Historical heat wave temperature in Naples (34ºC)(local effects)(1971-2000)",
-      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
-      "format": "tif",
-      "mediatype": "geotiff",
-      "bytes": "",
-      "hash": "",
-      "path": "https://clarity.meteogrid.com/geoserver/Local_Effects/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=Local_Effects:Heat_wave_temperature_historical_very_hight_hazard_Naples&FORMAT=geotiff&boundingbox=4647500,1947000,4720500,2008000,urn:ogc:def:crs:EPSG::3035",
-      "schema": {},
-      "sources": [],
-      "licenses": [
-        {
-          "name": "",
-          "title": "",
-          "path": ""
-        }
+      "tags": [
+        "service-type:ogc:wcs",
+        "resource-type:????",
+        "eu-gl:hazard-characterization:local-effects",
+        "eu-gl:risk-and-impact-assessment",
+        "hazard:temperature:heat:heat-wave",
+        "emissions-scenario:baseline"
       ],
-      "service_type": "ogc:wcs",
-      "mapview": {
-        "service_type": "ogc:wms",
-        "url": "https://clarity.meteogrid.com/geoserver/Local_Effects/wms?service=WMS&version=1.1.0&request=GetMap&layers=Local_Effects:Heat_wave_temperature_historical_very_hight_hazard_Naples&bbox=4647500,1947000,4720500,2008000&width=725&height=768&srs=EPSG:3035&format=image/png"
-      },
-      "crs": "EPSG:3035",
-      "spatial_extent": {
-        "xmin": 4647500,
-        "ymin": 1947000,
-        "xmax": 4720500,
-        "ymax": 2008000
-      },
-      "spatial_resolution": {
-        "distance": 500,
-        "uom": "m"
-      },
-      "grid_info": {
-        "band_count": 1,
-        "rows": 122,
-        "columns": 146,
-        "start_cell": "top-left",
-        "bands": [
-          {
-            "id": 1,
-            "name": "local-effects_hazard_heat-wave_baseline_temperature34c_naples",
-            "description": "Historical heat wave temperature in Naples (34ºC)(local effects)(1971-2000)",
-            "bit_depth": "unsigned-32-bit",
-            "no_data_value": -3.40282e38,
-            "compression_type": "none"
-          }
-        ]
-      },
-      "trs": "ISO 8601:2004",
-      "temporal_extent": {
-        "start": "1971",
-        "end": "2000"
-      },
-      "eu_gl": {
-        "workflow_step": [
-          "eu-gl:hazard-characterization:local-effects",
-          "eu-gl:risk-and-impact-assessment"
-        ],
-        "hazards": ["hazard:temperature:heat:heat-wave"],
-        "resource_type": "",
-        "emissions_scenario": "emissions-scenario:baseline"
-      }
+      "references": [
+        ["@mapview:ogc:wms", "#/path", "https://clarity.meteogrid.com/geoserver/Local_Effects/wms?service=WMS&version=1.1.0&request=GetMap&layers=Local_Effects:LE_Tmrt_RareEvent_1971-2000_observations_Naples&bbox=4647500,1947000,4720500,2008000&width=725&height=768&srs=EPSG:3035&format=image/png"]
+      ]
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r30",
       "name": "exposure_population_age<15_naples",
       "title": "Distribution of population for Naples Municipality (age group < 15 years)",
       "description": "Distribution of population for Naples Municipality (age group < 15 years)",
-      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "profile": "clarity-data-package-resource.json",
       "format": "tif",
       "mediatype": "geotiff",
       "bytes": "",
       "hash": "",
       "path": "https://clarity.meteogrid.com/geoserver/Exposure/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=Exposure:Population_men15_naples&FORMAT=geotiff&boundingbox=4647500,1947000,4716000,2003000,urn:ogc:def:crs:EPSG::3035",
-      "schema": {},
-      "sources": [
-        {
-          "title": "ISTAT (Italian National Institute of Statistics): Census Data - Population",
-          "path": "https://www.istat.it",
-          "email": "comunica@istat.it"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "",
-          "title": "",
-          "path": ""
-        }
-      ],
-      "service_type": "ogc:wcs",
-      "mapview": {
-        "service_type": "ogc:wms",
-        "url": "https://clarity.meteogrid.com/geoserver/Exposure/wms?service=WMS&version=1.1.0&request=GetMap&layers=Exposure:Population_men15_naples&bbox=4647500,1947000,4716000,2003000&width=725&height=768&srs=EPSG:3035&format=image/png"
-      },
+      "sources": [{
+        "title": "ISTAT (Italian National Institute of Statistics): Census Data - Population",
+        "path": "https://www.istat.it",
+        "email": "comunica@istat.it"
+      }],
+      "licenses": [{
+        "name": "",
+        "title": "",
+        "path": ""
+      }],
       "crs": "EPSG:3035",
       "spatial_extent": {
         "xmin": 4647500,
@@ -1897,63 +1611,52 @@
         "rows": 111,
         "columns": 137,
         "start_cell": "top-left",
-        "bands": [
-          {
-            "id": 1,
-            "name": "exposure_population_age<15_naples",
-            "description": "Distribution of population for Naples Municipality (age group < 15 years)",
-            "bit_depth": "unsigned-32-bit",
-            "no_data_value": -3.40282e38,
-            "compression_type": "none"
-          }
-        ]
+        "bands": [{
+          "id": 1,
+          "name": "exposure_population_age<15_naples",
+          "description": "Distribution of population for Naples Municipality (age group < 15 years)",
+          "bit_depth": "32-bit-unsigned",
+          "no_data_value": -3.40282e38,
+          "compression_type": "none"
+        }]
       },
       "trs": "ISO 8601:2004",
       "temporal_extent": {
         "start": "2011",
         "end": "2011"
       },
-      "eu_gl": {
-        "workflow_step": ["eu-gl:exposure-evaluation"],
-        "hazards": ["hazard:temperature:heat:heat-wave"],
-        "resource_type": "",
-        "elements_at_risk": ["element-at-risk:population"],
-        "vulnerability_classes": [
-          "element-at-risk:population:vulnerability-class:age-group<15"
-        ]
-      }
+      "tags": [
+        "service-type:ogc:wcs",
+        "resource-type:????",
+        "eu-gl:exposure-evaluation",
+        "hazard:temperature:heat:heat-wave",
+        "element-at-risk:population",
+        "vulnerability-class:population:age-group<15"
+      ],
+      "references": [
+        ["@mapview:ogc:wms", "#/path", "https://clarity.meteogrid.com/geoserver/Exposure/wms?service=WMS&version=1.1.0&request=GetMap&layers=Exposure:Population_men15_naples&bbox=4647500,1947000,4716000,2003000&width=725&height=768&srs=EPSG:3035&format=image/png"]
+      ]
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r31",
       "name": "exposure_population_age15-65_naples",
       "title": "Distribution of population for Naples Municipality (age group 15-65 years)",
       "description": "Distribution of population for Naples Municipality (age group 15-65 years)",
-      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "profile": "clarity-data-package-resource.json",
       "format": "tif",
       "mediatype": "geotiff",
       "bytes": "",
       "hash": "",
       "path": "https://clarity.meteogrid.com/geoserver/Exposure/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=Exposure:Population_15to65_naples&FORMAT=geotiff&boundingbox=4647500,1947000,4716000,2003000,urn:ogc:def:crs:EPSG::3035",
-      "schema": {},
-      "sources": [
-        {
-          "title": "ISTAT (Italian National Institute of Statistics): Census Data - Population",
-          "path": "https://www.istat.it",
-          "email": "comunica@istat.it"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "",
-          "title": "",
-          "path": ""
-        }
-      ],
-      "service_type": "ogc:wcs",
-      "mapview": {
-        "service_type": "ogc:wms",
-        "url": "https://clarity.meteogrid.com/geoserver/Exposure/wms?service=WMS&version=1.1.0&request=GetMap&layers=Exposure:Population_15to65_naples&bbox=4647500,1947000,4716000,2003000&width=725&height=768&srs=EPSG:3035&format=image/png"
-      },
+      "sources": [{
+        "title": "ISTAT (Italian National Institute of Statistics): Census Data - Population",
+        "path": "https://www.istat.it",
+        "email": "comunica@istat.it"
+      }],
+      "licenses": [{
+        "name": "",
+        "title": "",
+        "path": ""
+      }],
       "crs": "EPSG:3035",
       "spatial_extent": {
         "xmin": 4647500,
@@ -1970,63 +1673,52 @@
         "rows": 111,
         "columns": 137,
         "start_cell": "top-left",
-        "bands": [
-          {
-            "id": 1,
-            "name": "exposure_population_age15-65_naples",
-            "description": "Distribution of population for Naples Municipality (age group 15-65 years)",
-            "bit_depth": "unsigned-32-bit",
-            "no_data_value": -3.40282e38,
-            "compression_type": "none"
-          }
-        ]
+        "bands": [{
+          "id": 1,
+          "name": "exposure_population_age15-65_naples",
+          "description": "Distribution of population for Naples Municipality (age group 15-65 years)",
+          "bit_depth": "32-bit-unsigned",
+          "no_data_value": -3.40282e38,
+          "compression_type": "none"
+        }]
       },
       "trs": "ISO 8601:2004",
       "temporal_extent": {
         "start": "2011",
         "end": "2011"
       },
-      "eu_gl": {
-        "workflow_step": ["eu-gl:exposure-evaluation"],
-        "hazards": ["hazard:temperature:heat:heat-wave"],
-        "resource_type": "",
-        "elements_at_risk": ["element-at-risk:population"],
-        "vulnerability_classes": [
-          "element-at-risk:population:vulnerability-class:age-group15-65"
-        ]
-      }
+      "tags": [
+        "service-type:ogc:wcs",
+        "resource-type:????",
+        "eu-gl:exposure-evaluation",
+        "hazard:temperature:heat:heat-wave",
+        "element-at-risk:population",
+        "vulnerability-class:population:age-group15-65"
+      ],
+      "references": [
+        ["@mapview:ogc:wms", "#/path", "https://clarity.meteogrid.com/geoserver/Exposure/wms?service=WMS&version=1.1.0&request=GetMap&layers=Exposure:Population_15to65_naples&bbox=4647500,1947000,4716000,2003000&width=725&height=768&srs=EPSG:3035&format=image/png"]
+      ]
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r32",
       "name": "exposure_population_age>65_naples",
       "title": "Distribution of population for Naples Municipality (age group > 65 years)",
       "description": "Distribution of population for Naples Municipality (age group > 65 years)",
-      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "profile": "clarity-data-package-resource.json",
       "format": "tif",
       "mediatype": "geotiff",
       "bytes": "",
       "hash": "",
       "path": "https://clarity.meteogrid.com/geoserver/Exposure/wcs?SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=Exposure:Population_mayor65_naples&FORMAT=geotiff&boundingbox=4647500,1947000,4716000,2003000,urn:ogc:def:crs:EPSG::3035",
-      "schema": {},
-      "sources": [
-        {
-          "title": "ISTAT (Italian National Institute of Statistics): Census Data - Population",
-          "path": "https://www.istat.it",
-          "email": "comunica@istat.it"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "",
-          "title": "",
-          "path": ""
-        }
-      ],
-      "service_type": "ogc:wcs",
-      "mapview": {
-        "service_type": "ogc:wms",
-        "url": "https://clarity.meteogrid.com/geoserver/Exposure/wms?service=WMS&version=1.1.0&request=GetMap&layers=Exposure:Population_mayor65_naples&bbox=4647500,1947000,4716000,2003000&width=725&height=768&srs=EPSG:3035&format=image/png"
-      },
+      "sources": [{
+        "title": "ISTAT (Italian National Institute of Statistics): Census Data - Population",
+        "path": "https://www.istat.it",
+        "email": "comunica@istat.it"
+      }],
+      "licenses": [{
+        "name": "",
+        "title": "",
+        "path": ""
+      }],
       "crs": "EPSG:3035",
       "spatial_extent": {
         "xmin": 4647500,
@@ -2043,44 +1735,42 @@
         "rows": 111,
         "columns": 137,
         "start_cell": "top-left",
-        "bands": [
-          {
-            "id": 1,
-            "name": "exposure_population_age>65_naples",
-            "description": "Distribution of population for Naples Municipality (age group > 65 years)",
-            "bit_depth": "unsigned-32-bit",
-            "no_data_value": -3.40282e38,
-            "compression_type": "none"
-          }
-        ]
+        "bands": [{
+          "id": 1,
+          "name": "exposure_population_age>65_naples",
+          "description": "Distribution of population for Naples Municipality (age group > 65 years)",
+          "bit_depth": "32-bit-unsigned",
+          "no_data_value": -3.40282e38,
+          "compression_type": "none"
+        }]
       },
       "trs": "ISO 8601:2004",
       "temporal_extent": {
         "start": "2011",
         "end": "2011"
       },
-      "eu_gl": {
-        "workflow_step": ["eu-gl:exposure-evaluation"],
-        "hazards": ["hazard:temperature:heat:heat-wave"],
-        "resource_type": "",
-        "elements_at_risk": ["element-at-risk:population"],
-        "vulnerability_classes": [
-          "element-at-risk:population:vulnerability-class:age-group>65"
-        ]
-      }
+      "tags": [
+        "service-type:ogc:wcs",
+        "resource-type:????",
+        "eu-gl:exposure-evaluation",
+        "hazard:temperature:heat:heat-wave",
+        "element-at-risk:population",
+        "vulnerability-class:population:age-group>65"
+      ],
+      "references": [
+        ["@mapview:ogc:wms", "#/path", "https://clarity.meteogrid.com/geoserver/Exposure/wms?service=WMS&version=1.1.0&request=GetMap&layers=Exposure:Population_mayor65_naples&bbox=4647500,1947000,4716000,2003000&width=725&height=768&srs=EPSG:3035&format=image/png"]
+      ]
     },
     {
-      "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples#r33",
       "name": "vulnerability_population",
       "title": "",
       "description": "",
-      "profile": "http://github.com/clarity-h2020/data-package/schemas/clarity-data-package-resource.json",
+      "profile": "clarity-data-package-resource.json",
       "format": "",
       "mediatype": "",
       "bytes": "",
       "hash": "https://service.emikat.at/geoserver/clarity/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=clarity:view.2813&maxFeatures=50&outputFormat=text%2Fxml%3B%20subtype%3Dgml%2F2.1.2",
       "path": "https://service.emikat.at/EmiKatTst/api/scenarios/2846/feature/view.2813/table/csv?rownum=1000",
-      "schema": {},
       "sources": [],
       "mapview": {
         "service_type": "ogc:wms",
@@ -2102,34 +1792,32 @@
         "start": "2011",
         "end": "2011"
       },
+      "tags": [
+        "service-type:ogc:wfs",
+        "resource-type:????",
+        "eu-gl:vulnerability-analysis",
+        "eu-gl:risk-and-impact-assessment",
+        "hazard:temperature:heat:heat-wave",
+        "hazard:temperature:heat:heat-wave:index:heat-wave-duration",
+        "element-at-risk:population",
+        "vulnerability-class:population:age-group<15",
+        "vulnerability-class:population:age-group15-65",
+        "vulnerability-class:population:age-group>65",
+        "damage-class:population:d1",
+        "damage-class:population:d2",
+        "damage-class:population:d3",
+        "damage-class:population:d4",
+        "damage-class:population:d5"
+      ],
+      "references": [
+        ["@mapview:ogc:wms", "#/path", "https://clarity.meteogrid.com/geoserver/Exposure/wms?service=WMS&version=1.1.0&request=GetMap&layers=Exposure:Population_mayor65_naples&bbox=4647500,1947000,4716000,2003000&width=725&height=768&srs=EPSG:3035&format=image/png"]
+      ],
       "eu_gl": {
-        "workflow_step": [
-          "eu-gl:vulnerability-analysis",
-          "eu-gl:risk-and-impact-assessment"
-        ],
-        "hazards": ["hazard:temperature:heat:heat-wave"],
-        "index": "hazard:temperature:heat:heat-wave:index:heat-wave-duration",
-        "resource_type": "",
-        "elements_at_risk": ["element-at-risk:population"],
-        "vulnerability_classes": [
-          "element-at-risk:population:vulnerability-class:age-group<15",
-          "element-at-risk:population:vulnerability-class:age-group15-65",
-          "element-at-risk:population:vulnerability-class:age-group>65"
-        ],
-        "damage_classes": [
-          "element-at-risk:population:damage-class:d1",
-          "element-at-risk:population:damage-class:d2",
-          "element-at-risk:population:damage-class:d3",
-          "element-at-risk:population:damage-class:d4",
-          "element-at-risk:population:damage-class:d5"
-        ],
-        "hazard_events": [
-          {
+        "hazard_events": [{
             "name": "Heat wave event (temperature 28ºC, duration 6 days)",
             "type": "hazard:temperature:heat:heat-wave:index:heat-wave-duration:event:$temperature$duration",
             "description": "Heat wave event (temperature 28ºC, duration 6 days)",
-            "parameters": [
-              {
+            "parameters": [{
                 "name": "temperature",
                 "type": "float",
                 "uom": "c",
@@ -2147,8 +1835,7 @@
             "name": "Heat wave event (temperature 30ºC, duration 6 days)",
             "type": "hazard:temperature:heat:heat-wave:index:heat-wave-duration:event:$temperature$duration",
             "description": "Heat wave event (temperature 30ºC, duration 6 days)",
-            "parameters": [
-              {
+            "parameters": [{
                 "name": "temperature",
                 "type": "float",
                 "uom": "c",
@@ -2166,8 +1853,7 @@
             "name": "Heat wave event (temperature 32ºC, duration 6 days)",
             "type": "hazard:temperature:heat:heat-wave:index:heat-wave-duration:event:$temperature$duration",
             "description": "Heat wave event (temperature 32ºC, duration 6 days)",
-            "parameters": [
-              {
+            "parameters": [{
                 "name": "temperature",
                 "type": "float",
                 "uom": "c",
@@ -2185,8 +1871,7 @@
             "name": "Heat wave event (temperature 36ºC, duration 6 days)",
             "type": "hazard:temperature:heat:heat-wave:index:heat-wave-duration:event:$temperature$duration",
             "description": "Heat wave event (temperature 36ºC, duration 6 days)",
-            "parameters": [
-              {
+            "parameters": [{
                 "name": "temperature",
                 "type": "float",
                 "uom": "c",
