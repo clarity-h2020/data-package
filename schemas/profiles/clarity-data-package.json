@@ -3,18 +3,6 @@
 	"title": "CLARITY Data Package",
 	"description": "CLARITY Data Package is a simple specification for data access and delivery.",
 	"type": "object",
-	"required": [
-		"profile",
-		"id",
-		"version",
-		"name",
-		"title",
-		"description",
-		"created",
-		"resources"
-	],
-	"definitions": {
-	},
 	"properties": {
 		"profile": {
 			"$ref": "dictionary.json#/definitions/profile",
@@ -29,13 +17,13 @@
 		"version": {
 			"title": "Version",
 			"description": "A unique version number for this descriptor.",
-			"context": "It should conform to the Semantic Versioning requirements (http://semver.org/) and should follow the Data Package Version pattern (https://frictionlessdata.io/specs/patterns/#data-package-version): MAJOR.MINOR.PATCH (e.g., 1.0.0)",
 			"type": "string",
 			"pattern": "^(\\d+\\.)?(\\d+\\.)?(\\*|\\d+)$",
 			"examples": [
 				"{\n  \"version\": \"0.0.1\"\n}\n",
 				"{\n  \"version\": \"1.0.1-beta\"\n}\n"
-			]
+			],
+			"context": "It should conform to the Semantic Versioning requirements (http://semver.org/) and should follow the Data Package Version pattern (https://frictionlessdata.io/specs/patterns/#data-package-version): MAJOR.MINOR.PATCH (e.g., 1.0.0)"
 		},
 		"title": {
 			"$ref": "dictionary.json#/definitions/title"
@@ -129,5 +117,15 @@
 			"description": "The css_style property is a pointer to a default CSS file containing the styling configuration for several elements within the data package (e.g., threholds values colouring, vector and raster maps colouring, etc.).\n\nPlease, check the following links for further information:\n# https://www.w3.org/TR/css-2018/ \n# https://docs.geoserver.org/latest/en/user/styling/css/cookbook/index.html",
 			"$ref": "dictionary.json#/definitions/path"
 		}
-	}
+	},
+	"required": [
+		"profile",
+		"name",
+		"id",
+		"version",
+		"title",
+		"description",
+		"created",
+		"resources"
+	]
 }
