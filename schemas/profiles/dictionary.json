@@ -367,7 +367,7 @@
 		},
 		 "spatialResolutionByDistance": {
 			 "title": "Spatial Resolution (Distance)",
-			 "description": "Spatial resolution described in terms of \"distance\". A resolution distance shall be expressed as a numerical value associated with a unit of length.",
+			 "description": "Spatial resolution described in terms of \"distance\". A resolution distance shall be expressed as a numerical value associated with a unit of length. Use degree values if the projection is geographic, otherwise use meters",
 			 "type": "object",
 			 "properties": {
 				 "distance": {
@@ -491,20 +491,22 @@
 				},
 				 "bit_depth": {
 					 "title": "Bit Depth",
-					 "description": "The bit depth (also known as pixel depth) of a cell determines the range of values that a particular raster file can store, which is based on the formula 2n (where n is the bit depth). For example, an 8-bit raster can have 256 unique values, which range from 0 to 255.",
+					 "description": "The bit depth (also known as pixel depth) of a cell determines the range of values that a particular raster file can store, which is based on the formula 2n (where n is the bit depth). For example, an uint8 raster can have 256 unique values, which range from 0 to 255.",
 					 "type": "string",
 					 "enum": [
 						"1-bit",
 						"2-bit",
 						"4-bit",
-						"8-bit-signed",
-						"8-bit-unsigned",
-						"16-bit-signed",
-						"16-bit-unsigned",
-						"32-bit-signed",
-						"32-bit-unsigned",
-						"32-bit-floating-point",
-						"64-bit-unsigned"
+						"int8",
+						"int16",
+						"int32",
+						"int64",
+						"uint8",
+						"uint16",
+						"uint32",
+						"uint64",
+						"float32",
+						"float64"
 					]
 				},
 				 "compression_type": {
