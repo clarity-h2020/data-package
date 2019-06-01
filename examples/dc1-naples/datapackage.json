@@ -1773,7 +1773,7 @@
       "mediatype": "text/csv",
       "bytes": "TBD",
       "hash": "TBD",
-      "path": "https://service.emikat.at/EmiKatTst/api/scenarios/2846/feature/view.2813/table/csv?rownum=1000",
+      "path": "https://service.emikat.at/EmiKatTst/api/scenarios/2846/feature/view.2813/table/csv?rownum=1000&filter=HAZARD_EVENT=HW.6d_28C",
       "sources": [],
       "crs": "EPSG:3035",
       "spatial_extent": {
@@ -1802,7 +1802,9 @@
         "damage-class:population:d2",
         "damage-class:population:d3",
         "damage-class:population:d4",
-        "damage-class:population:d5"
+        "damage-class:population:d5",
+        "event-probability:frequent",
+        "emissions-scenario:rcp45"
       ],
       "references": [
         ["@mapview:ogc:wms", "damage-class:population:d1", "https://service.emikat.at/geoserver/clarity/wms?service=WMS&version=1.1.0&request=GetMap&layers=clarity:view.2813&styles=DamageLevel1Q&bbox=4650500.0,1942000.0,4713000.0,1995500.0&width=768&height=657&srs=EPSG:3035&format=image/gif&cql_filter=HAZARD_EVENT='HW.6d_28C'"],
@@ -1834,7 +1836,7 @@
       "mediatype": "text/csv",
       "bytes": "TBD",
       "hash": "TBD",
-      "path": "https://service.emikat.at/EmiKatTst/api/scenarios/2846/feature/view.2813/table/csv?rownum=1000",
+      "path": "https://service.emikat.at/EmiKatTst/api/scenarios/2846/feature/view.2813/table/csv?rownum=1000&filter=HAZARD_EVENT=HW.6d_30C",
       "sources": [],
       "crs": "EPSG:3035",
       "spatial_extent": {
@@ -1895,7 +1897,7 @@
       "mediatype": "text/csv",
       "bytes": "TBD",
       "hash": "TBD",
-      "path": "https://service.emikat.at/EmiKatTst/api/scenarios/2846/feature/view.2813/table/csv?rownum=1000",
+      "path": "https://service.emikat.at/EmiKatTst/api/scenarios/2846/feature/view.2813/table/csv?rownum=1000&filter=HAZARD_EVENT=HW.6d_32C",
       "sources": [],
       "crs": "EPSG:3035",
       "spatial_extent": {
@@ -1956,7 +1958,7 @@
       "mediatype": "text/csv",
       "bytes": "TBD",
       "hash": "TBD",
-      "path": "https://service.emikat.at/EmiKatTst/api/scenarios/2846/feature/view.2813/table/csv?rownum=1000",
+      "path": "https://service.emikat.at/EmiKatTst/api/scenarios/2846/feature/view.2813/table/csv?rownum=1000&filter=HAZARD_EVENT=HW.6d_34C",
       "sources": [],
       "crs": "EPSG:3035",
       "spatial_extent": {
