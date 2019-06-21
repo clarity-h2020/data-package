@@ -1,5 +1,6 @@
 {
 	 "$schema": "http://json-schema.org/draft-04/schema#",
+	 "$id": "https://raw.githubusercontent.com/clarity-h2020/data-package/master/schemas/profiles/dictionary.json",
 	 "title": "CLARITY Common Dictionary",
 	 "description": "CLARITY Common Dictionary is a respository of reusable components/types for specifying the Data Package and Resource properties.",
 	 "definitions": {

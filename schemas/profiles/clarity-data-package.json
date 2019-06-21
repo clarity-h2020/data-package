@@ -1,6 +1,7 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"title": "CLARITY Data Package",
+	"$id": "https://raw.githubusercontent.com/clarity-h2020/data-package/master/schemas/profiles/clarity-data-package.json",
+	"title": "CLARITY Data Package Schema Specification",
 	"description": "CLARITY Data Package is a simple specification for data access and delivery.",
 	"type": "object",
 	"properties": {
