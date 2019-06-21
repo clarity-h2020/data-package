@@ -65,7 +65,7 @@
 		"bytes": {
 			"title": "Bytes",
 			"description": "The size of this resource in bytes.",
-			"type": "integer",
+			"type": "number",
 			"minimum": 0,
 			"examples": [
 				"{\n  \"bytes\": 2082\n}\n"
