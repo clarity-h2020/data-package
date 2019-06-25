@@ -771,7 +771,10 @@
 				"service-type:ogc:wcs",
 				"service-type:ogc:wfs",
 				"service-type:osm",
-				"service-type:tms"
+				"service-type:tms",
+				"service-type:emikat",
+				"service-type:ogc:cws",
+				"service-type:ogc:dcat"
 			]
 		},
 		 "reference": {
