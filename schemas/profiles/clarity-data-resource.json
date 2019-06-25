@@ -251,6 +251,12 @@
 							},
 							{
 								"$ref": "dictionary.json#/definitions/hazardEvent"
+							},
+							{
+								"$ref": "dictionary.json#/definitions/serviceType"
+							},
+							{
+								"$ref": "dictionary.json#/definitions/resourceType"
 							}
 						]
 					}
