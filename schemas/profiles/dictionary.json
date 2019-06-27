@@ -774,7 +774,7 @@
 				"service-type:tms",
 				"service-type:emikat",
 				"service-type:ogc:cws",
-				"service-type:ogc:dcat"
+				"service-type:dcat"
 			]
 		},
 		 "reference": {
