@@ -262,14 +262,7 @@
 					}
 				},
 				"references": {
-					"title": "References",
-					"description": "References",
-					"type": "array",
-					"minItems": 1,
-					"uniqueItems": true,
-					"items": {
-						"$ref": "dictionary.json#/definitions/reference"
-					}
+					"$ref": "dictionary.json#/definitions/references"
 				}
 			},
 			"required": [
