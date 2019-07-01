@@ -107,16 +107,12 @@
 		"temporal_extent": {
 			"$ref": "dictionary.json#/definitions/temporalExtent"
 		},
-		"metadata": {
-			"$ref": "dictionary.json#/definitions/metadata"
+		"references": {
+			"$ref": "dictionary.json#/definitions/references",
+			"context": "Within the context of the data package itself, only the @metadata and @css-style references apply at the moment."
 		},
 		"resources": {
 			"$ref": "clarity-data-resource.json#/definitions/resources"
-		},
-		"css_style": {
-			"title": "CSS Style",
-			"description": "The css_style property is a pointer to a default CSS file containing the styling configuration for several elements within the data package (e.g., threholds values colouring, vector and raster maps colouring, etc.).\n\nPlease, check the following links for further information:\n# https://www.w3.org/TR/css-2018/ \n# https://docs.geoserver.org/latest/en/user/styling/css/cookbook/index.html",
-			"$ref": "dictionary.json#/definitions/path"
 		}
 	},
 	"required": [
