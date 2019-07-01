@@ -490,6 +490,10 @@
 					 "description": "Description of the band",
 					 "$ref": "#/definitions/description"
 				},
+				"uom": {
+					"description": "Unit of measurement for the information represented in this band",
+					"$ref": "#/definitions/uom"
+			   },
 				 "bit_depth": {
 					 "title": "Bit Depth",
 					 "description": "The bit depth (also known as pixel depth) of a cell determines the range of values that a particular raster file can store, which is based on the formula 2n (where n is the bit depth). For example, an uint8 raster can have 256 unique values, which range from 0 to 255.",
