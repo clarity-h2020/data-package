@@ -54,5 +54,5 @@ scripts/my-preparation-script.py
 ```
 
 ## Specification
-Detailed specification of CLARITY Data Package can be found in 'docs' folder: https://github.com/clarity-h2020/data-package/tree/master/docs
+Detailed specification schemas of CLARITY Data Package can be found in 'schemas/filters' folder: https://github.com/clarity-h2020/data-package/tree/master/schemas/profiles
 
