@@ -781,35 +781,45 @@
 				"service-type:dcat"
 			]
 		},
-		 "reference": {
-			 "title": "Reference",
-			 "description": "A reference to some related stuff concerning the resource or data package",
-			 "type": "array",
-			 "items": {
-				 "type": "string"
-			},
-			 "minItems": 2,
-			 "maxItems": 3,
-			 "uniqueItems": true,
-			 "context": "Currently, these are the references types defined, although nothing prevents the definition of new ones by others:\n * @mapview \n * @metadata \n * @tag \n * @resource \n * @tableview \n * css: The css_style property is a pointer to a default CSS file containing the styling configuration for several elements within the data package (e.g., threholds values colouring, vector and raster maps colouring, etc.).\n\nPlease, check the following links for further information:\n# https://www.w3.org/TR/css-2018/ \n# https://docs.geoserver.org/latest/en/user/styling/css/cookbook/index.html",
-
-			 "examples": [
-				"{\n  [\"@tag:damage-class:population:group-age<15\", \"#/path[0]\" ]\n }",
-				"{\n  [\"@tag:damage-class:population:group-age15-65\", \"#/path[1]\" ]\n }",
-				"{\n  [\"@tag:damage-class:population:group-age>65\", \"#/path[2]\" ]\n }",
-				"{\n  [\"@mapview:ogc:wms\", \"damage-class:population:group-age<15\", \"http://geoserver/wms.....\" ]\n }",
-				"{\n  [\"@mapview:ogc:wms\", \"damage-class:population:group-age15-65\", \"http://geoserver/wms.....\" ]\n }",
-				"{\n  [\"@mapview:ogc:wms\", \"damage-class:population:group-age>65\", \"http://geoserver/wms.....\" ]\n }",
-				"{\n  [\"@mapview:ogc:wms\", \"#/path[0]\", \"http://geoserver/wms.....\" ]\n }",
-				"{\n  [\"@mapview:ogc:wms\", \"#/path[1]\", \"http://geoserver/wms.....\" ]\n }",
-				"{\n  [\"@mapview:ogc:wms\", \"#/path[2]\", \"http://geoserver/wms.....\" ]\n }",
-				"{\n  [\"@resource:hazard-event:param1:value1#param2:value2#param3:value3\", \"#/resources/[name=xxxx]\" ]\n }",
-				"{\n  [\"@metadata:ogc:cws\", \"#/path\", \"http://geonetwork/catalogue.....\" ]\n }",
-				"{\n  [\"@metadata:dcat\", \"#/path\", \"http://ckan/catalogue.....\" ]\n }",
-				"{\n  [\"@tableview:meteogrid:rest\", \"#/path\", \"http://meteogrid/api-rest.....\" ]\n }",
-				"{\n  [\"@css\", \"#/path\", \"http://link-to-css-file.....\" ]\n }"
-			]
-		},
+		"reference": {
+			"title": "Reference",
+			"description": "Reference definition",
+			"type": "object",
+			"properties": {
+				"type": {
+					"title": "Reference Type",
+					"description": "Reference type",
+					"type": "string",
+					"enum": [
+						"@css",
+						"@mapview:ogc:wms",
+						"@mapview:ogc:wms-t",
+						"@mapview:osm",
+						"@mapview:tms",
+						"@metadata:ogc:cws",
+						"@metadata:dcat",
+						"@resource",
+						"@tag",
+						"@tableview:meteogrid:rest"
+				   ]
+			   },
+				"qualifier": {
+					"title": "Reference Qualifier",
+					"description": "Reference Qualifier",
+					"type": "string"
+			   },
+				"path": {
+					"title": "Reference Value",
+					"description": "Reference Value",
+					"$ref": "#/definitions/path"
+			   }
+		   },
+			"required": [
+			   "type",
+			   "qualifier",
+			   "path"
+		   ]
+	   },
 		"references": {
 			"title": "References",
 			"description": "References",

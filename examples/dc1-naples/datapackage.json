@@ -1,7 +1,7 @@
 {
   "name": "dc1-naples",
   "id": "http://github.com/clarity-h2020/data-package/examples/dc1-naples",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "profile": "clarity-data-package.json",
   "title": "Naples Metropolitan Area Data Package",
   "description": "This is the CLARITY data package for the Naples metropolitan area corresponding to the Demonstrator Case (DC1). \r\n Further description to be completed",
